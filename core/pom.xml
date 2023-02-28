@@ -29,27 +29,16 @@
 
   <developers>
     <developer>
-      <id>micstriit</id>
-      <name>Michael Offner</name>
-      <email>michael@tachyon.org</email>
-      <organization>Tachyon Association Switzerland</organization>
-      <organizationUrl>https://tachyon.org</organizationUrl>
+      <id>ianhickey</id>
+      <name>Ian Hickey</name>
+      <email>ianhickey@tachyoncfml.org</email>
+      <organization>TachyonCFML.org</organization>
+      <organizationUrl>https://tachyoncfml.org</organizationUrl>
       <roles>
         <role>Project-Administrator</role>
         <role>Developer</role>
       </roles>
       <timezone>+1</timezone>
-    </developer>
-    <developer>
-      <id>isapir</id>
-      <name>Igal Sapir</name>
-      <email>dev@21solutions.net</email>
-      <organization>21 Solutions</organization>
-      <organizationUrl>http://21solutions.net/</organizationUrl>
-      <roles>
-          <role>Developer</role>
-      </roles>
-      <timezone>-8</timezone>
     </developer>
   </developers>
 
@@ -176,7 +165,7 @@
   	<dependency>
   		<groupId>commons-net</groupId>
   		<artifactId>commons-net</artifactId>
-  		<version>3.3</version>
+  		<version>3.9.0</version>
       <scope>provided</scope>
   	</dependency>
     <dependency>
