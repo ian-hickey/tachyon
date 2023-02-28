@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2016, Lucee Assosication Switzerland. All rights reserved.*
+ * Copyright (c) 2016, Tachyon Assosication Switzerland. All rights reserved.*
  * Copyright (c) 2014, the Railo Company LLC. All rights reserved.
  *
  * This library is free software; you can redistribute it and/or
@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU Lesser General Public 
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
- component extends="org.lucee.cfml.test.LuceeTestCase" {
+ component extends="org.tachyon.cfml.test.TachyonTestCase" {
 
  	public function testTimeFormatTimeZone_lz() localMode="modern" {
 
@@ -219,7 +219,7 @@
 		assertEquals("#TimeFormat(CreateDateTime( 2009, 6, 29, 12, 15, 26),"hh TT")#", "12 PM");
 
 
-		// only supported by lucee
+		// only supported by tachyon
 		assertEquals("#TimeFormat(CreateDateTime( 2009, 6, 29, 24, 0, 0),"h TT")#", "12 AM");
 		assertEquals("#TimeFormat(CreateDateTime( 2009, 6, 29, 24, 0, 0),"hh TT")#", "12 AM");
 		

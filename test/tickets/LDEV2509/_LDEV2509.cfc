@@ -1,4 +1,4 @@
-component extends = "org.lucee.cfml.test.LuceeTestCase"{
+component extends = "org.tachyon.cfml.test.TachyonTestCase"{
 
 	function run( testResults , testBox ) {
 		describe( "test case for LDEV2509", function() {
@@ -6,7 +6,7 @@ component extends = "org.lucee.cfml.test.LuceeTestCase"{
 				query datasource = "LDEV2509_DSN" name = "testQry"{
 					echo("SELECT Title FROM LDEV2509");
 				}
-				expect(testQry.Title[1]).toBe('Lucee');
+				expect(testQry.Title[1]).toBe('Tachyon');
 			});
 		});
 	}

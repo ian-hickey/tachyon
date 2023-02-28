@@ -1,6 +1,6 @@
 component {
 
-	this.name = "Lucee";
+	this.name = "Tachyon";
 	this.datasources["LDEV2509_DSN"] = server.getDatasource("mssql");
 
 	this.datasource = "LDEV2509_DSN";
@@ -14,7 +14,7 @@ component {
 			echo("CREATE TABLE LDEV2509( id int, Title SQL_VARIANT )");
 		}
 		query{
-			echo("INSERT INTO LDEV2509 VALUES( 1,'Lucee' )");
+			echo("INSERT INTO LDEV2509 VALUES( 1,'Tachyon' )");
 		}
 	}
 }

@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 	function beforeAll(){
 		variables.uri = createuri("LDEV2213");
 		fileWrite(uri&'/Application.cfc',"component {#chr(10)##chr(9)#this.localmode = 'modern';#chr(10)#}");
@@ -15,13 +15,13 @@ component extends="org.lucee.cfml.test.LuceeTestCase"{
 				local.result = _InternalRequest(
 					template:uri&'/test.cfm'
 				);
-				expect(local.result.filecontent).tobe("Before: []I Love Lucee!After: [testcase]");
+				expect(local.result.filecontent).tobe("Before: []I Love Tachyon!After: [testcase]");
 			});
 			it("Cannot set calling scope vars from closures without localMode",function( currentSpec ){
 				local.result = _InternalRequest(
 					template:uri&'/test.cfm'
 				);
-				expect(local.result.filecontent).tobe("Before: []I Love Lucee!After: [testcase]");
+				expect(local.result.filecontent).tobe("Before: []I Love Tachyon!After: [testcase]");
 			});
 		});
 	}	

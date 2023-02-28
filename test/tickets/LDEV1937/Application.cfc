@@ -1,7 +1,7 @@
 component {
 
 	this.name = "LDEV-1937";
-	variables.adminWeb = new org.lucee.cfml.Administrator("web", server.WebAdminPassword);
+	variables.adminWeb = new org.tachyon.cfml.Administrator("web", server.WebAdminPassword);
 
     createDatasouce("testMYSQL", "mysql", server.getDatasource("mysql"));
     createDatasouce("testMSSQL", "mssql", server.getDatasource("mssql"));

@@ -12,35 +12,35 @@
 
 
   <!-- ===================================================================== -->
-  <!-- Lucee CFML Servlet - this is the main Lucee servlet                   -->
+  <!-- Tachyon CFML Servlet - this is the main Tachyon servlet                   -->
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-  <servlet id="Lucee">
-    <description>Lucee CFML Engine</description>
+  <servlet id="Tachyon">
+    <description>Tachyon CFML Engine</description>
     <servlet-name>CFMLServlet</servlet-name>
-    <servlet-class>lucee.loader.servlet.CFMLServlet</servlet-class>
+    <servlet-class>tachyon.loader.servlet.CFMLServlet</servlet-class>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-    <!-- to specify the location of the Lucee Server config and libraries,   -->
+    <!-- to specify the location of the Tachyon Server config and libraries,   -->
     <!-- uncomment the init-param below.  make sure that the param-value     -->
-    <!-- points to a valid folder, and that the process that runs Lucee has  -->
+    <!-- points to a valid folder, and that the process that runs Tachyon has  -->
     <!-- write permissions to that folder.  leave commented for defaults.    -->
     <!--
     <init-param>
-      <param-name>lucee-server-root</param-name>
-      <param-value>/var/Lucee/config/server/</param-value>
-      <description>Lucee Server configuration directory (for Server-wide configurations, settings, and libraries)</description>
+      <param-name>tachyon-server-root</param-name>
+      <param-value>/var/Tachyon/config/server/</param-value>
+      <description>Tachyon Server configuration directory (for Server-wide configurations, settings, and libraries)</description>
     </init-param>
     !-->
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
     <!-- to specify the location of the Web Contexts' config and libraries,  -->
     <!-- uncomment the init-param below.  make sure that the param-value     -->
-    <!-- points to a valid folder, and that the process that runs Lucee has  -->
+    <!-- points to a valid folder, and that the process that runs Tachyon has  -->
     <!-- write permissions to that folder.  the {web-context-label} can be   -->
-    <!-- set in Lucee Server Admin homepage.  leave commented for defaults.  -->
+    <!-- set in Tachyon Server Admin homepage.  leave commented for defaults.  -->
     <!--
     <init-param>
-      <param-name>lucee-web-directory</param-name>
-      <param-value>/var/Lucee/config/web/{web-context-label}/</param-value>
-      <description>Lucee Web Directory (for Website-specific configurations, settings, and libraries)</description>
+      <param-name>tachyon-web-directory</param-name>
+      <param-value>/var/Tachyon/config/web/{web-context-label}/</param-value>
+      <description>Tachyon Web Directory (for Website-specific configurations, settings, and libraries)</description>
     </init-param>
     !-->
     <load-on-startup>1</load-on-startup>
@@ -52,12 +52,12 @@
   </servlet-mapping>
 
   <!-- ===================================================================== -->
-  <!-- Lucee REST Servlet - handles Lucee's RESTful web services             -->
+  <!-- Tachyon REST Servlet - handles Tachyon's RESTful web services             -->
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-  <servlet id="LuceeREST">
-    <description>Lucee Servlet for RESTful services</description>
+  <servlet id="TachyonREST">
+    <description>Tachyon Servlet for RESTful services</description>
     <servlet-name>RESTServlet</servlet-name>
-    <servlet-class>lucee.loader.servlet.RestServlet</servlet-class>
+    <servlet-class>tachyon.loader.servlet.RestServlet</servlet-class>
     <load-on-startup>2</load-on-startup>
   </servlet>
   <servlet-mapping>

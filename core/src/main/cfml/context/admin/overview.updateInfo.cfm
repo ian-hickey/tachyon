@@ -16,7 +16,7 @@
 	<cfset var http="">
 	<cftry>
 	<cfhttp 
-		url="#update.location#/lucee/remote/version/Info.cfc?method=getpatchversionfor&version=#server.lucee.version#" 
+		url="#update.location#/tachyon/remote/version/Info.cfc?method=getpatchversionfor&version=#server.tachyon.version#"
 		method="get" resolveurl="no" result="http">
 	<cfwddx action="wddx2cfml" input="#http.fileContent#" output="wddx">
 	<cfset session.availableVersion=wddx>
@@ -32,8 +32,8 @@
 	<cfset var http="">
 	<cftry>
 	<cfhttp 
-		url="#update.location#/lucee/remote/version/Info.cfc?method=getPatchVersionDocFor&version=1.0.0.015" 
-		method="get" resolveurl="no" result="http"><!--- #server.lucee.version# --->
+		url="#update.location#/tachyon/remote/version/Info.cfc?method=getPatchVersionDocFor&version=1.0.0.015"
+		method="get" resolveurl="no" result="http"><!--- #server.tachyon.version# --->
 	<cfwddx action="wddx2cfml" input="#http.fileContent#" output="wddx">
 	<cfreturn wddx>
 		<cfcatch>
@@ -56,7 +56,7 @@ Wenn das System gepatcht wird, werden Sie Ihre Session verliehren und m�ssen S
 
 <br><br>
 <h2>Update Info</h2>
- - Installed Version #server.lucee.version#<br>
+ - Installed Version #server.tachyon.version#<br>
  - Available Version #getAvailableVersion()#<br>
 <form>
 <textarea name="doc" rows="30" cols="90">#getAvailableVersionDoc()#</textarea>

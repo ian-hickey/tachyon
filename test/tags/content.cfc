@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="content,mime,pdf"	{
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="content,mime,pdf"	{
 
 	public void function testInvalidMimeTypes() skip=true {
 		var mimeType = "";
@@ -29,7 +29,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase" labels="content,mime,pdf"	
 		var pdf = callTestPDF( mode="named" );
 		expect( pdf.headers["content-type"] ).toBe( "application/pdf" );
 
-		// TODO lucee.runtime.exp.Abort: Page request is aborted LDEV-3761
+		// TODO tachyon.runtime.exp.Abort: Page request is aborted LDEV-3761
 		//pdf = callTestPDF( mode="direct" );
 		//expect( pdf.headers["content-type"] ).toBe( "application/pdf" );
 	}

@@ -1,6 +1,6 @@
 ﻿<!--- 
  *
- * Copyright (c) 2015, Lucee Assosication Switzerland. All rights reserved.
+ * Copyright (c) 2015, Tachyon Assosication Switzerland. All rights reserved.
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -16,7 +16,7 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  * 
  ---><cfscript>
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="qoq" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="qoq" {
 
 	function test() localmode=true {
 		cacheName="ldev1280";
@@ -53,7 +53,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase" labels="qoq" {
 			caches="#{
 
 			ldev1280:{
-			  class: 'lucee.runtime.cache.ram.RamCache'
+			  class: 'tachyon.runtime.cache.ram.RamCache'
 			, storage: false
 			, custom: {"timeToIdleSeconds":"10","timeToLiveSeconds":"10"}
 			, default: 'query'

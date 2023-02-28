@@ -1,9 +1,9 @@
-﻿component extends="org.lucee.cfml.test.LuceeTestCase" {
+﻿component extends="org.tachyon.cfml.test.TachyonTestCase" {
 
 	function beforeAll() {
 		variables.dir=getDirectoryFromPath(getCurrentTemplatePath())&"LDEV2814/";
 		if(!directoryExists(dir))directoryCreate(dir);
-		variables.StringUtil=createObject("java","lucee.commons.lang.StringUtil");
+		variables.StringUtil=createObject("java","tachyon.commons.lang.StringUtil");
 	}
 
 	function afterAll(){

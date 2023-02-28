@@ -15,7 +15,7 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
 component {
-	this.name = "lucee_context#server.lucee.version#";
+	this.name = "tachyon_context#server.tachyon.version#";
 	this.clientmanagement="no";
 	this.clientstorage="file"; 
 	this.scriptprotect="all";

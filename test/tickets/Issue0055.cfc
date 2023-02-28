@@ -1,6 +1,6 @@
 <!--- 
  *
- * Copyright (c) 2015, Lucee Association Switzerland. All rights reserved.
+ * Copyright (c) 2015, Tachyon Association Switzerland. All rights reserved.
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU Lesser General Public 
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  * 
- ---><cfcomponent extends="org.lucee.cfml.test.LuceeTestCase">
+ ---><cfcomponent extends="org.tachyon.cfml.test.TachyonTestCase">
 	<!---
 	<cffunction name="beforeTests"></cffunction>
 	<cffunction name="afterTests"></cffunction>

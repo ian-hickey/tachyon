@@ -1,4 +1,4 @@
-component extends = "org.lucee.cfml.test.LuceeTestCase" {
+component extends = "org.tachyon.cfml.test.TachyonTestCase" {
 	function run( testResults , testbox ){
         describe( "Testcase for function arraySplice", function(){
             arr = ["one","two","three","four","five","six"];

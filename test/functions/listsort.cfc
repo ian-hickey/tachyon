@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" {
 	function run() {
 		describe( title="Test suite for ListSort", body=function() {
 			it( title='Test case for ListSort function  ',body=function( currentSpec ) {

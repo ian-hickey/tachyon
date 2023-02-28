@@ -1,7 +1,7 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="http" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="http" {
 
 	function beforeAll(){
-		variables.testUrl = "https://update.lucee.org/rest/update/provider/light/5.3.10.97"; // returns a 302 to lucee cdn
+		variables.testUrl = "https://update.tachyon.org/rest/update/provider/light/5.3.10.97"; // returns a 302 to tachyon cdn
 	}
 
 	function run( testResults, testBox ) {

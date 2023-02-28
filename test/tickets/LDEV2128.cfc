@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="qoq"{
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="qoq"{
 	function run( testResults , testBox ) {
 		describe( "test case for LDEV-2128", function() {
 			it(title = "Query of Queries UNION returns incorrect results with cfqueryparam", body = function( currentSpec ) {

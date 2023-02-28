@@ -1,7 +1,7 @@
-﻿omponent extends = "org.lucee.cfml.test.LuceeTestCase" {
+﻿omponent extends = "org.tachyon.cfml.test.TachyonTestCase" {
 	function run( testResults, testBox ) {
 		describe( title = "Testcase for LDEV-2337", body = function() {
-			it( title = "Lucee does not support using Unicode currency symbols in variable names", body = function( CurrentSpec ) {
+			it( title = "Tachyon does not support using Unicode currency symbols in variable names", body = function( CurrentSpec ) {
 				VARIABLES._$ = 41.00;
 				VARIABLES._€ = 42.00;
 				VARIABLES._£ = 43.00;

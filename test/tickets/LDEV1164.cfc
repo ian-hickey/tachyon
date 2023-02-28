@@ -1,4 +1,4 @@
-<cfcomponent extends="org.lucee.cfml.test.LuceeTestCase">
+<cfcomponent extends="org.tachyon.cfml.test.TachyonTestCase">
 	<cfscript>
 		function run(){
 			describe( title="Test suite for LDEV-1164", body=function(){
@@ -12,7 +12,7 @@
 	</cfscript>
 
 	<cffunction name="httpCall" access="private" returntype="any">
-		<cfhttp url="https://lucee.org" timeout="10" method="HEAD">
+		<cfhttp url="https://tachyon.org" timeout="10" method="HEAD">
 		<cfreturn cfhttp />
 	</cffunction>
 </cfcomponent>

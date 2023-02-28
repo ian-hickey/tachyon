@@ -16,8 +16,8 @@
 
 
 <cfparam name="form.rememberMe" default="s" />
-<cfparam name="cookie.lucee_admin_lang" default="en">
-<cfset session.lucee_admin_lang = cookie.lucee_admin_lang>
+<cfparam name="cookie.tachyon_admin_lang" default="en">
+<cfset session.tachyon_admin_lang = cookie.tachyon_admin_lang>
 <cfif isDefined('url.action')>
 	<cfset self=request.self&"?action="&url.action>
 <cfelse>
@@ -44,7 +44,7 @@
 				</tr>
 				<cfset f="">
 				<cfloop collection="#languages#" item="key">
-					<cfif f EQ "" or key EQ session.lucee_admin_lang>
+					<cfif f EQ "" or key EQ session.tachyon_admin_lang>
 						<cfset f=key>
 					</cfif>
 				</cfloop>
@@ -56,7 +56,7 @@
 						<select name="lang" class="medium">
 							<cfloop from="1" to="#arrayLen(aLangKeys)#" index="iKey">
 								<cfset key = aLangKeys[iKey]>
-								<option value="#key#" <cfif key EQ session.lucee_admin_lang>selected</cfif>>#languages[key]#</option>
+								<option value="#key#" <cfif key EQ session.tachyon_admin_lang>selected</cfif>>#languages[key]#</option>
 							</cfloop>
 						</select>
 					</td>

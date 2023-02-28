@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU Lesser General Public 
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  * 
- ---><cfcomponent hint="Note" extends="lucee.admin.plugin.Plugin">
+ ---><cfcomponent hint="Note" extends="tachyon.admin.plugin.Plugin">
 	
 	<cffunction name="init"
 		hint="this function will be called to initialize">
@@ -23,7 +23,7 @@
 		
 		<!--- lang --->
 		<cfloop collection="#arguments.lang#" item="key">
-			<cfset arguments.lang[key]=replace(arguments.lang[key],'{link}','<a target="_blank" href="http://dnsexchange.ch/#session.lucee_admin_lang#/login.cfm">http://dnsexchange.ch</a>','all')>
+			<cfset arguments.lang[key]=replace(arguments.lang[key],'{link}','<a target="_blank" href="http://dnsexchange.ch/#session.tachyon_admin_lang#/login.cfm">http://dnsexchange.ch</a>','all')>
 		</cfloop>
 		
 		<!--- app --->

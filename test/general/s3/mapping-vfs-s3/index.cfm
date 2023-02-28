@@ -1,1 +1,1 @@
-<cfset echo(directoryExists("s3://lucee@/"))>
+<cfset echo(directoryExists("s3://tachyon@/"))>

@@ -17,7 +17,7 @@
 component {
 
 
-	this.name="luceedoc_#server.lucee.version#";
+	this.name="tachyondoc_#server.tachyon.version#";
 	this.clientmanagement="no";
 	this.clientstorage="file"; 
 	this.scriptprotect="all";
@@ -42,8 +42,8 @@ component {
 
 	function onRequestStart( target ) {
 
-		param name="cookie.lucee_admin_lang" default="en";
-		Session.lucee_admin_lang = cookie.lucee_admin_lang;
+		param name="cookie.tachyon_admin_lang" default="en";
+		Session.tachyon_admin_lang = cookie.tachyon_admin_lang;
 
 		param name="URL.item"   default="";
 		param name="URL.format" default="html";
@@ -54,7 +54,7 @@ component {
 			request.componentDetails.pack=getPackages();
 		}
 		catch(e) {
-			request.componentDetails.pack=["org.lucee.cfml"];
+			request.componentDetails.pack=["org.tachyon.cfml"];
 		}
 
 

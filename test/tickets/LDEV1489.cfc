@@ -1,4 +1,4 @@
-<cfcomponent extends="org.lucee.cfml.test.LuceeTestCase" labels="s3">
+<cfcomponent extends="org.tachyon.cfml.test.TachyonTestCase" labels="s3">
 	<cfscript>
 		// skip closure
 		function isNotSupported() {
@@ -16,7 +16,7 @@
 		function beforeAll() skip="isNotSupported"{
 			if(isNotSupported()) return;
 			s3Details = getCredentials();
-			bucketName = lcase("lucee-ldev1489-#hash(CreateGUID())#");
+			bucketName = lcase("tachyon-ldev1489-#hash(CreateGUID())#");
 			base = "s3://#s3Details.ACCESS_KEY_ID#:#s3Details.SECRET_KEY#@";
 			variables.baseWithBucketName = "s3://#s3Details.ACCESS_KEY_ID#:#s3Details.SECRET_KEY#@/#bucketName#";
 			// for skipping rest of the cases, if error occurred.

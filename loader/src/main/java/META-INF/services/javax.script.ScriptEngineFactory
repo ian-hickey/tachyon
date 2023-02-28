@@ -1,2 +1,2 @@
-lucee.runtime.script.LuceeScriptEngineFactory
-lucee.runtime.script.CFMLScriptEngineFactory
+tachyon.runtime.script.TachyonScriptEngineFactory
+tachyon.runtime.script.CFMLScriptEngineFactory

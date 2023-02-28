@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project default="core" basedir="." name="Lucee" xmlns:artifact="antlib:org.apache.maven.artifact.ant">
+<project default="core" basedir="." name="Tachyon" xmlns:artifact="antlib:org.apache.maven.artifact.ant">
 
   <property name="version" value="6.0.0.347-SNAPSHOT"/>
 
@@ -33,7 +33,7 @@
       <mkdir dir="${outputDir}"/>
   </target>
 
- <target name="core" depends="withTestcases,setEnv" description="build Lucee and run testcases">
+ <target name="core" depends="withTestcases,setEnv" description="build Tachyon and run testcases">
       <property name="buildLoaderJar" value="true"/>
 
       <echots message="Full Build, build .lco and .jar and run testcases"/>
@@ -44,7 +44,7 @@
       <delete dir="${outputDir}"/>
   </target>
 
-  <target name="fast" depends="setEnv" description="build only Lucee itself">
+  <target name="fast" depends="setEnv" description="build only Tachyon itself">
       <property name="target" location="target"/>
 
       <echots message="Fast Build, only build .lco and .jar"/>
@@ -57,7 +57,7 @@
   </target>
 
 
-  <target name="quick" depends="setEnv" description="build only Lucee itself, only the .lco file">
+  <target name="quick" depends="setEnv" description="build only Tachyon itself, only the .lco file">
       <echots message="Quick Build, only build .lco"/>
       <antcall target="buildLoaderFast">
         <param name="compileTestBox" value="false"/><!-- needed for cfml build archives-->

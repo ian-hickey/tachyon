@@ -280,7 +280,7 @@ Latest version: #latest.v#</cfif>"><cfif hasUpdates>
 							<cfset link="#request.self#?action=#url.action#&action2=detail&id=#versionStr[key].id#">
 							<cfset dn=getDumpNail(versionStr[key].image,130,50)>
 							<div class="extensionthumb">
-								<cfset lasProvider=(versionStr[key].provider?:"")=="local" || findNoCase("lucee.org",versionStr[key].provider) GT 0>
+								<cfset lasProvider=(versionStr[key].provider?:"")=="local" || findNoCase("tachyon.org",versionStr[key].provider) GT 0>
 								<cfif not lasProvider><cfset noneLasCounter++></cfif>
 								<a <cfif not lasProvider> style="border-color: ###(lasProvider?'9C9':'FC6')#;"</cfif> href="#link#" title="#stText.ext.viewdetails#">
 									<div class="extimg">
@@ -315,7 +315,7 @@ Latest version: #latest.v#</cfif>"><cfif hasUpdates>
 
 <cfif noneLasCounter>
 	<div class="message" style="border-color: ##FC6;color:##C93;">
-		Extensions with a yellow border are not provided by the Lucee Association Switzerland and do not neccessarily follow our guidelines. These extensions are not reviewed by the Lucee Association Switzerland.
+		Extensions with a yellow border are not provided by the Tachyon Association Switzerland and do not neccessarily follow our guidelines. These extensions are not reviewed by the Tachyon Association Switzerland.
 	</div>
 </cfif>
 </cfif>
@@ -331,7 +331,7 @@ Latest version: #latest.v#</cfif>"><cfif hasUpdates>
 	</cfif>
 	<cfif structKeyExists(url, 'addedRe')>
 		<div class="error">
-			Deployed Lucee Extension, see deploy.log for details.
+			Deployed Tachyon Extension, see deploy.log for details.
 		</div>
 	</cfif>
 	<cfformClassic onerror="customError" action="#request.self#?action=#url.action#&action2=upload" method="post" enctype="multipart/form-data">

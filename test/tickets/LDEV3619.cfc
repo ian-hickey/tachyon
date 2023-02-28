@@ -1,13 +1,13 @@
-component extends = "org.lucee.cfml.test.LuceeTestCase" skip=true{
+component extends = "org.tachyon.cfml.test.TachyonTestCase" skip=true{
     function run ( testResults , testBox ) {
         describe("Testcase for LDEV-3619", function(){
             it(title="Single space between param and name with dot notation", body=function( currentSpec ){
-                param cfml.engine = "Lucee";
-                expect(cfml.engine).toBe("Lucee");
+                param cfml.engine = "Tachyon";
+                expect(cfml.engine).toBe("Tachyon");
             });
             it(title="Multiple spaces between param and name", body=function( currentSpec ){
-                param  engine = "Lucee";
-                expect(engine).toBe("Lucee");
+                param  engine = "Tachyon";
+                expect(engine).toBe("Tachyon");
             });
             it(title="Multiple spaces between param and name with dot notation", body=function( currentSpec ){
                 try {
@@ -18,7 +18,7 @@ component extends = "org.lucee.cfml.test.LuceeTestCase" skip=true{
                 catch(any e) {
                     result.filecontent = e.message;
                 }
-                expect(trim(result.filecontent)).toBe("Lucee");
+                expect(trim(result.filecontent)).toBe("Tachyon");
             });
         });
     }

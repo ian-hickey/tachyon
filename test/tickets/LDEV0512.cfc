@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 	function run( testResults , testBox ) {
 		describe( "list to array function with numeric value", function() {
 			it("simple list to array function", function( currentSpec ){

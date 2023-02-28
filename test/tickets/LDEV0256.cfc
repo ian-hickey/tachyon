@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" {
 //LDEV0256.cfc
 	function beforeAll() {
 		variables.salt = 'A41n9t0Q';

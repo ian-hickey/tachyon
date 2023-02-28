@@ -1,6 +1,6 @@
 <!--- 
  *
- * Copyright (c) 2016, Lucee Assosication Switzerland. All rights reserved.*
+ * Copyright (c) 2016, Tachyon Assosication Switzerland. All rights reserved.*
  * Copyright (c) 2014, the Railo Company LLC. All rights reserved.
  *
  * This library is free software; you can redistribute it and/or
@@ -17,7 +17,7 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  * 
  ---><cfscript>
-component extends="org.lucee.cfml.test.LuceeTestCase"	{
+component extends="org.tachyon.cfml.test.TachyonTestCase"	{
 	
 	//public function beforeTests(){}
 	
@@ -55,11 +55,11 @@ component extends="org.lucee.cfml.test.LuceeTestCase"	{
 		}
 		assertEquals('{"value":1,"2":1,"3":[1]}',c);
 
-		var list = "I,love,lucee,";
+		var list = "I,love,tachyon,";
 		var result = listMap(list,function(element,index){
 			return element;
 		});
-		assertEquals('I,love,lucee', result);
+		assertEquals('I,love,tachyon', result);
 
 		// member function test
 		res=arr.map(function( value ){
@@ -69,11 +69,11 @@ component extends="org.lucee.cfml.test.LuceeTestCase"	{
 
 		assertEquals("false,true,false,,false",arrayToList(res));
 
-		var list2 = "I;love@lucee,";
+		var list2 = "I;love@tachyon,";
 		var result2 = list2.Map(function(element){
 			return element;
 		});
-		assertEquals('I;love@lucee,' , result2);
+		assertEquals('I;love@tachyon,' , result2);
 	}
 
 

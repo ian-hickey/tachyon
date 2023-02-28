@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="mysql" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="mysql" {
 	// skip closure
 	function isNotSupported() {
 		var mySql = getCredentials();
@@ -16,7 +16,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase" labels="mysql" {
 				var result = _InternalRequest(
 					template:"#uri#/test.cfm"
 				);
-				expect(result.filecontent.trim()).toBe('lucee');
+				expect(result.filecontent.trim()).toBe('tachyon');
 			});
 		});
 	}

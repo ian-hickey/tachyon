@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" {
 
 	public function run( testResults , testBox ) {
 		describe( title = "Testcase for lTrim()", body = function() {

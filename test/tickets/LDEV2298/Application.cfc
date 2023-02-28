@@ -1,6 +1,6 @@
 component {
 
-	this.name = "luceetest";
+	this.name = "tachyontest";
 	this.datasources["ldev2298_DSN"] = server.getDatasource("mssql");
 	this.datasource = "ldev2298_DSN";
 
@@ -23,7 +23,7 @@ component {
 			echo("CREATE TABLE ldev2298_null( id int, employee varchar(20), emp_join_date datetime)");
 		}
 		query{
-			echo("INSERT INTO ldev2298_null VALUES( 1,'lucee','1997-04-11' )");
+			echo("INSERT INTO ldev2298_null VALUES( 1,'tachyon','1997-04-11' )");
 		}
 	}	
 

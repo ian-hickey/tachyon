@@ -1,6 +1,6 @@
 /**
  * Copyright (c) 2014, the Railo Company Ltd.
- * Copyright (c) 2015, Lucee Assosication Switzerland
+ * Copyright (c) 2015, Tachyon Assosication Switzerland
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -19,7 +19,7 @@
 package com.allaire.cfx
 
 import kotlin.Throws
-import lucee.loader.util.Util
+import tachyon.loader.util.Util
 import kotlin.jvm.Synchronized
 import kotlin.jvm.Transient
 import org.osgi.framework.Version

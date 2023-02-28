@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2015, Lucee Association Switzerland. All rights reserved.
+ * Copyright (c) 2015, Tachyon Association Switzerland. All rights reserved.
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU Lesser General Public 
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="mail" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="mail" {
 
 	variables.from="susi@sorglos.de";
 	variables.to="geisse@peter.ch";
@@ -52,7 +52,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase" labels="mail" {
 	}
 
 	function teardown( currentMethod ){
-		createObject("java", "java.lang.System").clearProperty("lucee.mail.use.7bit.transfer.encoding.for.html.parts");
+		createObject("java", "java.lang.System").clearProperty("tachyon.mail.use.7bit.transfer.encoding.for.html.parts");
 	}
 
 	private function getCredentials() {
@@ -308,7 +308,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase" labels="mail" {
 
 	public function testHtmlOnlyPartShouldUse7bitEncodingWhenSystemPropertySet() localmode="true" skip="notHasServices" {
 		// fallback to the old behavior of using 7bit encoding
-		createObject("java", "java.lang.System").setProperty("lucee.mail.use.7bit.transfer.encoding.for.html.parts", "true");
+		createObject("java", "java.lang.System").setProperty("tachyon.mail.use.7bit.transfer.encoding.for.html.parts", "true");
 
 		mail type="html" to=variables.to from=variables.from subject="test mail1" spoolEnable=false {
 			echo("<p>This is a text email!</p>#chr(10)#<p>another line</p>");
@@ -324,7 +324,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase" labels="mail" {
 
 	public function testMultiMailPartShouldUse7bitEncodingForTextAnd7bitEncodingForHtmlWhenSystemPropertySet() localmode="true" skip="notHasServices" {
 		// fallback to the old behavior of using 7bit encoding
-		createObject("java", "java.lang.System").setProperty("lucee.mail.use.7bit.transfer.encoding.for.html.parts", "true");
+		createObject("java", "java.lang.System").setProperty("tachyon.mail.use.7bit.transfer.encoding.for.html.parts", "true");
 
 		mail to=variables.to from=variables.from subject="test mail1" spoolEnable=false {
 			mailpart type="text" {

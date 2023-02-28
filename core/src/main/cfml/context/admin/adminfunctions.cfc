@@ -85,14 +85,14 @@
 	</cffunction>
 
 	<cffunction name="getDataStoreName" access="private" output="no" returntype="string">
-		<cfreturn "#request.admintype#-#getLuceeId()[request.admintype].id#" />
+		<cfreturn "#request.admintype#-#getTachyonId()[request.admintype].id#" />
 	</cffunction>
 
 	<cffunction name="getDataFilePath" access="private" output="no" returntype="string">
 		<cfif request.admintype eq "server">
-			<cfset local.datadir = expandPath("{lucee-server}/userdata") & server.separator.file />
+			<cfset local.datadir = expandPath("{tachyon-server}/userdata") & server.separator.file />
 		<cfelse>
-			<cfset local.datadir = expandPath("{lucee-web}/admin/userdata") & server.separator.file />
+			<cfset local.datadir = expandPath("{tachyon-web}/admin/userdata") & server.separator.file />
 		</cfif>
 		<cfif not directoryExists(datadir)>
 			<cfdirectory action="create" directory="#datadir#" />

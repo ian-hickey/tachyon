@@ -1,4 +1,4 @@
-<cfcomponent extends="org.lucee.cfml.test.LuceeTestCase" labels="s3">
+<cfcomponent extends="org.tachyon.cfml.test.TachyonTestCase" labels="s3">
 	<cfscript>
 		// skip closure
 		function isNotSupported() {
@@ -8,7 +8,7 @@
 
 		function beforeAll() skip="isNotSupported"{
 			if ( isNotSupported() ) return;
-			variables.bucketName = lcase("lucee-ldev1129-#CreateGUID()#");
+			variables.bucketName = lcase("tachyon-ldev1129-#CreateGUID()#");
 			variables.testFolder = createURI( variables.bucketName );
 
 			if (not directoryExists(testFolder) ){

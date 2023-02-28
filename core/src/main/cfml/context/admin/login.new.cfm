@@ -1,5 +1,5 @@
-<cfparam name="cookie.lucee_admin_lang" default="en">
-<cfset session.lucee_admin_lang = cookie.lucee_admin_lang>
+<cfparam name="cookie.tachyon_admin_lang" default="en">
+<cfset session.tachyon_admin_lang = cookie.tachyon_admin_lang>
 <cfparam name="languages" default="#{en:'English',de:'Deutsch'}#">
 <cfscript>
 try{
@@ -7,7 +7,7 @@ try{
 }
 // in case direct java  access is disabled
 catch(e) {
-	path="/lucee-server/context/";
+	path="/tachyon-server/context/";
 }
 </cfscript>
 
@@ -18,8 +18,8 @@ catch(e) {
 	<cfif request.adminType == "server">
 		You will need to configure a password before you can access the Server Administrator.
 		<ul>
-		<li>create a file with name <b>password.txt</b> containing your new password under the root Lucee server directory ( /lucee-server/context/password.txt ).</li>
-		<li>click "import file", Lucee will then read and configure your new password, afterwards Lucee will automatically delete that file</ul>
+		<li>create a file with name <b>password.txt</b> containing your new password under the root Tachyon server directory ( /tachyon-server/context/password.txt ).</li>
+		<li>click "import file", Tachyon will then read and configure your new password, afterwards Tachyon will automatically delete that file</ul>
 
 		
 	<cfelse>
@@ -52,7 +52,7 @@ catch(e) {
 				</tr>
 				<cfset f = "">
 				<cfloop collection="#languages#" item="key">
-					<cfif f == "" || (key == session.lucee_admin_lang)>
+					<cfif f == "" || (key == session.tachyon_admin_lang)>
 						<cfset f = key>
 					</cfif>
 				</cfloop>
@@ -61,7 +61,7 @@ catch(e) {
 					<td>
 						<select name="lang" class="xlarge">
 							<cfloop collection="#languages#" item="key">
-								<option value="#key#" <cfif (key == session.lucee_admin_lang)>selected</cfif>>#languages[key]#</option>
+								<option value="#key#" <cfif (key == session.tachyon_admin_lang)>selected</cfif>>#languages[key]#</option>
 							</cfloop>
 						</select>
 					</td>

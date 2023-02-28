@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="logging" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="logging" {
 	function run( testResults , testBox ) {
 		describe(title="Testcase for LDEV-4128", body=function() {
 			it(title="checking cflog async is faster than non-async",skip=true, body=function( currentSpec ) {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project default="core" basedir="." name="Lucee" xmlns:artifact="antlib:org.apache.maven.artifact.ant">
+<project default="core" basedir="." name="Tachyon" xmlns:artifact="antlib:org.apache.maven.artifact.ant">
 
   <path id="maven-ant-tasks.classpath" path="ant/lib/maven-ant-tasks-2.1.3.jar" />
   <typedef resource="org/apache/maven/artifact/ant/antlib.xml"
@@ -22,6 +22,6 @@
       <property name="baseDir" location="."/>
   </target>
 
-	  <target name="core,build" depends="setEnv" description="build only Lucee itself"> </target>
+	  <target name="core,build" depends="setEnv" description="build only Tachyon itself"> </target>
 	   
 </project>

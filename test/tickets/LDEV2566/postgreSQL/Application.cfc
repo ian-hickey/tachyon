@@ -1,6 +1,6 @@
 component {
 
-	this.name = "luceeTestPostgreSQL";
+	this.name = "tachyonTestPostgreSQL";
 	this.datasources["ldev2566_POSTGRESQL"] = server.getDatasource("postgres");
 	this.datasource = "ldev2566_POSTGRESQL";
 

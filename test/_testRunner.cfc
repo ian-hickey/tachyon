@@ -39,7 +39,7 @@ component {
 	}
 	
 	public struct function runTests() localmode=true {
-		SystemOut = createObject( "java", "lucee.commons.lang.SystemOut" );
+		SystemOut = createObject( "java", "tachyon.commons.lang.SystemOut" );
 		out = SystemOut.setOut( nullValue() );
 		//err=SystemOut.setErr(nullValue());
 		TAB = chr( 9 );
@@ -231,7 +231,7 @@ component {
 			}
 			//systemOutput(serializeJson(bundle.suiteStats));
 		}
-		// report out any slow test specs, because for Lucee, slow performance is a bug (tm)
+		// report out any slow test specs, because for Tachyon, slow performance is a bug (tm)
 		if ( !isNull( bundle.suiteStats ) ) {
 			loop array=bundle.suiteStats item="local.suiteStat" {
 				if ( !isNull( suiteStat.specStats ) ) {

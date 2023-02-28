@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" {
 	function run( testResults , testBox ){
 		describe( title = "Testcase for LDEV-2353", body = function(){
 			it( title = "IsNumeric(...) Not working for negative exponent notation numbers as string", body = function( currentSpec ){

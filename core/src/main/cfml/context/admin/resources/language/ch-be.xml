@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <language key="ch-be" label="Bärndütsch">
-	<data key="services.update.locdesc">Hie chasch d'Url definiere wo mä äs Lucee Update cha bezieh, normalerwis gset das öpe su us &apos;https://www.lucee.org&apos;</data>
+	<data key="services.update.locdesc">Hie chasch d'Url definiere wo mä äs Tachyon Update cha bezieh, normalerwis gset das öpe su us &apos;https://www.tachyon.org&apos;</data>
 	<data key="services.update.type_manually">Manueu</data>
 	<data key="services.update.location">URL</data>
 	<data key="services.update.settitle">Istellige</data>
@@ -16,13 +16,13 @@
 	<data key="services.update.jira">Für Details bsuchet üsäs {a}Bug Tracking System{/a}</data>
 	<data key="services.update.removedesc">Entfernet aui nach der Grundinstallation nachträgläch igspiltä Patches</data>
 	<data key="services.update.noupdate">Für oichi Version {current} gits im momänt ke Patch</data>
-	<data key="services.update.restart">Lucee nöi startä</data>
-	<data key="services.update.desc">Dir chöit hi Lucee updatä, somit bekanti Fähler flickä und optimirigä ispilä.</data>
+	<data key="services.update.restart">Tachyon nöi startä</data>
+	<data key="services.update.desc">Dir chöit hi Tachyon updatä, somit bekanti Fähler flickä und optimirigä ispilä.</data>
 	<data key="services.update.removelatest">Letschti Patch {version} entfernä</data>
-	<data key="services.update.setdesc">Definired hi wiä u wo Lucee Versionä beziäht. </data>
+	<data key="services.update.setdesc">Definired hi wiä u wo Tachyon Versionä beziäht. </data>
 	<data key="services.update.exerun">Update usführa</data>
 	<data key="services.update.remove">Installirti Patchä entfernä</data>
-	<data key="services.update.typedesc">Hiä chöit dr definirä wie Lucee patcht wird, &apos;Automatisch&apos; oder manuell &apos;Manuell&apos;.</data>
+	<data key="services.update.typedesc">Hiä chöit dr definirä wie Tachyon patcht wird, &apos;Automatisch&apos; oder manuell &apos;Manuell&apos;.</data>
 	<data key="mappings.archivesecuredesc">Source Dateiä us äm Archiv usschlissä. D'Source Dateiä wärde nume für Code Print usgabe (Fählermäudige) brucht.</data>
 	<data key="mappings.topleveldesc">Macht das Mapping zuägriffbar übers Web (Zuägriffbar übär Browser oder anderi HTTP Zugriffä)</data>
 	<data key="mappings.archiveheaddescription">Name vo där Archivdatei (ra oder ras)  (Absolut oder relativ zum Webroot).</data>
@@ -31,8 +31,8 @@
 	<data key="mappings.physical">Ressourcä</data>
 	<data key="mappings.archivetitle">Archiv ersteuä</data>
 	<data key="mappings.compilestoponerrordesc">Leit fescht, öb bimä nä Fähler die witäri Kompilirig gstoppt wirt</data>
-	<data key="mappings.editdesc">Hi cha ma die einzelnä Mappings bearbeitä oder us äm ä bestehendä Mapping äs Lucee Archiv ersteuä.</data>
-	<data key="mappings.archivedesc">Erstehät hi äs Lucee Archiv (ra/ras) us ä mä Mapping</data>
+	<data key="mappings.editdesc">Hi cha ma die einzelnä Mappings bearbeitä oder us äm ä bestehendä Mapping äs Tachyon Archiv ersteuä.</data>
+	<data key="mappings.archivedesc">Erstehät hi äs Tachyon Archiv (ra/ras) us ä mä Mapping</data>
 	<data key="mappings.physicalhead">Ressourcä</data>
 	<data key="mappings.archivesecure">Sichär</data>
 	<data key="mappings.compiledesc">Kompillirät hi aui cfc u cfm Files im ä nä Mapping</data>
@@ -46,8 +46,8 @@
 	<data key="mappings.compilestoponerror">Bim ä nä Fähler stoppä</data>
 	<data key="mappings.archivemissing">Bitte gäbet ä Wärt für a Archivname a</data>
 	<data key="mappings.trustedhead">Trusted</data>
-	<data key="mappings.introtext">Bitte beachtät das numä Templates wo dür Lucee verarbetät wärde das Mappings kenne (cfm, cfml, cfc). 
-	Wenn dr o nit Lucee Dateiä weit la verarbetä müsst är virtueui Mappings uf äm Applikationsserver ersteuä.</data>
+	<data key="mappings.introtext">Bitte beachtät das numä Templates wo dür Tachyon verarbetät wärde das Mappings kenne (cfm, cfml, cfc).
+	Wenn dr o nit Tachyon Dateiä weit la verarbetä müsst är virtueui Mappings uf äm Applikationsserver ersteuä.</data>
 	<data key="mappings.physicalheaddescription">Pfad zur g'mäppete Ressource (Absolut oder relativ zum Webroot).</data>
 	<data key="customtags.physical">Ressourcä</data>
 	<data key="customtags.archive">Archiv</data>
@@ -65,13 +65,13 @@
 	<data key="customtags.mode.standard">CFML standard</data>
 	<data key="customtags.mode.mixed">Mixed</data>
 	<data key="customtags.mode.modern">Modern</data>
-	<data key="customtags.mode.classic">Classic (Lucee 1.0 - 3.0)</data>
+	<data key="customtags.mode.classic">Classic (Tachyon 1.0 - 3.0)</data>
 	<data key="customtags.mode.custom">Custom</data>
 	<data key="customtags.customtaglocalsearch">Lokales Verzeichnis einbeziehen</data>
 	<data key="customtags.physicalmissing">Bitte geben Sie einen Wert für die Ressource an. (Zeile </data>
 	<data key="customtags.customtagmappings">Resourcen</data>
 	<data key="customtags.extensions">Extensions</data>
-	<data key="customtags.customtagmappingsdesc">Verzeichnisse, welche Lucee nach Custom tags überprüft.</data>
+	<data key="customtags.customtagmappingsdesc">Verzeichnisse, welche Tachyon nach Custom tags überprüft.</data>
 	<data key="customtags.customtagsetting">Einstellungen</data>
 	<data key="customtags.extensionsdesc">Dies sind die Extensions welche für Customtags verwendet werden und die Rheinefolge in welcher sie gesucht werden.</data>
 	<data key="menu.server.label">ISteuigä</data>
@@ -137,10 +137,10 @@
 	<data key="security.speclistnewtitle">Neuen Web Kontext erstellen</data>
 	<data key="security.accesswritedesc">definiert den Schreibzugriff</data>
 	<data key="security.tagimport">Tag CFImport</data>
-	<data key="security.cfmlenvironmentdescription">Einstellungen die festlegen wie Lucee Code mit dem Hostsystem interagiert.</data>
+	<data key="security.cfmlenvironmentdescription">Einstellungen die festlegen wie Tachyon Code mit dem Hostsystem interagiert.</data>
 	<data key="security.functions">Tags &amp; Funktionen</data>
 	<data key="security.functionsdescription">Tags and Funktionen, die ein potentielles Sicherheitsrisiko für das Hostsystem darstellen.</data>
-	<data key="security.filedescription">Legt fest, wie Lucee mit dem lokalen Dateisystem in einer Instanz interagieren kann.&lt;br&gt;- none: erlaubt keinen Zugriff auf das lokale Dateisystem&lt;br&gt;- local: erlaubt nur Dateizugriffe innerhalb des Webrootverzeichnisses&lt;br&gt;- all: erlaubt vollen Dateizugriff auf das Hostsystem.&lt;br&gt;</data>
+	<data key="security.filedescription">Legt fest, wie Tachyon mit dem lokalen Dateisystem in einer Instanz interagieren kann.&lt;br&gt;- none: erlaubt keinen Zugriff auf das lokale Dateisystem&lt;br&gt;- local: erlaubt nur Dateizugriffe innerhalb des Webrootverzeichnisses&lt;br&gt;- all: erlaubt vollen Dateizugriff auf das Hostsystem.&lt;br&gt;</data>
 	<data key="security.cfmlenvironment">CFML Umgebung</data>
 	<data key="security.file">Dateizugriff</data>
 	<data key="security.settingsdescription">Die Einstellungen Region, Komponenten und Scope können im &apos;Web Administrator&apos; geändert werden.</data>
@@ -149,7 +149,7 @@
 	<data key="security.maildescription">Die Maileinstellungen  können im &apos;Web Administrator&apos; geändert werden.</data>
 	<data key="security.tagobjectdescription">Mit dem Tag CFObject und der Funktion createObject können Java Objekte geladen werden. Wenn Sie diese Option ausschalten, können Sie nur noch Objekte des Typs &apos;component&apos; erstellen.</data>
 	<data key="security.mapping">Mappings</data>
-	<data key="security.remotedescription">Es wird erlaubt das der User seine Einstellungen mit einem anderen lucee synchronisiern kann</data>
+	<data key="security.remotedescription">Es wird erlaubt das der User seine Einstellungen mit einem anderen tachyon synchronisiern kann</data>
 	<data key="security.accessread">Lesezugriff</data>
 	<data key="security.tagregistry">Tag CFRegistry</data>
 	<data key="security.speclisttitle">Spzifische Web Kontexte</data>
@@ -167,12 +167,12 @@
 	<data key="security.accesswrite">Schreibzugriff</data>
 	<data key="security.datasourcedescription">Definiert wieviele Datenquellen im &apos;Web Administrator&apos; hinzugefügt, gelöscht und geändert werden können.</data>
 	<data key="security.specialdesc">Definieren Sie hier Sicherheitseinstellungen für einzelne Web Kontexte (webapps).</data>
-	<data key="security.javaaccessdescription">Erlaubt den Zugriff auf Java Methoden und Eigenschaften aus Lucee Code (Beispiel: stringValue.substring(2,5)). Wenn Sie direkten Java Zugrif zulassen, kann dies ein potentielles Sicherheitsrisiko darstellen.</data>
+	<data key="security.javaaccessdescription">Erlaubt den Zugriff auf Java Methoden und Eigenschaften aus Tachyon Code (Beispiel: stringValue.substring(2,5)). Wenn Sie direkten Java Zugrif zulassen, kann dies ein potentielles Sicherheitsrisiko darstellen.</data>
 	<data key="security.mappingdescription">Mappings können &apos;Web Administrator&apos; hinzugefügt, gelöscht und geändert werden.</data>
 	<data key="security.filelocal">local</data>
 	<data key="security.tabgeneral">Allgemein</data>
 	<data key="security.scheduledtask">Scheduled Task</data>
-	<data key="security.tagimportdescription">Dieser Tag kann verwendet werden um JSP und Lucee Tag Bibliotheken zu importieren.</data>
+	<data key="security.tagimportdescription">Dieser Tag kann verwendet werden um JSP und Tachyon Tag Bibliotheken zu importieren.</data>
 	<data key="security.datasource">Datasource</data>
 	<data key="security.speclisttext">Web Kontexte für die es bereits einen spezifische Einstellung gibt. Sie können diese Kontexte anpassen oder löschen.</data>
 	<data key="security.webadministrator">Web Administrator</data>
@@ -249,11 +249,11 @@
 	<data key="remote.passwordmissing">Das Administrator Passwort für den Remote Client fehlt</data>
 	<data key="remote.securitykey">Sicherheitsschlüssel</data>
 	<data key="remote.serverusernamedesc">Http Access Auhtentication Username</data>
-	<data key="remote.adminpassworddesc.web">Passwort für den Zugriff auf den Remote Lucee Web Administrator</data>
-	<data key="remote.adminpassworddesc.server">Passwort für den Zugriff auf den Remote Lucee Server Administrator</data>
+	<data key="remote.adminpassworddesc.web">Passwort für den Zugriff auf den Remote Tachyon Web Administrator</data>
+	<data key="remote.adminpassworddesc.server">Passwort für den Zugriff auf den Remote Tachyon Server Administrator</data>
 	<data key="remote.urlpath">Pfad</data>
 	<data key="remote.urlmissing">Die Remote Client URL fehlt</data>
-	<data key="remote.urlserverdesc">Remote Client Server (Beispiel: https://lucee.org)</data>
+	<data key="remote.urlserverdesc">Remote Client Server (Beispiel: https://tachyon.org)</data>
 	<data key="remote.proxyport">Port</data>
 	<data key="remote.labelmissing">Die Bezeichnung für den Remote Client fehlt</data>
 	<data key="remote.proxypassword">Passwort</data>
@@ -298,7 +298,7 @@
 	<data key="remote.detail.update">Remote Client updaten</data>
 	<data key="remote.securitykeytitledesc">Falls dieser Web Administrator von einem anderen Server aus synchronisiert werden soll, müssen sie den unten angegebenen Schlüssel bei der Definition der Remote Client Verbindung angeben.</data>
 	<data key="remote.securitykeydesc">Geben Sie hier den Schlüssel des Remote Clients an. Sie finden ihn unter Remote-Scherheitsschlüssel im Administrator des Remote Clients</data>
-	<data key="remote.urlpathdesc">Pfad zur Admin.cfc (Beispiel: /lucee/admin.cfc?wsdl)</data>
+	<data key="remote.urlpathdesc">Pfad zur Admin.cfc (Beispiel: /tachyon/admin.cfc?wsdl)</data>
 	<data key="application.web">Hier können Sie verschiedene Standardeinstellungen für den Applikations Kontext erfassen. Diese Einstellungen können von dem Tag CFApplication oder der Application.cfc übersteuert werden.</data>
 	<data key="application.scriptprotectcustom">Definieren Sie individuell welche Scopes geprüft werden sollen und welche nicht</data>
 	<data key="application.listener">Application Listener</data>
@@ -310,15 +310,15 @@
 	<data key="application.requesttimeout">Request Timeout</data>
 	<data key="application.listenertypedescription_none">Bei einem Request wird ausschliesslich die entsprechende Datei aufgerufen</data>
 	<data key="application.scriptprotectnone">Script-Protect ist nicht aktiv</data>
-	<data key="application.listenertypedescription_modern">Modernes Handling. Lucee sucht nur nach der Datei &apos;Application.cfc&apos;</data>
+	<data key="application.listenertypedescription_modern">Modernes Handling. Tachyon sucht nur nach der Datei &apos;Application.cfc&apos;</data>
 	<data key="application.listenerdescription">Legt fest, wie Request verarbeitet und welche Templates einbezogen werden sollen.</data>
 	<data key="application.listenertype_none">Kein</data>
 	<data key="application.listenermode">Mode</data>
 	<data key="application.listenermode_root">Root (Wurzelverzeichnis)</data>
-	<data key="application.requesttimeoutdescription">Legt die Zeit fest, wie lange Lucee auf die Beendigung eines Requests warten soll. Das heisst, dass die Ausführung des Requests beim Überschreiten dieser Zeit abgebrochen wird. Diese Verhaltensweise kann von dem Tag CFSetting übersteuert werden.</data>
+	<data key="application.requesttimeoutdescription">Legt die Zeit fest, wie lange Tachyon auf die Beendigung eines Requests warten soll. Das heisst, dass die Ausführung des Requests beim Überschreiten dieser Zeit abgebrochen wird. Diese Verhaltensweise kann von dem Tag CFSetting übersteuert werden.</data>
 	<data key="application.server">Definert Applikationseinstellungen, die als Standardwert für alle Webs gelten.</data>
 	<data key="application.scriptprotectdescription">Durch die Konfiguration von Script-Protect schützen Sie ihr System vor &apos;Cross-Site Scripting&apos;</data>
-	<data key="application.listenertypedescription_mixed">Gemischtes Handling. Lucee sucht sowohl nach der Datei &apos;Application.cfm/onRequestEnd.cfm&apos; wie auch nach der Datei &apos;Application.cfc&apos;</data>
+	<data key="application.listenertypedescription_mixed">Gemischtes Handling. Tachyon sucht sowohl nach der Datei &apos;Application.cfm/onRequestEnd.cfm&apos; wie auch nach der Datei &apos;Application.cfc&apos;</data>
 	<data key="application.scriptprotectall">Script-Protect überprüft alle Scopes ob die Daten von ausserhalb kommen (cgi, cookie, form, url)</data>
 	<data key="application.scriptprotect">Script-Protect</data>
 	<data key="application.listenermode_curr">Aktuell</data>
@@ -329,7 +329,7 @@
 	<data key="application.listenertype_mixed">Gemischt (CFML &gt;= 7)</data>
 	<data key="application.listenertype_classic">Klassisch (CFML &lt; 7)</data>
 	<data key="application.listenermodedescription_curr">Sucht nur im aktuellen Verzeichnis nach der Datei &apos;Application.cfc/Application.cfm&apos;.</data>
-	<data key="application.listenertypedescription_classic">Klassisches Handling. Lucee sucht nur nach der Datei &apos;Application.cfm&apos; und der entsprechenden Datei &apos;onRequestEnd.cfm&apos;</data>
+	<data key="application.listenertypedescription_classic">Klassisches Handling. Tachyon sucht nur nach der Datei &apos;Application.cfm&apos; und der entsprechenden Datei &apos;onRequestEnd.cfm&apos;</data>
 	<data key="application.allowurlrequesttimeout">Request timeout via URL</data>
 	<data key="mail.passwordmissing">Bitte geben Sie einen Wert für das entsprechende Passwort an. (Zeile </data>
 	<data key="mail.level">Log Level</data>
@@ -349,7 +349,7 @@
 	<data key="mail.server">Server (SMTP)</data>
 	<data key="mail.porterrorlast">) vom Typ Nummer an.</data>
 	<data key="mail.spoolenabled">Spooler an</data>
-	<data key="mail.mailserversdescription">Sie können mehrere Mailsserver definieren. Wenn Sie eine Mail absenden, versucht Lucee die Mail der Reihe nach über einen der angegebenen Mailserver zu versenden.</data>
+	<data key="mail.mailserversdescription">Sie können mehrere Mailsserver definieren. Wenn Sie eine Mail absenden, versucht Tachyon die Mail der Reihe nach über einen der angegebenen Mailserver zu versenden.</data>
 	<data key="mail.settings">Mail Einstellungen</data>
 	<data key="mail.usernamemissing">Bitte geben Sie einen Wert für den Benutzernamen an. (Zeile </data>
 	<data key="general.yes">Ja</data>
@@ -386,7 +386,7 @@
 	<data key="search.language">Sprache</data>
 	<data key="search.createcol">Collection erstellen</data>
 	<data key="search.noresult">Kein Resultat für Ihre Anfrage</data>
-	<data key="search.description">Hier können Sie Search Collections verwalten, erstellen, indexieren und löschen. Standardmässig verwendet Lucee LUCENE als Suchengine.</data>
+	<data key="search.description">Hier können Sie Search Collections verwalten, erstellen, indexieren und löschen. Standardmässig verwendet Tachyon LUCENE als Suchengine.</data>
 	<data key="search.missing_name">Bitte geben Sie einen Wert für den Namen der Collection an.</data>
 	<data key="search.indexsubdirs">Unterverzeichnisse einschliessen</data>
 	<data key="search.fileextensionsmissing">Bitte geben Sie einen Wert für Erweiterungen die indexiert werden sollen an.</data>
@@ -399,7 +399,7 @@
 	<data key="components.basecomponent">Basis/Root Komponente</data>
 	<data key="components.componentdumptemplatemissing">Bitte geben Sie einen Eintrag für das &apos;dump&apos; Template an.</data>
 	<data key="components.componentpathcachedesc">Kompenten Pfade werden gecached und nicht wieder geprüft</data>
-	<data key="components.web">Definiert wie Komopenten von Lucee verarbeitet werden.</data>
+	<data key="components.web">Definiert wie Komopenten von Tachyon verarbeitet werden.</data>
 	<data key="components.datamemberaccesstype">Zugriffsbeschränkung für Daten Mitglieder einer CFC</data>
 	<data key="components.componentpathcache">Cache</data>
 	<data key="components.dmatremote">remote</data>
@@ -412,18 +412,18 @@
 	<data key="components.archivemissing">Bitte geben Sie einen Wert für den Archivnamen an. (Zeile </data>
 	<data key="components.datamemberaccesstypedescription">Definiert wie die Variablen des &apos;this&apos; Scopes (Data Members) ausserhalb einer CFC angesprochen werden können. Eine strenge Objektorientierung würde verlangen, dass ein solcher Zugriff von Aussen gar nicht erst möglich wäre (access=private).</data>
 	<data key="components.autoimportdescription">Die folgende package Definition wird für jedes Template automatisch geladen.</data>
-	<data key="components.componentmappingsdesc">Zusätzliche Verzeichnisse, welche Lucee nach Komponenten überprüft.</data>
+	<data key="components.componentmappingsdesc">Zusätzliche Verzeichnisse, welche Tachyon nach Komponenten überprüft.</data>
 	<data key="components.componentmappingsearch">Mappings einbeziehen</data>
 	<data key="components.useshadowdescription">Definiert, ob eine Komponente einen eigenständigen &quot;Variables&quot; Scope parallel zum &quot;this&quot; Scope hat (CFML Standard) oder nicht. Wenn nicht, dann werden alle nicht spezifizierten Variablen in den &quot;this&quot; scope geschrieben.</data>
 	<data key="components.server">Definert Komponenteneinstellungen, die als Standartwert für alle Webs gelten.</data>
 	<data key="components.useshadow">Allow Variable Scope</data>
 	<data key="components.autoimportmissing">Bitte geben Sie einen Wert für Auto Import ein.</data>
-	<data key="components.triggerdatamemberdescription">Wenn eine Eigenschaft einer Komponente fehlt (oder geschützt ist), prüft Lucee weiter ob ein passender &quot;getter&quot; oder &quot;setter&quot; verfügbar ist.
+	<data key="components.triggerdatamemberdescription">Wenn eine Eigenschaft einer Komponente fehlt (oder geschützt ist), prüft Tachyon weiter ob ein passender &quot;getter&quot; oder &quot;setter&quot; verfügbar ist.
     Beispiel: &quot;myComponent.properyName&quot;, wenn die Komponente &apos;myComponent&apos; keine zugreifbare Eigenschaft mit dem Namen &apos;propertyName&apos; hat,
-    sucht Lucee nach einer entsprechenden CFC-Funktion (Methode) mit dem Namen &quot;getPropertyName&quot;. Für Schreiboperationen auf eine solche Eigenschaft wird nach einer Methode &quot;setPropertyName&quot; in der Komponente gesucht.</data>
+    sucht Tachyon nach einer entsprechenden CFC-Funktion (Methode) mit dem Namen &quot;getPropertyName&quot;. Für Schreiboperationen auf eine solche Eigenschaft wird nach einer Methode &quot;setPropertyName&quot; in der Komponente gesucht.</data>
 	<data key="components.physical">Ressource</data>
 	<data key="components.trusted">Trusted</data>
-	<data key="components.componentdumptemplatedescription">Wenn Sie ein Komponente direkt über den Browser aufrufen, wird dieses Template für die Darstellung verwendet. (Beispiel: https://www.lucee.org/ch/lucee/common/Example.cfc)</data>
+	<data key="components.componentdumptemplatedescription">Wenn Sie ein Komponente direkt über den Browser aufrufen, wird dieses Template für die Darstellung verwendet. (Beispiel: https://www.tachyon.org/ch/tachyon/common/Example.cfc)</data>
 	<data key="components.basecomponentmissing">Bitte geben Sie einen Wert für die Basis/Root Komponente ein.</data>
 	<data key="components.component">Komponente</data>
 	<data key="components.componentmappingsearchdesc">Die Komponente wird auch innerhalb der Mappings gesucht, damit wird auch das implizite Mapping &quot;/&quot; einbezogen, welches aufs webroot zeigt</data>
@@ -487,7 +487,7 @@
 	<data key="searchlng.turkish">Türkisch</data>
 	<data key="debug.logmemoryusage">Memoryverbrauch loggen.</data>
 	<data key="debug.memoryloggerdescripiton">Datei in welchem der Memoryverbrauch geloggt wird</data>
-	<data key="debug.enabledescription">Falls eingeschaltet, erstellt Lucee eine Debuggingausgabe für den aktuellen Request</data>
+	<data key="debug.enabledescription">Falls eingeschaltet, erstellt Tachyon eine Debuggingausgabe für den aktuellen Request</data>
 	<data key="debug.debugtemplatemissing">Bitte geben Sie einen Wert für das Debugging Template an.</data>
 	<data key="debug.debugtemplatedescription">Dieses Template wird für die Ausgabe der Debuginformationen</data>
 	<data key="debug.logmemoryusagedescription">Definiert ob der Memoryverbrauch des Systems geloggt werden soll oder nicht</data>
@@ -498,7 +498,7 @@
 	<data key="setting.templatecache">Template Cache</data>
 	<data key="setting.templatecacheclear">Template Cache leeren</data>
 	<data key="setting.querycache">Query Cache</data>
-	<data key="setting.web">Kontrolle der Ausgabe von Lucee</data>
+	<data key="setting.web">Kontrolle der Ausgabe von Tachyon</data>
 	<data key="setting.templatecachecleardesc">Drücken Sie den Button oberhalb um den Template Cache zu leeren.</data>
 	<data key="setting.inspecttemplate">Templates inspizieren (CFM/CFC)</data>
 	<data key="setting.componentcachecleardesc">Drücken Sie den Button oberhalb um den Komponentenpfad Cache zu leeren.</data>
@@ -507,12 +507,12 @@
 	<data key="setting.querycacheclear">Query Cache leeren</data>
 	<data key="setting.inspecttemplatealways">Immer ( Schlecht )</data>
 	<data key="setting.cachedesc">Verschiedene Cache and Performance Einstellungen um die Ausführung zu verbessern.</data>
-	<data key="setting.showversiondescription">Lucee Version im Response Header zurückgeben</data>
+	<data key="setting.showversiondescription">Tachyon Version im Response Header zurückgeben</data>
 	<data key="setting.componentcache">Komponentenpfad Cache</data>
 	<data key="setting.ctcache">Custom Tag Pfad Cache</data>
 	<data key="setting.inspecttemplatenever">Nie ( Beste Performance )</data>
-	<data key="setting.showversion">Lucee Version ausgeben</data>
-	<data key="setting.server">Kontrolle der Ausgabe von Lucee</data>
+	<data key="setting.showversion">Tachyon Version ausgeben</data>
+	<data key="setting.server">Kontrolle der Ausgabe von Tachyon</data>
 	<data key="setting.inspecttemplatealwaysdesc">
 When checked, any requested files found to currently reside in the template cache will always be inspected for potential updates. For sites where templates are updated during the life of the server or within request.
 </data>
@@ -529,18 +529,18 @@ When checked, any requested files will be inspected only once for potential upda
 	<data key="setting.templatecacheclearcount">Template Cache leeren ( {count} Element(e) )</data>
 	<data key="setting.componentcacheclear">Komponentenpfad Cache leeren ( {count} Element(e) )</data>
 	<data key="setting.ctcacheclear">Customtag Pfad Cache leeren ( {count} Element(e) )</data>
-	<data key="scopes.sessiontimeoutdescription">Legt die Zeit fest, wie lange Lucee für inaktive Sessions den Session-Scope erhält. Diese Verhaltensweise kann von dem Tag CFApplication übersteuert werden.</data>
+	<data key="scopes.sessiontimeoutdescription">Legt die Zeit fest, wie lange Tachyon für inaktive Sessions den Session-Scope erhält. Diese Verhaltensweise kann von dem Tag CFApplication übersteuert werden.</data>
 	<data key="scopes.sessiontype_cfml">CFML</data>
 	<data key="scopes.clientcookies">Client Cookies</data>
 	<data key="scopes.timeoutendvalue">den Timeout muss ein ganzzahlige Wert sein.</data>
-	<data key="scopes.mergeurlformdescription">Mit dieser Einstellung kann festgelegt werden, ob Lucee den Url und Form Scope zu einem einzigen Scope zusammenfasst oder nicht. Beim CFML Standard findet diese Zusammenfassung nicht statt.</data>
+	<data key="scopes.mergeurlformdescription">Mit dieser Einstellung kann festgelegt werden, ob Tachyon den Url und Form Scope zu einem einzigen Scope zusammenfasst oder nicht. Beim CFML Standard findet diese Zusammenfassung nicht statt.</data>
 	<data key="scopes.timeoutminutesvalue">Der Wert Minuten für </data>
 	<data key="scopes.applicationtimeoutdescription">Legt fest wielange Client Scope Daten behalten werden bevor sie gelöscht werden.</data>
 	<data key="scopes.clienttimeout">Client Timeout</data>
-	<data key="scopes.cascadetoresultsetdescription">Wenn eine Variable keinen vorangestellten Scope hat (Beispiel: #myVar# anstelle von #variables.myVar#), kann Lucee (nach dem CFML Standard) auch verfügbare Query-Resultsets durchsuchen.</data>
-	<data key="scopes.cascadingdescription">Abhängig von dieser Einstellung durchsucht Lucee gewisse Scopes, um eine im CFML-Code aufgerufene Variable zu finden. Dieses passiert jedoch nur, wenn die Variable ohne vorangestellten Scope aufgerufen wird. (Beispiel: #myVar# anstelle von #variables.myVar#)&lt;br&gt;- strict: durchsucht nur den Variables Scope&lt;br&gt;- small:	durchsucht die Scopes: Variables, Cgi, Url und Form&lt;br&gt;- standard (CFML Standard):	durchsucht die Scopes: Variables, Cgi, Url, Form und Cookie</data>
-	<data key="scopes.sessiontypedescription">J2EE Sessions erlauben es Lucee Sessions über einen J2EE Server-Cluster zu verteilen. Wenn Sie diese Einstellung ändern verlieren Sie die aktuelle Session und müssen sich erneut einloggen.</data>
-	<data key="scopes.web">Hier können Sie festlegen, wie Lucee Scopes abarbeitet.</data>
+	<data key="scopes.cascadetoresultsetdescription">Wenn eine Variable keinen vorangestellten Scope hat (Beispiel: #myVar# anstelle von #variables.myVar#), kann Tachyon (nach dem CFML Standard) auch verfügbare Query-Resultsets durchsuchen.</data>
+	<data key="scopes.cascadingdescription">Abhängig von dieser Einstellung durchsucht Tachyon gewisse Scopes, um eine im CFML-Code aufgerufene Variable zu finden. Dieses passiert jedoch nur, wenn die Variable ohne vorangestellten Scope aufgerufen wird. (Beispiel: #myVar# anstelle von #variables.myVar#)&lt;br&gt;- strict: durchsucht nur den Variables Scope&lt;br&gt;- small:	durchsucht die Scopes: Variables, Cgi, Url und Form&lt;br&gt;- standard (CFML Standard):	durchsucht die Scopes: Variables, Cgi, Url, Form und Cookie</data>
+	<data key="scopes.sessiontypedescription">J2EE Sessions erlauben es Tachyon Sessions über einen J2EE Server-Cluster zu verteilen. Wenn Sie diese Einstellung ändern verlieren Sie die aktuelle Session und müssen sich erneut einloggen.</data>
+	<data key="scopes.web">Hier können Sie festlegen, wie Tachyon Scopes abarbeitet.</data>
 	<data key="scopes.localmodealways">Always</data>
 	<data key="scopes.timeoutsecondsvalue">Der Wert Sekunden für </data>
 	<data key="scopes.sessionmanagementdescription">Standardmässig kann Session Management eingeschaltet werden. Diese Verhaltensweise kann von dem Tag CFApplication übersteuert werden.</data>
@@ -558,7 +558,7 @@ When checked, any requested files will be inspected only once for potential upda
 	<data key="scopes.sessionmanagement">Session Management</data>
 	<data key="scopes.timeouthoursvalue">Der Wert Stunden für </data>
 	<data key="scopes.localmode">Local Scope Modus</data>
-	<data key="scopes.clienttimeoutdescription">Sets the amount of time Lucee will keep the client scope alive. </data>
+	<data key="scopes.clienttimeoutdescription">Sets the amount of time Tachyon will keep the client scope alive. </data>
 	<data key="scopes.small">small</data>
 	<data key="scopes.sessiontype_j2ee">J2EE</data>
 	<data key="scopes.server">Definert Scopeeneinstellungen, die als Standardwert für alle Webs gelten sollen.</data>
@@ -582,13 +582,13 @@ When checked, any requested files will be inspected only once for potential upda
 	<data key="proxy.disable">Proxy nicht verwenden</data>
 	<data key="proxy.username">Benutzername</data>
 	<data key="proxy.enable">Proxy verwenden</data>
-	<data key="proxy.web">Definieren Sie einen Proxy, welcher an diversen Stellen (cfhttp, cfftp, cfmail ...) in Lucee Verwendung findet</data>
+	<data key="proxy.web">Definieren Sie einen Proxy, welcher an diversen Stellen (cfhttp, cfftp, cfmail ...) in Tachyon Verwendung findet</data>
 	<data key="proxy.missingport">Bitte geben Sie einen Wert für den Proxy Port an</data>
 	<data key="proxy.password">Passwort</data>
 	<data key="proxy.serverdescription">URL eines Proxy Server im Stil &apos;http://myproxyserver.org/&apos;</data>
-	<data key="video.web.installednot">Video Komponenten sind nicht auf Ihrem System installiert. Um diese zu installieren wechseln sie in den Lucee Server Administrator.</data>
+	<data key="video.web.installednot">Video Komponenten sind nicht auf Ihrem System installiert. Um diese zu installieren wechseln sie in den Tachyon Server Administrator.</data>
 	<data key="video.web.installed">Video Komponenten sind auf Ihrem System installiert.</data>
-	<data key="video.web.installedbut">Video Komponenten sind zwar installiert, jedoch können sie nicht korrekt ausgeführt werden. Wechseln Sie in den Lucee Server Administrator, um dies zu reparieren:</data>
+	<data key="video.web.installedbut">Video Komponenten sind zwar installiert, jedoch können sie nicht korrekt ausgeführt werden. Wechseln Sie in den Tachyon Server Administrator, um dies zu reparieren:</data>
 	<data key="video.uploaddesc">Video Komponenten (ffmpeg.zip)</data>
 	<data key="video.upload">Upload</data>
 	<data key="video.providerdesc">URL eines Provider der die benötigten Komponenten (FFMpeg Binaries) anbietet.</data>
@@ -598,10 +598,10 @@ When checked, any requested files will be inspected only once for potential upda
 	<data key="video.server.installedbut2">Wir empfehlen Ihnen eine manuelle Installation vorzunehmen.</data>
 	<data key="video.server.installedbut1">Video Komponenten sind zwar installiert, jedoch können sie nicht korrekt ausgeführt werden:</data>
 	<data key="video.server.mantitle">Manuelle Installation</data>
-	<data key="video.server.installednotdesc">Da für das Tag cfvideo/cfvideoplayer betriebssystemspezifische Video Komponenten benötigt werden, sind diese nicht mit Lucee gebundelt. Dies würde den Umfang der Software unnötig vergrössern. Zudem dürfen gewisse enthaltene Codecs nicht vertrieben werden. Die Verwendung derer ist jedoch uneingeschränkt, weshalb sie diese nachladen können. Sie können diese Komponenten direkt vom Provider laden oder hier per Formular hochladen.</data>
-	<data key="video.server.installednotuploaddesc">Video Komponenten (ffmpeg.zip) werden direkt über Formular hochgeladen und in Lucee kopiert (keine Installation). Als Quelle dient z.B. {provider}</data>
+	<data key="video.server.installednotdesc">Da für das Tag cfvideo/cfvideoplayer betriebssystemspezifische Video Komponenten benötigt werden, sind diese nicht mit Tachyon gebundelt. Dies würde den Umfang der Software unnötig vergrössern. Zudem dürfen gewisse enthaltene Codecs nicht vertrieben werden. Die Verwendung derer ist jedoch uneingeschränkt, weshalb sie diese nachladen können. Sie können diese Komponenten direkt vom Provider laden oder hier per Formular hochladen.</data>
+	<data key="video.server.installednotuploaddesc">Video Komponenten (ffmpeg.zip) werden direkt über Formular hochgeladen und in Tachyon kopiert (keine Installation). Als Quelle dient z.B. {provider}</data>
 	<data key="video.server.mandesc">Eine Manuelle Installation wird wie folgt vorgenommen: Navigieren Sie zur Adresse {provider} und laden sie dort die ffmpeg.zip für Ihr Betriebssystem ({OS-Name}) herunter. Kopieren Sie diese Datei (nicht entpacken) in das Verzeichnis {directory}. Falls Sie für Ihr Betriebssystem keinen Download finden, kontaktieren Sie uns.</data>
-	<data key="video.server.installednoturldesc">Video Komponenten werden direkt vom Remote Server geladen und in Lucee kopiert (keine Installation).</data>
+	<data key="video.server.installednoturldesc">Video Komponenten werden direkt vom Remote Server geladen und in Tachyon kopiert (keine Installation).</data>
 	<data key="video.server.installednotuploadtitle">Video Komponenten über Upload</data>
 	<data key="video.provider">Provider</data>
 	<data key="video.providermissing">Fehlende Provider Definition</data>
@@ -648,7 +648,7 @@ When checked, any requested files will be inspected only once for potential upda
 	<data key="schedule.description">Hier können Sie Scheduled Tasks hinzufügen, bearbeiten oder löschen.</data>
 	<data key="schedule.storeresponse">Legt fest, ob die Ausgabe in einer Datei gespeichert werden soll oder nicht.</data>
 	<data key="schedule.resolvedescription">Wandelt relative URLs in absolute um</data>
-	<data key="schedule.proxydesc">Wenn zwischen dem Lucee Server und der aufzurufenden URL ein Proxy liegt, können sie hier dessen Einstelllungen definieren.</data>
+	<data key="schedule.proxydesc">Wenn zwischen dem Tachyon Server und der aufzurufenden URL ein Proxy liegt, können sie hier dessen Einstelllungen definieren.</data>
 	<data key="schedule.starttime">Startzeit</data>
 	<data key="schedule.endsatdescweekly">Definert den Tag bis zu welchem der Task ausgeführt werden soll.</data>
 	<data key="schedule.startsatdesc">Definert den Tag an welchem der Task zu ersten mal ausgeführt werden soll.</data>
@@ -667,7 +667,7 @@ When checked, any requested files will be inspected only once for potential upda
 	<data key="schedule.urlmissing">Bitte geben Sie einen Wert für die URL des Tasks an.</data>
 	<data key="schedule.file">Datei</data>
 	<data key="schedule.timeoutdescription">Timeout in Sekunden. Definiert wie lange der Task auf eine Antwort von der aufgerufenen URL warten soll.</data>
-	<data key="schedule.outputdesc">Mit den folgenden Einstellungen können Sie defineren ob Lucee die generierte Ausgabe speichern soll und wo sie gespeichert werden soll.</data>
+	<data key="schedule.outputdesc">Mit den folgenden Einstellungen können Sie defineren ob Tachyon die generierte Ausgabe speichern soll und wo sie gespeichert werden soll.</data>
 	<data key="schedule.port">Port</data>
 	<data key="schedule.urldescription">URL des neuen Tasks.</data>
 	<data key="schedule.namedescription">Name des neuen Tasks (dieser Name muss eindeutig sein).</data>
@@ -681,7 +681,7 @@ When checked, any requested files will be inspected only once for potential upda
 	<data key="schedule.enddate">Enddatum</data>
 	<data key="schedule.portdescription">Port der aufzurufenden URL (HTTP Standard: 80)</data>
 	<data key="schedule.executiondescweekly">Dieser Task wird wöchentlich ausgeführt.</data>
-	<data key="schedule.endtimedesc">Definert die Zeit bei welcher Lucee die tägliche Ausführung stoppt.</data>
+	<data key="schedule.endtimedesc">Definert die Zeit bei welcher Tachyon die tägliche Ausführung stoppt.</data>
 	<data key="schedule.executiondescevery">Dieser Task wird in einem bestimmten intervall ausgeführt.</data>
 	<data key="schedule.enddatedesc">Definiert den Tag, bis zu welchem der Task ausgeführt werden soll.</data>
 	<data key="schedule.namemissing">Bitte geben Sie einen Wert für den Namen des Tasks an.</data>
@@ -689,7 +689,7 @@ When checked, any requested files will be inspected only once for potential upda
 	<data key="schedule.proxyusername">Username, um auf einen geschützten Proxy zuzugreifen.</data>
 	<data key="schedule.name">Name</data>
 	<data key="schedule.intervaltype">Intervall Typ</data>
-	<data key="schedule.currentdatetime">Aktuelle Datum/Zeit dieses Lucee Kontexts: (mm/dd/yyyy hh:mm tt)</data>
+	<data key="schedule.currentdatetime">Aktuelle Datum/Zeit dieses Tachyon Kontexts: (mm/dd/yyyy hh:mm tt)</data>
 	<data key="schedule.weekly">wöchentlich</data>
 	<data key="schedule.endsat">Endet am</data>
 	<data key="schedule.executiontimedescdaily">Definert die Zeit bei welcher der Task täglich ausgeführt werden soll.</data>
@@ -703,7 +703,7 @@ When checked, any requested files will be inspected only once for potential upda
 	<data key="schedule.endtime">Endzeit</data>
 	<data key="schedule.startdate">Startdatum</data>
 	<data key="schedule.password">Passwort</data>
-	<data key="schedule.starttimedesc">Definert die Zeit bei welcher Lucee die tägliche Ausführung beginnt.</data>
+	<data key="schedule.starttimedesc">Definert die Zeit bei welcher Tachyon die tägliche Ausführung beginnt.</data>
 	<data key="schedule.once">einmalig</data>
 	<data key="schedule.resume">pause beenden</data>
 	<data key="schedule.intervaltypedesc">Ausführungsintervall des neuen Tasks</data>
@@ -747,16 +747,16 @@ When checked, any requested files will be inspected only once for potential upda
 	<data key="settings.dbhost">Host/Server</data>
 	<data key="settings.dbconnlimitinf">- inf -</data>
 	<data key="settings.type">Typ</data>
-	<data key="regional.timeserverdescription">Time server der die aktuelle Zeit zürück gibt. Falls gesetzt, wird in Lucee diese Zeit anstelle der lokalen Server-Zeit verwendet (Beispiel: swisstime.ethz.ch, time.nist.gov).</data>
+	<data key="regional.timeserverdescription">Time server der die aktuelle Zeit zürück gibt. Falls gesetzt, wird in Tachyon diese Zeit anstelle der lokalen Server-Zeit verwendet (Beispiel: swisstime.ethz.ch, time.nist.gov).</data>
 	<data key="regional.server">Hier können Sie regionale Einstellungen vornehmen, die Vorgabe für alle Web-Instanzen sind. Auf die aktuelle Instanz haben diese Werte keinen Einfluss.</data>
 	<data key="regional.defaultencodingdescription"></data>
-	<data key="regional.web">Lucee lässt Sie Ihre eigenen individuellen Locale-, Zeitzonen- und Zeitservereinstellungen vorzunehmen.</data>
+	<data key="regional.web">Tachyon lässt Sie Ihre eigenen individuellen Locale-, Zeitzonen- und Zeitservereinstellungen vorzunehmen.</data>
 	<data key="regional.timezone">Zeitzone</data>
 	<data key="regional.timeserver">Time server (NTP)</data>
 	<data key="regional.other"> --- andere --- </data>
 	<data key="regional.defaultencoding">Standard Encoding</data>
 	<data key="regional.timeservermissing">Bitte wählen Sie einen Wert für die Zeitzone aus.</data>
-	<data key="regional.timezonedescription">Definiert die gewünschte Zeitzone für Lucee. Diese Einstellung ändert die Zeit für den Kontext der Webs.&lt;br&gt;</data>
+	<data key="regional.timezonedescription">Definiert die gewünschte Zeitzone für Tachyon. Diese Einstellung ändert die Zeit für den Kontext der Webs.&lt;br&gt;</data>
 	<data key="regional.serverprop.web">Server Administrator Wert</data>
 	<data key="regional.serverprop.server">Server Wert</data>
 	<data key="regional.locale">Locale</data>
@@ -799,12 +799,12 @@ When checked, any requested files will be inspected only once for potential upda
 	<data key="overview.installedtls">Installierte Tag&lt;br&gt;Bibliotheken</data>
 	<data key="overview.bugreport">Fehlerreport</data>
 	<data key="overview.issuetracker">Issue Tracker</data>
-	<data key="overview.datetime">Lucee Datum/Zeit</data>
+	<data key="overview.datetime">Tachyon Datum/Zeit</data>
 	<data key="overview.forum">Forum</data>
-	<data key="overview.featurerequestmail">features@lucee.ch</data>
+	<data key="overview.featurerequestmail">features@tachyon.ch</data>
 	<data key="overview.licenceprofessional">Professional</data>
-	<data key="overview.licencecommunitydesc">Lucee Community ist für den einfachen Einsatz gedacht. Bis auf wenige Einschränkungen bietet die Community Version den vollen Sprachumfang von Lucee und dies völlig umsonst.</data>
-	<data key="overview.licenceenterprisedesc">Die Enterprise Version von Lucee ist die grösste und umfassenste Version, gedacht um in einem grösseren Umfeld einzusetzen.</data>
+	<data key="overview.licencecommunitydesc">Tachyon Community ist für den einfachen Einsatz gedacht. Bis auf wenige Einschränkungen bietet die Community Version den vollen Sprachumfang von Tachyon und dies völlig umsonst.</data>
+	<data key="overview.licenceenterprisedesc">Die Enterprise Version von Tachyon ist die grösste und umfassenste Version, gedacht um in einem grösseren Umfeld einzusetzen.</data>
 	<data key="overview.licenceenterprise">Enterprise</data>
 	<data key="overview.contact">Kontakt</data>
 	<data key="overview.serialnumber">Seriennummer</data>
@@ -821,16 +821,16 @@ When checked, any requested files will be inspected only once for potential upda
 	<data key="overview.contexts.label">Label</data>
 	<data key="overview.contexts.title">Web Kontexte</data>
 	<data key="overview.contexts.config_file">Config file</data>
-	<data key="overview.licencedesc">Lucee ist in vier verschiedenen Editionen verfügbar, zugeschnitten für die verschiedenen Einsatzgebiete und Bugets.</data>
-	<data key="overview.serialnumberdescription">Seriennummer für Lucee</data>
+	<data key="overview.licencedesc">Tachyon ist in vier verschiedenen Editionen verfügbar, zugeschnitten für die verschiedenen Einsatzgebiete und Bugets.</data>
+	<data key="overview.serialnumberdescription">Seriennummer für Tachyon</data>
 	<data key="overview.cfcompatibility">Kompatibel zu ColdFusion&amp;reg; Version</data>
 	<data key="overview.os">Betriebssystem</data>
-	<data key="overview.salesmail">sales@lucee.ch</data>
+	<data key="overview.salesmail">sales@tachyon.ch</data>
 	<data key="overview.installedfls">Installierte Funktions&lt;br&gt;Bibliotheken</data>
-	<data key="overview.bugreportmail">bugs@lucee.ch</data>
-	<data key="overview.purchase">Hol Dir Deine Lucee Lizenz</data>
+	<data key="overview.bugreportmail">bugs@tachyon.ch</data>
+	<data key="overview.purchase">Hol Dir Deine Tachyon Lizenz</data>
 	<data key="overview.sales">Verkauf</data>
-	<data key="overview.licenceprofessionaldesc">Die Professional Version bietet den vollen Sprachumfang von Lucee, es muss also auf keine Feature verzichtet werden. Mit der Professional Version können mehrere Webs auf einem Server betrieben werden, die Anzahl Webs wird jedoch durch den Lizenspreis eingeschränkt.</data>
+	<data key="overview.licenceprofessionaldesc">Die Professional Version bietet den vollen Sprachumfang von Tachyon, es muss also auf keine Feature verzichtet werden. Mit der Professional Version können mehrere Webs auf einem Server betrieben werden, die Anzahl Webs wird jedoch durch den Lizenspreis eingeschränkt.</data>
 	<data key="overview.used">verwendet</data>
 	<data key="overview.licencecommunity">Community</data>
 	<data key="overview.remote_addr">Remote IP</data>
@@ -839,22 +839,22 @@ When checked, any requested files will be inspected only once for potential upda
 	<data key="overview.contactinfo">Info</data>
 	<data key="overview.versionname">Versionsname</data>
 	<data key="overview.mailinglist_de">Mailinglist (deutsch)</data>
-	<data key="overview.infomail">info@lucee.ch</data>
-	<data key="overview.introdesc.web">Lucee, die CFML engine. Schnell, preiswert und einfach zu bedienen. Mit Lucee haben sie sich für den performanten und qualitativ hochwertigen Weg von CFML entschieden. Passen Sie Ihren Webkontext nach Ihren Bedürfnissen und Wünschen an. Dafür steht Ihnen hier der Web Administrator zur Verfügung.</data>
-	<data key="overview.introdesc.server">Der Server Administrator ermöglicht Ihnen Updates und Patches für Ihre Lucee Edition vorzunehmen und die Engine per Mauklick neu zu starten. Zusätzlich können Sie in der Develop und Enterprise Edition die einzelnen Webkontexte vorkonfigurieren und diverse Beschränkungen und Konfigurationen individuell pro Webkontext einrichten.</data>
+	<data key="overview.infomail">info@tachyon.ch</data>
+	<data key="overview.introdesc.web">Tachyon, die CFML engine. Schnell, preiswert und einfach zu bedienen. Mit Tachyon haben sie sich für den performanten und qualitativ hochwertigen Weg von CFML entschieden. Passen Sie Ihren Webkontext nach Ihren Bedürfnissen und Wünschen an. Dafür steht Ihnen hier der Web Administrator zur Verfügung.</data>
+	<data key="overview.introdesc.server">Der Server Administrator ermöglicht Ihnen Updates und Patches für Ihre Tachyon Edition vorzunehmen und die Engine per Mauklick neu zu starten. Zusätzlich können Sie in der Develop und Enterprise Edition die einzelnen Webkontexte vorkonfigurieren und diverse Beschränkungen und Konfigurationen individuell pro Webkontext einrichten.</data>
 	<data key="overview.servertime">Server Datum/Zeit (JVM): </data>
 	<data key="overview.version">Version</data>
 	<data key="overview.info">Info</data>
 	<data key="overview.featurerequest">Feature Anfragen</data>
 	<data key="overview.contextcount">Anzahl Kontexte</data>
-	<data key="help.logotitle">Lucee Hilfe</data>
+	<data key="help.logotitle">Tachyon Hilfe</data>
 	<data key="help.closewindow">Fenster schliessen</data>
-	<data key="help.videohelp">Lucee - Online Video Hilfe</data>
+	<data key="help.videohelp">Tachyon - Online Video Hilfe</data>
 	<data key="help.videohelpnotavailable">Die Online Video Hilfe ist für diese Seite nicht verfügbar</data>
-	<data key="help.globalhelp">Lucee - Globale Online Hilfe</data>
+	<data key="help.globalhelp">Tachyon - Globale Online Hilfe</data>
 	<data key="help.globalhelpnotavailable">Die globale Online Hilfe ist für diese Seite nicht verfügbar</data>
 	<data key="help.globalhelpnotconnected">Die globale Hilfe ist nicht verfügbar - Verbindungsprobleme</data>
-	<data key="help.localhelp">Lucee - Lokale Hilfe</data>
+	<data key="help.localhelp">Tachyon - Lokale Hilfe</data>
 	<data key="help.addlocalhelp">Klicken Sie hier um eine neue lokale Hilfe für diese Seite zu erstellen</data>
 	<data key="help.addhelpnote">Hilfenotiz hinzufügen</data>
 	<data key="help.addnote">Notiz hinzufügen</data>

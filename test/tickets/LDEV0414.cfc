@@ -1,4 +1,4 @@
-<cfcomponent extends="org.lucee.cfml.test.LuceeTestCase">
+<cfcomponent extends="org.tachyon.cfml.test.TachyonTestCase">
 	<cfscript>
 		function run( testResults , testBox ) {
 			describe( "Test suite for LDEV-414", function() {

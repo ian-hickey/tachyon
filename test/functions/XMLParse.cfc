@@ -1,7 +1,7 @@
 
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="xml" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="xml" {
 	
-	variables.xml='<img src="/lucee/graph.cfm?img=qq.png&type=png"/>';// the & is the problem
+	variables.xml='<img src="/tachyon/graph.cfm?img=qq.png&type=png"/>';// the & is the problem
 		
 	public void function testLenient(){
 		xmlParse(xmlString:variables.xml,lenient:true);

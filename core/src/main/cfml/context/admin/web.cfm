@@ -11,7 +11,7 @@
 	param name="request.setCFApplication" default="true" type="boolean";
 
 	if(request.setCFApplication) {
-		application name="webadmin#server.lucee.version#"
+		application name="webadmin#server.tachyon.version#"
 		sessionmanagement="yes"
 		clientmanagement="no"
 		setclientcookies="yes"
@@ -47,8 +47,8 @@
 <cfset ad = request.adminType>
 <cfset request.self = (request.singleMode?"index": request.adminType )& ".cfm">
 
-<cfparam name="cookie.lucee_admin_lang" default="en">
-<cfset session.lucee_admin_lang = cookie.lucee_admin_lang>
+<cfparam name="cookie.tachyon_admin_lang" default="en">
+<cfset session.tachyon_admin_lang = cookie.tachyon_admin_lang>
 
 <cfset login_error = "">
 
@@ -80,19 +80,19 @@
 				pw="#form["login_password"&ad]#"
 				returnVariable="hashedPassword">
 			<cfset session["password" & request.adminType]=hashedPassword>
-			<cfset session.lucee_admin_lang=form.lang>
+			<cfset session.tachyon_admin_lang=form.lang>
 			<!--- Thread operation for update provider --->
-			<cfcookie expires="NEVER" name="lucee_admin_lang" value="#session.lucee_admin_lang#">
+			<cfcookie expires="NEVER" name="tachyon_admin_lang" value="#session.tachyon_admin_lang#">
 			<cfif form.rememberMe != "s">
 				<cfcookie
 					expires="#dateAdd(form.rememberMe, 1, now())#"
-					name="lucee_admin_pw_#ad#"
+					name="tachyon_admin_pw_#ad#"
 					value="#hashedPassword#">
 			<cfelse>
-				<cfcookie expires="Now" name="lucee_admin_pw_#ad#" value="">
+				<cfcookie expires="Now" name="tachyon_admin_pw_#ad#" value="">
 			</cfif>
-			<cfif isDefined("cookie.lucee_admin_lastpage") && cookie.lucee_admin_lastpage != "logout">
-				<cfset url.action = cookie.lucee_admin_lastpage>
+			<cfif isDefined("cookie.tachyon_admin_lastpage") && cookie.tachyon_admin_lastpage != "logout">
+				<cfset url.action = cookie.tachyon_admin_lastpage>
 			</cfif>
 		</cfif>
 	</cfif>
@@ -116,21 +116,21 @@
 		<cfif form.rememberMe != "s">
 			<cfcookie
 				expires="#dateAdd(form.rememberMe,1,now())#"
-				name="lucee_admin_pw_#ad#"
+				name="tachyon_admin_pw_#ad#"
 				value="#hashedPassword#">
 		<cfelse>
-			<cfcookie expires="Now" name="lucee_admin_pw_#ad#" value="">
+			<cfcookie expires="Now" name="tachyon_admin_pw_#ad#" value="">
 		</cfif>
 	</cfif>
 </cfif>
 <!--- cookie ---->
 
 <cfset fromCookie=false>
-<cfif !structKeyExists(session, "password" & request.adminType) && structKeyExists(cookie,'lucee_admin_pw_#ad#')>
+<cfif !structKeyExists(session, "password" & request.adminType) && structKeyExists(cookie,'tachyon_admin_pw_#ad#')>
 	<cfset fromCookie=true>
 	
 	<cftry>
-		<cfset session["password" & ad]=cookie['lucee_admin_pw_#ad#']>
+		<cfset session["password" & ad]=cookie['tachyon_admin_pw_#ad#']>
 		<cfcatch></cfcatch>
 	</cftry>
 </cfif>
@@ -173,7 +173,7 @@
 </cfif>
 </cfsilent>
 
-<cfparam name="session.lucee_admin_lang" default="en">
+<cfparam name="session.tachyon_admin_lang" default="en">
 
 <cfinclude template="resources/text.cfm">
 <cfinclude template="web_functions.cfm">
@@ -186,7 +186,7 @@
 <cffunction name="loadPluginLanguage" output="false">
 	<cfargument name="pluginDir">
 	<cfargument name="pluginName">
-	<cfargument name="lang" type="string" default="#session.lucee_admin_lang#">
+	<cfargument name="lang" type="string" default="#session.tachyon_admin_lang#">
 
 	<cfset var fileLanguage="#arguments.pluginDir#/#arguments.pluginName#/language.xml">
 	<cfif arguments.lang == "en">
@@ -235,10 +235,10 @@
 		password="#session["password" & request.adminType]#"
 		returnVariable="pluginDir">
 	<cfset mappings = [:]>
-	<cfset mappings['/lucee_plugin_directory/']=pluginDir>
+	<cfset mappings['/tachyon_plugin_directory/']=pluginDir>
 	
 	<!--- this is only used when request.adminType eq "web" --->
-	<cfset mappings['/lucee_server_plugin_directory/']=ExpandPath("{lucee-server}/context/admin/plugin")>
+	<cfset mappings['/tachyon_server_plugin_directory/']=ExpandPath("{tachyon-server}/context/admin/plugin")>
 	
 	<cfapplication action="update" mappings="#mappings#">
 
@@ -254,19 +254,19 @@
 		if (structKeyExists(application, "reloadPlugins")){
 			refreshPlugins = true;
 			structDelete(application, "reloadPlugins");	
-		} else if (not StructKeyExists(application, "lucee_admin_plugins_last_updated")){
+		} else if (not StructKeyExists(application, "tachyon_admin_plugins_last_updated")){
 			refreshPlugins = true;
-		} else if ((StructKeyExists(server, "lucee_admin_plugins_last_updated")
-				and (not StructKeyExists(application, "lucee_admin_plugins_last_updated")
-					or DateCompare(server.lucee_admin_plugins_last_updated, application.lucee_admin_plugins_last_updated) neq 1) )
+		} else if ((StructKeyExists(server, "tachyon_admin_plugins_last_updated")
+				and (not StructKeyExists(application, "tachyon_admin_plugins_last_updated")
+					or DateCompare(server.tachyon_admin_plugins_last_updated, application.tachyon_admin_plugins_last_updated) neq 1) )
 				){
 			refreshPlugins = true;
 		}		
 	</cfscript>	
 	<cfif refreshPlugins || !hasPlugin || (structKeyExists(session, "alwaysNew") && session.alwaysNew)>
 		<cfscript>
-			lock name="lucee_admin_plugins_last_updated"{ 
-				application.lucee_admin_plugins_last_updated = now(); // used to compare against server
+			lock name="tachyon_admin_plugins_last_updated"{
+				application.tachyon_admin_plugins_last_updated = now(); // used to compare against server
 				application.plugin = {}; // clear plugins
 			}
 		</cfscript>
@@ -296,7 +296,7 @@
 					<cfset _pos=_lang.__position>
 					<cfset structDelete(_lang,"__action",false)>
 
-					<cfset application.pluginLanguage[session.lucee_admin_lang][plugindirs.name]=_lang>
+					<cfset application.pluginLanguage[session.tachyon_admin_lang][plugindirs.name]=_lang>
 
 					<cfset item=struct(
 						label:_lang.title,
@@ -469,7 +469,7 @@
 	}
 	request.getRemoteClients=getRemoteClients;
 
-	// used for automated testing of lucee admin via testbox
+	// used for automated testing of tachyon admin via testbox
 	if (structKeyExists(url, "testUrls") && url.testUrls){
 		setting showdebugoutput="false";
 		content reset="yes" type="application/json";
@@ -548,9 +548,9 @@
 	</cfif>
 </cfif>
 <cfif (current.action != "changeto" || current.action != "overview" || current.action != "chartAjax" || current.action != "update") && current.action != "services.restart">
-	<cfcookie name="lucee_admin_lastpage" value="overview" expires="NEVER">
+	<cfcookie name="tachyon_admin_lastpage" value="overview" expires="NEVER">
 <cfelseif current.action == "services.restart">
-	<cfcookie name="lucee_admin_lastpage" value="services.restart" expires="NEVER">
+	<cfcookie name="tachyon_admin_lastpage" value="services.restart" expires="NEVER">
 </cfif>
 
 

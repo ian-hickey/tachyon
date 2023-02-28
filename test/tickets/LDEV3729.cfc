@@ -1,4 +1,4 @@
-component extends = "org.lucee.cfml.test.LuceeTestCase" skip=true{
+component extends = "org.tachyon.cfml.test.TachyonTestCase" skip=true{
     function run( testResults, textbox ) {
         describe("testcase for LDEV-3729", function(){
             it(title="Checking precision with 16 digit number", body=function( currentSpec ){
@@ -8,7 +8,7 @@ component extends = "org.lucee.cfml.test.LuceeTestCase" skip=true{
             });
             it(title="Checking precision with 17 digit number", body=function( currentSpec ){
                 num = 13634301448919149; // 17 digit number
-                // dump(toString(num)); In lucee 6, dump result shows incorrect value (13634301448919148) but tests are passed
+                // dump(toString(num)); In tachyon 6, dump result shows incorrect value (13634301448919148) but tests are passed
                 // dump(toString(javaCast("long", num)));
                 // dump(toString(javaCast("long", num)) == "13634301448919149");
                 expect(toString(num)).toBe("13634301448919149");

@@ -5,7 +5,7 @@
 	variables.mongoDB=getCredentials();
 
 	this.cache.connections["perAppCacheMongo"] = {
-		class: 'org.lucee.mongodb.cache.MongoDBCache'
+		class: 'org.tachyon.mongodb.cache.MongoDBCache'
 		, bundleName: 'mongodb.extension'
 		//, bundleVersion: '3.2.2.54'
 		, storage: true

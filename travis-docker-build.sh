@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# get lucee version
+# get tachyon version
 LUCEE_VERSION=$(<buildVersionNumber.txt)
 
 # build the travis request body
@@ -24,11 +24,11 @@ EOF
 }
 REQUEST_BODY=$(build_request)
 
-# trigger the lucee-dockerfiles travis job for this lucee version
+# trigger the tachyon-dockerfiles travis job for this tachyon version
 curl --no-progress-meter -S -m 30 -X POST \
   -H "Content-Type: application/json" \
   -H "Accept: application/json" \
   -H "Travis-API-Version: 3" \
   -H "Authorization: token ${TRAVIS_TOKEN}" \
   -d "${REQUEST_BODY}" \
-  https://api.travis-ci.com/repo/lucee%2Flucee-dockerfiles/requests
+  https://api.travis-ci.com/repo/tachyon%2Ftachyon-dockerfiles/requests

@@ -1,4 +1,4 @@
-component extends = "org.lucee.cfml.test.LuceeTestCase" labels="qoq"{
+component extends = "org.tachyon.cfml.test.TachyonTestCase" labels="qoq"{
 
 	function run( testResults , testBox ) {
 		describe( title = "Test suite for LDEV-3514", body = function() {
@@ -13,7 +13,7 @@ component extends = "org.lucee.cfml.test.LuceeTestCase" labels="qoq"{
 			querySetCell(q2, "test", "test");
 
 			it(title = "Join QoQ containing CFC Object", skip=true, body = function( currentSpec ) {
-				local.obj = new org.lucee.cfml.test.LuceeTestCase();
+				local.obj = new org.tachyon.cfml.test.TachyonTestCase();
 				querySetCell(q, "CompObj", obj);
 
 				try {
@@ -33,7 +33,7 @@ component extends = "org.lucee.cfml.test.LuceeTestCase" labels="qoq"{
 			});
 
 			it(title = "Native QoQ containing CFC Object", body = function( currentSpec ) {
-				local.obj = new org.lucee.cfml.test.LuceeTestCase();
+				local.obj = new org.tachyon.cfml.test.TachyonTestCase();
 				querySetCell(q, "CompObj", obj);
 
 				try {
@@ -52,7 +52,7 @@ component extends = "org.lucee.cfml.test.LuceeTestCase" labels="qoq"{
 			});
 
 			it(title = "Join QoQ containing a serialized CFC Object",  body = function( currentSpec ) {
-				local.obj = new org.lucee.cfml.test.LuceeTestCase();
+				local.obj = new org.tachyon.cfml.test.TachyonTestCase();
 				querySetCell(q, "CompObj", serialize(obj));
 
 				try {
@@ -72,7 +72,7 @@ component extends = "org.lucee.cfml.test.LuceeTestCase" labels="qoq"{
 			});
 
 			it(title = "Native QoQ containing a serialized CFC Object",  body = function( currentSpec ) {
-				local.obj = new org.lucee.cfml.test.LuceeTestCase();
+				local.obj = new org.tachyon.cfml.test.TachyonTestCase();
 				querySetCell(q, "CompObj", serialize(obj));
 				try {
 					local.myQuery = queryExecute(

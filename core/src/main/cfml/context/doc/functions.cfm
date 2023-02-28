@@ -1,5 +1,5 @@
 <cfsetting showDebugOutput=false>
-<cfinclude template="/lucee/admin/resources/text.cfm">
+<cfinclude template="/tachyon/admin/resources/text.cfm">
 <cfset stText.doc.attr.default="Default Value">
 
 
@@ -64,7 +64,7 @@
 		};
 
 		$( function() {
-			$( '#lucee-docs-search-input' ).typeahead(
+			$( '#tachyon-docs-search-input' ).typeahead(
 				{
 					hint: true,
 					highlight: true,
@@ -96,13 +96,13 @@
 				<div class="tile">
 					<ul class="breadcrumb margin-no-top margin-right margin-no-bottom margin-left">
 						<li><a href="index.cfm">Home</a></li>
-						<li><a href="functions.cfm">Lucee functions</a></li>
+						<li><a href="functions.cfm">Tachyon functions</a></li>
 						<li class="active">#data.name#</li>
 					</ul>
 				</div>
 			</div>
 		<cfelse>
-			<h2 style="text-align: center;">Lucee Functions</h2>
+			<h2 style="text-align: center;">Tachyon Functions</h2>
 		</cfif>
 
 		<h2><em>#data.name#()</em></h2>
@@ -194,12 +194,12 @@
 			<div class="tile">
 				<ul class="breadcrumb margin-no-top margin-right margin-no-bottom margin-left">
 					<li><a href="index.cfm">Home</a></li>
-					<li class="active">Lucee functions</li>
+					<li class="active">Tachyon functions</li>
 				</ul>
 			</div>
 		</div>
 
-		<p>Functions are at the core of Lucee Server's templating language. You can check out every function available using the A-Z index below.</p>
+		<p>Functions are at the core of Tachyon Server's templating language. You can check out every function available using the A-Z index below.</p>
 
 		<cfset qryAllItems = queryNew("Functions")>
 		<cfloop array="#arrAllItems#" index="ai">
@@ -238,7 +238,7 @@
 </cfsavecontent>
 
 <!--- <cfif !structKeyExists(url, "isAjaxRequest")> --->
-<cfmodule template="doc_layout.cfm" title="Lucee Function Reference" prevLinkItem="#prevLinkItem#" nextLinkItem="#nextLinkItem#">
+<cfmodule template="doc_layout.cfm" title="Tachyon Function Reference" prevLinkItem="#prevLinkItem#" nextLinkItem="#nextLinkItem#">
 	<cfoutput>#a#</cfoutput>
 </cfmodule><!--- doc_layout !--->
 <!--- <cfelse>

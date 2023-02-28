@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="throw" skip=true{
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="throw" skip=true{
 
 	function beforeAll() {
 		try {

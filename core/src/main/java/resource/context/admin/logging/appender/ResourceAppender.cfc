@@ -1,7 +1,7 @@
 <cfcomponent extends="Appender">
 	
     <cfset fields=array(
-		field("Path","path","{lucee-config}/logs/",true,"Path to the file (any virtual filesystem supported)","text")
+		field("Path","path","{tachyon-config}/logs/",true,"Path to the file (any virtual filesystem supported)","text")
 		,field("Charset","charset","UTF-8",true,"charset used to write the file (empty == resource charset)","text")
 		,field("Max Files","maxfiles","10",true,"Maximal amount of Files created, if this number is reached the oldest get destroyed for every new file","text")
 		,field("Max File Size (in bytes)","maxfilesize",10*1024*1024,true,"The maxial size of a log file created in bytes","text")
@@ -31,7 +31,7 @@
     </cffunction>
     
 	<cffunction name="getClass" returntype="string" output="false">
-    	<cfreturn "lucee.commons.io.log.log4j2.appender.ResourceAppender">
+    	<cfreturn "tachyon.commons.io.log.log4j2.appender.ResourceAppender">
     </cffunction>
     
 	<cffunction name="getLabel" returntype="string" output="false">

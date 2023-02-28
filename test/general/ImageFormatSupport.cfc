@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="image" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="image" {
 
 	function beforeAll(){
 		variables.base = server._getTempDir( "imageFormatSupport" );

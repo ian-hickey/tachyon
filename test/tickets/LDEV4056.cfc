@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="transaction" skip=true {
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="transaction" skip=true {
 	
 	function run( testResults, testBox ) {
 		describe("Testcase for LDEV4056", function() {

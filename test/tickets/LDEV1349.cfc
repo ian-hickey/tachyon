@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 	function run( testResults , testBox ) {
 		describe( "Test suite for LDEV-1349", function() {
 			it( title='checking path conversion', body=function( currentSpec ) {

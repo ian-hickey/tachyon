@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="cookie" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="cookie" {
 
 	function run( testResults , testBox ) {
 		describe( "Test suite for LDEV2900", function() {

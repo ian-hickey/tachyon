@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="image" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="image" {
 	
 	public void function testImageGetEXIFMetadata() {
 		var img = "LDEV0006/exif_original.jpg";

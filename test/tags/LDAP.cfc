@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="ldap"	{
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="ldap"	{
 
 	// uses docke image form docker pull rroemhild/test-openldap
 
@@ -29,12 +29,12 @@ component extends="org.lucee.cfml.test.LuceeTestCase" labels="ldap"	{
 					attributes=ldapAddAttributes( cn="Ralio", sn="Fusion", uid="ralio" ) );
 
 				// update user
-				ldapUpdate( dn="uid=ralio,ou=people,#ldap.base_dn#", attributes="cn=Lucee Dev");
+				ldapUpdate( dn="uid=ralio,ou=people,#ldap.base_dn#", attributes="cn=Tachyon Dev");
 
 				// check user is renamed
-				var results = ldapQuery( start=ldap.base_dn, filter="(cn=Lucee Dev)" );
+				var results = ldapQuery( start=ldap.base_dn, filter="(cn=Tachyon Dev)" );
 				expect( results.recordcount ).toBe( 1 );
-				expect( results.cn ).toBe( "Lucee Dev" );
+				expect( results.cn ).toBe( "Tachyon Dev" );
 
 				// cleanup
 				ldapDelete( dn="uid=ralio,ou=people,#ldap.base_dn#" );
@@ -51,11 +51,11 @@ component extends="org.lucee.cfml.test.LuceeTestCase" labels="ldap"	{
 				expect( results.cn ).toBe( "Cold fusion" );
 
 				// rename user
-				ldapRename( dn="uid=cfml,ou=people,#ldap.base_dn#", attributes="uid=Lucee");
+				ldapRename( dn="uid=cfml,ou=people,#ldap.base_dn#", attributes="uid=Tachyon");
 
 				// check user is renamed
-				var results = ldapQuery(start=ldap.base_dn,	filter="(uid=Lucee)" );
-				expect( results.uid ).toBe( "Lucee" );
+				var results = ldapQuery(start=ldap.base_dn,	filter="(uid=Tachyon)" );
+				expect( results.uid ).toBe( "Tachyon" );
 
 				// cleanup
 				ldapDelete( dn="uid=cfml,ou=people,#ldap.base_dn#" );
@@ -88,7 +88,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase" labels="ldap"	{
 			return;
 		ldapDelete( dn="uid=ralio,ou=people,#ldap.base_dn#" );
 		ldapDelete( dn="uid=cfml,ou=people,#ldap.base_dn#" );
-		ldapDelete( dn="uid=lucee,ou=people,#ldap.base_dn#" );
+		ldapDelete( dn="uid=tachyon,ou=people,#ldap.base_dn#" );
 		ldapDelete( dn="uid=ACF,ou=people,#ldap.base_dn#" );
 	}
 	

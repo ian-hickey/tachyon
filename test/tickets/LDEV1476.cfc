@@ -1,8 +1,8 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="image" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="image" {
 	function run( testResults , testBox ) {
 		describe( "test case for LDEV-1476", function() {
 			it(title = "checking image data from tobase64() function", body = function( currentSpec ) {
-				arrSrc=["tomcat.gif", "lucee.png","test.jpg"];
+				arrSrc=["tomcat.gif", "tachyon.png","test.jpg"];
 
 				loop array=arrSrc item="src" {
 					var result = "";
@@ -23,7 +23,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase" labels="image" {
 			});
 
 			it(title = "checking image data from filereadBinary() function", body = function( currentSpec ) {
-				arrSrc=["tomcat.gif", "lucee.png","test.jpg"];
+				arrSrc=["tomcat.gif", "tachyon.png","test.jpg"];
 
 				loop array=arrSrc item="src" {
 					var result = "";

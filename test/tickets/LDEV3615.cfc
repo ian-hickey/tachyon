@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="qoq" skip=true {
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="qoq" skip=true {
 
 	function testQoQunion (){
 		var q1 = queryNew(

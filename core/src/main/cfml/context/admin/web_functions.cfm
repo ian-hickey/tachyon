@@ -339,7 +339,7 @@ function _byteFormatShort(numeric left,numeric right,string suffix){
 	<cfargument name="text"         default="">
 	<cfargument name="isExpand"     default="#false#" type="boolean">
 
-	<cfset var stText= application.stText[session.lucee_admin_lang]>
+	<cfset var stText= application.stText[session.tachyon_admin_lang]>
 	<cfset var desc  = len(arguments.text) ? arguments.text : stText.settings.appcfcdesc>
 
 	<cfif !arguments.isExpand>

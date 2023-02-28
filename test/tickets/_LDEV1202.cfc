@@ -20,7 +20,7 @@
 LDEV-273
 
  ---><cfscript>
-component extends="org.lucee.cfml.test.LuceeTestCase"	{
+component extends="org.tachyon.cfml.test.TachyonTestCase"	{
 	
 
 	public void function testCFMLElvis() {
@@ -28,7 +28,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase"	{
 		assertEquals("",c.elvis());
 	}
 
-	public void function testLuceeElvis() {
+	public void function testTachyonElvis() {
 		var c=new LDEV1202.Test();
 		assertEquals("",c.elvis());
 	}
@@ -38,7 +38,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase"	{
 		assertTrue(c.isItNull());
 	}
 
-	public void function testLuceeIsNull() {
+	public void function testTachyonIsNull() {
 		var c=new LDEV1202.Test();
 		assertTrue(c.isItNull());
 	}

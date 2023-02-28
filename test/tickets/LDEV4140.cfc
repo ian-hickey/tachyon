@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="mssql" skip=true {
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="mssql" skip=true {
     function run( testResults , testBox ) {
         describe( "Test suite for LDEV-4140", function() {
             it( title="Checking multiple queries with the nested errors in MSSQL", skip="#notHasMssql()#", body = function( currentSpec ) {

@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="serialize" skip=true{
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="serialize" skip=true{
 	function run( testResults , testBox ) {
 		describe( "test case for LDEV-3997", function() {
 			it( title = "serialize the component object which has a java object in variable", body=function( currentSpec ) {

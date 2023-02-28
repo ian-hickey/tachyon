@@ -52,7 +52,7 @@ try {
 	if ( len( request.testServices ) )
 		SystemOutput( "Test Services restricted to [#request.testServices#]", true );
 
-	// you can also provide a json file with your environment variables, i.e. just set LUCEE_BUILD_ENV="c:\work\lucee\loader\env.json"
+	// you can also provide a json file with your environment variables, i.e. just set LUCEE_BUILD_ENV="c:\work\tachyon\loader\env.json"
 	setupTestServices = new test._setupTestServices().setup();
 
 	function mem(type) {
@@ -136,10 +136,10 @@ try {
 	// allow using other/additional BaseSpecs like testbox.system.BaseSpec
 	param name="testSuiteExtends" default="";
 	if ( len( testSuiteExtends ) eq 0 )
-		request.testSuiteExtends= "org.lucee.cfml.test.LuceeTestCase";
+		request.testSuiteExtends= "org.tachyon.cfml.test.TachyonTestCase";
 	else
 		request.testSuiteExtends = testSuiteExtends; 
-	if ( request.testSuiteExtends != "org.lucee.cfml.test.LuceeTestCase" )
+	if ( request.testSuiteExtends != "org.tachyon.cfml.test.TachyonTestCase" )
 		SystemOutput( "Running with custom BaseSpec [#testSuiteExtends#]", true );
 
 	param name="testDebugAbort" default="false";
@@ -209,7 +209,7 @@ try {
 	systemOutput( "update componentpaths #dateTimeFormat( now() )#" & NL, true );
 
 	// load testbox
-	SystemOut = createObject( "java", "lucee.commons.lang.SystemOut" );
+	SystemOut = createObject( "java", "tachyon.commons.lang.SystemOut" );
 	out = SystemOut.setOut( nullValue() );
 	//err = SystemOut.setErr( nullValue() );
 
@@ -243,16 +243,16 @@ try {
 	resultPath = ExpandPath( "/test") & "/reports/";
 	if ( !DirectoryExists( resultPath ) )
 		DirectoryCreate( resultPath );
-	JUnitReportFile = resultPath & "junit-test-results-#server.lucee.version#.xml";
+	JUnitReportFile = resultPath & "junit-test-results-#server.tachyon.version#.xml";
 	FileWrite( JUnitReportFile, jUnitReporter.runReport(results=result, testbox=tb, justReturn=true) );
 
 	// load errors into an array, so we can dump them out to $GITHUB_STEP_SUMMARY
 	results = [];
-	results_md = ["## Lucee #server.lucee.version#", ""];
+	results_md = ["## Tachyon #server.tachyon.version#", ""];
 
 	systemOutput( NL & NL & "=============================================================", true );
 	arrayAppend( results, "TestBox Version: #tb.getVersion()#");
-	arrayAppend( results, "Lucee Version: #server.lucee.version#");
+	arrayAppend( results, "Tachyon Version: #server.tachyon.version#");
 	arrayAppend( results, "Java Version: #server.java.version#");
 	arrayAppend( results, "Total Execution time: (#NumberFormat( ( getTickCount()-request._start) / 1000 )# s)");
 	arrayAppend( results, "Test Execution time: (#NumberFormat( result.getTotalDuration() /1000 )# s)");

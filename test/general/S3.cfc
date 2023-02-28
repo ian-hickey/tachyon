@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="s3" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="s3" {
 	function beforeAll(){
 	}
 
@@ -23,14 +23,14 @@ component extends="org.lucee.cfml.test.LuceeTestCase" labels="s3" {
 					,url:getCredencials());
 				expect(trim(res.filecontent?:"")).toBe(true);
 			});
-			it(title="test this.vfs.s3.lucee", body=function() {
+			it(title="test this.vfs.s3.tachyon", body=function() {
 				var uri=createURI("s3/mapping-vfs-s3/index.cfm");
 				local.res=_InternalRequest(
 					template:uri
 					,url:getCredencials());
 				expect(trim(res.filecontent?:"")).toBe(true);
 			});
-			it(title="test this.vfs.s3[.lucee]", body=function() {
+			it(title="test this.vfs.s3[.tachyon]", body=function() {
 				var uri=createURI("s3/default-mapping-vfs-s3/index.cfm");
 				local.res=_InternalRequest(
 					template:uri
@@ -39,7 +39,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase" labels="s3" {
 			});
 			it(title="test access 100 threads at the same time", body=function() {
 				var cred=getCredencials();
-				var dir="s3://#cred.ACCESS_KEY_ID#:#cred.SECRET_KEY#@/lucee-s3-#lcase( hash( CreateGUID() ) )#/";
+				var dir="s3://#cred.ACCESS_KEY_ID#:#cred.SECRET_KEY#@/tachyon-s3-#lcase( hash( CreateGUID() ) )#/";
 				var file=dir&"testmultithread.txt";
 				try {
 					if(!directoryExists(dir))directoryCreate(dir);

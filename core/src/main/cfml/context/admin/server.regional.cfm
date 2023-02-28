@@ -1,4 +1,4 @@
-<!--- <cfset classConfig=createObject("java","lucee.runtime.config.ConfigWeb")>
+<!--- <cfset classConfig=createObject("java","tachyon.runtime.config.ConfigWeb")>
 <cfset STRICT=classConfig.SCOPE_STRICT>
 <cfset SMALL=classConfig.SCOPE_SMALL>
 <cfset STANDART=classConfig.SCOPE_STANDART> --->
@@ -225,7 +225,7 @@ Create Datasource --->
 		</h3>
 		<cfscript>
 			jvmTZ = GetTimeZoneInfo( "jvm" );
-			luceeTZ = GetTimeZoneInfo( GetTimeZone() );
+			tachyonTZ = GetTimeZoneInfo( GetTimeZone() );
 		</cfscript>
 		<table class="maintbl" style="width:500px">
 			<tbody>
@@ -238,7 +238,7 @@ Create Datasource --->
 				<tr>
 					<th scope="row">#stText.Overview.DateTime#</th>
 					<td>#lsdateFormat(now())#
-						#lstimeFormat(now())# (#luceeTZ.isDSTon ? luceeTZ.nameDST : luceeTZ.name#)
+						#lstimeFormat(now())# (#tachyonTZ.isDSTon ? tachyonTZ.nameDST : tachyonTZ.name#)
 					</td>
 				</tr>
 			</tbody>

@@ -35,7 +35,7 @@
 		* return the unique identifier for this debug type
 		*/
 		function getId() {
-			return "lucee-comment";
+			return "tachyon-comment";
 		}
 		
 		string function readDebug(struct custom, struct debugging, string context){
@@ -66,11 +66,11 @@
 		// GENERAL
 			if( isEnabled(arguments.custom,"general") ) {
 				echo(server.coldfusion.productname);
-				if(StructKeyExists(server.lucee,'versionName'))
-					echo('('&server.lucee.versionName&')');
+				if(StructKeyExists(server.tachyon,'versionName'))
+					echo('('&server.tachyon.versionName&')');
 				
 				echo(" "&ucFirst(server.coldfusion.productlevel));
-				echo(" "&server.lucee.version);
+				echo(" "&server.tachyon.version);
 				echo(' (CFML Version '&server.ColdFusion.ProductVersion&')');
 				echo(NL);
 				

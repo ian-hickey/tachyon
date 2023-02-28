@@ -1,7 +1,7 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="qoq"{
-	variables.isLucee5 = false;
-	if( structKeyExists(server, "lucee") && listFirst(server.lucee.version, ".") == "5" )
-		variables.isLucee5 = true;
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="qoq"{
+	variables.isTachyon5 = false;
+	if( structKeyExists(server, "tachyon") && listFirst(server.tachyon.version, ".") == "5" )
+		variables.isTachyon5 = true;
 
 	function isNotSupported(s1) {
 		return s1;
@@ -9,7 +9,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase" labels="qoq"{
 
 	function run( testResults , testBox ) {
 		describe( title="Test suite for LDEV-1299", body=function() {
-			it(title="checking query with cachedAfter Attribute", skip=isNotSupported(!variables.isLucee5), body = function( currentSpec ) {
+			it(title="checking query with cachedAfter Attribute", skip=isNotSupported(!variables.isTachyon5), body = function( currentSpec ) {
 				var uri = createURI("LDEV1299")
 				var result = _InternalRequest(
 					template:"#uri#/test.cfm"
@@ -17,7 +17,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase" labels="qoq"{
 				expect(result.filecontent.trim()).toBe('3');
 			});
 
-			it(title="checking query with cachedAfter Attribute", skip=isNotSupported(variables.isLucee5), body = function( currentSpec ) {
+			it(title="checking query with cachedAfter Attribute", skip=isNotSupported(variables.isTachyon5), body = function( currentSpec ) {
 				var qry = queryNew("id,name,mail,showtime", "integer,varchar,varchar,timestamp", [
 						[1, "pothy", "pothy@test.com", now()],
 						[2, "mitrah", "mitrah@test.com", now()],

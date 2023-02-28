@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 	function run( testResults , testBox ) {
 		describe( "Test suite for LDEV-1553", function() {
 			it( title='checking createTimeSpan() as boolean', body=function( currentSpec ) {

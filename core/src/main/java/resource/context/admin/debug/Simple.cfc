@@ -13,7 +13,7 @@
 			, group("Custom Debugging Output","Define what is outputted",3)
 			, field("Scope Variables","scopes","Enabled",false,"Enable Scope reporting","checkbox","Enabled")
 			, field("General Debug Information ","general","Enabled",false,
-				"Select this option to show general information about this request. General items are Lucee Version, Template, Time Stamp, User Locale, User Agent, User IP, and Host Name. ",
+				"Select this option to show general information about this request. General items are Tachyon Version, Template, Time Stamp, User Locale, User Agent, User IP, and Host Name. ",
 				"checkbox","Enabled")
 		);
 
@@ -26,7 +26,7 @@
 		}
 
 		string function getid(){
-			return "lucee-simple";
+			return "tachyon-simple";
 		}
 
 		void function onBeforeUpdate(struct custom){
@@ -70,7 +70,7 @@
 			return structKeyExists( arguments.custom, arguments.key ) && ( arguments.custom[ arguments.key ] == "Enabled" || arguments.custom[ arguments.key ] == "true" );
 		}
 
-		variables.cookieName = "lucee_debug_simple";
+		variables.cookieName = "tachyon_debug_simple";
 		variables.bitmaskAll = 2 ^ 31 - 1;
 		variables.scopeNames = [ "Application", "CGI", "Client", "Cookie", "Form", "Request", "Server", "Session", "URL" ];
 
@@ -178,51 +178,51 @@
 			</td></td></td></th></th></th></tr></tr></tr></table></table></table></a></abbrev></acronym></address></applet></au></b></banner></big></blink></blockquote></bq></caption></center></cite></code></comment></del></dfn></dir></div></div></dl></em></fig></fn></font></form></frame></frameset></h1></h2></h3></h4></h5></h6></head></i></ins></kbd></listing></map></marquee></menu></multicol></nobr></noframes></noscript></note></ol></p></param></person></plaintext></pre></q></s></samp></script></select></small></strike></strong></sub></sup></table></td></textarea></th></title></tr></tt></u></ul></var></wbr></xmp>
 		</cfif>
 		<style type="text/css">
-			#-lucee-debug 			{ margin: 2.5em 1em 0 1em; padding: 1em; background-color: #FFF; color: #222; border: 1px solid #CCC; border-radius: 5px; text-shadow: none; }
-			#-lucee-debug.collapsed	{ padding: 0; border-width: 0; }
-			#-lucee-debug legend 	{ padding: 0 1em; background-color: #FFF; color: #222; }
-			#-lucee-debug legend span { font-weight: normal; }
+			#-tachyon-debug 			{ margin: 2.5em 1em 0 1em; padding: 1em; background-color: #FFF; color: #222; border: 1px solid #CCC; border-radius: 5px; text-shadow: none; }
+			#-tachyon-debug.collapsed	{ padding: 0; border-width: 0; }
+			#-tachyon-debug legend 	{ padding: 0 1em; background-color: #FFF; color: #222; }
+			#-tachyon-debug legend span { font-weight: normal; }
 
-			#-lucee-debug, #-lucee-debug td	{ font-family: Helvetica, Arial, sans-serif; font-size: 9pt; line-height: 1.35; }
-			#-lucee-debug.large, #-lucee-debug.large td	{ font-size: 10pt; }
-			#-lucee-debug.small, #-lucee-debug.small td	{ font-size: 8.5pt; }
+			#-tachyon-debug, #-tachyon-debug td	{ font-family: Helvetica, Arial, sans-serif; font-size: 9pt; line-height: 1.35; }
+			#-tachyon-debug.large, #-tachyon-debug.large td	{ font-size: 10pt; }
+			#-tachyon-debug.small, #-tachyon-debug.small td	{ font-size: 8.5pt; }
 
-			#-lucee-debug table		{ empty-cells: show; border-collapse: collapse; border-spacing: 0; }
-			#-lucee-debug table.details	{ margin-top: 0.5em; border: 1px solid #ddd; margin-left: 9pt; max-width: 100%; }
-			#-lucee-debug table.details th { font-size: 9pt; font-weight: normal; background-color: #f2f2f2; color: #3c3e40; }
-			#-lucee-debug table.details td, #-lucee-debug table.details th { padding: 2px 4px;  border: 1px solid #ddd; }
+			#-tachyon-debug table		{ empty-cells: show; border-collapse: collapse; border-spacing: 0; }
+			#-tachyon-debug table.details	{ margin-top: 0.5em; border: 1px solid #ddd; margin-left: 9pt; max-width: 100%; }
+			#-tachyon-debug table.details th { font-size: 9pt; font-weight: normal; background-color: #f2f2f2; color: #3c3e40; }
+			#-tachyon-debug table.details td, #-tachyon-debug table.details th { padding: 2px 4px;  border: 1px solid #ddd; }
 
-			#-lucee-debug .section-title	{ margin-top: 1.25em; font-size: 1.25em; font-weight: normal; color:#555; }
-			#-lucee-debug .section-title:first-child	{ margin-top: auto; }
-			#-lucee-debug .label		{ white-space: nowrap; vertical-align: top; text-align: right; padding-right: 1em; background-color: inherit; color: inherit; text-shadow: none; }
+			#-tachyon-debug .section-title	{ margin-top: 1.25em; font-size: 1.25em; font-weight: normal; color:#555; }
+			#-tachyon-debug .section-title:first-child	{ margin-top: auto; }
+			#-tachyon-debug .label		{ white-space: nowrap; vertical-align: top; text-align: right; padding-right: 1em; background-color: inherit; color: inherit; text-shadow: none; }
 
 		<cfif structKeyExists(Cookie, variables.cookieName)>
-			#-lucee-debug .collapsed	{ display: none; }
+			#-tachyon-debug .collapsed	{ display: none; }
 		</cfif>
 
-			#-lucee-debug .bold 		{ font-weight: bold; }
-			#-lucee-debug .txt-c 	{ text-align: center; }
-			#-lucee-debug .txt-l 	{ text-align: left; }
-			#-lucee-debug .txt-r 	{ text-align: right; }
-			#-lucee-debug .faded 	{ color: #999; }
-			#-lucee-debug .ml14px 	{ margin-left: 14px; }
-			#-lucee-debug table.details td.txt-r { padding-right: 1em; }
-			#-lucee-debug .num-lsv 	{ font-weight: normal; }
-			#-lucee-debug tr.nowrap td { white-space: nowrap; }
-			#-lucee-debug tr.red td, #-lucee-debug .red 	{ background-color: #FDD; }
+			#-tachyon-debug .bold 		{ font-weight: bold; }
+			#-tachyon-debug .txt-c 	{ text-align: center; }
+			#-tachyon-debug .txt-l 	{ text-align: left; }
+			#-tachyon-debug .txt-r 	{ text-align: right; }
+			#-tachyon-debug .faded 	{ color: #999; }
+			#-tachyon-debug .ml14px 	{ margin-left: 14px; }
+			#-tachyon-debug table.details td.txt-r { padding-right: 1em; }
+			#-tachyon-debug .num-lsv 	{ font-weight: normal; }
+			#-tachyon-debug tr.nowrap td { white-space: nowrap; }
+			#-tachyon-debug tr.red td, #-tachyon-debug .red 	{ background-color: #FDD; }
 
-			#-lucee-debug .sortby.selected, #-lucee-debug .sortby:hover { background-color: #25A; color: #FFF !important; cursor: pointer; text-decoration: none;}
+			#-tachyon-debug .sortby.selected, #-tachyon-debug .sortby:hover { background-color: #25A; color: #FFF !important; cursor: pointer; text-decoration: none;}
 			.sortby { text-decoration: underline; font-weight: bold; }
-			#-lucee-debug table.details tr > th > a { color: #25A !important; text-decoration: underline; }
-			#-lucee-debug .pad 	{ padding-left: 16px; }
-			#-lucee-debug a 	{ cursor: pointer; }
-			#-lucee-debug td a 	{ color: #25A; }
-			#-lucee-debug .warning{ color: red; }
-			#-lucee-debug td a:hover	{ color: #58C; text-decoration: underline; }
-			#-lucee-debug pre 	{ background-color: #EEE; padding: 1em; border: solid 1px #333; border-radius: 1em; white-space: pre-wrap; word-break: break-all; word-wrap: break-word; tab-size: 2; }
+			#-tachyon-debug table.details tr > th > a { color: #25A !important; text-decoration: underline; }
+			#-tachyon-debug .pad 	{ padding-left: 16px; }
+			#-tachyon-debug a 	{ cursor: pointer; }
+			#-tachyon-debug td a 	{ color: #25A; }
+			#-tachyon-debug .warning{ color: red; }
+			#-tachyon-debug td a:hover	{ color: #58C; text-decoration: underline; }
+			#-tachyon-debug pre 	{ background-color: #EEE; padding: 1em; border: solid 1px #333; border-radius: 1em; white-space: pre-wrap; word-break: break-all; word-wrap: break-word; tab-size: 2; }
 
-			.-lucee-icon-plus 	{ background: url(data:image/gif;base64,R0lGODlhCQAJAIABAAAAAP///yH5BAEAAAEALAAAAAAJAAkAAAIRhI+hG7bwoJINIktzjizeUwAAOw==) no-repeat left center; padding: 4px 0 4px 16px; }
-			.-lucee-icon-minus 	{ background: url(data:image/gif;base64,R0lGODlhCQAJAIABAAAAAP///yH5BAEAAAEALAAAAAAJAAkAAAIQhI+hG8brXgPzTHllfKiDAgA7)     no-repeat left center; padding: 4px 0 4px 16px; }
+			.-tachyon-icon-plus 	{ background: url(data:image/gif;base64,R0lGODlhCQAJAIABAAAAAP///yH5BAEAAAEALAAAAAAJAAkAAAIRhI+hG7bwoJINIktzjizeUwAAOw==) no-repeat left center; padding: 4px 0 4px 16px; }
+			.-tachyon-icon-minus 	{ background: url(data:image/gif;base64,R0lGODlhCQAJAIABAAAAAP///yH5BAEAAAEALAAAAAAJAAkAAAIQhI+hG8brXgPzTHllfKiDAgA7)     no-repeat left center; padding: 4px 0 4px 16px; }
 		</style>
 
 		<cfoutput>
@@ -230,13 +230,13 @@
 			<cfset var sectionId = "ALL">
 			<cfset var isOpen = this.isSectionOpen( sectionId )>
 
-			<!-- Lucee Debug Output !-->
-			<fieldset id="-lucee-debug" class="#arguments.custom.size# #isOpen ? '' : 'collapsed'#">
+			<!-- Tachyon Debug Output !-->
+			<fieldset id="-tachyon-debug" class="#arguments.custom.size# #isOpen ? '' : 'collapsed'#">
 
-				<legend><a id="-lucee-debug-btn-#sectionId#" class="-lucee-icon-#isOpen ? 'minus' : 'plus'#" onclick="__LUCEE.debug.toggleSection( '#sectionId#' ) ? __LUCEE.util.removeClass('-lucee-debug', 'collapsed') : __LUCEE.util.addClass('-lucee-debug', 'collapsed');">
-				 Lucee Debug Output</a> <span>(#this.getLabel()#)</span></legend>
+				<legend><a id="-tachyon-debug-btn-#sectionId#" class="-tachyon-icon-#isOpen ? 'minus' : 'plus'#" onclick="__LUCEE.debug.toggleSection( '#sectionId#' ) ? __LUCEE.util.removeClass('-tachyon-debug', 'collapsed') : __LUCEE.util.addClass('-tachyon-debug', 'collapsed');">
+				 Tachyon Debug Output</a> <span>(#this.getLabel()#)</span></legend>
 
-				<div id="-lucee-debug-ALL" class="#isOpen ? '' : 'collapsed'#">
+				<div id="-tachyon-debug-ALL" class="#isOpen ? '' : 'collapsed'#">
 
 					<!--- General --->
 					<cfif isEnabled( arguments.custom, 'general' )>
@@ -244,7 +244,7 @@
 						<div class="section-title">Debugging Information</div>
 					    <cfif getJavaVersion() LT 8 >
 							<div class="warning">
-								You are running Lucee with Java #server.java.version# Lucee does not formally support this version of Java. Consider updating to the latest Java version for security and performance reasons.
+								You are running Tachyon with Java #server.java.version# Tachyon does not formally support this version of Java. Consider updating to the latest Java version for security and performance reasons.
 							</div>
 					    </cfif>
 
@@ -259,14 +259,14 @@
 								<td class="pad">#_cgi.http_user_agent#</td>
 							</tr>
 							<tr>
-								<td colspan="2" id="-lucee-debug-#sectionId#" class="#isOpen ? '' : 'collapsed'#">
+								<td colspan="2" id="-tachyon-debug-#sectionId#" class="#isOpen ? '' : 'collapsed'#">
 									<table class="ml14px">
 										<tr>
 											<td class="label" colspan="2">
 												#server.coldfusion.productname#
-												<cfif StructKeyExists(server.lucee,'versionName')>(<a href="#server.lucee.versionNameExplanation#" target="_blank">#server.lucee.versionName#</a>)
+												<cfif StructKeyExists(server.tachyon,'versionName')>(<a href="#server.tachyon.versionNameExplanation#" target="_blank">#server.tachyon.versionName#</a>)
 												</cfif>
-												#ucFirst(server.coldfusion.productlevel)# #server.lucee.version# (CFML Version #server.ColdFusion.ProductVersion#)
+												#ucFirst(server.coldfusion.productlevel)# #server.tachyon.version# (CFML Version #server.ColdFusion.ProductVersion#)
 											</td>
 										</tr>
 										<tr>
@@ -349,7 +349,7 @@
 							, "#unitFormat( arguments.custom.unit, tot, prettify )# ms
 								&nbsp;&nbsp;&nbsp; Total" )>
 
-						<tr><td <cfif !pages.recordcount>  id="-lucee-debug-#sectionId#" class="#isOpen ? '' : 'collapsed'#"</cfif>><table>
+						<tr><td <cfif !pages.recordcount>  id="-tachyon-debug-#sectionId#" class="#isOpen ? '' : 'collapsed'#"</cfif>><table>
 							<tr>
 								<td class="pad txt-r">#unitFormat( arguments.custom.unit, loa,prettify )# ms</td>
 								<td class="pad">Startup/Compilation</td>
@@ -365,7 +365,7 @@
 						</table></td></tr>
 						<cfif pages.recordcount>
 						<tr>
-							<td id="-lucee-debug-#sectionId#" class="#isOpen ? '' : 'collapsed'#">
+							<td id="-tachyon-debug-#sectionId#" class="#isOpen ? '' : 'collapsed'#">
 								<table class="details">
 									<thead>
 										<tr>
@@ -395,7 +395,7 @@
 											<td class="txt-r" title="#pages.total - pages.load#">#unitFormat(arguments.custom.unit, pages.total-pages.load,prettify)#</td>
 											<td class="txt-r">#pages.count#</td>
 											<td class="txt-r" title="#pages.avg#"><cfif pages.count GT 1>#unitFormat(arguments.custom.unit, pages.avg,prettify)#<cfelse>-</cfif></td>
-											<td id="-lucee-debug-pages-#pages.currentRow#" oncontextmenu="__LUCEE.debug.selectText( this.id );">#pages.src#</td>
+											<td id="-tachyon-debug-pages-#pages.currentRow#" oncontextmenu="__LUCEE.debug.selectText( this.id );">#pages.src#</td>
 											<td class="txt-r faded" title="#pages.id#">#ordermap[pages.id]#</td>
 										</tr>
 									</cfloop>
@@ -403,7 +403,7 @@
 										<tr class="red"><td colspan="3">red = over #unitFormat( arguments.custom.unit, arguments.custom.highlight * 1000 ,prettify)# ms average execution time</td></tr>
 									</cfif>
 								</table>
-							</td><!--- #-lucee-debug-#sectionId# !--->
+							</td><!--- #-tachyon-debug-#sectionId# !--->
 						</tr></cfif>
 					</table>
 
@@ -423,7 +423,7 @@
 							<cfset renderSectionHeadTR( sectionId, "#arrayLen(exceptions)# Exception#arrayLen( exceptions ) GT 1 ? 's' : ''# Caught" )>
 
 							<tr>
-								<td id="-lucee-debug-#sectionId#" class="#isOpen ? '' : 'collapsed'#">
+								<td id="-tachyon-debug-#sectionId#" class="#isOpen ? '' : 'collapsed'#">
 									<table class="details">
 										<thead>
 											<tr>
@@ -445,7 +445,7 @@
 										</cfloop>
 
 									</table>
-								</td><!--- #-lucee-debug-#sectionId# !--->
+								</td><!--- #-tachyon-debug-#sectionId# !--->
 							</tr>
 						</table>
 					</cfif>
@@ -462,7 +462,7 @@
 							<cfset renderSectionHeadTR( sectionId, "#implicitAccess.recordcount# Implicit Variable Access#( implicitAccess.recordcount GT 1 ) ? 'es' : ''#" )>
 
 							<tr>
-								<td id="-lucee-debug-#sectionId#" class="#isOpen ? '' : 'collapsed'#">
+								<td id="-tachyon-debug-#sectionId#" class="#isOpen ? '' : 'collapsed'#">
 									<table class="details">
 										<thead>
 											<tr>
@@ -485,7 +485,7 @@
 										</cfloop>
 
 									</table>
-								</td><!--- #-lucee-debug-#sectionId# !--->
+								</td><!--- #-tachyon-debug-#sectionId# !--->
 							</tr>
 						</table>
 					</cfif>
@@ -503,7 +503,7 @@
 							<cfset renderSectionHeadTR( sectionId, "#timers.recordcount# Timer#( timers.recordcount GT 1 ) ? 's' : ''# Set" )>
 
 							<tr>
-								<td id="-lucee-debug-#sectionId#" class="#isOpen ? '' : 'collapsed'#">
+								<td id="-tachyon-debug-#sectionId#" class="#isOpen ? '' : 'collapsed'#">
 									<table class="details">
 										<thead>
 											<tr>
@@ -521,7 +521,7 @@
 										</cfloop>
 
 									</table>
-								</td><!--- #-lucee-debug-#sectionId# !--->
+								</td><!--- #-tachyon-debug-#sectionId# !--->
 							</tr>
 						</table>
 					</cfif>
@@ -542,7 +542,7 @@
 							<cfset renderSectionHeadTR( sectionId, "#traces.recordcount# Trace Point#( traces.recordcount GT 1 ) ? 's' : ''#" )>
 
 							<tr>
-								<td id="-lucee-debug-#sectionId#" class="#isOpen ? '' : 'collapsed'#">
+								<td id="-tachyon-debug-#sectionId#" class="#isOpen ? '' : 'collapsed'#">
 									<table class="details">
 										<thead>
 											<tr>
@@ -592,7 +592,7 @@
 										</cfloop>
 
 									</table>
-								</td><!--- #-lucee-debug-#sectionId# !--->
+								</td><!--- #-tachyon-debug-#sectionId# !--->
 							</tr>
 						</table>
 					</cfif>
@@ -611,7 +611,7 @@
 							<cfset renderSectionHeadTR( sectionId, "#dumps.recordcount# Dump#( dumps.recordcount GT 1 ) ? 's' : ''#" )>
 
 							<tr>
-								<td id="-lucee-debug-#sectionId#" class="#isOpen ? '' : 'collapsed'#">
+								<td id="-tachyon-debug-#sectionId#" class="#isOpen ? '' : 'collapsed'#">
 									<table class="details">
 										<thead>
 											<tr>
@@ -656,7 +656,7 @@
 							<cfset renderSectionHeadTR( sectionId, "#queries.recordcount# Quer#queries.recordcount GT 1 ? 'ies' : 'y'# Executed (Total Records: #records#; Total Time: #unitFormat( arguments.custom.unit, total ,prettify)# ms; Total Open Connections: #openConns#)" )>
 
 							<tr>
-								<td id="-lucee-debug-#sectionId#" class="#isOpen ? '' : 'collapsed'#">
+								<td id="-tachyon-debug-#sectionId#" class="#isOpen ? '' : 'collapsed'#">
 
 
 									<table><tr><td>
@@ -705,7 +705,7 @@
 												</tr>
 												<tr class="sort-group">
 													<th class="label">SQL:</th>
-													<td id="-lucee-debug-query-sql-#queries.currentRow#" colspan="6" oncontextmenu="__LUCEE.debug.selectText( this.id );"><pre>#trim( queries.sql )#</pre></td>
+													<td id="-tachyon-debug-query-sql-#queries.currentRow#" colspan="6" oncontextmenu="__LUCEE.debug.selectText( this.id );"><pre>#trim( queries.sql )#</pre></td>
 												</tr>
 
 												<cfif listFindNoCase(queries.columnlist, 'usage') && isStruct(queries.usage)>
@@ -760,7 +760,7 @@
 									</table>
 
 									</tr></td></table>
-								</td><!--- #-lucee-debug-#sectionId# !--->
+								</td><!--- #-tachyon-debug-#sectionId# !--->
 							</tr>
 						</table>
 					</cfif>
@@ -817,14 +817,14 @@
 
 									<tr><td colspan="3">
 
-										<table id="-lucee-debug-#sectionId#" class="#isOpen ? '' : 'collapsed'# ml14px"><tr><td>
+										<table id="-tachyon-debug-#sectionId#" class="#isOpen ? '' : 'collapsed'# ml14px"><tr><td>
 
 											<cfif isOpen>
 												<cftry><cfdump var="#v#" keys="1000" label="#sc GT 1000?"First 1000 Records":""#"><cfcatch>not available</cfcatch></cftry>
 											<cfelse>
 												the Scope will be displayed with the next request
 											</cfif>
-										</td></tr></table><!--- #-lucee-debug-#sectionId# !--->
+										</td></tr></table><!--- #-tachyon-debug-#sectionId# !--->
 									</td></tr>
 								<cfelse>
 
@@ -837,13 +837,13 @@
 						</table>
 					</cfif>
 
-				</div><!--- #-lucee-debug-ALL !--->
-			</fieldset><!--- #-lucee-debug !--->
+				</div><!--- #-tachyon-debug-ALL !--->
+			</fieldset><!--- #-tachyon-debug !--->
 		</cfoutput>
 
 
 		<script>
-			<cfset this.includeInline( "/lucee/res/js/util.min.js" )>
+			<cfset this.includeInline( "/tachyon/res/js/util.min.js" )>
 
 			var __LUCEE = __LUCEE || {};
 
@@ -871,20 +871,20 @@
 
 				, toggleSection: 	function( name ) {
 
-					var btn = __LUCEE.util.getDomObject( "-lucee-debug-btn-" + name );
-					var obj = __LUCEE.util.getDomObject( "-lucee-debug-" + name );
+					var btn = __LUCEE.util.getDomObject( "-tachyon-debug-btn-" + name );
+					var obj = __LUCEE.util.getDomObject( "-tachyon-debug-" + name );
 					var isOpen = ( __LUCEE.util.getCookie( __LUCEE.debug.cookieName, 0 ) & __LUCEE.debug.allSections[ name ] ) > 0;
 
 					if ( isOpen ) {
 
-						__LUCEE.util.removeClass( btn, '-lucee-icon-minus' );
-						__LUCEE.util.addClass( btn, '-lucee-icon-plus' );
+						__LUCEE.util.removeClass( btn, '-tachyon-icon-minus' );
+						__LUCEE.util.addClass( btn, '-tachyon-icon-plus' );
 						__LUCEE.util.addClass( obj, 'collapsed' );
 						__LUCEE.debug.clearFlag( name );
 					} else {
 
-						__LUCEE.util.removeClass( btn, '-lucee-icon-plus' );
-						__LUCEE.util.addClass( btn, '-lucee-icon-minus' );
+						__LUCEE.util.removeClass( btn, '-tachyon-icon-plus' );
+						__LUCEE.util.addClass( btn, '-tachyon-icon-minus' );
 						__LUCEE.util.removeClass( obj, 'collapsed' );
 						__LUCEE.debug.setFlag( name );
 					}
@@ -1056,10 +1056,10 @@
 			ldAttachTableSorters();
 
 			<cfif !structKeyExists(Cookie, variables.cookieName) || (Cookie[variables.cookieName] == variables.bitmaskAll)>
-				var luceeStyle = document.createElement("style");
-				luceeStyle.type = 'text/css';
-				luceeStyle.innerHTML = "#-lucee-debug .collapsed { display: none; }";
-				document.getElementById("-lucee-debug").prepend(luceeStyle);
+				var tachyonStyle = document.createElement("style");
+				tachyonStyle.type = 'text/css';
+				tachyonStyle.innerHTML = "#-tachyon-debug .collapsed { display: none; }";
+				document.getElementById("-tachyon-debug").prepend(tachyonStyle);
 			</cfif>
 		</script>
 	</cffunction><!--- output() !--->
@@ -1082,7 +1082,7 @@
 		<cfset var isOpen = this.isSectionOpen( arguments.sectionId )>
 
 		<tr>
-			<td><a id="-lucee-debug-btn-#arguments.sectionId#" class="-lucee-icon-#isOpen ? 'minus' : 'plus'#" onclick="__LUCEE.debug.toggleSection( '#arguments.sectionId#' );">
+			<td><a id="-tachyon-debug-btn-#arguments.sectionId#" class="-tachyon-icon-#isOpen ? 'minus' : 'plus'#" onclick="__LUCEE.debug.toggleSection( '#arguments.sectionId#' );">
 				#arguments.label1#</a></td>
 			<td class="pad"><a onclick="__LUCEE.debug.toggleSection( '#arguments.sectionId#' );">#arguments.label2#</a></td>
 		</tr>

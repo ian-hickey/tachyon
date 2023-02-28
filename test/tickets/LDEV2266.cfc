@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="mysql" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="mysql" {
 	
 	
 	//public function afterTests(){}

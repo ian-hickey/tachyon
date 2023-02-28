@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="xml" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="xml" {
 	function run( testResults , testBox ) {
 		describe( "Test Case for LDEV710", function() {
 				var xmlOrig = fileRead(expandPath("./LDEV710/xmlOrig.xml"));

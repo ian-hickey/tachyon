@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 	function run( testResults , testBox ) {
 		describe( title="Test suite for LDEV-1296", body=function() {
 			it(title="checking query.reduce member function, default value on arguments", body = function( currentSpec ) {

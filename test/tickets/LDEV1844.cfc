@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 	function run( testResults , testBox ) {
 		describe( "Test suite for LDEV-1844", function() {
 			it( title='Checking chaning process in member function with array', body=function( currentSpec ) {

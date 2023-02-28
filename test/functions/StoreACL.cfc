@@ -1,6 +1,6 @@
 <!--- 
  *
- * Copyright (c) 2015, Lucee Assosication Switzerland. All rights reserved.
+ * Copyright (c) 2015, Tachyon Assosication Switzerland. All rights reserved.
  * Copyright (c) 2014, the Railo Company LLC. All rights reserved.
  *
  * This library is free software; you can redistribute it and/or
@@ -17,7 +17,7 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  * 
  ---><cfscript>
-component extends="org.lucee.cfml.test.LuceeTestCase"	{
+component extends="org.tachyon.cfml.test.TachyonTestCase"	{
 	
 	//public function beforeTests(){}
 	
@@ -52,10 +52,10 @@ component extends="org.lucee.cfml.test.LuceeTestCase"	{
 	public function testStoreAddACLBucket() localMode=true {
 		if(variables.s3Supported) {
 			try{
-				testStoreACL("s3://lucee-testsuite-addaclbucket",true,true);
+				testStoreACL("s3://tachyon-testsuite-addaclbucket",true,true);
 			}
 			finally {
-	    		directoryDelete("s3://lucee-testsuite-addaclbucket",true);
+	    		directoryDelete("s3://tachyon-testsuite-addaclbucket",true);
 	    	}
 		}
 	}
@@ -63,10 +63,10 @@ component extends="org.lucee.cfml.test.LuceeTestCase"	{
 	public function testStoreSetACLBucket() localMode=true {
 		if(variables.s3Supported) {
 			try{
-				testStoreACL("s3://lucee-testsuite-setaclbucket2",true,false);
+				testStoreACL("s3://tachyon-testsuite-setaclbucket2",true,false);
 			}
 			finally {
-	    		directoryDelete("s3://lucee-testsuite-setaclbucket2",true);
+	    		directoryDelete("s3://tachyon-testsuite-setaclbucket2",true);
 	    	}
 		}
 	}
@@ -74,10 +74,10 @@ component extends="org.lucee.cfml.test.LuceeTestCase"	{
 	public function testStoreAddACLObject() localMode=true {
 		if(variables.s3Supported) {
 			try{
-				testStoreACL("s3://lucee-testsuite-addaclobject/sub12234",false,true);
+				testStoreACL("s3://tachyon-testsuite-addaclobject/sub12234",false,true);
 			}
 			finally {
-	    		directoryDelete("s3://lucee-testsuite-addaclobject",true);
+	    		directoryDelete("s3://tachyon-testsuite-addaclobject",true);
 	    	}
 		}
 	}
@@ -85,10 +85,10 @@ component extends="org.lucee.cfml.test.LuceeTestCase"	{
 	public function testStoreSetACLObject() localMode=true {
 		if(variables.s3Supported) {
 			try{
-				testStoreACL("s3://lucee-testsuite-setaclobject2/sub12234",false,false);
+				testStoreACL("s3://tachyon-testsuite-setaclobject2/sub12234",false,false);
 			}
 			finally {
-	    		directoryDelete("s3://lucee-testsuite-setaclobject2",true);
+	    		directoryDelete("s3://tachyon-testsuite-setaclobject2",true);
 	    	}
 		}
 	}

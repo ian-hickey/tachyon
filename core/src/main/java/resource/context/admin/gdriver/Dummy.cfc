@@ -15,7 +15,7 @@
 	)>
 
 	<cffunction name="getClass" returntype="string">
-    	<cfreturn "lucee.runtime.gateway.LuceeGateway">
+    	<cfreturn "tachyon.runtime.gateway.TachyonGateway">
     </cffunction>
     
 	<cffunction name="getLabel" returntype="string" output="no">

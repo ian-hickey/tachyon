@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU Lesser General Public 
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  * 
- ---><cfcomponent extends="org.lucee.cfml.test.LuceeTestCase">
+ ---><cfcomponent extends="org.tachyon.cfml.test.TachyonTestCase">
 	<cffunction name="beforeTests">
 		<cfapplication action="update" clientmanagement="true">
 	</cffunction>
@@ -30,7 +30,7 @@
 
 
 		<!--- not working in JSR223env --->
-		<cfif server.lucee.environment=="servlet">
+		<cfif server.tachyon.environment=="servlet">
 			<cflock timeout="1000" throwontimeout="yes" type="exclusive" scope="request">
 				<cfset client.susi=1>
 				<cfset assertEquals(true,DeleteClientVariable('susi'))>

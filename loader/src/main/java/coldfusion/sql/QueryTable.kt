@@ -18,5 +18,5 @@
  */
 package coldfusion.sql
 
-import lucee.runtime.type.Query
+import tachyon.runtime.type.Query
 interface QueryTable : Query

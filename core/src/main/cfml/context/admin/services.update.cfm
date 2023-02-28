@@ -25,7 +25,7 @@
 <cfswitch expression="#url.action2#">
 	<cfcase value="settings">
 		<cfif !structKeyExists(form, "location") OR !structKeyExists(form, "locationCustom")>
-			<cfset form.locationCustom = "https://update.lucee.org">
+			<cfset form.locationCustom = "https://update.tachyon.org">
 		</cfif>
 		<cfadmin
 			action="UpdateUpdate"
@@ -79,7 +79,7 @@
 			password="#session["password"&request.adminType]#"
 			returnvariable="upd";
 	
-	stText.services.update.downUpDesc=replace(stText.services.update.downUpDesc,'{version}',server.lucee.version);
+	stText.services.update.downUpDesc=replace(stText.services.update.downUpDesc,'{version}',server.tachyon.version);
 
 		/*if(isNull(providerData.message) || providerData.type == 'warning'){
 			error.message = "Couldn't able to reach the server. Please try after some times";
@@ -89,8 +89,8 @@
 		}
 		updateData=getAvailableVersion();*/
 
-		if(updateData.provider.location EQ "https://update.lucee.org" || updateData.provider.location EQ "http://update.lucee.org"){
-			version = "lucee";
+		if(updateData.provider.location EQ "https://update.tachyon.org" || updateData.provider.location EQ "http://update.tachyon.org"){
+			version = "tachyon";
 		} 
 		else{
 			version = "custom";
@@ -108,7 +108,7 @@
 		}
 		if(version eq 'custom' && structKeyExists(updateData, "otherVersions") && Len(updateData.otherVersions)){
 			for(versions in updateData.otherVersions){
-				if(toVersionSortable(versions) LTE toVersionSortable(server.lucee.version)){
+				if(toVersionSortable(versions) LTE toVersionSortable(server.tachyon.version)){
 					arrayPrepend(versionsStr.custom.downgrade, versions);
 				}
 				else{
@@ -128,12 +128,12 @@
 		if(!isNull(updateData.otherVersions) && len(updateData.otherVersions)){
 
 			for(versions in updateData.otherVersions ){
-				if(versions EQ server.lucee.version) cfcontinue;
+				if(versions EQ server.tachyon.version) cfcontinue;
 				vs=toVersionSortable(versions);
 				if(vs LT minVS) cfcontinue;
 				;
 				if(FindNoCase("SNAPSHOT", versions)){
-					if(vs LTE toVersionSortable(server.lucee.version)){
+					if(vs LTE toVersionSortable(server.tachyon.version)){
 						arrayPrepend(versionsStr.SNAPSHOT.downgrade, versions);
 					} 
 					else{
@@ -142,7 +142,7 @@
 					hasOptions=true;
 				} 
 				else if(FindNoCase("ALPHA", versions) || FindNoCase("BETA", versions) || FindNoCase("RC", versions)){
-					if(vs LTE toVersionSortable(server.lucee.version)){
+					if(vs LTE toVersionSortable(server.tachyon.version)){
 						arrayPrepend(versionsStr.pre_Release.downgrade, versions);
 					} else{
 						arrayPrepend(versionsStr.pre_Release.upgrade, versions);
@@ -150,7 +150,7 @@
 					hasOptions=true;
 				}
 				else{
-					if(vs LTE toVersionSortable(server.lucee.version)){
+					if(vs LTE toVersionSortable(server.tachyon.version)){
 						arrayPrepend(versionsStr.release.downgrade, versions);
 					} else{
 						arrayPrepend(versionsStr.release.upgrade, versions);
@@ -175,11 +175,11 @@
 <cfif !hasOptions>
 	<p><b>No upgrades or downgrades available!</b></p>
 <cfelse>
-	<!--- <h1>#stText.services.update.luceeProvider#</h1>--->
+	<!--- <h1>#stText.services.update.tachyonProvider#</h1>--->
 	<p>
-		Current Version <b>( #server.lucee.version# )</b><br><br>
+		Current Version <b>( #server.tachyon.version# )</b><br><br>
 		#stText.services.update.titleDesc#
-		<!--- #replace(stText.services.update.titleDesc,'{version}',"<b>"&server.lucee.version&"</b>") # --->
+		<!--- #replace(stText.services.update.titleDesc,'{version}',"<b>"&server.tachyon.version&"</b>") # --->
 	</p>
 
 	<cfset hiddenFormContents = "" >
@@ -263,7 +263,7 @@
 									<b>#stText.services.update.location_custom#</b>
 								</label>
 								<input id="customtextinput" type="text" class="text" name="locationCustom" size="40" value="<cfif  version EQ 'custom'>#updateData.provider.location#</cfif>" disabled>
-								<div class="comment">#replace("#stText.services.update.location_customDesc#","{url}","<a href=""https://docs.lucee.org"">https://docs.lucee.org</a>")#</div>
+								<div class="comment">#replace("#stText.services.update.location_customDesc#","{url}","<a href=""https://docs.tachyon.org"">https://docs.tachyon.org</a>")#</div>
 								<cfif version EQ 'custom'>
 									<cfhtmlbody>
 										<script type="text/javascript">
@@ -304,9 +304,9 @@
 					$( '##customtextinput' ).attr( 'disabled', false);
 					$('##customURL').attr( 'disabled', false);
 				}
-				if('#server.lucee.state#' == 'SNAPSHOT')
+				if('#server.tachyon.state#' == 'SNAPSHOT')
 					var version = 'Snapshot';
-				else if('#server.lucee.state#' == 'RC')
+				else if('#server.tachyon.state#' == 'RC')
 					var version = 'Pre_release';
 				else
 					var version = 'Release';
@@ -409,7 +409,7 @@
 			});
 		</script>
 	</cfhtmlbody>
-	<cfset stText.services.update.titleDesc2 = replaceListNoCase(stText.services.update.titleDesc2,'{min-version},{server.lucee.loaderPath}','<b>#minVersion#</b>,<b>#listDeleteAt(loaderInfo.LoaderPath,listlen(loaderInfo.LoaderPath,"\/"),"\/")#</b>')>
-	<p class="comment">* #replace(stText.services.update.titleDesc2,'{context}',"<b class='error'>"&#expandPath("{lucee-server}\patches")#&"</b>") #</p>
+	<cfset stText.services.update.titleDesc2 = replaceListNoCase(stText.services.update.titleDesc2,'{min-version},{server.tachyon.loaderPath}','<b>#minVersion#</b>,<b>#listDeleteAt(loaderInfo.LoaderPath,listlen(loaderInfo.LoaderPath,"\/"),"\/")#</b>')>
+	<p class="comment">* #replace(stText.services.update.titleDesc2,'{context}',"<b class='error'>"&#expandPath("{tachyon-server}\patches")#&"</b>") #</p>
 	
 </cfoutput>

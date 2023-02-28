@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" skip="true"{
+component extends="org.tachyon.cfml.test.TachyonTestCase" skip="true"{
 	function run( testResults , testBox ) {
 		describe(title="Testcase for LDEV-4122", body=function() {
 			it(title="checking UDF has multiple arguments with same name", body=function( currentSpec ) {

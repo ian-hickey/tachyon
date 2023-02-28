@@ -22,8 +22,8 @@
 		<cfargument name="callerId" required="no" type="string" default="undefined">
 		
 		<cfset var result="">
-		<cfset var id=getLuceeId()[arguments.type].id>
-		<cfset var sec=getLuceeId()[arguments.type].securityKey>
+		<cfset var id=getTachyonId()[arguments.type].id>
+		<cfset var sec=getTachyonId()[arguments.type].securityKey>
 		<cfif not listFind(arguments.callerId,id)>
 			<cfadmin 
 				type="#arguments.type#"
@@ -42,7 +42,7 @@
 		<cfargument name="action" required="yes" type="string">
 		<cfargument name="urlCollection" required="no" type="struct" default="#{}#">
 	
-		<cfset var sec=getLuceeId()[arguments.type].securityKey>
+		<cfset var sec=getTachyonId()[arguments.type].securityKey>
 		<cfset pw=Decrypt(arguments.password,sec,'cfmx_compat','hex')>
 		
         <cfadmin 
@@ -55,7 +55,7 @@
             type="#arguments.type#"
             password="#pw#"
             returnVariable="local.pluginDir">	
-		<cfset mappings['/lucee_plugin_directory/']=pluginDir>
+		<cfset mappings['/tachyon_plugin_directory/']=pluginDir>
         <cfapplication action="update" mappings="#mappings#" sessionmanagement="yes" 
 	clientmanagement="no" 
 	setclientcookies="yes" 

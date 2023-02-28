@@ -1,4 +1,4 @@
-<cfcomponent extends="org.lucee.cfml.test.LuceeTestCase">
+<cfcomponent extends="org.tachyon.cfml.test.TachyonTestCase">
 	<cfscript>
 		function beforeAll(){
 			// runs before all testcases
@@ -9,7 +9,7 @@
 		}
 
 		function run( testResults , testBox ){
-			describe( title="Test suite for checking cfschedule result attribute in Lucee", body=function(){
+			describe( title="Test suite for checking cfschedule result attribute in Tachyon", body=function(){
 				beforeEach(function( currentSpec ){
 					// runs before each spec in this suite group
 					hasError = false;
@@ -64,7 +64,7 @@
 				}, labels="result attribute for script version of cfschedule(should be available)");
 			}
 
-			, labels="Test suite for checking cfschedule result attribute in Lucee");
+			, labels="Test suite for checking cfschedule result attribute in Tachyon");
 		}
 
 

@@ -1,13 +1,13 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 	function beforeAll(){}
 
 	function afterAll(){}
 
 	function run( testResults , testBox ) {
 
-		var DateTimeUtil=createObject("java","lucee.commons.date.DateTimeUtil");
-		var ScheduledTaskThread=createObject("java","lucee.runtime.schedule.ScheduledTaskThread");
-		var ScheduleTaskImpl=createObject("java","lucee.runtime.schedule.ScheduleTaskImpl");
+		var DateTimeUtil=createObject("java","tachyon.commons.date.DateTimeUtil");
+		var ScheduledTaskThread=createObject("java","tachyon.runtime.schedule.ScheduledTaskThread");
+		var ScheduleTaskImpl=createObject("java","tachyon.runtime.schedule.ScheduleTaskImpl");
 		var TimeZone=createObject("java","java.util.TimeZone");
 		var Date=createObject("java","java.util.Date");
 		var UNIX0=createDateTime(1970,1,1,0,0,0,0,"UTC");	

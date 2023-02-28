@@ -1,14 +1,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.lucee</groupId>
-  <artifactId>lucee</artifactId>
-  <version>6.0.0.347-SNAPSHOT</version>
+  <groupId>org.tachyoncf</groupId>
+  <artifactId>tachyon</artifactId>
+  <version>1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>Lucee Loader Build</name>
-  <description>Building the Lucee Loader JAR</description>
-  <url>http://maven.lucee.org/loader/</url>
+  <name>Tachyon Loader Build</name>
+  <description>Building the Tachyon Loader JAR</description>
+  <url>http://maven.tachyon.org/loader/</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -19,7 +19,7 @@
     <maven.build.timestamp.format>yyyy/MM/dd HH:mm:ss z</maven.build.timestamp.format>
     <maven.build.timestamp.zone>UTC</maven.build.timestamp.zone>
     <maven.build.timestamp.locale>en,GB</maven.build.timestamp.locale>
-    <main.class>lucee.runtime.script.Main</main.class>
+    <main.class>tachyon.runtime.script.Main</main.class>
   </properties>
 
   <licenses>
@@ -34,9 +34,9 @@
     <developer>
       <id>micstriit</id>
       <name>Michael Offner</name>
-      <email>michael@lucee.org</email>
-      <organization>Lucee Association Switzerland</organization>
-      <organizationUrl>http://lucee.org</organizationUrl>
+      <email>michael@tachyon.org</email>
+      <organization>Tachyon Association Switzerland</organization>
+      <organizationUrl>http://tachyon.org</organizationUrl>
       <roles>
         <role>Project-Administrator</role>
         <role>Developer</role>
@@ -169,7 +169,7 @@
           </executions>
         </plugin>
 
-      <!-- plugin to build Lucee Core Files (.lco) -->
+      <!-- plugin to build Tachyon Core Files (.lco) -->
          <plugin>
            <artifactId>maven-antrun-plugin</artifactId>
            <version>3.0.0</version>
@@ -326,7 +326,7 @@
   source: mvn
 -->
   <dependency>
-    <groupId>org.lucee</groupId>
+    <groupId>org.tachyon</groupId>
     <artifactId>jzlib</artifactId>
     <version>1.1.3</version>
     <scope>provided</scope>
@@ -338,7 +338,7 @@
     <scope>provided</scope>
   </dependency>
   <dependency>
-    <groupId>org.lucee</groupId>
+    <groupId>org.tachyon</groupId>
     <artifactId>tika-core</artifactId>
     <version>1.28.4</version>
     <scope>provided</scope>
@@ -356,49 +356,49 @@
     <scope>provided</scope>
   </dependency>
   <dependency>
-    <groupId>org.lucee</groupId>
+    <groupId>org.tachyon</groupId>
     <artifactId>commons-compress</artifactId>
     <version>1.9.0</version>
     <scope>provided</scope>
   </dependency>
   <dependency>
-    <groupId>org.lucee</groupId>
+    <groupId>org.tachyon</groupId>
     <artifactId>commons-email</artifactId>
     <version>1.2.0</version>
     <scope>provided</scope>
   </dependency>
   <dependency>
-    <groupId>org.lucee</groupId>
+    <groupId>org.tachyon</groupId>
     <artifactId>commons-fileupload</artifactId>
     <version>1.3.2.L0001</version>
     <scope>provided</scope>
   </dependency>
   <dependency>
-    <groupId>org.lucee</groupId>
+    <groupId>org.tachyon</groupId>
     <artifactId>commons-io</artifactId>
     <version>2.4.0</version>
     <scope>provided</scope>
   </dependency>
   <dependency>
-    <groupId>org.lucee</groupId>
+    <groupId>org.tachyon</groupId>
     <artifactId>commons-lang</artifactId>
     <version>2.6.0</version>
     <scope>provided</scope>
   </dependency>
   <dependency>
-    <groupId>org.lucee</groupId>
+    <groupId>org.tachyon</groupId>
     <artifactId>commons-logging-adapters</artifactId>
     <version>1.1.0.0000L</version>
     <scope>provided</scope>
   </dependency>
   <dependency>
-    <groupId>org.lucee</groupId>
+    <groupId>org.tachyon</groupId>
     <artifactId>commons-logging-api</artifactId>
     <version>1.1.0.0000L</version>
     <scope>provided</scope>
   </dependency>
   <dependency>
-    <groupId>org.lucee</groupId>
+    <groupId>org.tachyon</groupId>
     <artifactId>commons-logging</artifactId>
     <version>1.2.0.0000L</version>
     <scope>provided</scope>
@@ -421,29 +421,29 @@
     <scope>provided</scope>
   </dependency>
  <dependency>
-    <groupId>org.lucee</groupId>
+    <groupId>org.tachyon</groupId>
     <artifactId>log4j-core</artifactId>
     <version>2.17.2.0001L</version>
   </dependency>
   <dependency>
-    <groupId>org.lucee</groupId>
+    <groupId>org.tachyon</groupId>
     <artifactId>log4j-api</artifactId>
     <version>2.17.2.0001L</version>
   </dependency>
   <dependency>
-    <groupId>org.lucee</groupId>
+    <groupId>org.tachyon</groupId>
     <artifactId>portlet</artifactId>
     <version>1.0.0</version>
     <scope>provided</scope>
   </dependency>
   <dependency>
-    <groupId>org.lucee</groupId>
+    <groupId>org.tachyon</groupId>
     <artifactId>xml-apis</artifactId>
     <version>1.4.1</version>
     <scope>provided</scope>
   </dependency>
   <dependency>
-    <groupId>org.lucee</groupId>
+    <groupId>org.tachyon</groupId>
     <artifactId>jta</artifactId>
     <version>1.1.0</version>
     <scope>provided</scope>
@@ -455,19 +455,19 @@
     <scope>provided</scope>
   </dependency>
   <dependency>
-  	<groupId>org.lucee</groupId>
+  	<groupId>org.tachyon</groupId>
   	<artifactId>httpcomponents-httpclient</artifactId>
   	<version>4.5.13</version>
     <scope>provided</scope>
   </dependency>
   <dependency>
-    <groupId>org.lucee</groupId>
+    <groupId>org.tachyon</groupId>
     <artifactId>httpcomponents-httpcore</artifactId>
     <version>4.4.13</version>
     <scope>provided</scope>
   </dependency>
   <dependency>
-  	<groupId>org.lucee</groupId>
+  	<groupId>org.tachyon</groupId>
   	<artifactId>httpcomponents-httpmime</artifactId>
   	<version>4.5.13</version>
     <scope>provided</scope>
@@ -509,7 +509,7 @@
     <scope>provided</scope>
   </dependency>
   <dependency>
-    <groupId>org.lucee</groupId>
+    <groupId>org.tachyon</groupId>
     <artifactId>xml-resolver</artifactId>
     <version>1.2.0</version>
     <scope>provided</scope>
@@ -581,12 +581,12 @@
     <scope>provided</scope>
   </dependency>
   <dependency>
-    <groupId>org.lucee</groupId>
+    <groupId>org.tachyon</groupId>
     <artifactId>argon2</artifactId>
     <version>2.7.0</version>
   </dependency>
   <dependency>
-    <groupId>org.lucee</groupId>
+    <groupId>org.tachyon</groupId>
     <artifactId>txtmark</artifactId>
     <version>0.16.0</version>
     <scope>provided</scope>
@@ -596,7 +596,7 @@
    <repositories>
       <repository>
          <id>repo</id>
-         <url>https://raw.githubusercontent.com/lucee/mvn/master/releases</url>
+         <url>https://raw.githubusercontent.com/tachyon/mvn/master/releases</url>
       </repository>
       <repository>
         <id>snapi</id>
@@ -609,9 +609,9 @@
    </repositories>
 
   <scm>
-    <url>https://github.com/lucee/Lucee</url>
-             <connection>scm:git:git://github.com/lucee/Lucee.git</connection>
-    <developerConnection>scm:git:git@github.com:lucee/Lucee.git</developerConnection>
+    <url>https://github.com/tachyon/Tachyon</url>
+             <connection>scm:git:git://github.com/tachyon/Tachyon.git</connection>
+    <developerConnection>scm:git:git@github.com:tachyon/Tachyon.git</developerConnection>
     <tag>${project.version}</tag>
   </scm>
 

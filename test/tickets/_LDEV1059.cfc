@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 	function run( testResults , testBox ) {
 		describe( "query scope in caller hides variables scope in CFC", function() {
 			it('Creating cfc instance with new()',  function( currentSpec ) {

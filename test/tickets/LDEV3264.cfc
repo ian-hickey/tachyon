@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="session" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="session" {
 
 
 	function beforeAll(){

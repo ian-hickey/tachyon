@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 	function run( testResults , testBox ) {
 		describe( title="Test suite for LDEV-1582", body=function() {
 			it(title="Checking mask value '99.00' with negative number ", body = function( currentSpec ) {

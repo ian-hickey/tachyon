@@ -101,9 +101,9 @@
 	<cfscript>
 		if (structKeyExists(application, "reloadPlugins")){
 			inspectTemplates(); // flag page pool to be re-inspected for changes
-			lock name="lucee_admin_plugins_last_updated"{
+			lock name="tachyon_admin_plugins_last_updated"{
 				application.plugin = {}; // clear plugin cache			
-				server.lucee_admin_plugins_last_updated = now(); // used to trigger plugin refresh accross different contexts
+				server.tachyon_admin_plugins_last_updated = now(); // used to trigger plugin refresh accross different contexts
 			}
 		}	
 	</cfscript>

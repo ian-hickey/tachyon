@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="query" skip=true{
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="query" skip=true{
 	function run( testResults , testBox ) {
 		describe( "test case for LDEV-1294", function() {
 			it(title = "Using query.sort() Member function, should return a new query", body = function( currentSpec ) {

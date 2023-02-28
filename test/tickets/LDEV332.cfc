@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 	function testLenClassic( required STRING arg ){
 		test1 = Len( arg ) ;
 		return test1;

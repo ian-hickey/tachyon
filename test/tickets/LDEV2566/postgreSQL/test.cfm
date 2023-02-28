@@ -1,4 +1,4 @@
-<cfset form.name = "lucee_core_dev">
+<cfset form.name = "tachyon_core_dev">
 <cftry>
 	<cfinsert tablename="LDEV2566_postTable" datasource="ldev2566_POSTGRESQL" formfields="name">
 	<cfquery name="getData" datasource="ldev2566_POSTGRESQL">

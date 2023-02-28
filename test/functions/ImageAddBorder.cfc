@@ -16,11 +16,11 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  * 
  ---><cfscript>
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="image" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="image" {
 	
 
 	public void function testImageAddBorder() localmode="true" {
-		path=GetDirectoryFromPath(GetCurrentTemplatePath())&"images/lucee.png";
+		path=GetDirectoryFromPath(GetCurrentTemplatePath())&"images/tachyon.png";
 		img=imageRead(path)
 		//echo(img);
 		imageAddBorder(img);

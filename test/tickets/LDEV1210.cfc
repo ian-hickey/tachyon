@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="memcached"{
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="memcached"{
 
 	variables.cacheName='memcached';
 
@@ -50,7 +50,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase" labels="memcached"{
 		//try {
 			application action="update"
 				caches="#{memcached:{
-						  class: 'org.lucee.extension.io.cache.memcache.MemCacheRaw'
+						  class: 'org.tachyon.extension.io.cache.memcache.MemCacheRaw'
 						, bundleName: 'memcached.extension'
 						, bundleVersion: '3.0.2.29'
 						, storage: false

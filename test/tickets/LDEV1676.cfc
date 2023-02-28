@@ -1,4 +1,4 @@
-component extends = "org.lucee.cfml.test.LuceeTestCase" labels="xml" {
+component extends = "org.tachyon.cfml.test.TachyonTestCase" labels="xml" {
 	function beforeAll(){
 		variables.uri = createURI("LDEV1676");
 	}	
@@ -10,7 +10,7 @@ component extends = "org.lucee.cfml.test.LuceeTestCase" labels="xml" {
 					template : "#uri#\LDEV1676.cfm",
 					forms :	{scene=1}
 				).filecontent;
-				expect(trim(result)).toBe("http://update.lucee.org/rest/update/provider/echoGet/cgi");
+				expect(trim(result)).toBe("http://update.tachyon.org/rest/update/provider/echoGet/cgi");
 			});
 
 			it( title="Check xmlFeatures externalGeneralEntities=false",body = function ( currentSpec ) {

@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
     function run( testResults, testBox ){
         describe( "Test case for LDEV-3532", function() {
             it( title="reFind() no matches with regex type java", body=function( currentSpec ){

@@ -16,7 +16,7 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  * 
  ---><cfscript>
-component extends="org.lucee.cfml.test.LuceeTestCase"	{
+component extends="org.tachyon.cfml.test.TachyonTestCase"	{
 	//processingdirective pageencoding="UTF-8";
 	variables.suffix="Query";
 

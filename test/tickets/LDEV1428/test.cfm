@@ -73,7 +73,7 @@
 		q = new Query();
 
 		try{
-			if( structKeyExists( server, "lucee" ) ){ ORMCloseSession(); }
+			if( structKeyExists( server, "tachyon" ) ){ ORMCloseSession(); }
 			ORMExecuteQuery("delete from ActiveUser where userName = 'unitTest'");
 			ORMFlush();
 			ORMClearSession();

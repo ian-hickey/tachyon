@@ -2,7 +2,7 @@ component {
 
 	this.name	=	'LDEV1992';
 	mySQL = getCredentials();
-	variables.adminWeb = new org.lucee.cfml.Administrator("web", request.WebAdminPassword);
+	variables.adminWeb = new org.tachyon.cfml.Administrator("web", request.WebAdminPassword);
 	tmpStrt.name = "TestDSN";
 	tmpStrt.type = "MYSQL";
 	tmpStrt.newName = "TestDSN1";
@@ -81,7 +81,7 @@ component {
 	        echo("
 				INSERT INTO `users` (`user_id`, `firstName`, `FKRoleID`)
 					VALUES
-						('4028818e2fb6c893012fe637c5db00a7','lucee',23)
+						('4028818e2fb6c893012fe637c5db00a7','tachyon',23)
 				");
 			}
 		}

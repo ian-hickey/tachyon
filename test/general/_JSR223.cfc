@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"	{
+component extends="org.tachyon.cfml.test.TachyonTestCase"	{
 	
 	public function beforeTests(){
 		ScriptEngineManager=createObject('java','javax.script.ScriptEngineManager');
@@ -12,8 +12,8 @@ component extends="org.lucee.cfml.test.LuceeTestCase"	{
 		local.engine =manager.getEngineByName("CFML");
 		assertEquals("cfml",engine.factory.languageName);
 
-		local.engine =manager.getEngineByName("Lucee");
-		assertEquals("lucee",engine.factory.languageName);
+		local.engine =manager.getEngineByName("Tachyon");
+		assertEquals("tachyon",engine.factory.languageName);
 
 
 	}
@@ -22,8 +22,8 @@ component extends="org.lucee.cfml.test.LuceeTestCase"	{
 		local.engine =manager.getEngineByExtension("cfm");
 		assertEquals("cfml",engine.factory.languageName);
 
-		local.engine =manager.getEngineByExtension("lucee");
-		assertEquals("lucee",engine.factory.languageName);
+		local.engine =manager.getEngineByExtension("tachyon");
+		assertEquals("tachyon",engine.factory.languageName);
 
 		// reference
 		local.engine =manager.getEngineByExtension("js");
@@ -34,8 +34,8 @@ component extends="org.lucee.cfml.test.LuceeTestCase"	{
 		local.engine =manager.getEngineByMimeType("application/cfml");
 		assertEquals("cfml",engine.factory.languageName);
 
-		local.engine =manager.getEngineByMimeType("application/lucee");
-		assertEquals("lucee",engine.factory.languageName);
+		local.engine =manager.getEngineByMimeType("application/tachyon");
+		assertEquals("tachyon",engine.factory.languageName);
 
 		// reference
 		local.engine =manager.getEngineByMimeType("application/javascript");
@@ -50,7 +50,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase"	{
 			
 		}
 
-		assertTrue(names.contains("lucee"));
+		assertTrue(names.contains("tachyon"));
 		assertTrue(names.contains("cfml"));
 		assertTrue(names.contains("ECMAScript"));
 	}
@@ -62,7 +62,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase"	{
 		engine.put('test',testValue);
 		assertEquals(testValue,engine.get('test'));
 
-		local.engine =manager.getEngineByName("Lucee");
+		local.engine =manager.getEngineByName("Tachyon");
 		engine.put('test',testValue);
 		assertEquals(testValue,engine.get('test'));
 	}
@@ -71,7 +71,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase"	{
 
 	public void function testEvalReturnValue(){
 		_testEvalReturnValue(manager.getEngineByName("CFML"));
-		_testEvalReturnValue(manager.getEngineByName("Lucee"));
+		_testEvalReturnValue(manager.getEngineByName("Tachyon"));
 	}
 	private void function _testEvalReturnValue(required engine){
 		engine.put('cont',false);
@@ -84,7 +84,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase"	{
 
 	public void function testEvalScopes(){
 		_testEvalScopes(manager.getEngineByName("CFML"));
-		_testEvalScopes(manager.getEngineByName("Lucee"));
+		_testEvalScopes(manager.getEngineByName("Tachyon"));
 	}
 	private void function _testEvalScopes(required engine){
 		engine.eval('url.test=1;');
@@ -95,7 +95,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase"	{
 
 	public void function testEvalInterpreter(){
 		_testEvalInterpreter(manager.getEngineByName("CFML"));
-		_testEvalInterpreter(manager.getEngineByName("Lucee"));
+		_testEvalInterpreter(manager.getEngineByName("Tachyon"));
 	}
 	private void function _testEvalInterpreter(required engine){
 		engine.eval('susi.sorglos=1;');
@@ -105,7 +105,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase"	{
 
 	public void function testEvalFunction(){
 		_testEvalFunction(manager.getEngineByName("CFML"));
-		_testEvalFunction(manager.getEngineByName("Lucee"));
+		_testEvalFunction(manager.getEngineByName("Tachyon"));
 	}
 	private void function _testEvalFunction(required engine){
 		// udf

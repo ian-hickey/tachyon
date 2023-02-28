@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="s3,zip" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="s3,zip" {
 	
 	//public function beforeTests(){}
 	
@@ -317,13 +317,13 @@ private function testResourceListening(res) localMode=true {
     assertEquals("s,ss,sss.txt",listSort(arrayToList(children),"textnoCase"));
 
     // filter
-    filter=createObject("java","lucee.commons.io.res.filter.ExtensionResourceFilter").init("txt",false);
+    filter=createObject("java","tachyon.commons.io.res.filter.ExtensionResourceFilter").init("txt",false);
     children=res.list(filter);
     assertEquals("sss.txt",listSort(arrayToList(children),"textnoCase"));
 }
 
 private function toResource(string path) localMode=true {
-    var res=createObject('java','lucee.commons.io.res.util.ResourceUtil').toResourceNotExisting(getPageContext(), path);
+    var res=createObject('java','tachyon.commons.io.res.util.ResourceUtil').toResourceNotExisting(getPageContext(), path);
     return res;
 }
 
@@ -395,7 +395,7 @@ private function testResourceGetter(res) localMode=true {
 private function testResourceReadWrite(res) localMode=true {
     f=res.getRealResource("original.txt");
     
-    IOUtil=createObject("java","lucee.commons.io.IOUtil");
+    IOUtil=createObject("java","tachyon.commons.io.IOUtil");
     
     IOUtil.write(f, "Susi Sorglos", nullValue(), false);
     res=IOUtil.toString(f,nullValue());
@@ -412,7 +412,7 @@ private function testResourceReadWrite(res) localMode=true {
 
 private function testResourceProvider(string path) localmode=true {
     // first we ceate a resource object
-    res=createObject('java','lucee.commons.io.res.util.ResourceUtil').toResourceNotExisting(getPageContext(), path);
+    res=createObject('java','tachyon.commons.io.res.util.ResourceUtil').toResourceNotExisting(getPageContext(), path);
 
     // delete when exists
     if(res.exists()) res.remove(true);
@@ -482,7 +482,7 @@ private function assertEqualPaths(string path1, string path2) {
 
 	private void function test(string label,string root){
 		var start=getTickCount();
-		var dir=arguments.root&"lucee-res-#lcase(hash(CreateGUID()))#/";
+		var dir=arguments.root&"tachyon-res-#lcase(hash(CreateGUID()))#/";
 		
 		// make sure there are no data from a previous run 
 		if(directoryExists(dir)) {

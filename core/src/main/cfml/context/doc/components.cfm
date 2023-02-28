@@ -4,7 +4,7 @@
 <cfset arrAllItems = request.componentDetails.cfcs>
 <cfset arrAllPacks=request.componentDetails.pack>
 
-<cfinclude template="/lucee/admin/resources/text.cfm">
+<cfinclude template="/tachyon/admin/resources/text.cfm">
 
 <cfif len( url.item )>
 	<cfset itemPos = arrAllItems.findNoCase( url.item )>
@@ -79,7 +79,7 @@
 		};
 
 		$( function() {
-			$( '#lucee-docs-search-input' ).typeahead(
+			$( '#tachyon-docs-search-input' ).typeahead(
 				{
 					hint: true,
 					highlight: true,
@@ -143,7 +143,7 @@
 								</div>
 						</div>
 					<cfelse>
-						<h2 style="text-align: center;">Lucee Components</h2>
+						<h2 style="text-align: center;">Tachyon Components</h2>
 					</cfif>
 
 					<h2>Component <em>#(listLast(data.fullName, "."))#</em></h2>
@@ -159,7 +159,7 @@
 
 					<!--- Properties of the component --->
 					<cfscript>
-					tmp = ['accessors':false,'persistent':false,'synchronized':false,'extends':'lucee.Component'];
+					tmp = ['accessors':false,'persistent':false,'synchronized':false,'extends':'tachyon.Component'];
 					propertiesStruct=structNew('linked');
 					loop struct=tmp index="key" item="def" {
 						if(!structKeyExists(data, key)) continue;
@@ -389,7 +389,7 @@
 				</ul>
 			</div>
 		</div>
-		<p>The packages listed here are based on the component mappings defined in the Lucee Administrator under  "Archives & Resources/Component". Add your own packages here by register your components with a component mapping. What makes it easier to access your components.</p>
+		<p>The packages listed here are based on the component mappings defined in the Tachyon Administrator under  "Archives & Resources/Component". Add your own packages here by register your components with a component mapping. What makes it easier to access your components.</p>
 
 		<cfset qryAllItems = queryNew("component")>
 		<cfloop array="#arrAllItems#" index="ai">

@@ -1,7 +1,7 @@
 
-component extends="org.lucee.cfml.test.LuceeTestCase"	{
+component extends="org.tachyon.cfml.test.TachyonTestCase"	{
 	
-	variables.xml='<img src="/lucee/graph.cfm?img=qq.png&type=png"/>';// the & is the problem
+	variables.xml='<img src="/tachyon/graph.cfm?img=qq.png&type=png"/>';// the & is the problem
 		
 	public void function testLenient(){
 		xml variable="LOCAL.res" lenient=true {

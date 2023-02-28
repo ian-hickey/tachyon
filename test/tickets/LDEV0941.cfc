@@ -1,4 +1,4 @@
-<cfcomponent extends="org.lucee.cfml.test.LuceeTestCase"  labels="pdf,zip">
+<cfcomponent extends="org.tachyon.cfml.test.TachyonTestCase"  labels="pdf,zip">
 	<cfscript>
 		
 		function run( testResults , testBox ) {

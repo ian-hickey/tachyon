@@ -1,4 +1,4 @@
-<cfcomponent extends="org.lucee.cfml.test.LuceeTestCase">
+<cfcomponent extends="org.tachyon.cfml.test.TachyonTestCase">
 	<cfscript>
 		function beforeAll(){
 			MyQuery = queryNew('Manager, Employee', 'varchar,varchar');

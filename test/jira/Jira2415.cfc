@@ -15,7 +15,7 @@
  * 
  **/
 <cfscript>
-component extends="org.lucee.cfml.test.LuceeTestCase"	{
+component extends="org.tachyon.cfml.test.TachyonTestCase"	{
 	
 	//public function beforeTests(){}
 	
@@ -60,7 +60,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase"	{
 
 	
 	private boolean function hasFullNullSupport(){
-		return server.ColdFusion.ProductName EQ "Lucee" && getPageContext().getConfig().getFullNullSupport();
+		return server.ColdFusion.ProductName EQ "Tachyon" && getPageContext().getConfig().getFullNullSupport();
 	}
 } 
 </cfscript>

@@ -1,7 +1,7 @@
 component {
 	this.name = 'test';
 	this.cache.connections["testEHcache"] = {
-	  class: 'org.lucee.extension.cache.eh.EHCache'
+	  class: 'org.tachyon.extension.cache.eh.EHCache'
 	, bundleName: 'ehcache.extension'
 	//, bundleVersion: '2.10.0.21'
 	, storage: false

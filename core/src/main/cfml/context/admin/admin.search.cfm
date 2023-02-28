@@ -14,9 +14,9 @@
 	<cfreturn ret />
 </cffunction>
 
-<cfset luceeArchivePath = expandPath("{lucee-web}/context/lucee-admin.lar") />
-<cfset luceeArchiveZipPath = "zip://" & luceeArchivePath & "!" />
-<cfset dataDir = expandPath("{lucee-server}/searchdata") & server.separator.file />
+<cfset tachyonArchivePath = expandPath("{tachyon-web}/context/tachyon-admin.lar") />
+<cfset tachyonArchiveZipPath = "zip://" & tachyonArchivePath & "!" />
+<cfset dataDir = expandPath("{tachyon-server}/searchdata") & server.separator.file />
 
 <cfset current.label = stText.admin.search.label />
 <cfoutput>
@@ -32,10 +32,10 @@
 <cfif structKeyExists(url, 'q') and len(url.q)>
 	<cfset variables.indexFile = '#dataDir#searchindex.cfm' />
 
-	<!--- do initial or new indexing when a new Lucee version is detected --->
+	<!--- do initial or new indexing when a new Tachyon version is detected --->
 	<cfif not fileExists(variables.indexFile)
 		or structKeyExists(url, "reindex")
-		or fileRead('#dataDir#indexed-lucee-version.cfm') neq server.lucee.version & server.lucee['release-date']>
+		or fileRead('#dataDir#indexed-tachyon-version.cfm') neq server.tachyon.version & server.tachyon['release-date']>
 		<cfinclude template="admin.search.index.cfm" />
 	</cfif>
 
@@ -45,7 +45,7 @@
 	<cfset keys2action = evaluate(fileread(variables.indexFile)) />
 	
 	<!--- loop through translations--->
-	<cfset data = application.stText[session.lucee_admin_lang] />
+	<cfset data = application.stText[session.tachyon_admin_lang] />
 	<cfset foundkeys = searchLang(url.q, data) />
 	
 	<cfloop array="#foundkeys#" index="key">
@@ -87,7 +87,7 @@
 			<cfset pagename = rereplace(replace(action, ".", " - "), '.', '\U\0') />
 		</cfif>
 		<h3><a href="#cgi.SCRIPT_NAME#?action=#action#">#pagename#</a></h3>
-		<cfset tmp = fileRead('#dataDir##action#.#session.lucee_admin_lang#.txt', 'utf-8') />
+		<cfset tmp = fileRead('#dataDir##action#.#session.tachyon_admin_lang#.txt', 'utf-8') />
 		<cfset pos = find(url.q, tmp) />
 		<cfset startpos = max(1, pos-showchars/2) />
 		<cfif startpos gt 1>
@@ -100,6 +100,6 @@
 		This feature is currently in Beta State.
 		If you have any problems while using this Implementation,
 		please post the bugs and errors in our
-		<a href="https://jira.jboss.org/jira/browse/Lucee" target="_blank">bugtracking system</a>. 
+		<a href="https://jira.jboss.org/jira/browse/Tachyon" target="_blank">bugtracking system</a>.
 	</div>
 </cfif>

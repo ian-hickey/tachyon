@@ -15,10 +15,10 @@
  * You should have received a copy of the GNU Lesser General Public 
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  * 
- ---><cfcomponent extends="org.lucee.cfml.test.LuceeTestCase">
+ ---><cfcomponent extends="org.tachyon.cfml.test.TachyonTestCase">
 	
 	<cffunction name="testDateConvert" localMode="modern">
-<!--- no longer supported with Lucee 5
+<!--- no longer supported with Tachyon 5
 <cfset valueEquals(left="{ts '2006-01-26 00:00:00'}x", right="#DateConvert("Local2utc", "{ts '2006-01-26 01:00:00'}")#x")>
 <cfset valueEquals(left="{ts '2006-07-26 00:00:00'}x", right="#DateConvert("Local2utc", "{ts '2006-07-26 02:00:00'}")#x")>
 <cfset valueEquals(left="{ts '2006-03-26 03:00:00'}x", right="#DateConvert("Local2utc", "{ts '2006-03-26 05:00:00'}")#x")>

@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 	function run( testResults , testBox ) {
 		describe( "Test suite for LDEV-1484", function() {
 			it( title='Checking structFilter() with arguments scope calling via UDF', body=function( currentSpec ) {

@@ -11,7 +11,7 @@
 				}
 			},
 			{
-				datasource="luceedb"
+				datasource="tachyondb"
 			}
 		);
 		writeOutput(qQuery.recordcount);
@@ -28,7 +28,7 @@
 				} 
 			},
 			{
-				datasource="luceedb"
+				datasource="tachyondb"
 			}
 		);
 		writeOutput(qQuery1.recordcount);

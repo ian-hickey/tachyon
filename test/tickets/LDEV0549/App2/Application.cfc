@@ -1,7 +1,7 @@
 component {
 	this.name = 'AppB549';
 	this.cache.connections["default"] = {
-		 class: 'lucee.runtime.cache.ram.RamCache'
+		 class: 'tachyon.runtime.cache.ram.RamCache'
 		, storage: true
 		, custom: {"timeToIdleSeconds":"0","timeToLiveSeconds":"0"}
 		, default: 'object'

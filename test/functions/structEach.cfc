@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" {
 	function run( testResults, textbox ) {
 		describe("testcase for StructEach()", function() {
 			variables.animals = {"cow": "moo","pig": "oink"};

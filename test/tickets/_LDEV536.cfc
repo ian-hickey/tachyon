@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 	function run( testResults , testBox ) {
 		describe( "test case for LDEV-0536", function() {
 			it(title = "Unable to handle RFC822 datetime string with Z for timezone", body = function( currentSpec ) {

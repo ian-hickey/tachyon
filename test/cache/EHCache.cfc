@@ -1,6 +1,6 @@
 <!--- MUST fix the test case and enable again!
  *
- * Copyright (c) 2016, Lucee Assosication Switzerland. All rights reserved.*
+ * Copyright (c) 2016, Tachyon Assosication Switzerland. All rights reserved.*
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -16,7 +16,7 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  * 
  ---><cfscript>
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="cache,ehCache" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="cache,ehCache" {
 	
 	
 	//public function afterTests(){}
@@ -33,7 +33,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase" labels="cache,ehCache" {
 	}
 
 	public void function testClassExist() {
-		createObject('java','org.lucee.extension.cache.eh.EHCache','ehcache.extension');
+		createObject('java','org.tachyon.extension.cache.eh.EHCache','ehcache.extension');
 	}
 
 	public void function testTimespan() {
@@ -75,7 +75,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase" labels="cache,ehCache" {
 	private string function defineCache(){
 		application action="update" 
 			caches="#{ehcache: {
-	  class: 'org.lucee.extension.cache.eh.EHCache'
+	  class: 'org.tachyon.extension.cache.eh.EHCache'
 	, bundleName: 'ehcache.extension'
 	, storage: false
 	, custom: {"bootstrapAsynchronously":"true","replicatePuts":"true","automatic_hostName":"",

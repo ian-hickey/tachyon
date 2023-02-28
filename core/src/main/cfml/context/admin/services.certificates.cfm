@@ -24,19 +24,19 @@ Defaults --->
 <cfset _port=session.certPort>
 
 <cfscript>
-	LuceeTrustStore = false;
-	if ((server.system.properties["lucee.use.lucee.SSL.TrustStore"]?: false)
-			|| (server.system.environment["lucee_use_lucee_SSL_TrustStore"]?: false)){
-		LuceeTrustStore = true;
+	TachyonTrustStore = false;
+	if ((server.system.properties["tachyon.use.tachyon.SSL.TrustStore"]?: false)
+			|| (server.system.environment["tachyon_use_tachyon_SSL_TrustStore"]?: false)){
+		TachyonTrustStore = true;
 	};
 	
 </cfscript>
 
-<cfif !LuceeTrustStore>
+<cfif !TachyonTrustStore>
 	<p>
-	<b>As Lucee is currently using the JVM TrustStore/cacerts file, this functionality isn't available.</b>
+	<b>As Tachyon is currently using the JVM TrustStore/cacerts file, this functionality isn't available.</b>
 	<br><br>
-	Set the following System or Environment variables to enable: <code>lucee.use.lucee.SSL.TrustStore = true;</code>
+	Set the following System or Environment variables to enable: <code>tachyon.use.tachyon.SSL.TrustStore = true;</code>
 	</p>
 </cfif>
 

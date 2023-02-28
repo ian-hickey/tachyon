@@ -1,4 +1,4 @@
-component extends = "org.lucee.cfml.test.LuceeTestCase"{
+component extends = "org.tachyon.cfml.test.TachyonTestCase"{
 	cfapplication(mappings = { "/cfcMap" : getDirectoryFromPath(getCurrentTemplatePath()) & "LDEV3900/otherCfc"});
 	function run( testResults , testBox ) {
 		describe( "Test case for LDEV-3900", function() {

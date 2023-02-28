@@ -1,7 +1,7 @@
 <cfscript>
 	/**
 	* 
-	* This is a sample skin file for the Lucee DumpTemplate. You can copy this file into a new one in the same location and 
+	* This is a sample skin file for the Tachyon DumpTemplate. You can copy this file into a new one in the same location and
 	* define the colors as you see fit. Just adapt the settings for the Header of an object to display, the key color and the 
 	* value color. Next to it you can also define the text color for the header and the regular key and value elements
 	* you shouldn't change the definition of the pointer for the SimpleValue though. This is in order not to display a mouse

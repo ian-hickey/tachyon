@@ -21,7 +21,7 @@
 
 
 						<!---<table class="maintbl">
-						<cfloop list="CFML,Lucee" item="dialect">
+						<cfloop list="CFML,Tachyon" item="dialect">
 					<cfset css=iif(len(component["baseComponentTemplate"&dialect]) EQ 0 and
 					 len(component["strBaseComponentTemplate"&dialect]) NEQ 0,de('Red'),de(''))>
 							<tr>
@@ -48,7 +48,7 @@
 								<b>#component["strBaseComponentTemplateCFML"]#</b>
 							</cfif>
 							
-						<cfoutput><input type="hidden" name="baseComponentTemplateLucee" value="#component["strBaseComponentTemplateLucee"]#" ></cfoutput>
+						<cfoutput><input type="hidden" name="baseComponentTemplateTachyon" value="#component["strBaseComponentTemplateTachyon"]#" ></cfoutput>
 
 
 						<div class="comment">#stText.Components.BaseComponentDescription#</div>
@@ -129,7 +129,7 @@
 						<cfelse>
 							<b>#component.strcomponentDumpTemplate#</b>
 						</cfif>
-						<cfset _url="#findNoCase("https",cgi.server_protocol)?"https":"http"#://#cgi.http_host##cgi.context_path#/lucee/Admin.cfc">
+						<cfset _url="#findNoCase("https",cgi.server_protocol)?"https":"http"#://#cgi.http_host##cgi.context_path#/tachyon/Admin.cfc">
 						<div class="comment">#replace(stText.Components.ComponentDumpTemplateDescription,'{url}',"<a href=""#_url#"">#_url#</a>",'all')#</div>
 					</td>
 				</tr>

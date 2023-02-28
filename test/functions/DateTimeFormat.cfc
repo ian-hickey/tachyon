@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 	function run( testResults , testBox ) {
 		describe( title="checking dateAndTimeFormat()", body=function() {
 			it(title='dateAndTimeFormat() function with arguments', body=function( currentSpec ) {

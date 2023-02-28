@@ -54,7 +54,7 @@ Expression Language Transformer
 -->
 <!ELEMENT el (el-class)>
 <!--
-Defines the subclass of Lucee.transfomer.cfml.expression.ExprTransfomer (Java) that implements
+Defines the subclass of Tachyon.transfomer.cfml.expression.ExprTransfomer (Java) that implements
 the expression language of this Tag Library (required)
 -->
 <!ELEMENT el-class (#PCDATA)>
@@ -69,7 +69,7 @@ definition if name of tag has an append name
 -->
 <!ELEMENT appendix (#PCDATA)>
 <!--
-Defines the subclass of Lucee.tag.Tag (PHP) that implements
+Defines the subclass of Tachyon.tag.Tag (PHP) that implements
 the request time semantics for this tag. (required)
 
 #PCDATA ::= fully qualified Java Like class name
@@ -79,7 +79,7 @@ the request time semantics for this tag. (required)
 Tag Translation Time Evaluator
 		You can check and evaluate the dom Element representation of a Tag
 
-Defines the subclass of Lucee.transfomer.tag.Evaluator (Java).
+Defines the subclass of Tachyon.transfomer.tag.Evaluator (Java).
 
 #PCDATA ::= fully qualified class name
 -->
@@ -88,7 +88,7 @@ Defines the subclass of Lucee.transfomer.tag.Evaluator (Java).
 Tag dependent Body Transformer
 		Define a class to parse the body, diffrent from CFML Transformer
 
-Defines the subclass of Lucee.transfomer.tag.TagDependetBodyTransformer (Java).
+Defines the subclass of Tachyon.transfomer.tag.TagDependetBodyTransformer (Java).
 
 #PCDATA ::= fully qualified class name
 -->

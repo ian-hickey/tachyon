@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 	function run(){
 		describe( title="Test suite for LDEV-1725", body=function(){
 			it(title="Checking ListLast with attribute count", body=function(){

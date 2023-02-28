@@ -107,7 +107,7 @@ class CFCProxy(path: String?, initialThis: Map?, invokeDirectly: Boolean) {
 
         // no Request
         if (req == null) // TODO new File
-            req = creator.createHttpServletRequest(File("."), "Lucee", "/", "", null, null, null, null, null)
+            req = creator.createHttpServletRequest(File("."), "Tachyon", "/", "", null, null, null, null, null)
         // noRespone
         if (rsp == null) rsp = creator.createHttpServletResponse(out)
         val pc: PageContext = creator.createPageContext(req, rsp, out)

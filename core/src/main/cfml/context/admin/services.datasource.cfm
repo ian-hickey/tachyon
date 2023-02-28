@@ -4,8 +4,8 @@ error.message="";
 error.detail="";
 
 driverNames=structnew("linked");
-driverNames=ComponentListPackageAsStruct("lucee-server.admin.dbdriver",driverNames);
-driverNames=ComponentListPackageAsStruct("lucee.admin.dbdriver",driverNames);
+driverNames=ComponentListPackageAsStruct("tachyon-server.admin.dbdriver",driverNames);
+driverNames=ComponentListPackageAsStruct("tachyon.admin.dbdriver",driverNames);
 driverNames=ComponentListPackageAsStruct("dbdriver",driverNames);
 
 variables.drivers={};

@@ -1,6 +1,6 @@
 <cfapplication caches="#{
 	object:{
-		class="org.lucee.extension.cache.eh.EHCache"
+		class="org.tachyon.extension.cache.eh.EHCache"
 		,storage=false
 		,custom={timeToLiveSeconds:86400
 				,maxelementsondisk:10000000

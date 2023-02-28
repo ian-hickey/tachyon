@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project default="run" basedir="." name="Lucee">
+<project default="run" basedir="." name="Tachyon">
 
 <macrodef name="echots">
 	<attribute name="message"/>
@@ -28,7 +28,7 @@
 <script language="CFML">
 <![CDATA[
 	encodeForHTML("abc"); // test if ESAPI extension exist right away
-	systemOutput("---------- #DateTimeFormat(now(),'yyyy-mm-dd HH:nn:ss')# - Lucee Started ----------", true);
+	systemOutput("---------- #DateTimeFormat(now(),'yyyy-mm-dd HH:nn:ss')# - Tachyon Started ----------", true);
 
 	// doing the bare minimum here, all the action happends in /test/run-tests.cfm
 	// this code is also in /test/bootstrap-tests.cfm

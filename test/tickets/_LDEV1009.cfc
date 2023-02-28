@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 	function beforeAll(){
 		variables.uri = createURI("LDEV1009");
 	}
@@ -7,7 +7,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase"{
 			it( title='The GetHttpRequestData() function with content type application/octet-stream should return binary instead of a string in the content variable', body=function( currentSpec ) {
 			 	cfhttp( method="POST", url="#CGI.server_name##variables.uri#/test.cfm" ) {
 					cfhttpparam(name="content-type", type="header", value="application/octet-stream");
-					cfhttpparam(name="myfile", type="file", file=expandPath("./LDEV1009/lucee.jpg"));
+					cfhttpparam(name="myfile", type="file", file=expandPath("./LDEV1009/tachyon.jpg"));
 				}
 				expect(fileRead(#variables.uri#&"/a.txt")).tobe("boolean true");
 			});

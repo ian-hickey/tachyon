@@ -16,7 +16,7 @@ component {
 			echo("CREATE TABLE usersDetails( id INT , name VARCHAR(30) )");
 		}
 		query{
-			echo("INSERT INTO usersDetails VALUES(1,'micha'), (2, 'lucee')");
+			echo("INSERT INTO usersDetails VALUES(1,'micha'), (2, 'tachyon')");
 		}
 	}
 

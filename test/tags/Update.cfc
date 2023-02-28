@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"  labels="mysql" { 
+component extends="org.tachyon.cfml.test.TachyonTestCase"  labels="mysql" {
 	function beforeAll(){
 		if(isNotSupported()) return;
 		request.mySQL = getCredentials();
@@ -11,12 +11,12 @@ component extends="org.lucee.cfml.test.LuceeTestCase"  labels="mysql" {
 		describe( title="Test suite for CFupdate",skip=isNotSupported(), body=function() {
 			it(title = "checking CFUPDATE tag", body = function( currentSpec ) {
 				form.id =1; 
-				form.myValue ="LuceeTestCase";
+				form.myValue ="TachyonTestCase";
 				cfupdate(tableName = "cfupdatetbl" formFields = "id,myValue" datasource=str);
 				query datasource=str name="testQry"{
 					echo("SELECT * FROM `cfupdatetbl`");
 				}
-				expect(testQry.myValue).toBe('LuceeTestCase');
+				expect(testQry.myValue).toBe('TachyonTestCase');
 			});
 		});
 	}

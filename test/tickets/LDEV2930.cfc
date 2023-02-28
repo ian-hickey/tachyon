@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="syntax" skip=true {
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="syntax" skip=true {
 	function run( testResults , testBox ) {
 		describe( "Test suite for LDEV-2930", function() {
 			it(title="break should work inside a times loop LDEV-2930", body = function( currentSpec ) {

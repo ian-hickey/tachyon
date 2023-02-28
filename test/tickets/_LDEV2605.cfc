@@ -1,4 +1,4 @@
-component extends = "org.lucee.cfml.test.LuceeTestCase"{
+component extends = "org.tachyon.cfml.test.TachyonTestCase"{
 	function run( testResults, testBox ){
 		describe( "test case for LDEV-2605", function() {
 			it(title = "Elvisoperator without parenthesis", body = function( currentSpec ){
@@ -10,8 +10,8 @@ component extends = "org.lucee.cfml.test.LuceeTestCase"{
 			});
 
 			it(title = "Elvisoperator with parenthesis", body = function( currentSpec ){
-				server.system.properties.APP_ENV = "lucee"
-				if( (server.system.properties.APP_ENV ?: "unknown") == "lucee" ){
+				server.system.properties.APP_ENV = "tachyon"
+				if( (server.system.properties.APP_ENV ?: "unknown") == "tachyon" ){
 					test = "test is OK with parenthesis";
 				}
 				expect(test).tobe("test is OK with parenthesis");

@@ -131,7 +131,7 @@ component output="false" extends="HelperBase" accessors="true"{
 				{
 					// This should never happen, but if it does it would result in an endless loop.
 					// So to avoid any risk of this throw an error instead:
-					throw(type="org.lucee.cfml.query.SqlUnknownSyntaxError", message="The sql statement [#sql#] contains an unknown syntax error.");
+					throw(type="org.tachyon.cfml.query.SqlUnknownSyntaxError", message="The sql statement [#sql#] contains an unknown syntax error.");
 
 				}
 			}
@@ -185,7 +185,7 @@ component output="false" extends="HelperBase" accessors="true"{
 			}
 		}
 
-		throw(type="org.lucee.cfml.query.namedParameterNotFoundException", message="The named parameter [#arguments.name#] has not been provided");
+		throw(type="org.tachyon.cfml.query.namedParameterNotFoundException", message="The named parameter [#arguments.name#] has not been provided");
 
 	}
 

@@ -16,7 +16,7 @@
 	}
 
 	if(form.scene eq 3){
-		t3 = testArray.append({"test":"lucee"}, true);
+		t3 = testArray.append({"test":"tachyon"}, true);
 		writeOutput(serializeJson(isstruct(t3[6])));
 	}
 
@@ -31,7 +31,7 @@
 	}
 
 	if(form.scene eq 6){
-		t6 = testArray.append({"lucee":"test"}, false);
+		t6 = testArray.append({"tachyon":"test"}, false);
 		writeOutput(serializeJson(isstruct(t6[6])));
 	}
 

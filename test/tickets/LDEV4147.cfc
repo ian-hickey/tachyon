@@ -1,5 +1,5 @@
 <cfscript>
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="imap" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="imap" {
 
 	function beforeAll() {
 		variables.uri = createURI("LDEV4147"); 	
@@ -7,7 +7,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase" labels="imap" {
 
 		if (notHasServices()) return;
 
-		variables.username = "luceeldev4147imap@localhost";
+		variables.username = "tachyonldev4147imap@localhost";
 		variables.sendingMails = _internalRequest(
 			template="#variables.uri#/sendMails.cfm",
 			forms = {username: variables.username}

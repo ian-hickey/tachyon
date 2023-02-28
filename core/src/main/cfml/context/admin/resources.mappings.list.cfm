@@ -86,7 +86,7 @@
 				
 <cfsavecontent variable="codeSample">
 
-<cfloop query="mappings"><cfif mappings.hidden || mappings.virtual=="/lucee" || mappings.virtual=="/lucee-server"><cfcontinue></cfif><cfset del="">
+<cfloop query="mappings"><cfif mappings.hidden || mappings.virtual=="/tachyon" || mappings.virtual=="/tachyon-server"><cfcontinue></cfif><cfset del="">
 this.mappings=["#mappings.virtual#"]={<cfif len(mappings.strPhysical)>
 &nbsp;&nbsp;&nbsp;physical:"#mappings.strPhysical#"<cfset del=","></cfif><cfif len(mappings.strArchive)>
 &nbsp;&nbsp;&nbsp;#del#archive:"#mappings.strArchive#"<cfset del=","></cfif>};

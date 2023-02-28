@@ -16,7 +16,7 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  * 
  ---><cfscript>
-component extends="org.lucee.cfml.test.LuceeTestCase"	{
+component extends="org.tachyon.cfml.test.TachyonTestCase"	{
 	
 	//public function beforeTests(){}
 	
@@ -25,7 +25,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase"	{
 	//public function setUp(){}
 
 	public void function testArrrayFirst(){
-		if(server.ColdFusion.ProductName EQ "lucee"){
+		if(server.ColdFusion.ProductName EQ "tachyon"){
 			var x=array(1,2,3,4,5,6,7,8);
 			assertEquals(1,ArrayFirst(x));
 		}

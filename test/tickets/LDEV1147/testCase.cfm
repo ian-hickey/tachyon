@@ -14,7 +14,7 @@
 	</cfif>
 	<cfset hasError = "False">
 	<cftry>
-		<cfstoredproc procedure="#variables.Owner#.lucee_bug_test.testproc">
+		<cfstoredproc procedure="#variables.Owner#.tachyon_bug_test.testproc">
 		<cfcatch>
 			<cfset hasError = cfcatch.detail>
 		</cfcatch>
@@ -28,7 +28,7 @@
 	</cfif>
 	<cfset hasError = "False">
 	<cftry>
-		<cfstoredproc procedure="#variables.Owner#.lucee_bug_test.testproc2" >
+		<cfstoredproc procedure="#variables.Owner#.tachyon_bug_test.testproc2" >
 			<cfprocparam cfsqltype="cf_sql_varchar" value="foo">
 		</cfstoredproc>
 		<cfcatch>

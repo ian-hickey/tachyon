@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project default="run" basedir="." name="LuceeTestWarmup">
+<project default="run" basedir="." name="TachyonTestWarmup">
 
 <macrodef name="echots">
     <attribute name="message"/>
@@ -17,11 +17,11 @@
 
     <script language="CFML">
     <![CDATA[
-        systemOutput("---------- #DateTimeFormat(now(),'yyyy-mm-dd HH:nn:ss')# - Lucee Started (LUCEE_ENABLE_WARMUP=true) ----------", true);
-        systemOutput("Lucee should automatically exit with 0, within 30s", true);
+        systemOutput("---------- #DateTimeFormat(now(),'yyyy-mm-dd HH:nn:ss')# - Tachyon Started (LUCEE_ENABLE_WARMUP=true) ----------", true);
+        systemOutput("Tachyon should automatically exit with 0, within 30s", true);
         sleep(30*1000);
-        systemOutput("WARNING! After 30s, Lucee still hasn't automatically exited with 0, after deploying", true);
-        throw "WARNING! After 30s, Lucee still hasn't automatically exited with 0";
+        systemOutput("WARNING! After 30s, Tachyon still hasn't automatically exited with 0, after deploying", true);
+        throw "WARNING! After 30s, Tachyon still hasn't automatically exited with 0";
     ]]>
     </script>
   <echots message="finished run of build-warmup-test.xml"/>

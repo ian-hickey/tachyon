@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" {
 
 	public void function testQueryAddColumn() localmode="true" {
 		qryResult = queryNew( 'column1,column2', "varchar,varchar",[["col1-1","col2-1"],["col1-2","col2-2"]] );

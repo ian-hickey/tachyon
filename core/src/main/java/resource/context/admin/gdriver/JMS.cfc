@@ -64,7 +64,7 @@ topic=no
 #subscriberName=uniqueSubscriber
 --->
 	<cffunction name="getClass" returntype="string">
-    	<cfreturn "lucee.extension.gateway.jms.JMSGateway">
+    	<cfreturn "tachyon.extension.gateway.jms.JMSGateway">
     </cffunction>
 	<cffunction name="getCFCPath" returntype="string">
     	<cfreturn "">
@@ -74,7 +74,7 @@ topic=no
     	<cfreturn "JMS">
     </cffunction>
 	<cffunction name="getDescription" returntype="string" output="no">
-    	<cfreturn "Processing a JMS messages in Lucee">
+    	<cfreturn "Processing a JMS messages in Tachyon">
     </cffunction>
 	
 	<cffunction name="getListenerCFCDescription" returntype="string" output="no">

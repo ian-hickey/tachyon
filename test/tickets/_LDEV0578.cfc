@@ -1,4 +1,4 @@
-<cfcomponent extends="org.lucee.cfml.test.LuceeTestCase">
+<cfcomponent extends="org.tachyon.cfml.test.TachyonTestCase">
 	<cfscript>
 		function run( testResults , testBox ) {
 			describe( "thread with closure", function() {
@@ -18,7 +18,7 @@
 
 				xit('Calling simple thread page using http',  function( currentSpec ) {
 					// Please change the http url correspondingly
-					http url="http://testbox.lucee.dev/test/testcases/LDEV0578/test2.cfm" result="local.res";
+					http url="http://testbox.tachyon.dev/test/testcases/LDEV0578/test2.cfm" result="local.res";
 					writeDump(local.res);
 				});
 			});

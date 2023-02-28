@@ -1,4 +1,4 @@
-component extends = "org.lucee.cfml.test.LuceeTestCase"{
+component extends = "org.tachyon.cfml.test.TachyonTestCase"{
 
 	function beforeAll(){
 		variables.path = "/test/#listLast(getDirectoryFromPath(getCurrenttemplatepath()),"\/")#/" &"FileReadBinary/";
@@ -16,11 +16,11 @@ component extends = "org.lucee.cfml.test.LuceeTestCase"{
 			});
 
 			it(title = "Checking with FileReadBinary with URL", body = function( currentSpec ) {
-			  	expect(isbinary(FileReadBinary("https://lucee.org/assets/img/logo.png"))).tobe("true");
+			  	expect(isbinary(FileReadBinary("https://tachyon.org/assets/img/logo.png"))).tobe("true");
 			});
 			
 			it(title = "Checking with FileReadBinary with file", body = function( currentSpec ) {
-				filewrite(path&'FileReadBinary.txt'," I love lucee");
+				filewrite(path&'FileReadBinary.txt'," I love tachyon");
 			  	expect(isbinary(FileReadBinary(path&'FileReadBinary.txt'))).tobe("true");
 			});
 		});

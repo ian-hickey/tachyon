@@ -1,4 +1,4 @@
-component extends = "org.lucee.cfml.test.LuceeTestCase" labels="mssql" {
+component extends = "org.tachyon.cfml.test.TachyonTestCase" labels="mssql" {
 
 	function beforeAll() {
 		variables.uri = createURI("LDEV3030");
@@ -47,9 +47,9 @@ component extends = "org.lucee.cfml.test.LuceeTestCase" labels="mssql" {
 	}
 
 	function isMSSQLNotSupported() {
-		var enabled = server._getSystemPropOrEnvVars( "lucee.datasource.mssql.modern", "", false);
-		if (! ( structCount( enabled ) eq 1 && enabled["lucee.datasource.mssql.modern"] eq "true") ){
-			//systemOutput("lucee.datasource.mssql.modern not enabled", true);
+		var enabled = server._getSystemPropOrEnvVars( "tachyon.datasource.mssql.modern", "", false);
+		if (! ( structCount( enabled ) eq 1 && enabled["tachyon.datasource.mssql.modern"] eq "true") ){
+			//systemOutput("tachyon.datasource.mssql.modern not enabled", true);
 			return true;
 		}
 		return structIsEmpty(server.getDatasource("mssql"));

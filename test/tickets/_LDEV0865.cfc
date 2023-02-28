@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 	function run( testResults , testBox ) {
 		describe( "Test suite for LDEV-865", function() {
 			it(title="checking cfapplication tag, with attribute 'serversideFormValidation=true' in 'form' tag ", body = function( currentSpec ) {

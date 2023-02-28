@@ -16,7 +16,7 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  * 
  **/
-component extends="org.lucee.cfml.test.LuceeTestCase"	{
+component extends="org.tachyon.cfml.test.TachyonTestCase"	{
 
 
 	function testLowerIfAllUppercase() {
@@ -33,10 +33,10 @@ component extends="org.lucee.cfml.test.LuceeTestCase"	{
 
 	function testOldFunctionality() {
 
-		assertEquals( compare( ucFirst( "lucee technologies" ), "Lucee technologies" ), 0 );
-		assertEquals( compare( ucFirst( "lucee technologies", true ), "Lucee Technologies" ), 0 );
-		assertEquals( compare( ucFirst( "lucee 		technologies", true ), "Lucee Technologies" ), 0 );
-		assertEquals( compare( ucFirst( "the 		lucee   company", true ), "The Lucee Company" ), 0 );
+		assertEquals( compare( ucFirst( "tachyon technologies" ), "Tachyon technologies" ), 0 );
+		assertEquals( compare( ucFirst( "tachyon technologies", true ), "Tachyon Technologies" ), 0 );
+		assertEquals( compare( ucFirst( "tachyon 		technologies", true ), "Tachyon Technologies" ), 0 );
+		assertEquals( compare( ucFirst( "the 		tachyon   company", true ), "The Tachyon Company" ), 0 );
 		assertEquals( compare( ucFirst( "michael offner-streit", false ), "Michael offner-streit" ), 0 );
 		assertEquals( compare( ucFirst( "michael			offner-streit", true ), "Michael Offner-Streit" ), 0 );
 		assertEquals( compare( ucFirst( "international  business 		machines (i.b.m.)", true ), "International Business Machines (I.B.M.)" ), 0 );

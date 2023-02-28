@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="xml" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="xml" {
 	function run( testResults , testBox ) {
 		describe( "test case for Duplicate", function() {
 			it(title = "Checking with Duplicate", body = function( currentSpec ) {
@@ -48,7 +48,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase" labels="xml" {
 					assertEquals("0", "#d.get()#");
 				}
 				<!--- not working in JSR223env --->
-				if(server.lucee.environment=="servlet"){
+				if(server.tachyon.environment=="servlet"){
 					duplicate(client);
 					duplicate(session);
 					duplicate(application);

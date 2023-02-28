@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{	
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 	function beforeAll(){
 		setLocale("en_us");
 	}
@@ -24,11 +24,11 @@ component extends="org.lucee.cfml.test.LuceeTestCase"{
 		}
 	}
  
-	function testLuceeMemberFunction(){
+	function testTachyonMemberFunction(){
 		local.testcase=new LSDateFormat.LSDateFormat();
 		testcase.testMemberFunction();
 	}
-	function testLuceeFunction(){
+	function testTachyonFunction(){
 		local.testcase=new LSDateFormat.LSDateFormat();
 		testcase.testFunction();
 	}

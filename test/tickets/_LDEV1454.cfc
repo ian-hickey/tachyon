@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 	function run( testResults , testBox ) {
 		describe( "test case for LDEV-14544", function() {
 			it(title = "Checking HTTP call, with Content-Type header value as multipart/form-data", body = function( currentSpec ) {

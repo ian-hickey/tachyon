@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="java" skip=true {
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="java" skip=true {
 
 	function beforeAll() {
 		variables.uri = createURI("LDEV4001");
@@ -6,7 +6,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase" labels="java" skip=true {
 
 	function run( testResults, testBox ) {
 		describe("Testcase for LDEV4001", function() {
-			it( title="java code in lucee using cfjava tag", body=function( currentSpec ) {
+			it( title="java code in tachyon using cfjava tag", body=function( currentSpec ) {
 				try {
 					var res = _internalRequest(
 						template:"#variables.uri#/LDEV4001.cfm",
@@ -16,9 +16,9 @@ component extends="org.lucee.cfml.test.LuceeTestCase" labels="java" skip=true {
 				catch(any e) {
 					var res = e.message;
 				}
-				expect(res).toBe("Lucee");
+				expect(res).toBe("Tachyon");
 			});
-			it( title="java code in lucee using java block", body=function( currentSpec ) {
+			it( title="java code in tachyon using java block", body=function( currentSpec ) {
 				try {
 					var res = _internalRequest(
 						template:"#variables.uri#/LDEV4001.cfm",
@@ -28,7 +28,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase" labels="java" skip=true {
 				catch(any e) {
 					var res = e.message;
 				}
-				expect(res).toBe("java block worked in Lucee");
+				expect(res).toBe("java block worked in Tachyon");
 			});
 		});
 	}

@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 	function run( testResults , testBox ) {
 		describe( "Getting caches from Application.cfc", function() {
 			it('application.cfc',  function( currentSpec ) {
@@ -8,7 +8,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase"{
 				);
 				var data=evaluate(trim(result.filecontent));
 				
-				assertEquals('lucee.runtime.cache.ram.RamCache',data.cache.connections.test.class);
+				assertEquals('tachyon.runtime.cache.ram.RamCache',data.cache.connections.test.class);
 				assertEquals(false,data.cache.connections.test.storage);
 				assertEquals(0,data.cache.connections.test.custom.timeToIdleSeconds);
 			});
@@ -17,14 +17,14 @@ component extends="org.lucee.cfml.test.LuceeTestCase"{
 		describe( "Getting caches from cfapplication", function() {
 			it('application.cfm',  function( currentSpec ) {
 				application action="update" caches={test1046:{
-					class: 'lucee.runtime.cache.ram.RamCache'
+					class: 'tachyon.runtime.cache.ram.RamCache'
 					, storage: false
 					, custom: {'timeToIdleSeconds':'0','timeToLiveSeconds':'0'}
 					, default: ''
 				}};
 
 				var data=getApplicationMetadata();
-				assertEquals('lucee.runtime.cache.ram.RamCache',data.cache.connections.test1046.class);
+				assertEquals('tachyon.runtime.cache.ram.RamCache',data.cache.connections.test1046.class);
 				assertEquals(false,data.cache.connections.test1046.storage);
 				assertEquals(0,data.cache.connections.test1046.custom.timeToIdleSeconds);
 			});

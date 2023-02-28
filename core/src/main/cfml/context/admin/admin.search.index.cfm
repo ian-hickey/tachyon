@@ -3,7 +3,7 @@
 		<cfdirectory action="create" directory="#dataDir#" mode="777" recurse="true" />
 	</cfif>
 
-	<cfdirectory action="list" name="qlangs" directory="#expandPath('{lucee-web}/context/admin/resources/language/')#" filter="*.xml" />
+	<cfdirectory action="list" name="qlangs" directory="#expandPath('{tachyon-web}/context/admin/resources/language/')#" filter="*.xml" />
 
 	<cfset translations = {} />
 	<cfset pageContents = {} />
@@ -34,7 +34,7 @@
 	</cfloop>
 
 	<cfset searchresults = {} />
-	<cfdirectory action="list" directory="#luceeArchiveZipPath#" filter="*.*.cfm" name="qFiles" sort="name" />
+	<cfdirectory action="list" directory="#tachyonArchiveZipPath#" filter="*.*.cfm" name="qFiles" sort="name" />
 
 	<cfloop query="qFiles">
 		<cfset currFile = qFiles.directory & "/" & qFiles.name />
@@ -85,8 +85,8 @@
 
 	</cfloop>
 
-	<!--- remember the Lucee version which is now in use --->
-	<cffile action="write" file="#datadir#indexed-lucee-version.cfm" output="#server.lucee.version##server.lucee['release-date']#" mode="644" addnewline="no" />
+	<!--- remember the Tachyon version which is now in use --->
+	<cffile action="write" file="#datadir#indexed-tachyon-version.cfm" output="#server.tachyon.version##server.tachyon['release-date']#" mode="644" addnewline="no" />
 
 	<!--- store the searchresults --->
 	<cffile action="write" file="#datadir#searchindex.cfm" charset="utf-8" output="#serialize(searchresults)#" mode="644" />

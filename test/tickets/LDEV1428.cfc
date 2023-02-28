@@ -1,5 +1,5 @@
  <cfscript>
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="orm"	{
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="orm"	{
 
 	public void function testDelete(){
 		local.uri=createURI("LDEV1428/test.cfm");

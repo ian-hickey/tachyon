@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" skip=true{
+component extends="org.tachyon.cfml.test.TachyonTestCase" skip=true{
 	function run( testResults, testBox ){
 		describe( title="Test case for LDEV-3772", body=function() {
 			it( title="StringEach() - Arithmetic operation with elements", body=function( currentSpec ) {

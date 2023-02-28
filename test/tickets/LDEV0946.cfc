@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 	public function run( testResults , testBox ) {
 		describe( title="Test suite for LDEV-946 ( checking GetMetaData() for a component )", body=function() {
 			it(title="Component with functions defined", body=function( currentSpec ) {

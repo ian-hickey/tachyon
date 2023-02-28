@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 	function run( testResults , testBox ) {
 		describe( title="Test suite for LDEV-1682", body=function() {
 			it(title="Checking REFind() attribute SCOPE ", body = function( currentSpec ) {

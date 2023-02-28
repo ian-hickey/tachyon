@@ -18,7 +18,7 @@
  */
 package coldfusion.runtime
 
-import lucee.runtime.CFMLFactoryImpl
+import tachyon.runtime.CFMLFactoryImpl
 
 object SessionTracker {
     fun getSessionCount(): Int {

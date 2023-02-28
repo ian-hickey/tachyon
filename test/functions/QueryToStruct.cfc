@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="query,struct" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="query,struct" {
     function beforeAll() {
         variables.qry = query(
             id:[1,2,3,4],

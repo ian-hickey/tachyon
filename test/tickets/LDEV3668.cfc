@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" skip=true{
+component extends="org.tachyon.cfml.test.TachyonTestCase" skip=true{
     function run( testResults , testBox ) {
         describe( "Testcase for LDEV-3668", function() {
             variables.arr = ["direct"];

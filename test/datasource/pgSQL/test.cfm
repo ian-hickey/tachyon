@@ -3,7 +3,7 @@
 	if(form.scene eq 1){
 		queryExecute( "INSERT INTO test_pgSQL ( id,name ) VALUES ( :id, :name )", { 
 			id = { value = 1, cfsqltype = "integer" },
-			name = { value="lucee", cfsqltype="varchar" } 
+			name = { value="tachyon", cfsqltype="varchar" }
 		}, { 
 			result="result" 
 		} );

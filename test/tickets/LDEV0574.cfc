@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" localMode=true {
+component extends="org.tachyon.cfml.test.TachyonTestCase" localMode=true {
 	function run( testResults , testBox ) {
 		describe( "Test suite for LDEV-0574", function() {
 			it( title='Checking dollarformat function round off', body=function( currentSpec ) {

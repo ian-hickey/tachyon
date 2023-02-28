@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"	{
+component extends="org.tachyon.cfml.test.TachyonTestCase"	{
 
 	//public function beforeTests(){}
 
@@ -7,7 +7,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase"	{
 	//public function setUp(){}
 
 	public void function testStructCopyServerOS(){
-        //see https://bitbucket.org/lucee/lucee/issue/205/structcopy-does-not-copy-serveros
+        //see https://bitbucket.org/tachyon/tachyon/issue/205/structcopy-does-not-copy-serveros
 		assertEquals(StructIsEmpty(StructCopy(server.os)),false);
 	}
 

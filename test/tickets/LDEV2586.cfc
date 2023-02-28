@@ -1,4 +1,4 @@
-component extends = "org.lucee.cfml.test.LuceeTestCase" labels="mssql"{
+component extends = "org.tachyon.cfml.test.TachyonTestCase" labels="mssql"{
 // ZAC is that merge correct? i simply took the version from 6.0
 	function beforeAll() {
 		variables.msSQL = server.getDatasource("mssql");

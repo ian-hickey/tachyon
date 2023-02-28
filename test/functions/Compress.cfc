@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 function test() {
 	loop list="tgz:m,zip:m,tbz:m,tar:m,gzip:s,bzip:s" item="format2type" {
 		var format=listFirst(format2type,":");

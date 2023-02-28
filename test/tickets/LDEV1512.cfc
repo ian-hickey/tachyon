@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 	function run( testResults , testBox ) {
 		describe( "test case for LDEV-1512", function() {
 			it(title = "Checking JSON with createTimeSpan string, in arrayFormat", body = function( currentSpec ) {

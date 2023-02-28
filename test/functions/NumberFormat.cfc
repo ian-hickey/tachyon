@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" {
 	function run( testResults, testBox ){
 		describe( title="Testcase for numberFormat()", body=function() {
 			it( title = "Checking with numberFormat()", body=function( currentSpec ) {

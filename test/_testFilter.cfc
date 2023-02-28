@@ -96,10 +96,10 @@ component {
 
 	public string function checkExtendsTestCase ( required struct meta, required string path ){
 		var extends = arguments.meta.extends.fullname ?: "";
-		if ( extends eq "Lucee.component" or len( extends ) eq 0 ) {
+		if ( extends eq "Tachyon.component" or len( extends ) eq 0 ) {
 			return 'Not a test suite [#(arguments.meta.extends?:{}).toJson()#]'; // plain old cfc, ignore
 		} else if ( listFindNoCase( variables.testSuiteExtends, extends ) eq 0 ) {
-			// default is "org.lucee.cfml.test.LuceeTestCase"
+			// default is "org.tachyon.cfml.test.TachyonTestCase"
 			return "Test extends wrong Base spec [#extends#] "
 				& "see ' -dtestSuiteExtends=""cfc.path"" ' ";
 		} else {
@@ -108,7 +108,7 @@ component {
 	}
 
 	public struct function getTestMeta ( required string path ){
-		// finally only allow files which extend "org.lucee.cfml.test.LuceeTestCase"
+		// finally only allow files which extend "org.tachyon.cfml.test.TachyonTestCase"
 		var cfcPath = ListChangeDelims( testMapping & Mid( arguments.path, len( testDirectory ) + 1 ), ".", "/\" );
 		cfcPath = mid( cfcPath, 1, len( cfcPath ) - 4 ); // strip off ".cfc"
 
@@ -116,7 +116,7 @@ component {
 			return { skip: true, missingExtends: true };
 		try {
 			// triggers a compile, which make the initial filter slower, but it would be compiled later anyway
-			// GetComponentMetaData leaks output https://luceeserver.atlassian.net/browse/LDEV-3582
+			// GetComponentMetaData leaks output https://tachyonserver.atlassian.net/browse/LDEV-3582
 			silent {
 				var meta = GetComponentMetaData( cfcPath );
 			}

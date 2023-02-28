@@ -1,4 +1,4 @@
-<cfcomponent extends="org.lucee.cfml.test.LuceeTestCase">
+<cfcomponent extends="org.tachyon.cfml.test.TachyonTestCase">
 	<cfscript>
 		function run( testResults , testBox ) {
 			describe( "Test suite for LDEV-929", function() {
@@ -7,7 +7,7 @@
 					var result = _InternalRequest(
 						template:uri
 					);
-					expect(result.filecontent.trim()).toBe("LuceeTest");
+					expect(result.filecontent.trim()).toBe("TachyonTest");
 				});
 				
 				it("Access cfproperty default value, with accessors='true' ", function( currentSpec ) {
@@ -15,7 +15,7 @@
 					var result = _InternalRequest(
 						template:uri
 					);
-					expect(result.filecontent.trim()).toBe("LuceeTest");
+					expect(result.filecontent.trim()).toBe("TachyonTest");
 				});
 			});
 		}

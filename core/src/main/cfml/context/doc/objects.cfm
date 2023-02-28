@@ -1,5 +1,5 @@
 <cfsetting showDebugOutput=false>
-<cfinclude template="/lucee/admin/resources/text.cfm">
+<cfinclude template="/tachyon/admin/resources/text.cfm">
 <cfset stText.doc.attr.default="Default Value">
 
 <cfset itemList = Application.objects.utils.getMemberFunctions()>
@@ -56,7 +56,7 @@
 		};
 
 		$( function() {
-			$( '#lucee-docs-search-input' ).typeahead(
+			$( '#tachyon-docs-search-input' ).typeahead(
 				{
 					hint: true,
 					highlight: true,
@@ -81,7 +81,7 @@
 
 
 
-<cfmodule template="doc_layout.cfm" title="Lucee object methods reference" prevLinkItem="#prevLinkItem#" nextLinkItem="#nextLinkItem#">
+<cfmodule template="doc_layout.cfm" title="Tachyon object methods reference" prevLinkItem="#prevLinkItem#" nextLinkItem="#nextLinkItem#">
 
 <cfoutput>
 	<cfif len( url.item )>
@@ -92,7 +92,7 @@
 			<div class="tile">
 				<ul class="breadcrumb margin-no-top margin-right margin-no-bottom margin-left">
 					<li><a href="index.cfm">Home</a></li>
-					<li><a href="objects.cfm">Lucee objects</a></li>
+					<li><a href="objects.cfm">Tachyon objects</a></li>
 					<li class="active">#ucFirst(data.member.type)#.#data.member.name#</li>
 				</ul>
 			</div>
@@ -178,7 +178,7 @@
 			<div class="tile">
 				<ul class="breadcrumb margin-no-top margin-right margin-no-bottom margin-left">
 					<li><a href="index.cfm">Home</a></li>
-					<li class="active">Lucee objects</li>
+					<li class="active">Tachyon objects</li>
 				</ul>
 			</div>
 		</div>

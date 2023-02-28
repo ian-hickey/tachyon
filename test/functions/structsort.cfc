@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="struct" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="struct" {
 
 	function run( testResults , testBox ) {
 		animals = {

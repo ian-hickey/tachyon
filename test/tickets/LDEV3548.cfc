@@ -1,5 +1,5 @@
 <cfscript>
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="pop"{
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="pop"{
 
 	function beforeAll() {
 		variables.uri = createURI("LDEV3548"); 	
@@ -15,7 +15,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase" labels="pop"{
 
 				expect(result).tobe("Done!!!"); // to check the mail has sended successfully
   
-				pop action="getAll" name="local.inboxemails" server="#creds.pop.server#" password="#creds.pop.password#" port="#creds.pop.PORT_INSECURE#" secure="no" username="luceeldev3548pop@localhost";
+				pop action="getAll" name="local.inboxemails" server="#creds.pop.server#" password="#creds.pop.password#" port="#creds.pop.PORT_INSECURE#" secure="no" username="tachyonldev3548pop@localhost";
 				
 				multipartMessage = queryGetRow(inboxemails,queryRecordCount(inboxemails)); // assumes last inbox mail must sended by above the process
 

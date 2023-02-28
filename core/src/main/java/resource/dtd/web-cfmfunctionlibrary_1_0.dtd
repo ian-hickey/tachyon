@@ -42,7 +42,7 @@ Defines the canonical name of a function or argument being defined
 -->
 <!ELEMENT name (#PCDATA)>
 <!--
-Defines the subclass of Lucee.func.Function (PHP) that implements
+Defines the subclass of Tachyon.func.Function (PHP) that implements
 the request time semantics for this tag. (required)
 
 #PCDATA ::= fully qualified Java Like class name

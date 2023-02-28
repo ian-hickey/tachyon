@@ -16,7 +16,7 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  * 
  ---><cfscript>
-component extends="org.lucee.cfml.test.LuceeTestCase"	{
+component extends="org.tachyon.cfml.test.TachyonTestCase"	{
 
 	//public function setUp(){}
 
@@ -30,7 +30,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase"	{
 	}
 
 	public void function testarrayContains(){
-		var arr1=['lucee','admin','test','case'];
+		var arr1=['tachyon','admin','test','case'];
 		var arr2=[1, 2, 3, 4, 5];
 		expect(ArrayContains(arr1,'TEST')).toBe(0);
 		expect(ArrayContains(arr2, 4)).toBe(4);
@@ -39,7 +39,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase"	{
 	}
 
 	public void function testarrayContainsNoCase(){
-		var arr1=['lucee','admin','test','case'];
+		var arr1=['tachyon','admin','test','case'];
 		var arr2=[1, 2, 3, 4];
 		expect(ArrayContainsNoCase(arr1,'TEST')).toBeTypeOf('number').toBe(3);
 		expect(ArrayContainsNoCase(arr2, 4)).toBe(4);

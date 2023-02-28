@@ -1,6 +1,6 @@
 <!---
  *
- * Copyright (c) 2015, Lucee Assosication Switzerland. All rights reserved.*
+ * Copyright (c) 2015, Tachyon Assosication Switzerland. All rights reserved.*
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -16,7 +16,7 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  *
  ---><cfscript>
-component extends="org.lucee.cfml.test.LuceeTestCase" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" {
 
 	//public function setUp() {}
 
@@ -37,10 +37,10 @@ component extends="org.lucee.cfml.test.LuceeTestCase" {
 			fail("Serialization of Component failed");
 
 		var jSB = createObject("java", "java.lang.StringBuilder").init();
-		jSB.append("Lucee!");
+		jSB.append("Tachyon!");
 
 		var eval = evaluate(serialize(jSB));
-		if ((eval.getClass().getName() != "java.lang.StringBuilder") || (eval.toString() != "Lucee!"))
+		if ((eval.getClass().getName() != "java.lang.StringBuilder") || (eval.toString() != "Tachyon!"))
 			fail("Serialization of Java failed")
 
 	}

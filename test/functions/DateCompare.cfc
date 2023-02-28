@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 	function run( testResults , testBox ) {
 		describe( "test case for DateCompare", function() {
 			it(title="Checking with DateCompare", body=function( currentSpec ) {

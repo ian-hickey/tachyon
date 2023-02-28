@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="query" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="query" {
 	// skip closure
 	function isNotSupported() {
 		var mySql = getCredentials();

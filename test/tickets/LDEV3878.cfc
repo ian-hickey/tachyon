@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" skip="false" labels="qoq" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" skip="false" labels="qoq" {
 	q = queryNew("id","numeric",[[1]]);
 
 	function run( testResults , testBox ) {
@@ -13,7 +13,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase" skip="false" labels="qoq" 
 					if( e.message contains 'IllegalQoQException' ) {
 						return;
 					}
-					if( e.getPageException().getClass().getName() == 'lucee.runtime.exp.IllegalQoQException' ) {
+					if( e.getPageException().getClass().getName() == 'tachyon.runtime.exp.IllegalQoQException' ) {
 						return;
 					}
 				}

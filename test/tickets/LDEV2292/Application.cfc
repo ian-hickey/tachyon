@@ -17,7 +17,7 @@ component {
 			echo("CREATE TABLE LDEV2292( id int, name varchar(20))");
 		}
 		query{
-			echo("INSERT INTO LDEV2292 VALUES( '1', 'lucee' )");
+			echo("INSERT INTO LDEV2292 VALUES( '1', 'tachyon' )");
 		}
 		query{
 			echo("INSERT INTO LDEV2292 VALUES( '2', 'railo' )");

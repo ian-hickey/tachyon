@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 	
 
 	public void function testThread(){
@@ -26,7 +26,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase"{
 	public void function testThreadHTTP(){
 		thread name="testthread" {
 			thread.data=1;
-			http url="https://extension.lucee.org/rest/extension/provider/info" result="http";
+			http url="https://extension.tachyon.org/rest/extension/provider/info" result="http";
 			thread.data=1;
 		}
 		thread action="join" name="testthread";

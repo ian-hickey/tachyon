@@ -1,4 +1,4 @@
-component extends = "org.lucee.cfml.test.LuceeTestCase" labels="qoq" skip=false {
+component extends = "org.tachyon.cfml.test.TachyonTestCase" labels="qoq" skip=false {
 
 	function run( testResults, textBox ) {
 		describe("Test case for LDEV-2541", function(){

@@ -3,8 +3,8 @@
 <cfoutput>
 <cfsavecontent variable="content">
 #chr(60)#cfprocessingdirective pageencoding="utf-8">#chr(60)#cfscript>
-if(not StructKeyExists(session,'lucee_admin_lang'))session.lucee_admin_lang='en';
-if(session.lucee_admin_lang EQ 'de') {
+if(not StructKeyExists(session,'tachyon_admin_lang'))session.tachyon_admin_lang='en';
+if(session.tachyon_admin_lang EQ 'de') {
 	stText=#serialize(stText['de'])#;
 }
 else {

@@ -9,12 +9,12 @@
 		</cfcatch>
 	</cftry>
 <cfelseif FORM.Scene EQ 2>
-	<cfset myList = "lucee">
+	<cfset myList = "tachyon">
 	<cfloop list=myList index="j">
 		<cfoutput>#j#</cfoutput>
 	</cfloop>
 <cfelseif FORM.Scene EQ 3>
-	<cfset myStct = {"name":"lucee"}> 
+	<cfset myStct = {"name":"tachyon"}>
 	<cfloop collection=myStct item="k">
 		<cfoutput> #k#</cfoutput>
 	</cfloop>

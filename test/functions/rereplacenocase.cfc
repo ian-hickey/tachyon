@@ -1,9 +1,9 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 
     function run( testResults , testBox ) {
         describe( "test case for reReplaceNocase", function() {
 
-            var myQry=QueryNew("id,name","Integer,VarChar",[[1,'Lucee'],[2,'I love Lucee']]);
+            var myQry=QueryNew("id,name","Integer,VarChar",[[1,'Tachyon'],[2,'I love Tachyon']]);
 
             it(title = "Test case for reReplaceNocase function", body = function( currentSpec ) {
                 assertEquals("xxdefxxabcxx",reReplaceNocase("xxabcxxabcxx","ABC","def"));

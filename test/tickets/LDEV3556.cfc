@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
      function run( testResults, testBox ){
         describe( "Test case for LDEV-3556", function() {
             it(title="Using string with hash() and toBease64 member functions", body=function( currentSpec ){

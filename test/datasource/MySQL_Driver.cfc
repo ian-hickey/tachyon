@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="mysql" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="mysql" {
 	function isNotSupported() {
 		variables.mySql = getCredentials();
 		if (len(variables.mySql)){
@@ -131,7 +131,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase" labels="mysql" {
 				assertEquals(true, isQuery(result));
 			});
 			/* TODO:
-			Errored: test with version 8.0.11 --> Cannot open file:/home/travis/build/lucee/Lucee/temp/archive/base/lucee-server/context/security/cacerts [Keystore was tampered with, or password was incorrect]
+			Errored: test with version 8.0.11 --> Cannot open file:/home/travis/build/tachyon/Tachyon/temp/archive/base/tachyon-server/context/security/cacerts [Keystore was tampered with, or password was incorrect]
 			it( title='test with version 8.0.11',skip=isNotSupported(), body=function( currentSpec ) {
 				defineDatasource('com.mysql.cj.jdbc.Driver',  'com.mysql.cj', '8.0.11');
 				var result = testConnection(); // TODO

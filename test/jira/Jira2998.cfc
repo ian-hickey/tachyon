@@ -16,7 +16,7 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  * 
  ---><cfscript>
-component extends="org.lucee.cfml.test.LuceeTestCase"	{
+component extends="org.tachyon.cfml.test.TachyonTestCase"	{
 
 	public void function testUCase(){
 		assertEquals(asc("A"),asc("a".ucase()));
@@ -160,12 +160,12 @@ c","abc".wrap(2));
 
 
 	public void function testREMatch(){
-		var string="Hallo https://www.lucee.org Susi";
+		var string="Hallo https://www.tachyon.org Susi";
 		var regex="https?://([-\w\.]+)+(:\d+)?(/([\w/_\.]*(\?\S+)?)?)?";
 		assertEquals(REMatch(regex, string),string.REMatch(regex));
 	}
 	public void function testREMatchNoCase(){
-		var string="Hallo https://www.lucee.org Susi";
+		var string="Hallo https://www.tachyon.org Susi";
 		var regex="https?://([-\w\.]+)+(:\d+)?(/([\w/_\.]*(\?\S+)?)?)?";
 		assertEquals(REMatchNoCase(regex, string),string.REMatchNoCase(regex));
 	}

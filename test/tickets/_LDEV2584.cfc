@@ -1,8 +1,8 @@
-component extends = "org.lucee.cfml.test.LuceeTestCase" {
+component extends = "org.tachyon.cfml.test.TachyonTestCase" {
 
 	function run( testResults, testBox ){
 		describe("Test case for LDEV2584", function(){
-			it(title = "Lucee doesn't convert decimal number to integer",body = function( currentSpec ){
+			it(title = "Tachyon doesn't convert decimal number to integer",body = function( currentSpec ){
 				testQuery = queryNew("id,firstname,value", "integer,varchar,integer", [
 					{ "id":1,"firstname":"VEN","value":4.767 },
 					{ "id":2,"firstname":"SEL","value":1672.34 },

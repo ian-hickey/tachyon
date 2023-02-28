@@ -2,7 +2,7 @@ component {
 
 	pgSQL = getCredentials();
 
-	this.name = "lucee_postgres2";
+	this.name = "tachyon_postgres2";
 	this.datasources["pgSQL_DSN"] = pgSQL;
 	this.datasource = "pgSQL_DSN";
 

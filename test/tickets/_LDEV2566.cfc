@@ -1,4 +1,4 @@
-component extends = "org.lucee.cfml.test.LuceeTestCase" {
+component extends = "org.tachyon.cfml.test.TachyonTestCase" {
 
 	function beforeAll(){
 		variables.uri = createURI("LDEV2566");
@@ -10,21 +10,21 @@ component extends = "org.lucee.cfml.test.LuceeTestCase" {
 				local.result = _InternalRequest(
 					template : uri&"/mssql/test.cfm"
 				);
-				expect(trim(result.filecontent)).tobe("lucee");
+				expect(trim(result.filecontent)).tobe("tachyon");
 			});
 
 			it(title = "CFINSERT tag check with MYSQL", body = function( currentSpec ){
 				local.result = _InternalRequest(
 					template : uri&"/mysql/test.cfm"
 				);
-				expect(trim(result.filecontent)).tobe("lucee_core");
+				expect(trim(result.filecontent)).tobe("tachyon_core");
 			});
 
 			it(title = "CFINSERT tag check with POSTGRESQL", body = function( currentSpec ){
 				local.result = _InternalRequest(
 					template : uri&"/postgresql/test.cfm"
 				);
-				expect(trim(result.filecontent)).tobe("lucee_core_dev");
+				expect(trim(result.filecontent)).tobe("tachyon_core_dev");
 			});
 		});
 	}

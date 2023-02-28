@@ -1,6 +1,6 @@
 
 component {
-	this.name = "lucee_debbug#server.lucee.version#";
+	this.name = "tachyon_debbug#server.tachyon.version#";
 	this.clientmanagement="no";
 	this.clientstorage="file"; 
 	this.scriptprotect="all";

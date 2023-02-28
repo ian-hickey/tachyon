@@ -24,14 +24,14 @@
 		<custom key="application.listenertype_none">Kein</custom>
 	
 		<custom key="application.listenertypedescription">Wählen Sie welche Art von Listener verwendet werden soll</custom>
-		<custom key="application.listenertypedescription_classic">Klassisches Handling. Lucee sucht nur nach der Datei 'Application.cfm' und der entsprechenden Datei 'onRequestEnd.cfm'</custom>
-		<custom key="application.listenertypedescription_mixed">Gemischtes Handling. Lucee sucht sowohl nach der Datei 'Application.cfm/onRequestEnd.cfm' wie auch nach der Datei 'Application.cfc'</custom>
-		<custom key="application.listenertypedescription_modern">Modernes Handling. Lucee sucht nur nach der Datei 'Application.cfc'</custom>
+		<custom key="application.listenertypedescription_classic">Klassisches Handling. Tachyon sucht nur nach der Datei 'Application.cfm' und der entsprechenden Datei 'onRequestEnd.cfm'</custom>
+		<custom key="application.listenertypedescription_mixed">Gemischtes Handling. Tachyon sucht sowohl nach der Datei 'Application.cfm/onRequestEnd.cfm' wie auch nach der Datei 'Application.cfc'</custom>
+		<custom key="application.listenertypedescription_modern">Modernes Handling. Tachyon sucht nur nach der Datei 'Application.cfc'</custom>
 		<custom key="application.listenertypedescription_none">Bei einem Request wird ausschliesslich die entsprechende Datei aufgerufen</custom>
 		<custom key="application.missingscriptprotect">Bitte geben Sie einen Wert für das Script-Protect ein</custom>
 	
 		<custom key="application.requesttimeout">Request Timeout</custom>
-		<custom key="application.requesttimeoutdescription">Legt die Zeit fest, wie lange Lucee auf die Beendigung eines Requests warten soll. Das heisst, dass die Ausführung des Requests beim Überschreiten dieser Zeit abgebrochen wird. Diese Verhaltensweise kann von dem Tag CFSetting übersteuert werden.</custom>
+		<custom key="application.requesttimeoutdescription">Legt die Zeit fest, wie lange Tachyon auf die Beendigung eines Requests warten soll. Das heisst, dass die Ausführung des Requests beim Überschreiten dieser Zeit abgebrochen wird. Diese Verhaltensweise kann von dem Tag CFSetting übersteuert werden.</custom>
 		<custom key="application.scriptprotect">Script-Protect</custom>
 		<custom key="application.scriptprotectall">Script-Protect überprüft alle Scopes ob die Daten von ausserhalb kommen (cgi, cookie, form, url)</custom>
 		<custom key="application.scriptprotectcustom">Definieren Sie individuell welche Scopes geprüft werden sollen und welche nicht</custom>
@@ -90,7 +90,7 @@
 		<custom key="components.basecomponentmissing">Bitte geben Sie einen Wert für die Basis/Root Komponente ein.</custom>
 		<custom key="components.component">Komponente</custom>
 		<custom key="components.componentdumptemplate">Komponetenausgabe Template (dump)</custom>
-		<custom key="components.componentdumptemplatedescription">Wenn Sie ein Komponente direkt über den Browser aufrufen, wird dieses Template für die Darstellung verwendet. (Beispiel: https://www.lucee.org/ch/lucee/common/Example.cfc)</custom>
+		<custom key="components.componentdumptemplatedescription">Wenn Sie ein Komponente direkt über den Browser aufrufen, wird dieses Template für die Darstellung verwendet. (Beispiel: https://www.tachyon.org/ch/tachyon/common/Example.cfc)</custom>
 		<custom key="components.componentdumptemplatemissing">Bitte geben Sie einen Eintrag für das 'dump' Template an.</custom>
 	
 		<custom key="components.datamemberaccesstype">Zugriffsbeschränkung für Daten Mitglieder einer CFC</custom>
@@ -102,13 +102,13 @@
 	
 		<custom key="components.server">Definert Komponenteneinstellungen, die als Standartwert für alle Webs gelten.</custom>
 		<custom key="components.triggerdatamember">Magic functions</custom>
-		<custom key="components.triggerdatamemberdescription">Wenn eine Eigenschaft einer Komponente fehlt (oder geschützt ist), prüft Lucee weiter ob ein passender &quot;getter&quot; oder &quot;setter&quot; verfügbar ist.
+		<custom key="components.triggerdatamemberdescription">Wenn eine Eigenschaft einer Komponente fehlt (oder geschützt ist), prüft Tachyon weiter ob ein passender &quot;getter&quot; oder &quot;setter&quot; verfügbar ist.
 		Beispiel: &quot;myComponent.properyName&quot;, wenn die Komponente 'myComponent' keine zugreifbare Eigenschaft mit dem Namen 'propertyName' hat,
-		sucht Lucee nach einer entsprechenden CFC-Funktion (Methode) mit dem Namen &quot;getPropertyName&quot;. Für Schreiboperationen auf eine solche Eigenschaft wird nach einer Methode &quot;setPropertyName&quot; in der Komponente gesucht.</custom>
+		sucht Tachyon nach einer entsprechenden CFC-Funktion (Methode) mit dem Namen &quot;getPropertyName&quot;. Für Schreiboperationen auf eine solche Eigenschaft wird nach einer Methode &quot;setPropertyName&quot; in der Komponente gesucht.</custom>
 	
 		<custom key="components.useshadow">Allow Variable Scope</custom>
 		<custom key="components.useshadowdescription">Definiert, ob eine Komponente einen eigenständigen &quot;Variables&quot; Scope parallel zum &quot;this&quot; Scope hat (CFML Standard) oder nicht. Wenn nicht, dann werden alle nicht spezifizierten Variablen in den &quot;this&quot; scope geschrieben.</custom>
-		<custom key="components.web">Definiert wie Komopenten von Lucee verarbeitet werden.</custom>
+		<custom key="components.web">Definiert wie Komopenten von Tachyon verarbeitet werden.</custom>
 	
 		<custom key="customtags.archive">Archiv</custom>
 		<custom key="customtags.archivemissing">Bitte geben Sie einen Wert für den Archivnamen an. (Zeile </custom>
@@ -128,7 +128,7 @@
 		<custom key="debug.debugtemplatedescription">Dieses Template wird für die Ausgabe der Debuginformationen</custom>
 		<custom key="debug.debugtemplatemissing">Bitte geben Sie einen Wert für das Debugging Template an.</custom>
 		<custom key="debug.enabledebugging">Debug Informationen anzeigen</custom>
-		<custom key="debug.enabledescription">Falls eingeschaltet, erstellt Lucee eine Debuggingausgabe für den aktuellen Request</custom>
+		<custom key="debug.enabledescription">Falls eingeschaltet, erstellt Tachyon eine Debuggingausgabe für den aktuellen Request</custom>
 		<custom key="debug.logmemoryusage">Memoryverbrauch loggen.</custom>
 	
 		<custom key="debug.logmemoryusagedescription">Definiert ob der Memoryverbrauch des Systems geloggt werden soll oder nicht</custom>
@@ -229,7 +229,7 @@
 	
 		<custom key="mail.logfilemissing">Bitte geben Sie einen Wert für die Log Datei an.</custom>
 		<custom key="mail.mailservers">Mail Server</custom>
-		<custom key="mail.mailserversdescription">Sie können mehrere Mailsserver definieren. Wenn Sie eine Mail absenden, versucht Lucee die Mail der Reihe nach über einen der angegebenen Mailserver zu versenden.</custom>
+		<custom key="mail.mailserversdescription">Sie können mehrere Mailsserver definieren. Wenn Sie eine Mail absenden, versucht Tachyon die Mail der Reihe nach über einen der angegebenen Mailserver zu versenden.</custom>
 		<custom key="mail.missingencoding">Bitte geben Sie einen Wert für das Standard Encoding ein</custom>
 		<custom key="mail.password">Passwort</custom>
 		<custom key="mail.passwordmissing">Bitte geben Sie einen Wert für das entsprechende Passwort an. (Zeile </custom>
@@ -248,7 +248,7 @@
 		<custom key="mail.usernamemissing">Bitte geben Sie einen Wert für den Benutzernamen an. (Zeile </custom>
 		<custom key="mappings.archive">Archiv</custom>
 	
-		<custom key="mappings.archivedesc">Erstellen Sie aus einem Mapping ein Lucee Archive (ra)</custom>
+		<custom key="mappings.archivedesc">Erstellen Sie aus einem Mapping ein Tachyon Archive (ra)</custom>
 		<custom key="mappings.archivehead">Archiv</custom>
 		<custom key="mappings.archiveheaddescription">Name der Archivdatei (ra oder ras)  (Absolut oder relativ zum Webroot).</custom>
 		<custom key="mappings.archivemissing">Bitte geben Sie einen Wert für den Archivnamen an. (Zeile </custom>
@@ -260,9 +260,9 @@
 		<custom key="mappings.compilestoponerror">Bei Fehler stoppen</custom>
 		<custom key="mappings.compilestoponerrordesc">Legt fest, ob bei einem Fehler die weitere Kompilierung gestoppt werden soll</custom>
 		<custom key="mappings.compiletitle">kompilieren</custom>
-		<custom key="mappings.editdesc">Hier können Sie ein einzelnes Mapping bearbeiten oder aus einem bestehenden Mapping ein Lucee Archiv erstellen.</custom>
+		<custom key="mappings.editdesc">Hier können Sie ein einzelnes Mapping bearbeiten oder aus einem bestehenden Mapping ein Tachyon Archiv erstellen.</custom>
 	
-		<custom key="mappings.introtext">Bitte beachten Sie, dass nur Seiten, die von Lucee verarbeitet werden diese Mappings kennen (cfm, cfml, cfc). Wenn Sie auch Dateien, die nicht von Lucee verarbeitet werden verwenden möchten, müssen Sie virtuelle Mappings auf Ihrem Applikationsserver erstellen.</custom>
+		<custom key="mappings.introtext">Bitte beachten Sie, dass nur Seiten, die von Tachyon verarbeitet werden diese Mappings kennen (cfm, cfml, cfc). Wenn Sie auch Dateien, die nicht von Tachyon verarbeitet werden verwenden möchten, müssen Sie virtuelle Mappings auf Ihrem Applikationsserver erstellen.</custom>
 		<custom key="mappings.physical">Ressource</custom>
 		<custom key="mappings.physicalhead">Ressource</custom>
 		<custom key="mappings.physicalheaddescription">Pfad der zu mappenden Ressource (Absolut oder relativ zum Webroot).</custom>
@@ -277,43 +277,43 @@
 		<custom key="mappings.virtualhead">Virtuell</custom>
 		<custom key="overview.bugreport">Fehlerreport</custom>
 	
-		<custom key="overview.bugreportmail">bugs@lucee.ch</custom>
+		<custom key="overview.bugreportmail">bugs@tachyon.ch</custom>
 		<custom key="overview.cfcompatibility">Kompatibel zu ColdFusion&amp;reg; Version</custom>
 		<custom key="overview.contact">Kontakt</custom>
 		<custom key="overview.contactinfo">Info</custom>
 		<custom key="overview.contextcount">Anzahl Kontexte</custom>
-		<custom key="overview.datetime">Lucee Datum/Zeit</custom>
+		<custom key="overview.datetime">Tachyon Datum/Zeit</custom>
 	
 		<custom key="overview.featurerequest">Feature Anfragen</custom>
-		<custom key="overview.featurerequestmail">features@lucee.ch</custom>
+		<custom key="overview.featurerequestmail">features@tachyon.ch</custom>
 		<custom key="overview.info">Info</custom>
-		<custom key="overview.infomail">info@lucee.ch</custom>
+		<custom key="overview.infomail">info@tachyon.ch</custom>
 		<custom key="overview.installedfls">Installierte Funktions&lt;br&gt;Bibliotheken</custom>
 	
 		<custom key="overview.installedtls">Installierte Tag&lt;br&gt;Bibliotheken</custom>
-		<custom key="overview.introdesc.server">Der Server Administrator ermöglicht Ihnen Updates und Patches für Ihre Lucee Edition vorzunehmen und die Engine per Mauklick neu zu starten. Zusätzlich können Sie in der Develop und Enterprise Edition die einzelnen Webkontexte vorkonfigurieren und diverse Beschränkungen und Konfigurationen individuell pro Webkontext einrichten.</custom>
-		<custom key="overview.introdesc.web">Lucee, die CFML engine. Schnell, preiswert und einfach zu bedienen. Mit Lucee haben sie sich für den performanten und qualitativ hochwertigen Weg von CFML entschieden. Passen Sie Ihren Webkontext nach Ihren Bedürfnissen und Wünschen an. Dafür steht Ihnen hier der Web Administrator zur Verfügung.</custom>
+		<custom key="overview.introdesc.server">Der Server Administrator ermöglicht Ihnen Updates und Patches für Ihre Tachyon Edition vorzunehmen und die Engine per Mauklick neu zu starten. Zusätzlich können Sie in der Develop und Enterprise Edition die einzelnen Webkontexte vorkonfigurieren und diverse Beschränkungen und Konfigurationen individuell pro Webkontext einrichten.</custom>
+		<custom key="overview.introdesc.web">Tachyon, die CFML engine. Schnell, preiswert und einfach zu bedienen. Mit Tachyon haben sie sich für den performanten und qualitativ hochwertigen Weg von CFML entschieden. Passen Sie Ihren Webkontext nach Ihren Bedürfnissen und Wünschen an. Dafür steht Ihnen hier der Web Administrator zur Verfügung.</custom>
 		<custom key="overview.licence">Erhältliche Editionen</custom>
 		<custom key="overview.licencecommunity">Community</custom>
 	
-		<custom key="overview.licencecommunitydesc">Lucee Community ist für den einfachen Einsatz gedacht. Bis auf wenige Einschränkungen bietet die Community Version den vollen Sprachumfang von Lucee und dies völlig umsonst.</custom>
-		<custom key="overview.licencedesc">Lucee ist in vier verschiedenen Editionen verfügbar, zugeschnitten für die verschiedenen Einsatzgebiete und Bugets.</custom>
+		<custom key="overview.licencecommunitydesc">Tachyon Community ist für den einfachen Einsatz gedacht. Bis auf wenige Einschränkungen bietet die Community Version den vollen Sprachumfang von Tachyon und dies völlig umsonst.</custom>
+		<custom key="overview.licencedesc">Tachyon ist in vier verschiedenen Editionen verfügbar, zugeschnitten für die verschiedenen Einsatzgebiete und Bugets.</custom>
 		<custom key="overview.licencedevelop">Develop</custom>
 		<custom key="overview.licencedevelopdesc">Die Develop Version ist eine Version, welche die Entwickler addressiert, also gedacht ist um damit CFML Applikation zu erstellen. Diese Version darf jedoch nicht produktiv eingesetzt werden.</custom>
 		<custom key="overview.licencedevelopmore">mehr</custom>
 		<custom key="overview.licenceenterprise">Enterprise</custom>
 	
-		<custom key="overview.licenceenterprisedesc">Die Enterprise Version von Lucee ist die grösste und umfassenste Version, gedacht um in einem grösseren Umfeld einzusetzen.</custom>
+		<custom key="overview.licenceenterprisedesc">Die Enterprise Version von Tachyon ist die grösste und umfassenste Version, gedacht um in einem grösseren Umfeld einzusetzen.</custom>
 		<custom key="overview.licenceprofessional">Professional</custom>
-		<custom key="overview.licenceprofessionaldesc">Die Professional Version bietet den vollen Sprachumfang von Lucee, es muss also auf keine Feature verzichtet werden. Mit der Professional Version können mehrere Webs auf einem Server betrieben werden, die Anzahl Webs wird jedoch durch den Lizenspreis eingeschränkt.</custom>
+		<custom key="overview.licenceprofessionaldesc">Die Professional Version bietet den vollen Sprachumfang von Tachyon, es muss also auf keine Feature verzichtet werden. Mit der Professional Version können mehrere Webs auf einem Server betrieben werden, die Anzahl Webs wird jedoch durch den Lizenspreis eingeschränkt.</custom>
 		<custom key="overview.os">Betriebssystem</custom>
-		<custom key="overview.purchase">Hol Dir Deine Lucee Lizenz</custom>
+		<custom key="overview.purchase">Hol Dir Deine Tachyon Lizenz</custom>
 		<custom key="overview.releasedate">Release Datum</custom>
 	
 		<custom key="overview.sales">Verkauf</custom>
-		<custom key="overview.salesmail">sales@lucee.ch</custom>
+		<custom key="overview.salesmail">sales@tachyon.ch</custom>
 		<custom key="overview.serialnumber">Seriennummer</custom>
-		<custom key="overview.serialnumberdescription">Seriennummer für Lucee</custom>
+		<custom key="overview.serialnumberdescription">Seriennummer für Tachyon</custom>
 		<custom key="overview.servertime">Server Datum/Zeit (mm/dd/yyyy HH:mm:ss): </custom>
 		<custom key="overview.used">verwendet</custom>
 	
@@ -335,7 +335,7 @@
 		<custom key="proxy.settings">Proxy Einstellungen</custom>
 		<custom key="proxy.username">Benutzername</custom>
 		<custom key="proxy.usernamedescription">Benutzername für den Proxy</custom>
-		<custom key="proxy.web">Definieren Sie einen Proxy, welcher an diversen Stellen (cfhttp, cfftp, cfmail ...) in Lucee Verwendung findet</custom>
+		<custom key="proxy.web">Definieren Sie einen Proxy, welcher an diversen Stellen (cfhttp, cfftp, cfmail ...) in Tachyon Verwendung findet</custom>
 		<custom key="regional.defaultencoding">Standard Encoding</custom>
 		<custom key="regional.defaultencodingdescription"></custom>
 	
@@ -347,18 +347,18 @@
 		<custom key="regional.serverprop">Server Einstellung</custom>
 	
 		<custom key="regional.timeserver">Time server (NTP)</custom>
-		<custom key="regional.timeserverdescription">Time server der die aktuelle Zeit zürück gibt. Falls gesetzt, wird in Lucee diese Zeit anstelle der lokalen Server-Zeit verwendet (Beispiel: swisstime.ethz.ch, time.nist.gov).</custom>
+		<custom key="regional.timeserverdescription">Time server der die aktuelle Zeit zürück gibt. Falls gesetzt, wird in Tachyon diese Zeit anstelle der lokalen Server-Zeit verwendet (Beispiel: swisstime.ethz.ch, time.nist.gov).</custom>
 		<custom key="regional.timeservermissing">Bitte wählen Sie einen Wert für die Zeitzone aus.</custom>
 		<custom key="regional.timezone">Zeitzone</custom>
-		<custom key="regional.timezonedescription">Definiert die gewünschte Zeitzone für Lucee. Diese Einstellung ändert die Zeit für den Kontext der Webs.&lt;br&gt;</custom>
-		<custom key="regional.web">Lucee lässt Sie Ihre eigenen individuellen Locale-, Zeitzonen- und Zeitservereinstellungen vorzunehmen.</custom>
+		<custom key="regional.timezonedescription">Definiert die gewünschte Zeitzone für Tachyon. Diese Einstellung ändert die Zeit für den Kontext der Webs.&lt;br&gt;</custom>
+		<custom key="regional.web">Tachyon lässt Sie Ihre eigenen individuellen Locale-, Zeitzonen- und Zeitservereinstellungen vorzunehmen.</custom>
 	
 		<custom key="remote.adminaccess">Admin Access</custom>
 		<custom key="remote.adminaccessdesc">Definiert den Zugang zum Remote Client, dessen Password und Security Key, die Security key kann innerhalb des Remote Client bezogen werden</custom>
 		<custom key="remote.adminpassword.server">Passwort für den remote Server Administrator</custom>
 		<custom key="remote.adminpassword.web">Passwort für den Remote Web Administrator</custom>
-		<custom key="remote.adminpassworddesc.server">Passwort für den Zugriff auf den Remote Lucee Server Administrator</custom>
-		<custom key="remote.adminpassworddesc.web">Passwort für den Zugriff auf den Remote Lucee Web Administrator</custom>
+		<custom key="remote.adminpassworddesc.server">Passwort für den Zugriff auf den Remote Tachyon Server Administrator</custom>
+		<custom key="remote.adminpassworddesc.web">Passwort für den Zugriff auf den Remote Tachyon Web Administrator</custom>
 	
 		<custom key="remote.connection">Verbindung</custom>
 		<custom key="remote.connectiondesc">Verbindung zum Remote Client, komplette URL (inkl. Port) und HTTP Access</custom>
@@ -420,10 +420,10 @@
 		<custom key="remote.urlmissing">Die Remote Client URL fehlt</custom>
 	
 		<custom key="remote.urlpath">Pfad</custom>
-		<custom key="remote.urlpathdesc">Pfad zur Admin.cfc (Beispiel: /lucee/admin.cfc?wsdl)</custom>
+		<custom key="remote.urlpathdesc">Pfad zur Admin.cfc (Beispiel: /tachyon/admin.cfc?wsdl)</custom>
 		<custom key="remote.urlpathmissing">Der Pfad zur Admin.cfc fehlt</custom>
 		<custom key="remote.urlserver">Server</custom>
-		<custom key="remote.urlserverdesc">Remote Client Server (Beispiel: http://lucee.ch)</custom>
+		<custom key="remote.urlserverdesc">Remote Client Server (Beispiel: http://tachyon.ch)</custom>
 		<custom key="remote.urlservermissing">Remote Client Server</custom>
 	
 		<custom key="remote.usage.cluster">Cluster Scope</custom>
@@ -431,7 +431,7 @@
 		<custom key="remote.usage.sync">Admin Synchronisation</custom>
 		<custom key="remote.usage.title">Verwendung</custom>
 		<custom key="schedule.createtask">Scheduled Task erstellen</custom>
-		<custom key="schedule.currentdatetime">Aktuelle Datum/Zeit dieses Lucee Kontexts: (mm/dd/yyyy hh:mm tt)</custom>
+		<custom key="schedule.currentdatetime">Aktuelle Datum/Zeit dieses Tachyon Kontexts: (mm/dd/yyyy hh:mm tt)</custom>
 	
 		<custom key="schedule.daily">täglich</custom>
 		<custom key="schedule.description">Hier können Sie Scheduled Tasks hinzufügen, bearbeiten oder löschen.</custom>
@@ -490,11 +490,11 @@
 		<custom key="schedule.weekly">wöchentlich</custom>
 	
 		<custom key="scopes.applicationtimeout">Application Timeout</custom>
-		<custom key="scopes.applicationtimeoutdescription">Legt die Zeit fest, wie lange Lucee für inaktive Applikationen den Application-Scope erhält. Diese Verhaltensweise kann von dem Tag CFApplication übersteuert werden.</custom>
+		<custom key="scopes.applicationtimeoutdescription">Legt die Zeit fest, wie lange Tachyon für inaktive Applikationen den Application-Scope erhält. Diese Verhaltensweise kann von dem Tag CFApplication übersteuert werden.</custom>
 		<custom key="scopes.cascadetoresultset">Resultsets durchsuchen</custom>
-		<custom key="scopes.cascadetoresultsetdescription">Wenn eine Variable keinen vorangestellten Scope hat (Beispiel: #myVar# anstelle von #variables.myVar#), kann Lucee (nach dem CFML Standard) auch verfügbare Query-Resultsets durchsuchen.</custom>
+		<custom key="scopes.cascadetoresultsetdescription">Wenn eine Variable keinen vorangestellten Scope hat (Beispiel: #myVar# anstelle von #variables.myVar#), kann Tachyon (nach dem CFML Standard) auch verfügbare Query-Resultsets durchsuchen.</custom>
 		<custom key="scopes.cascading">Cascading</custom>
-		<custom key="scopes.cascadingdescription">Abhängig von dieser Einstellung durchsucht Lucee gewisse Scopes, um eine im CFML-Code aufgerufene Variable zu finden. Dieses passiert jedoch nur, wenn die Variable ohne vorangestellten Scope aufgerufen wird. (Beispiel: #myVar# anstelle von #variables.myVar#)&lt;br&gt;- strict: durchsucht nur den Variables Scope&lt;br&gt;- small:	durchsucht die Scopes: Variables, Cgi, Url und Form&lt;br&gt;- standard (CFML Standard):	durchsucht die Scopes: Variables, Cgi, Url, Form und Cookie</custom>
+		<custom key="scopes.cascadingdescription">Abhängig von dieser Einstellung durchsucht Tachyon gewisse Scopes, um eine im CFML-Code aufgerufene Variable zu finden. Dieses passiert jedoch nur, wenn die Variable ohne vorangestellten Scope aufgerufen wird. (Beispiel: #myVar# anstelle von #variables.myVar#)&lt;br&gt;- strict: durchsucht nur den Variables Scope&lt;br&gt;- small:	durchsucht die Scopes: Variables, Cgi, Url und Form&lt;br&gt;- standard (CFML Standard):	durchsucht die Scopes: Variables, Cgi, Url, Form und Cookie</custom>
 	
 		<custom key="scopes.clientcookies">Client Cookies</custom>
 		<custom key="scopes.clientcookiesdescription">Client Cookies ein oder ausschalten. Diese Verhaltensweise kann von dem Tag CFApplication übersteuert werden.</custom>
@@ -511,17 +511,17 @@
 		<custom key="scopes.localmodeupdate">Update (CFML Standard)</custom>
 	
 		<custom key="scopes.mergeurlform">Url und Form kombinieren</custom>
-		<custom key="scopes.mergeurlformdescription">Mit dieser Einstellung kann festgelegt werden, ob Lucee den Url und Form Scope zu einem einzigen Scope zusammenfasst oder nicht. Beim CFML Standard findet diese Zusammenfassung nicht statt.</custom>
+		<custom key="scopes.mergeurlformdescription">Mit dieser Einstellung kann festgelegt werden, ob Tachyon den Url und Form Scope zu einem einzigen Scope zusammenfasst oder nicht. Beim CFML Standard findet diese Zusammenfassung nicht statt.</custom>
 		<custom key="scopes.server">Definert Scopeeneinstellungen, die als Standardwert für alle Webs gelten sollen.</custom>
 		<custom key="scopes.sessionmanagement">Session Management</custom>
 		<custom key="scopes.sessionmanagementdescription">Standardmässig kann Session Management eingeschaltet werden. Diese Verhaltensweise kann von dem Tag CFApplication übersteuert werden.</custom>
 		<custom key="scopes.sessiontimeout">Session Timeout</custom>
 	
-		<custom key="scopes.sessiontimeoutdescription">Legt die Zeit fest, wie lange Lucee für inaktive Sessions den Session-Scope erhält. Diese Verhaltensweise kann von dem Tag CFApplication übersteuert werden.</custom>
+		<custom key="scopes.sessiontimeoutdescription">Legt die Zeit fest, wie lange Tachyon für inaktive Sessions den Session-Scope erhält. Diese Verhaltensweise kann von dem Tag CFApplication übersteuert werden.</custom>
 		<custom key="scopes.sessiontype">Session Typ</custom>
 		<custom key="scopes.sessiontype_application">Application</custom>
 		<custom key="scopes.sessiontype_jee">JEE</custom>
-		<custom key="scopes.sessiontypedescription">JEE Sessions erlauben es Lucee Sessions über einen JEE Server-Cluster zu verteilen. Wenn Sie diese Einstellung ändern verlieren Sie die aktuelle Session und müssen sich erneut einloggen.</custom>
+		<custom key="scopes.sessiontypedescription">JEE Sessions erlauben es Tachyon Sessions über einen JEE Server-Cluster zu verteilen. Wenn Sie diese Einstellung ändern verlieren Sie die aktuelle Session und müssen sich erneut einloggen.</custom>
 		<custom key="scopes.small">small</custom>
 	
 		<custom key="scopes.standard">standard (CFML Default)</custom>
@@ -532,11 +532,11 @@
 		<custom key="scopes.timeoutminutesvalue">Der Wert Minuten für </custom>
 	
 		<custom key="scopes.timeoutsecondsvalue">Der Wert Sekunden für </custom>
-		<custom key="scopes.web">Hier können Sie festlegen, wie Lucee Scopes abarbeitet.</custom>
+		<custom key="scopes.web">Hier können Sie festlegen, wie Tachyon Scopes abarbeitet.</custom>
 		<custom key="search.collection">Collection</custom>
 		<custom key="search.collections">Collections</custom>
 		<custom key="search.createcol">Collection erstellen</custom>
-		<custom key="search.description">Hier können Sie Search Collections verwalten, erstellen, indexieren und löschen. Standardmässig verwendet Lucee LUCENE als Suchengine.</custom>
+		<custom key="search.description">Hier können Sie Search Collections verwalten, erstellen, indexieren und löschen. Standardmässig verwendet Tachyon LUCENE als Suchengine.</custom>
 	
 		<custom key="search.directorypath">Verzeichnispfad</custom>
 		<custom key="search.directorypathmissing">Bitte geben Sie einen Wert für den zu indexierenden Pfad an.</custom>
@@ -569,7 +569,7 @@
 		<custom key="security.accesswrite">Schreibzugriff</custom>
 		<custom key="security.accesswritedesc">definiert den Schreibzugriff</custom>
 		<custom key="security.cfmlenvironment">CFML Umgebung</custom>
-		<custom key="security.cfmlenvironmentdescription">Einstellungen die festlegen wie Lucee Code mit dem Hostsystem interagiert.</custom>
+		<custom key="security.cfmlenvironmentdescription">Einstellungen die festlegen wie Tachyon Code mit dem Hostsystem interagiert.</custom>
 		<custom key="security.cfx">CFX</custom>
 		<custom key="security.cfxdescription">Die Einstellungen für die CFX Tags können geändert werden. Im 'Server Administrator' global definierte Tags können auch verwendet werden.</custom>
 	
@@ -587,7 +587,7 @@
 		<custom key="security.file">Dateizugriff</custom>
 		<custom key="security.fileall">all</custom>
 	
-		<custom key="security.filedescription">Legt fest, wie Lucee mit dem lokalen Dateisystem in einer Instanz interagieren kann.&lt;br&gt;- none: erlaubt keinen Zugriff auf das lokale Dateisystem&lt;br&gt;- local: erlaubt nur Dateizugriffe innerhalb des Webrootverzeichnisses&lt;br&gt;- all: erlaubt vollen Dateizugriff auf das Hostsystem.&lt;br&gt;</custom>
+		<custom key="security.filedescription">Legt fest, wie Tachyon mit dem lokalen Dateisystem in einer Instanz interagieren kann.&lt;br&gt;- none: erlaubt keinen Zugriff auf das lokale Dateisystem&lt;br&gt;- local: erlaubt nur Dateizugriffe innerhalb des Webrootverzeichnisses&lt;br&gt;- all: erlaubt vollen Dateizugriff auf das Hostsystem.&lt;br&gt;</custom>
 		<custom key="security.filelocal">local</custom>
 		<custom key="security.filenone">none</custom>
 		<custom key="security.functions">Tags &amp; Funktionen</custom>
@@ -596,14 +596,14 @@
 		<custom key="security.general">Allgemeiner Zugriff</custom>
 		<custom key="security.generaldesc">Definiert den allgemeinen Zugriff auf den Administrator und das Tad cfadmin</custom>
 		<custom key="security.javaaccess">Direkter Java Zugriff</custom>
-		<custom key="security.javaaccessdescription">Erlaubt den Zugriff auf Java Methoden und Eigenschaften aus Lucee Code (Beispiel: stringValue.substring(2,5)). Wenn Sie direkten Java Zugrif zulassen, kann dies ein potentielles Sicherheitsrisiko darstellen.</custom>
+		<custom key="security.javaaccessdescription">Erlaubt den Zugriff auf Java Methoden und Eigenschaften aus Tachyon Code (Beispiel: stringValue.substring(2,5)). Wenn Sie direkten Java Zugrif zulassen, kann dies ein potentielles Sicherheitsrisiko darstellen.</custom>
 		<custom key="security.mail">Mail</custom>
 	
 		<custom key="security.maildescription">Die Maileinstellungen  können im 'Web Administrator' geändert werden.</custom>
 		<custom key="security.mapping">Mappings</custom>
 		<custom key="security.mappingdescription">Mappings können 'Web Administrator' hinzugefügt, gelöscht und geändert werden.</custom>
 		<custom key="security.remote">Remote</custom>
-		<custom key="security.remotedescription">Es wird erlaubt das der User seine Einstellungen mit einem anderen lucee synchronisiern kann</custom>
+		<custom key="security.remotedescription">Es wird erlaubt das der User seine Einstellungen mit einem anderen tachyon synchronisiern kann</custom>
 		<custom key="security.scheduledtask">Scheduled Task</custom>
 	
 		<custom key="security.scheduledtaskdescription">Die Einstellungen für Scheduled Task können im 'Web Administrator' geändert werden.</custom>
@@ -625,7 +625,7 @@
 		<custom key="security.tagexecute">Tag CFExecute</custom>
 		<custom key="security.tagexecutedescription">Dieser Tag kann verwendet werden um Prozesse auf dem lokalen Hostsystem auszuführen.</custom>
 		<custom key="security.tagimport">Tag CFImport</custom>
-		<custom key="security.tagimportdescription">Dieser Tag kann verwendet werden um JSP und Lucee Tag Bibliotheken zu importieren.</custom>
+		<custom key="security.tagimportdescription">Dieser Tag kann verwendet werden um JSP und Tachyon Tag Bibliotheken zu importieren.</custom>
 	
 		<custom key="security.tagobject">Tag CFObject / &lt;br&gt;Funktion createObject</custom>
 		<custom key="security.tagobjectdescription">Mit dem Tag CFObject und der Funktion createObject können Java Objekte geladen werden. Wenn Sie diese Option ausschalten, können Sie nur noch Objekte des Typs 'component' erstellen.</custom>
@@ -637,7 +637,7 @@
 		<custom key="security.webadministrator">Web Administrator</custom>
 		<custom key="security.webadministratordescription">Hier können Sie die Zugriffsrechte für die Einstellungen festlegen, die in den 'Web Administratoren' überschrieben werden können.</custom>
 		<custom key="services.update.desc">
-	Sie können Lucee auf eine neue Version patchen, also bekannte Fehler ausbügeln 
+	Sie können Tachyon auf eine neue Version patchen, also bekannte Fehler ausbügeln
 	und Optimierungen innerhalb ihrer Version einspielen.</custom>
 		<custom key="services.update.exe">Update ausführen</custom>
 		<custom key="services.update.exedesc">Spielen Sie die aktuellsten Pacthes für Ihre Version ein. Nach einem erfolgten Update, müssen Sie sich neu in den Administrator einloggen.</custom>
@@ -645,27 +645,27 @@
 		<custom key="services.update.exerun">Update ausführen</custom>
 		<custom key="services.update.infotitle">Info</custom>
 		<custom key="services.update.location">URL</custom>
-		<custom key="services.update.locdesc">Definieren Sie die URL von der ein Lucee Update bezogen werden kann, typischerweise 'https://www.lucee.org'</custom>
+		<custom key="services.update.locdesc">Definieren Sie die URL von der ein Tachyon Update bezogen werden kann, typischerweise 'https://www.tachyon.org'</custom>
 		<custom key="services.update.noupdate">Für Ihre Version {current} steht kein Patch zur Verfügung</custom>
 		<custom key="services.update.remove">Updates entfernen</custom>
 	
 		<custom key="services.update.removedesc">Entfernen Sie alle nach der Grundinstallation nachträglich installierten Updates.</custom>
 		<custom key="services.update.removerun">Updates entfernen</custom>
-		<custom key="services.update.restart">Lucee neu starten</custom>
-		<custom key="services.update.restartdesc">Hier können Sie Lucee neu starten. Nach erfolgtem Restart werden bestehende Sitzungen entfernt. Sie müssen sich in den Administrator erneut einloggen.</custom>
-		<custom key="services.update.setdesc">Definieren Sie wie und wo Ihre Lucee Version ihre Patches bezieht. Damit die eine Änderung dieser Einstellung aktiv wird, ist ein Neustart von Lucee erforderlich.</custom>
+		<custom key="services.update.restart">Tachyon neu starten</custom>
+		<custom key="services.update.restartdesc">Hier können Sie Tachyon neu starten. Nach erfolgtem Restart werden bestehende Sitzungen entfernt. Sie müssen sich in den Administrator erneut einloggen.</custom>
+		<custom key="services.update.setdesc">Definieren Sie wie und wo Ihre Tachyon Version ihre Patches bezieht. Damit die eine Änderung dieser Einstellung aktiv wird, ist ein Neustart von Tachyon erforderlich.</custom>
 		<custom key="services.update.settitle">Einstellungen</custom>
 	
 		<custom key="services.update.type">Typ</custom>
 		<custom key="services.update.type_auto">Automatisch</custom>
 		<custom key="services.update.type_manually">Manuell</custom>
-		<custom key="services.update.typedesc">Definieren Sie hier wie Lucee gepatcht werden soll, 'Automatisch' steht dafür, dass Lucee automatisch, täglich nach updates sucht. 'Manuell' bedeutet, dass ein Update nur manuell ausgeführt werden kann.</custom>
+		<custom key="services.update.typedesc">Definieren Sie hier wie Tachyon gepatcht werden soll, 'Automatisch' steht dafür, dass Tachyon automatisch, täglich nach updates sucht. 'Manuell' bedeutet, dass ein Update nur manuell ausgeführt werden kann.</custom>
 		<custom key="services.update.update">Für Ihre Version steht ein Patch zur Verfügung, Sie haben die Version {current} installiert, die aktuell verfügbare Version ist {available}</custom>
-		<custom key="setting.server">Kontrolle der Ausgabe von Lucee</custom>
+		<custom key="setting.server">Kontrolle der Ausgabe von Tachyon</custom>
 	
-		<custom key="setting.showversion">Lucee Version ausgeben</custom>
-		<custom key="setting.showversiondescription">Lucee Version im Response Header zurückgeben</custom>
-		<custom key="setting.web">Kontrolle der Ausgabe von Lucee</custom>
+		<custom key="setting.showversion">Tachyon Version ausgeben</custom>
+		<custom key="setting.showversiondescription">Tachyon Version im Response Header zurückgeben</custom>
+		<custom key="setting.web">Kontrolle der Ausgabe von Tachyon</custom>
 		<custom key="setting.whitespace">Whitespace management</custom>
 		<custom key="setting.whitespacedescription">Unterdrückt alle Whitespace (Leerzeichen, Tabs und Zeilenumbrüche), die in der Ausgabe einem Whitespace folgen</custom>
 		<custom key="settings.datasourcedescriptioncreate">Neue Datenquelle erstellen</custom>
@@ -718,10 +718,10 @@
 	
 		<custom key="video.server.installedbut1">Video Komponenten sind zwar installiert, jedoch können sie nicht korrekt ausgeführt werden:</custom>
 		<custom key="video.server.installedbut2">Wir empfehlen Ihnen eine manuelle Installation vorzunehmen.</custom>
-		<custom key="video.server.installednotdesc">Da für das Tag cfvideo/cfvideoplayer betriebssystemspezifische Video Komponenten benötigt werden, sind diese nicht mit Lucee gebundelt. Dies würde den Umfang der Software unnötig vergrössern. Zudem dürfen gewisse enthaltene Codecs nicht vertrieben werden. Die Verwendung derer ist jedoch uneingeschränkt, weshalb sie diese nachladen können. Sie können diese Komponenten direkt vom Provider laden oder hier per Formular hochladen.</custom>
-		<custom key="video.server.installednotuploaddesc">Video Komponenten (ffmpeg.zip) werden direkt über Formular hochgeladen und in Lucee kopiert (keine Installation). Als Quelle dient z.B. {provider}</custom>
+		<custom key="video.server.installednotdesc">Da für das Tag cfvideo/cfvideoplayer betriebssystemspezifische Video Komponenten benötigt werden, sind diese nicht mit Tachyon gebundelt. Dies würde den Umfang der Software unnötig vergrössern. Zudem dürfen gewisse enthaltene Codecs nicht vertrieben werden. Die Verwendung derer ist jedoch uneingeschränkt, weshalb sie diese nachladen können. Sie können diese Komponenten direkt vom Provider laden oder hier per Formular hochladen.</custom>
+		<custom key="video.server.installednotuploaddesc">Video Komponenten (ffmpeg.zip) werden direkt über Formular hochgeladen und in Tachyon kopiert (keine Installation). Als Quelle dient z.B. {provider}</custom>
 		<custom key="video.server.installednotuploadtitle">Video Komponenten über Upload</custom>
-		<custom key="video.server.installednoturldesc">Video Komponenten werden direkt vom Remote Server geladen und in Lucee kopiert (keine Installation).</custom>
+		<custom key="video.server.installednoturldesc">Video Komponenten werden direkt vom Remote Server geladen und in Tachyon kopiert (keine Installation).</custom>
 	
 		<custom key="video.server.installednoturltitle">Video Komponenten über URL</custom>
 		<custom key="video.server.mandesc">Eine Manuelle Installation wird wie folgt vorgenommen: Navigieren Sie zur Adresse {provider} und laden sie dort die ffmpeg.zip für Ihr Betriebssystem ({OS-Name}) herunter. Kopieren Sie diese Datei (nicht entpacken) in das Verzeichnis {directory}. Falls Sie für Ihr Betriebssystem keinen Download finden, kontaktieren Sie uns.</custom>
@@ -731,8 +731,8 @@
 		<custom key="video.uploadmissing">Fehlende Upload Definition</custom>
 	
 		<custom key="video.web.installed">Video Komponenten sind auf Ihrem System installiert.</custom>
-		<custom key="video.web.installedbut">Video Komponenten sind zwar installiert, jedoch können sie nicht korrekt ausgeführt werden. Wechseln Sie in den Lucee Server Administrator, um dies zu reparieren:</custom>
-		<custom key="video.web.installednot">Video Komponenten sind nicht auf Ihrem System installiert. Um diese zu installieren wechseln sie in den Lucee Server Administrator.</custom>
+		<custom key="video.web.installedbut">Video Komponenten sind zwar installiert, jedoch können sie nicht korrekt ausgeführt werden. Wechseln Sie in den Tachyon Server Administrator, um dies zu reparieren:</custom>
+		<custom key="video.web.installednot">Video Komponenten sind nicht auf Ihrem System installiert. Um diese zu installieren wechseln sie in den Tachyon Server Administrator.</custom>
 	
 	</language>
 
@@ -753,7 +753,7 @@
 	
 		<custom key="application.listenermode_curr2root">Current tp root (CFML default)</custom>
 		<custom key="application.listenermode_root">Root</custom>
-		<custom key="application.listenermodedescription">Defines where Lucee looks for the files &quot;Application.cfc/Application.cfm&quot;. In case of type &quot;none&quot; this setting is meaningless.</custom>
+		<custom key="application.listenermodedescription">Defines where Tachyon looks for the files &quot;Application.cfc/Application.cfm&quot;. In case of type &quot;none&quot; this setting is meaningless.</custom>
 		<custom key="application.listenermodedescription_curr">Looks for the file &quot;Application.cfc/Application.cfm&quot; only in the current template directory .</custom>
 	
 		<custom key="application.listenermodedescription_curr2root">Looks for the file &quot;Application.cfc/Application.cfm&quot; from the current up to the webroot directory.</custom>
@@ -765,15 +765,15 @@
 		<custom key="application.listenertype_modern">Modern</custom>
 		<custom key="application.listenertype_none">None</custom>
 		<custom key="application.listenertypedescription">Please select the type of the listener</custom>
-		<custom key="application.listenertypedescription_classic">Classic handling. Lucee looks for the file &quot;Application.cfm&quot; and a coresponding file &quot;OnRequestEnd.cfm&quot;</custom>
+		<custom key="application.listenertypedescription_classic">Classic handling. Tachyon looks for the file &quot;Application.cfm&quot; and a coresponding file &quot;OnRequestEnd.cfm&quot;</custom>
 	
-		<custom key="application.listenertypedescription_mixed">Mixed handling. Lucee looks for a file &quot;Application.cfm/OnRequestEnd.cfm&quot; as well as for the file &quot;Application.cfc&quot;</custom>
-		<custom key="application.listenertypedescription_modern">Modern handling. Lucee only looks for the file &quot;Application.cfc&quot;</custom>
-		<custom key="application.listenertypedescription_none">When a request is called no other initialization template will be invoked by Lucee</custom>
+		<custom key="application.listenertypedescription_mixed">Mixed handling. Tachyon looks for a file &quot;Application.cfm/OnRequestEnd.cfm&quot; as well as for the file &quot;Application.cfc&quot;</custom>
+		<custom key="application.listenertypedescription_modern">Modern handling. Tachyon only looks for the file &quot;Application.cfc&quot;</custom>
+		<custom key="application.listenertypedescription_none">When a request is called no other initialization template will be invoked by Tachyon</custom>
 		<custom key="application.missingscriptprotect">Please select a value for script-protect</custom>
 	
 		<custom key="application.requesttimeout">Request timeout</custom>
-		<custom key="application.requesttimeoutdescription">Sets the amount of time Lucee will wait for a request to finish before a request timeout will be raised. This means that the execution of the request will be stopped. This behaviour can be overridden by the tag cfsetting.</custom>
+		<custom key="application.requesttimeoutdescription">Sets the amount of time Tachyon will wait for a request to finish before a request timeout will be raised. This means that the execution of the request will be stopped. This behaviour can be overridden by the tag cfsetting.</custom>
 		<custom key="application.scriptprotect">Script-protect</custom>
 		<custom key="application.scriptprotectall">Script-protect checks in all scopes for external data (cgi,cookie,form,url)</custom>
 		<custom key="application.scriptprotectcustom">You can define the scopes to be checked individually</custom>
@@ -833,7 +833,7 @@
 		<custom key="components.component">Component</custom>
 		<custom key="components.componentdumptemplate">Component &quot;dump&quot; template</custom>
 	
-		<custom key="components.componentdumptemplatedescription">If you call a component directly this template will be invoked to dump the component. (Example: https://www.lucee.org/ch/lucee/common/Example.cfc)</custom>
+		<custom key="components.componentdumptemplatedescription">If you call a component directly this template will be invoked to dump the component. (Example: https://www.tachyon.org/ch/tachyon/common/Example.cfc)</custom>
 		<custom key="components.componentdumptemplatemissing">Please enter a value for the &quot;dump&quot; template</custom>
 		<custom key="components.datamemberaccesstype">Data member access type</custom>
 		<custom key="components.datamemberaccesstypedescription">Define the accessor for the data-members of a component. This defines how variables of the &quot;this&quot; scope of a component can be accessed from outside of the component.</custom>
@@ -845,13 +845,13 @@
 		<custom key="components.server">Define the component settings that will be used as a &lt;strong&gt;default&lt;/strong&gt; for all webs.</custom>
 	
 		<custom key="components.triggerdatamember">Magic functions</custom>
-		<custom key="components.triggerdatamemberdescription">If there is no accessible data member (property, element of the this scope) inside a component, Lucee searches for available matching &amp;quot;getters&amp;quot; or &amp;quot;setters&amp;quot; for the requested property.
+		<custom key="components.triggerdatamemberdescription">If there is no accessible data member (property, element of the this scope) inside a component, Tachyon searches for available matching &amp;quot;getters&amp;quot; or &amp;quot;setters&amp;quot; for the requested property.
 		The following example should clarify this behaviour. &amp;quot;somevar = myComponent.properyName&amp;quot;. If &amp;quot;myComponent&amp;quot; has no accessible data member named &amp;quot;propertyName&amp;quot;,
-		Lucee searches for a function member (method) named &amp;quot;getPropertyName&amp;quot;.</custom>
+		Tachyon searches for a function member (method) named &amp;quot;getPropertyName&amp;quot;.</custom>
 	
 		<custom key="components.useshadow">Variables scope</custom>
 		<custom key="components.useshadowdescription">Defines whether a component has an independent variables scope parallel to the &amp;quot;this&amp;quot; scope (CFML standard) or not.</custom>
-		<custom key="components.web">Defines how components will be handled by Lucee.</custom>
+		<custom key="components.web">Defines how components will be handled by Tachyon.</custom>
 		<custom key="customtags.archive">Archive</custom>
 		<custom key="customtags.archivemissing">Please enter a value for the archive name (row </custom>
 	
@@ -972,7 +972,7 @@
 		<custom key="mail.logfilemissing">Missing value for mail log file</custom>
 		<custom key="mail.mailservers">Mail servers</custom>
 	
-		<custom key="mail.mailserversdescription">You can define more than one mail server. When sending a mail, Lucee tries to send the mail with the first defined mail server. If the send operation fails, Lucee will continue using the next mail server in the list.</custom>
+		<custom key="mail.mailserversdescription">You can define more than one mail server. When sending a mail, Tachyon tries to send the mail with the first defined mail server. If the send operation fails, Tachyon will continue using the next mail server in the list.</custom>
 		<custom key="mail.missingencoding">Please enter a value for the default encoding</custom>
 		<custom key="mail.password">Password</custom>
 		<custom key="mail.passwordmissing">Please enter a value for the corresponding password (row </custom>
@@ -990,7 +990,7 @@
 		<custom key="mail.username">Username</custom>
 		<custom key="mail.usernamemissing">Please enter a value for the username (row </custom>
 		<custom key="mappings.archive">Archive</custom>
-		<custom key="mappings.archivedesc">Generate a Lucee archive (ra) from an existing mapping</custom>
+		<custom key="mappings.archivedesc">Generate a Tachyon archive (ra) from an existing mapping</custom>
 		<custom key="mappings.archivehead">Archive</custom>
 	
 		<custom key="mappings.archiveheaddescription">Name of the archive file (ra or ras), (absolute or relative to the webroot)</custom>
@@ -1003,15 +1003,15 @@
 		<custom key="mappings.compilestoponerror">Stop on error</custom>
 		<custom key="mappings.compilestoponerrordesc">Sets whether the compile process should be aborted on errors</custom>
 		<custom key="mappings.compiletitle">compile</custom>
-		<custom key="mappings.editdesc">Here you can edit a certain mapping or create a Lucee archive out of an existing one.</custom>
-		<custom key="mappings.introtext">Please note, that only pages processed by Lucee are aware of these mappings (cfm, cfml, cfc). If you want to use files not processed by Lucee for these special mapping directories, you have to add virtual mappings to these directories to your application server.</custom>
+		<custom key="mappings.editdesc">Here you can edit a certain mapping or create a Tachyon archive out of an existing one.</custom>
+		<custom key="mappings.introtext">Please note, that only pages processed by Tachyon are aware of these mappings (cfm, cfml, cfc). If you want to use files not processed by Tachyon for these special mapping directories, you have to add virtual mappings to these directories to your application server.</custom>
 		<custom key="mappings.physical">Resource</custom>
 	
 		<custom key="mappings.physicalhead">Resource</custom>
 		<custom key="mappings.physicalheaddescription">Path of the resource to map (absolute or relative to the webroot)</custom>
 		<custom key="mappings.physicalmissing">Please enter a value for the resource (row </custom>
 		<custom key="mappings.primaryhead">Primary</custom>
-		<custom key="mappings.primaryheaddescription">Sets where Lucee-files will first be searched</custom>
+		<custom key="mappings.primaryheaddescription">Sets where Tachyon-files will first be searched</custom>
 		<custom key="mappings.topleveldesc"></custom>
 	
 		<custom key="mappings.toplevelhead">Top Level</custom>
@@ -1019,44 +1019,44 @@
 		<custom key="mappings.trustedheaddescription"></custom>
 		<custom key="mappings.virtualhead">Virtual</custom>
 		<custom key="overview.bugreport">Bug report</custom>
-		<custom key="overview.bugreportmail">bugs@lucee.ch</custom>
+		<custom key="overview.bugreportmail">bugs@tachyon.ch</custom>
 	
 		<custom key="overview.cfcompatibility">ColdFusion&amp;reg; compatibilty version</custom>
 		<custom key="overview.contact">Contact</custom>
 		<custom key="overview.contactinfo">Info</custom>
 		<custom key="overview.contextcount">Context count</custom>
-		<custom key="overview.datetime">Lucee date/time</custom>
+		<custom key="overview.datetime">Tachyon date/time</custom>
 		<custom key="overview.featurerequest">Feature request</custom>
 	
-		<custom key="overview.featurerequestmail">features@lucee.ch</custom>
+		<custom key="overview.featurerequestmail">features@tachyon.ch</custom>
 		<custom key="overview.info">Info</custom>
-		<custom key="overview.infomail">info@lucee.ch</custom>
+		<custom key="overview.infomail">info@tachyon.ch</custom>
 		<custom key="overview.installedfls">Installed function&lt;br/&gt; libraries</custom>
 		<custom key="overview.installedtls">Installed tag&lt;br/&gt; libraries</custom>
 	
-		<custom key="overview.introdesc.server">The server administrator allows you to install updates and patches for your Lucee edition and to restart the engine on mouseclick. If you have the Develop or Enterprise edition you can preconfigure new web contexts and define restrictions and configurations per web context individually.</custom>
-		<custom key="overview.introdesc.web">Lucee, the CFML engine. Fast, inexpensive and easy to use. By choosing Lucee you decided to go the performant and high quality way of CFML. Set up your local web context according to your needs and wishes. For this purpose you can use this Lucee web administrator.</custom>
+		<custom key="overview.introdesc.server">The server administrator allows you to install updates and patches for your Tachyon edition and to restart the engine on mouseclick. If you have the Develop or Enterprise edition you can preconfigure new web contexts and define restrictions and configurations per web context individually.</custom>
+		<custom key="overview.introdesc.web">Tachyon, the CFML engine. Fast, inexpensive and easy to use. By choosing Tachyon you decided to go the performant and high quality way of CFML. Set up your local web context according to your needs and wishes. For this purpose you can use this Tachyon web administrator.</custom>
 		<custom key="overview.licence">Available Editions</custom>
 		<custom key="overview.licencecommunity">Community</custom>
-		<custom key="overview.licencecommunitydesc">Lucee Community is intended to be used by low budget business applicants. Except for some few limitations the Community Version offers the entire language range of Lucee.</custom>
-		<custom key="overview.licencedesc">Lucee is available in four different editions , adapted to the different areas of application and budgets.</custom>
+		<custom key="overview.licencecommunitydesc">Tachyon Community is intended to be used by low budget business applicants. Except for some few limitations the Community Version offers the entire language range of Tachyon.</custom>
+		<custom key="overview.licencedesc">Tachyon is available in four different editions , adapted to the different areas of application and budgets.</custom>
 	
 		<custom key="overview.licencedevelop">Develop</custom>
 		<custom key="overview.licencedevelopdesc">The Develop Version is a version, addressing those users who are most likely to apply it in order for assembling CFML appliction . The version though is prohibited to be used commercially.</custom>
 		<custom key="overview.licencedevelopmore">more</custom>
 		<custom key="overview.licenceenterprise">Enterprise</custom>
-		<custom key="overview.licenceenterprisedesc">The Enterprise Version of Lucee is the biggest and most comprehensive version intended to be used in a larger context.</custom>
+		<custom key="overview.licenceenterprisedesc">The Enterprise Version of Tachyon is the biggest and most comprehensive version intended to be used in a larger context.</custom>
 		<custom key="overview.licenceprofessional">Professional</custom>
 	
-		<custom key="overview.licenceprofessionaldesc">The Professional Version offers the full language range of Lucee, no restriction to the use of any feature has to be expected. With the Professional Version several webs can be used on one server, the number of webs however is limited by the licence price.</custom>
+		<custom key="overview.licenceprofessionaldesc">The Professional Version offers the full language range of Tachyon, no restriction to the use of any feature has to be expected. With the Professional Version several webs can be used on one server, the number of webs however is limited by the licence price.</custom>
 		<custom key="overview.os">OS</custom>
-		<custom key="overview.purchase">Purchase your Lucee license</custom>
+		<custom key="overview.purchase">Purchase your Tachyon license</custom>
 		<custom key="overview.releasedate">Release date</custom>
 		<custom key="overview.sales">Sales</custom>
-		<custom key="overview.salesmail">sales@lucee.ch</custom>
+		<custom key="overview.salesmail">sales@tachyon.ch</custom>
 	
 		<custom key="overview.serialnumber">Serial number</custom>
-		<custom key="overview.serialnumberdescription">Serial number for Lucee</custom>
+		<custom key="overview.serialnumberdescription">Serial number for Tachyon</custom>
 		<custom key="overview.servertime">Server date/time (mm/dd/yyyy HH:mm:ss): </custom>
 		<custom key="overview.used">currently in use</custom>
 		<custom key="overview.version">Version</custom>
@@ -1079,26 +1079,26 @@
 		<custom key="regional.defaultencoding">Default encoding</custom>
 		<custom key="regional.defaultencodingdescription"></custom>
 		<custom key="regional.locale">Locale</custom>
-		<custom key="regional.localedescription">Define the desired time locale for Lucee, this will change the default locale for the context of the web.</custom>
+		<custom key="regional.localedescription">Define the desired time locale for Tachyon, this will change the default locale for the context of the web.</custom>
 		<custom key="regional.missingencoding">Please enter a value for the default encoding</custom>
 		<custom key="regional.other"> --- other --- </custom>
 	
 		<custom key="regional.server">Here you can define regional settings that will be used as a &lt;strong&gt;default&lt;/strong&gt; for all webs. This settings have no direct effect on the current instance.</custom>
 		<custom key="regional.serverprop">Server properties</custom>
 		<custom key="regional.timeserver">Time server (NTP)</custom>
-		<custom key="regional.timeserverdescription">Time server that returns the current time. If set, this time will be used within Lucee instead of the local server time. (Example: swisstime.ethz.ch, time.nist.gov)&lt;br/&gt;</custom>
+		<custom key="regional.timeserverdescription">Time server that returns the current time. If set, this time will be used within Tachyon instead of the local server time. (Example: swisstime.ethz.ch, time.nist.gov)&lt;br/&gt;</custom>
 	
 		<custom key="regional.timeservermissing">Please define a value for the field timezone</custom>
 		<custom key="regional.timezone">Time zone</custom>
-		<custom key="regional.timezonedescription">Define the desired time zone for Lucee, this will also change the time for the context of the web.&lt;br/&gt;</custom>
-		<custom key="regional.web">Lucee lets you set your own individual locale, timezone and timeserver.</custom>
+		<custom key="regional.timezonedescription">Define the desired time zone for Tachyon, this will also change the time for the context of the web.&lt;br/&gt;</custom>
+		<custom key="regional.web">Tachyon lets you set your own individual locale, timezone and timeserver.</custom>
 		<custom key="remote.adminaccess">Admin Access</custom>
 		<custom key="remote.adminaccessdesc">Define Access to Remote Client, the Password and the Security Key, the Security key is provided by the Remote Client itself</custom>
 	
 		<custom key="remote.adminpassword.server">Password for the remote Server Administrator</custom>
 		<custom key="remote.adminpassword.web">Password for the remote Web Administrator</custom>
-		<custom key="remote.adminpassworddesc.server">Password für the access to the remote Lucee Server Administrator</custom>
-		<custom key="remote.adminpassworddesc.web">Password für the access to the remote Lucee Web Administrator</custom>
+		<custom key="remote.adminpassworddesc.server">Password für the access to the remote Tachyon Server Administrator</custom>
+		<custom key="remote.adminpassworddesc.web">Password für the access to the remote Tachyon Web Administrator</custom>
 		<custom key="remote.connection">Connection</custom>
 		<custom key="remote.connectiondesc">Connection to the Remote Client, URL (with Port) and HTTP Access</custom>
 	
@@ -1159,11 +1159,11 @@
 		<custom key="remote.url">URL</custom>
 		<custom key="remote.urlmissing">The remote client URL is missing</custom>
 		<custom key="remote.urlpath">Path</custom>
-		<custom key="remote.urlpathdesc">Path to Admin.cfc (example: /lucee/admin.cfc?wsdl)</custom>
+		<custom key="remote.urlpathdesc">Path to Admin.cfc (example: /tachyon/admin.cfc?wsdl)</custom>
 		<custom key="remote.urlpathmissing">the path to the Admin.cfc is missing</custom>
 		<custom key="remote.urlserver">Server</custom>
 	
-		<custom key="remote.urlserverdesc">Remote Client Server (Beispiel: http://lucee.ch)</custom>
+		<custom key="remote.urlserverdesc">Remote Client Server (Beispiel: http://tachyon.ch)</custom>
 		<custom key="remote.urlservermissing">Remote Client Server</custom>
 		<custom key="remote.usage.cluster">Cluster Scope</custom>
 		<custom key="remote.usage.desc">Define for what the Remote Client is used</custom>
@@ -1171,7 +1171,7 @@
 		<custom key="remote.usage.title">Usage</custom>
 	
 		<custom key="schedule.createtask">Create scheduled task</custom>
-		<custom key="schedule.currentdatetime">Current date/time of this Lucee context is: (mm/dd/yyyy hh:mm tt)</custom>
+		<custom key="schedule.currentdatetime">Current date/time of this Tachyon context is: (mm/dd/yyyy hh:mm tt)</custom>
 		<custom key="schedule.daily">daily</custom>
 		<custom key="schedule.description">Here you can add, modify, run and delete scheduled tasks&lt;br/&gt;&lt;br/&gt;</custom>
 		<custom key="schedule.detail">Defined scheduled tasks</custom>
@@ -1229,12 +1229,12 @@
 		<custom key="schedule.usernamedescription">Username to access the URL protected by authentication</custom>
 		<custom key="schedule.weekly">weekly</custom>
 		<custom key="scopes.applicationtimeout">Application timeout</custom>
-		<custom key="scopes.applicationtimeoutdescription">Sets the amount of time Lucee will keep the application scope alive. This behaviour can be overridden by the tag cfapplication.</custom>
+		<custom key="scopes.applicationtimeoutdescription">Sets the amount of time Tachyon will keep the application scope alive. This behaviour can be overridden by the tag cfapplication.</custom>
 		<custom key="scopes.cascadetoresultset">Search resultsets</custom>
 	
-		<custom key="scopes.cascadetoresultsetdescription">When a variable has no scope defined (Example: #myVar# instead of #variables.myVar#), Lucee will also search available resultsets (CFML&amp;nbsp;Standard) or not</custom>
+		<custom key="scopes.cascadetoresultsetdescription">When a variable has no scope defined (Example: #myVar# instead of #variables.myVar#), Tachyon will also search available resultsets (CFML&amp;nbsp;Standard) or not</custom>
 		<custom key="scopes.cascading">Cascading</custom>
-		<custom key="scopes.cascadingdescription">Depending on this setting Lucee scans certain scopes to find a variable called from the CFML source. This will only happen, when the variable is called without a scope. (Example: #myVar# instead of #variables.myVar#)&lt;br/&gt;- strict: scans only the variables scope&lt;br/&gt;- small: scans the scopes variables,cgi,url,form&lt;br/&gt;- standard (CFML Standard): scans the scopes variables,cgi,url,form,cookie</custom>
+		<custom key="scopes.cascadingdescription">Depending on this setting Tachyon scans certain scopes to find a variable called from the CFML source. This will only happen, when the variable is called without a scope. (Example: #myVar# instead of #variables.myVar#)&lt;br/&gt;- strict: scans only the variables scope&lt;br/&gt;- small: scans the scopes variables,cgi,url,form&lt;br/&gt;- standard (CFML Standard): scans the scopes variables,cgi,url,form,cookie</custom>
 		<custom key="scopes.clientcookies">Client cookies</custom>
 	
 		<custom key="scopes.clientcookiesdescription">Enable or disable client cookies. This behaviour can be overridden by the tag cfapplication.</custom>
@@ -1257,7 +1257,7 @@
 		<custom key="scopes.sessionmanagementdescription">By default session management can be enabled. This behaviour can be overridden by the tag cfapplication.</custom>
 	
 		<custom key="scopes.sessiontimeout">Session timeout</custom>
-		<custom key="scopes.sessiontimeoutdescription">Sets the amount of time Lucee will keep the session scope alive. This behaviour can be overridden by the tag cfapplication.</custom>
+		<custom key="scopes.sessiontimeoutdescription">Sets the amount of time Tachyon will keep the session scope alive. This behaviour can be overridden by the tag cfapplication.</custom>
 		<custom key="scopes.sessiontype">Session type</custom>
 		<custom key="scopes.sessiontype_application">Application</custom>
 		<custom key="scopes.sessiontype_jee">JEE</custom>
@@ -1272,12 +1272,12 @@
 	
 		<custom key="scopes.timeoutminutesvalue">Value minutes for </custom>
 		<custom key="scopes.timeoutsecondsvalue">Value seconds for </custom>
-		<custom key="scopes.web">Here you can define the settings for how Lucee handles scopes.</custom>
+		<custom key="scopes.web">Here you can define the settings for how Tachyon handles scopes.</custom>
 		<custom key="search.collection">Collection</custom>
 		<custom key="search.collections">Collections</custom>
 		<custom key="search.createcol">Create collection</custom>
 	
-		<custom key="search.description">Here you can manage, create, populate and delete search collections. By default, lucee uses Apache Lucene as the search engine.&lt;br/&gt;&lt;br/&gt;</custom>
+		<custom key="search.description">Here you can manage, create, populate and delete search collections. By default, tachyon uses Apache Lucene as the search engine.&lt;br/&gt;&lt;br/&gt;</custom>
 		<custom key="search.directorypath">Directory path</custom>
 		<custom key="search.directorypathmissing">Please enter a path to be indexed</custom>
 		<custom key="search.external">External</custom>
@@ -1309,7 +1309,7 @@
 		<custom key="security.accesswrite">Access Write</custom>
 		<custom key="security.accesswritedesc">define the access for writing data</custom>
 		<custom key="security.cfmlenvironment">CFML Environment</custom>
-		<custom key="security.cfmlenvironmentdescription">Settings that have an effect on how Lucee code interacts with the host environment</custom>
+		<custom key="security.cfmlenvironmentdescription">Settings that have an effect on how Tachyon code interacts with the host environment</custom>
 	
 		<custom key="security.cfx">CFX</custom>
 		<custom key="security.cfxdescription">The settings for the cfx tags can be changed. The globally defined CFX tags defined in the &quot;server administrator&quot; can be used as well.</custom>
@@ -1328,7 +1328,7 @@
 		<custom key="security.file">File access</custom>
 		<custom key="security.fileall">all</custom>
 	
-		<custom key="security.filedescription">Defines how Lucee can interact with the local filesystem in a web context.&lt;br/&gt;- none: allows no access to the filesystem at all&lt;br/&gt;- local: allows only access to the filesystem within the webroot&lt;br/&gt;- all: allows full file access on the hosts filesystem&lt;br/&gt;</custom>
+		<custom key="security.filedescription">Defines how Tachyon can interact with the local filesystem in a web context.&lt;br/&gt;- none: allows no access to the filesystem at all&lt;br/&gt;- local: allows only access to the filesystem within the webroot&lt;br/&gt;- all: allows full file access on the hosts filesystem&lt;br/&gt;</custom>
 		<custom key="security.filelocal">local</custom>
 		<custom key="security.filenone">none</custom>
 		<custom key="security.functions">Tags &amp;amp; Functions</custom>
@@ -1337,14 +1337,14 @@
 		<custom key="security.general">General Access</custom>
 		<custom key="security.generaldesc">Define the General Access for administrator and tag cfadmin</custom>
 		<custom key="security.javaaccess">Direct Java access</custom>
-		<custom key="security.javaaccessdescription">Allows access to Java methods and properties from the Lucee code (Example: stringValue.substring(2,5)). Allowing access to Java methods and properties might be a potential security risk</custom>
+		<custom key="security.javaaccessdescription">Allows access to Java methods and properties from the Tachyon code (Example: stringValue.substring(2,5)). Allowing access to Java methods and properties might be a potential security risk</custom>
 		<custom key="security.mail">Mail</custom>
 	
 		<custom key="security.maildescription">The mail settings can be changed in the &quot;web administrator&quot;</custom>
 		<custom key="security.mapping">Mapping</custom>
 		<custom key="security.mappingdescription">Allows adding, removing and updating of mappings in the &quot;web administrator&quot;.</custom>
 		<custom key="security.remote">Remote</custom>
-		<custom key="security.remotedescription">Es wird erlaubt das der User seine Einstellungen mit einem anderen lucee synchronisiern kann</custom>
+		<custom key="security.remotedescription">Es wird erlaubt das der User seine Einstellungen mit einem anderen tachyon synchronisiern kann</custom>
 	
 		<custom key="security.scheduledtask">Scheduled task</custom>
 		<custom key="security.scheduledtaskdescription">The scheduled task settings can be changed in the &quot;web administrator&quot;</custom>
@@ -1367,7 +1367,7 @@
 		<custom key="security.tagexecutedescription">This tag is used to execute a process on the local hosts system</custom>
 	
 		<custom key="security.tagimport">Tag CFImport</custom>
-		<custom key="security.tagimportdescription">This tag can be used to import JSP and Lucee tag libraries</custom>
+		<custom key="security.tagimportdescription">This tag can be used to import JSP and Tachyon tag libraries</custom>
 		<custom key="security.tagobject">Tag CFObject / &lt;br/&gt;function CreateObject</custom>
 		<custom key="security.tagobjectdescription">With the tag CFObject and the function CreateObject you can load Java objects. If disabled, you only can create objects of type &quot;component&quot;</custom>
 		<custom key="security.tagregistry">Tag CFRegistry</custom>
@@ -1378,34 +1378,34 @@
 		<custom key="security.webadministrator">Web administrator</custom>
 		<custom key="security.webadministratordescription">Here you can define the access rights for the settings that can be overridden in the &quot;web administrator&quot;.</custom>
 	
-		<custom key="services.update.desc">You can patch Lucee in order to receive the latest bugfixes and improved version.</custom>
+		<custom key="services.update.desc">You can patch Tachyon in order to receive the latest bugfixes and improved version.</custom>
 		<custom key="services.update.exe">Execute update</custom>
-		<custom key="services.update.exedesc">Apply the latest patch for your version. After the update has been installed Lucee will be restarted, all sessions will be cleared and you have to login again.</custom>
+		<custom key="services.update.exedesc">Apply the latest patch for your version. After the update has been installed Tachyon will be restarted, all sessions will be cleared and you have to login again.</custom>
 		<custom key="services.update.exerun">execute update</custom>
 		<custom key="services.update.infotitle">Info</custom>
 		<custom key="services.update.location">URL</custom>
 	
-		<custom key="services.update.locdesc">Define the URL where Lucee gets its updates. Typically &quot;https://www.lucee.org&quot;</custom>
+		<custom key="services.update.locdesc">Define the URL where Tachyon gets its updates. Typically &quot;https://www.tachyon.org&quot;</custom>
 		<custom key="services.update.noupdate">For your version {current} is no patch available</custom>
 		<custom key="services.update.remove">Remove updates</custom>
 		<custom key="services.update.removedesc">Remove all installed updates.</custom>
 		<custom key="services.update.removerun">Remove updates</custom>
-		<custom key="services.update.restart">Restart Lucee</custom>
+		<custom key="services.update.restart">Restart Tachyon</custom>
 	
-		<custom key="services.update.restartdesc">Restart the Lucee engine. All sessions will be cleared and you will have to login again.</custom>
-		<custom key="services.update.setdesc">Define where Lucee gets its patches. You have to restart Lucee after the update in order for the changes to take effect.</custom>
+		<custom key="services.update.restartdesc">Restart the Tachyon engine. All sessions will be cleared and you will have to login again.</custom>
+		<custom key="services.update.setdesc">Define where Tachyon gets its patches. You have to restart Tachyon after the update in order for the changes to take effect.</custom>
 		<custom key="services.update.settitle">Properties</custom>
 		<custom key="services.update.type">Type</custom>
 		<custom key="services.update.type_auto">Automatic</custom>
 		<custom key="services.update.type_manually">Manual</custom>
 	
-		<custom key="services.update.typedesc">Define how Lucee will be patched. &quot;Automatic&quot; means that Lucee searches automatically for updates once a day. &quot;Manual&quot; means that you can update Lucee only manually here.</custom>
+		<custom key="services.update.typedesc">Define how Tachyon will be patched. &quot;Automatic&quot; means that Tachyon searches automatically for updates once a day. &quot;Manual&quot; means that you can update Tachyon only manually here.</custom>
 		<custom key="services.update.update">A patch {available} is available for your current version {current}.</custom>
-		<custom key="setting.server">Lucee output control</custom>
-		<custom key="setting.showversion">Output Lucee version</custom>
+		<custom key="setting.server">Tachyon output control</custom>
+		<custom key="setting.showversion">Output Tachyon version</custom>
 	
-		<custom key="setting.showversiondescription">Return the Lucee version in the response header</custom>
-		<custom key="setting.web">Lucee output control</custom>
+		<custom key="setting.showversiondescription">Return the Tachyon version in the response header</custom>
+		<custom key="setting.web">Tachyon output control</custom>
 		<custom key="setting.whitespace">Whitespace management</custom>
 		<custom key="setting.whitespacedescription">Removes all white spaces in the output that follow a white space</custom>
 		<custom key="settings.datasourcedescriptioncreate">Create new datasource connection</custom>
@@ -1460,10 +1460,10 @@
 		<custom key="video.server.installedbut1">The video components are installed but they can not be executed properly:</custom>
 		<custom key="video.server.installedbut2">A manual installation is recommended.</custom>
 	
-		<custom key="video.server.installednotdesc">For the tag cfvideo/cfvideoplayer OS specific video components are required. They are not bundled with Lucee because the size of the software would increase a lot and because some codecs may not be redistributed, although their use is not prohibited. Therefore you can download these components directly from a provider and upload them with the form below.</custom>
-		<custom key="video.server.installednotuploaddesc">The video components (ffmpeg.zip) are uploaded directly over the form and copied into Lucee (no installation). As a source you can use e.g. {provider}</custom>
+		<custom key="video.server.installednotdesc">For the tag cfvideo/cfvideoplayer OS specific video components are required. They are not bundled with Tachyon because the size of the software would increase a lot and because some codecs may not be redistributed, although their use is not prohibited. Therefore you can download these components directly from a provider and upload them with the form below.</custom>
+		<custom key="video.server.installednotuploaddesc">The video components (ffmpeg.zip) are uploaded directly over the form and copied into Tachyon (no installation). As a source you can use e.g. {provider}</custom>
 		<custom key="video.server.installednotuploadtitle">Video components by upload</custom>
-		<custom key="video.server.installednoturldesc">The video componenten are downloaded automatically from the remote server and copied into Lucee (no installation).</custom>
+		<custom key="video.server.installednoturldesc">The video componenten are downloaded automatically from the remote server and copied into Tachyon (no installation).</custom>
 		<custom key="video.server.installednoturltitle">Download video components by an URL</custom>
 		<custom key="video.server.mandesc">A manuelle installation can be made like follows: Open the url {provider} and download the corresponding file ffmpeg.zip for your operating system ({OS-Name}). Then copy this file (do not unzip it) into the directory {directory}. If you can not find a file for your operating system, just contact us.</custom>
 	
@@ -1472,9 +1472,9 @@
 		<custom key="video.uploaddesc">Video components (ffmpeg.zip)</custom>
 		<custom key="video.uploadmissing">Missing upload definition</custom>
 		<custom key="video.web.installed">The video components are installed on your system.</custom>
-		<custom key="video.web.installedbut">The video components are installed but they can not be executed properly.Just switch to the Lucee Server Administrator, in order to repair it:</custom>
+		<custom key="video.web.installedbut">The video components are installed but they can not be executed properly.Just switch to the Tachyon Server Administrator, in order to repair it:</custom>
 	
-		<custom key="video.web.installednot">The video components are not installed on your system. In order to install them just switch to the Lucee Server Administrator.</custom>
+		<custom key="video.web.installednot">The video components are not installed on your system. In order to install them just switch to the Tachyon Server Administrator.</custom>
 	
 	</language>
 </languages>

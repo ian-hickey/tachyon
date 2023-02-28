@@ -1,6 +1,6 @@
 <cfscript>
 	//encodeForHTML("abc"); // test if ESAPI extension exist right away
-	systemOutput("---------- #DateTimeFormat(now(),'yyyy-mm-dd HH:nn:ss')# - Lucee Started ----------", true);
+	systemOutput("---------- #DateTimeFormat(now(),'yyyy-mm-dd HH:nn:ss')# - Tachyon Started ----------", true);
 
 	setting requesttimeout = 10*60; // 10 mins, for when running via script-runner and _internalRequest
 

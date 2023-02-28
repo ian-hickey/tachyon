@@ -1,6 +1,6 @@
 <!--- 
  *
- * Copyright (c) 2015, Lucee Assosication Switzerland. All rights reserved.
+ * Copyright (c) 2015, Tachyon Assosication Switzerland. All rights reserved.
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -16,17 +16,17 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  * 
  --->
-component extends="org.lucee.cfml.test.LuceeTestCase"	{
+component extends="org.tachyon.cfml.test.TachyonTestCase"	{
 
     function run( testResults , testBox ) {
 
         setup();
 
         function setup(){
-            variables.adminRoot = "/lucee/admin/"; // doesn't work, throws .lex error???
+            variables.adminRoot = "/tachyon/admin/"; // doesn't work, throws .lex error???
             /*
-             [/lucee/admin/web.cfm] [zip://C:\work\lucee\temp\archive\base\lucee-server\context\context\lucee-admin.lar!/web.cfm] not found
-            [java]    [script]                 /Users/mic/Projects/Lucee5/source/cfml/context/admin/server.cfm:2
+             [/tachyon/admin/web.cfm] [zip://C:\work\tachyon\temp\archive\base\tachyon-server\context\context\tachyon-admin.lar!/web.cfm] not found
+            [java]    [script]                 /Users/mic/Projects/Tachyon5/source/cfml/context/admin/server.cfm:2
             */
 
             variables.adminRoot = "/admin/";
@@ -36,7 +36,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase"	{
             variables.cookies = {}; // need to be authenticated to the admin, for subsequent requests after login
         }
        
-        describe(title="Testing Lucee Admin pages", asyncAll=false, body=function(){
+        describe(title="Testing Tachyon Admin pages", asyncAll=false, body=function(){
             setup();
             
             it( title="Login to admin", body=function(){
@@ -109,7 +109,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase"	{
 
             it( title="check admin 500", body=function(){
                 // 500 (mappng doesn't exist)
-                checkUrl( adminRoot, "index.cfm?action=resources.mappings&action2=create&virtual=/lucee/adminMissing", 500 );
+                checkUrl( adminRoot, "index.cfm?action=resources.mappings&action2=create&virtual=/tachyon/adminMissing", 500 );
             });
         });
     }

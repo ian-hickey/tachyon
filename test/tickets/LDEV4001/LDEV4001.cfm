@@ -14,7 +14,7 @@
 			}
 		}
 	</cfjava>
-	<cfset newClass.init("Lucee")>
+	<cfset newClass.init("Tachyon")>
 	<cfoutput>#newClass.getValue()#</cfoutput>
 
 <cfelseif form.scene == 2>
@@ -22,7 +22,7 @@
 		classInstance = java{
 			public class class1{
 				public String execute() {
-					return "java block worked in Lucee";
+					return "java block worked in Tachyon";
 				}
 			}
 		}

@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" skip=true{
+component extends="org.tachyon.cfml.test.TachyonTestCase" skip=true{
     function run( testResults, testBox ){
         describe(title="Testcase for LDEV-3696", body=function( currentSpec ) {
             it(title="Checking closure variable scope inside another closure/UDF", body=function( currentSpec, foo = "FOO from argument scope" )  {

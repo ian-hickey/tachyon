@@ -1,4 +1,4 @@
-<cfcomponent extends="org.lucee.cfml.test.LuceeTestCase"  labels="mysql">
+<cfcomponent extends="org.tachyon.cfml.test.TachyonTestCase"  labels="mysql">
 <cfscript>
 
 	//public function afterTests(){}

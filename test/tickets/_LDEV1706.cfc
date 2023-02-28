@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 	function afterALL(){
 		if(fileExists(variables.testfile)){
 			fileDelete(variables.testfile);
@@ -16,7 +16,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase"{
 				fileWrite(variables.testfile,"
 					component {
 						static function bar() {
-							return 'Lucee';
+							return 'Tachyon';
 						}
 					}");
 				try {
@@ -24,8 +24,8 @@ component extends="org.lucee.cfml.test.LuceeTestCase"{
 				} catch ( any e ) {
 					var result = e.message;
 				}
-				assertEquals("lucee", LDEV1706.foo::bar());
-				assertEquals("lucee", result);
+				assertEquals("tachyon", LDEV1706.foo::bar());
+				assertEquals("tachyon", result);
 			});
 		});
 	}

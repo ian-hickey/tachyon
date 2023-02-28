@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="mssql,orm" skip="true" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="mssql,orm" skip="true" {
 	
 	function beforeAll() {
 		variables.uri = createURI("LDEV4150");

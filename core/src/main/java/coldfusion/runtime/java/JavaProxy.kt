@@ -18,7 +18,7 @@
  */
 package coldfusion.runtime.java
 
-import lucee.runtime.PageContext
+import tachyon.runtime.PageContext
 
 class JavaProxy : JavaObject {
     constructor(clazz: Class?) : super(ThreadLocalPageContext.get().getVariableUtil(), clazz) {}

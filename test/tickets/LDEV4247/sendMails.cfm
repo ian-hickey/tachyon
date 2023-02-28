@@ -11,11 +11,11 @@
         thread action="run" creds="#creds#" name="LDEV-4247_#i#" {
             try {
                 mail to = "#creds.username#"
-                from = "luceeldev4247@localhost"
+                from = "tachyonldev4247@localhost"
                 subject = "sending the mail for LDEV4247" 
                 server="#creds.smtp.server#"
                 password="#creds.smtp.password#"
-                username="luceeldev4247@localhost"
+                username="tachyonldev4247@localhost"
                 port="#creds.smtp.PORT_INSECURE#"
                 useTls="true"
                 usessl="false"

@@ -12,8 +12,8 @@
  
 <!--- load available drivers --->
 <cfset driverNames=structnew("linked")>
-<cfset driverNames=ComponentListPackageAsStruct("lucee-server.admin.cdriver",driverNames)>
-<cfset driverNames=ComponentListPackageAsStruct("lucee.admin.cdriver",driverNames)>
+<cfset driverNames=ComponentListPackageAsStruct("tachyon-server.admin.cdriver",driverNames)>
+<cfset driverNames=ComponentListPackageAsStruct("tachyon.admin.cdriver",driverNames)>
 <cfset driverNames=ComponentListPackageAsStruct("cdriver",driverNames)>
 
 <cfset drivers={}>
@@ -23,8 +23,8 @@
 		<cfset tmp = createObject("component",fn)>
 		<!--- Workaround for EHCache Extension --->
 		<cfset clazz=tmp.getClass()>
-		<cfif "lucee.extension.io.cache.eh.EHCache" EQ clazz or "lucee.runtime.cache.eh.EHCache" EQ clazz>
-			<cfset clazz="org.lucee.extension.cache.eh.EHCache">
+		<cfif "tachyon.extension.io.cache.eh.EHCache" EQ clazz or "tachyon.runtime.cache.eh.EHCache" EQ clazz>
+			<cfset clazz="org.tachyon.extension.cache.eh.EHCache">
 		</cfif>
 		<cfset drivers[clazz]=tmp>
 	</cfif>

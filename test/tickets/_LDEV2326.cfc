@@ -1,4 +1,4 @@
-component extends = "org.lucee.cfml.test.LuceeTestCase"  labels="pdf"{
+component extends = "org.tachyon.cfml.test.TachyonTestCase"  labels="pdf"{
 
 	function beforeAll(){
 		afterAll();
@@ -6,7 +6,7 @@ component extends = "org.lucee.cfml.test.LuceeTestCase"  labels="pdf"{
 		directoryCreate("#variables.uri#/pdf");
 		cfloop( from = "1" to = "2" index = "i" ){
         	cfdocument(format = "PDF" filename = "#variables.uri#/pdf/#i#.pdf" overwrite = "true"){
-            	writeOutput("lucee");
+            	writeOutput("tachyon");
         	}
     	}
 	}

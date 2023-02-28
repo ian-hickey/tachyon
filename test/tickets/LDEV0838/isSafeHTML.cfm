@@ -1,6 +1,6 @@
 <cfparam name="form.scene" default="0">
 <cfif FORM.scene EQ 1 >
-	<cfset inputHTML= "<b>Lucee Starts Works on getSafeHTML()</b>">
+	<cfset inputHTML= "<b>Tachyon Starts Works on getSafeHTML()</b>">
 	<cfset result = isSafeHTML(inputHTML)>
 	<cfoutput>#result#</cfoutput>
 <cfelse>

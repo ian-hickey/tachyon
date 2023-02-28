@@ -27,7 +27,7 @@
 
 	if( form.scene EQ 3 ){
 
-		qNew = queryNew( "id,name", "integer,varchar", [ { id = 1, name = "test" }, { id = 2, name = "lucee" } ] );
+		qNew = queryNew( "id,name", "integer,varchar", [ { id = 1, name = "test" }, { id = 2, name = "tachyon" } ] );
 		usingQOQ = queryExecute(
 			sql = "SELECT name FROM qNew WHERE id = /* this comment's will break params */ :id",
 			params = {

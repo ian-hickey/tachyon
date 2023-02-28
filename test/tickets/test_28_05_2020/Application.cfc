@@ -11,7 +11,7 @@ component {
 			echo("CREATE TABLE test_table( id int, name varchar(20))");
 		}
 		query{
-			echo("insert into test_table values(1,'lucee_test')");
+			echo("insert into test_table values(1,'tachyon_test')");
 		}
 	}
 	

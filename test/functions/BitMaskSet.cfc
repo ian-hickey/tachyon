@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 	function run( testResults , testBox ) {
 		describe( title="Test suite for BitMaskSet()", body=function() {
 			it(title="Checking BitMaskSet() function", body = function( currentSpec ) {

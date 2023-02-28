@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="static" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="static" {
 
 	function beforeAll() {
 		variables.dir = getDirectoryFromPath(getCurrentTemplatePath()) & "LDEV4212";

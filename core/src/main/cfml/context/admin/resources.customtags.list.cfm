@@ -60,8 +60,8 @@
 					
 						<cfset modes=array(
 							struct(mode:'classic',ext:'cfm,cfml'),
-							struct(mode:'mixed',ext:'cfm,cfc,lucee'),
-							struct(mode:'modern',ext:'cfc,lucee')
+							struct(mode:'mixed',ext:'cfm,cfc,tachyon'),
+							struct(mode:'modern',ext:'cfc,tachyon')
 						
 						)>
 						<cfif hasAccess>

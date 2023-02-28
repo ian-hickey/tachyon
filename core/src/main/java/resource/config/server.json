@@ -1,17 +1,17 @@
 {
 	"applicationTimeout":"1,0,0,0"
-	,"cacheDirectory":"{lucee-config}/cache/"
+	,"cacheDirectory":"{tachyon-config}/cache/"
 	,"cacheDirectoryMaxSize":"100mb"
 	,"cascadeToResultset":true
 	,"clientCookies":true
-	,"clientDirectory":"{lucee-config}/client-scope/"
+	,"clientDirectory":"{tachyon-config}/client-scope/"
 	,"clientDirectoryMaxSize":"100mb"
 	,"clientManagement":false
 	,"clientTimeout":"0,0,90,0"
-	,"componentBase":"/lucee/Component.cfc"
-	,"componentBaseLuceeDialect":"/lucee/Component.lucee"
+	,"componentBase":"/tachyon/Component.cfc"
+	,"componentBaseTachyonDialect":"/tachyon/Component.tachyon"
 	,"componentDataMemberAccess":"public"
-	,"componentDumpTemplate":"/lucee/component-dump.cfm"
+	,"componentDumpTemplate":"/tachyon/component-dump.cfm"
 	,"debuggingEnabled":false
 	,"debuggingQueryUsage":false
 	,"developMode":false
@@ -30,35 +30,35 @@
 	,"sessionTimeout":"0,0,30,0"
 	,"systemErr":"system"
 	,"systemOut":"system"
-	,"tempDirectory":"{lucee-config}/temp/"
+	,"tempDirectory":"{tachyon-config}/temp/"
 	,"timeserver":"pool.ntp.org"
-	,"updateLocation":"https://update.lucee.org"
+	,"updateLocation":"https://update.tachyon.org"
 	,"updateType":"manual"
 	,"version":"5.0"
 	,"cacheHandlers":{
 		"timespan":{
-			"class":"lucee.runtime.cache.tag.timespan.TimespanCacheHandler"
+			"class":"tachyon.runtime.cache.tag.timespan.TimespanCacheHandler"
 		}
 		,"request":{
-			"class":"lucee.runtime.cache.tag.request.RequestCacheHandler"
+			"class":"tachyon.runtime.cache.tag.request.RequestCacheHandler"
 		}
 	}
 	,"cfx":{
 		"HelloWorld":{
 			"type":"java"
-			,"class":"lucee.cfx.example.HelloWorld"
+			,"class":"tachyon.cfx.example.HelloWorld"
 		}
 	}
 	,"componentMappings":[
 		{
 			"virtual":"/default"
-			,"physical":"{lucee-web}/components/"
+			,"physical":"{tachyon-web}/components/"
 			,"primary":"physical"
 			,"inspectTemplate":"never"
 		}
 		,{
 			"virtual":"/default-server"
-			,"physical":"{lucee-server}/components/"
+			,"physical":"{tachyon-server}/components/"
 			,"primary":"physical"
 			,"inspectTemplate":"never"
 		}
@@ -66,7 +66,7 @@
 	,"customTagMappings":[
 		{
 			"inspectTemplate":"never"
-			,"physical":"{lucee-config}/customtags/"
+			,"physical":"{tachyon-config}/customtags/"
 		}
 	]
 	,"dataSources":{
@@ -74,152 +74,152 @@
 	}
 	,"debugging":{
 		"logMemoryUsage":"no"
-		,"template":"/lucee/templates/debugging/debugging.cfm"
+		,"template":"/tachyon/templates/debugging/debugging.cfm"
 	}
 	,"defaultResourceProvider":[
 		{
-			"class":"lucee.commons.io.res.type.file.FileResourceProvider"
+			"class":"tachyon.commons.io.res.type.file.FileResourceProvider"
 			,"arguments":"lock-timeout:1000;"
 		}
 	]
 	,"dumpWriters":[
 		{
 			"name":"html"
-			,"class":"lucee.runtime.dump.HTMLDumpWriter"
+			,"class":"tachyon.runtime.dump.HTMLDumpWriter"
 			,"default":"browser"
 		}
 		,{
 			"name":"text"
-			,"class":"lucee.runtime.dump.TextDumpWriter"
+			,"class":"tachyon.runtime.dump.TextDumpWriter"
 			,"default":"console"
 		}
 		,{
 			"name":"classic"
-			,"class":"lucee.runtime.dump.ClassicHTMLDumpWriter"
+			,"class":"tachyon.runtime.dump.ClassicHTMLDumpWriter"
 		}
 		,{
 			"name":"simple"
-			,"class":"lucee.runtime.dump.SimpleHTMLDumpWriter"
+			,"class":"tachyon.runtime.dump.SimpleHTMLDumpWriter"
 		}
 	]
 	,"fileSystem":{
-		"fldDefaultDirectory":"{lucee-config}/library/fld/"
-		,"tldDefaultDirectory":"{lucee-config}/library/tld/"
-		,"functionDefaultDirectory":"{lucee-config}/library/function/"
-		,"tagDefaultDirectory":"{lucee-config}/library/tag/"
-		,"deployDirectory":"{lucee-config}/cfclasses/"
+		"fldDefaultDirectory":"{tachyon-config}/library/fld/"
+		,"tldDefaultDirectory":"{tachyon-config}/library/tld/"
+		,"functionDefaultDirectory":"{tachyon-config}/library/function/"
+		,"tagDefaultDirectory":"{tachyon-config}/library/tag/"
+		,"deployDirectory":"{tachyon-config}/cfclasses/"
 	}
 	,"loggers":{
 		"datasource":{
 			"appender":"resource"
-			,"appenderArguments":"path:{lucee-config}/logs/datasource.log"
+			,"appenderArguments":"path:{tachyon-config}/logs/datasource.log"
 			,"level":"error"
 			,"layout":"classic"
 		}
 		,"memory":{
 			"appender":"resource"
-			,"appenderArguments":"path:{lucee-config}/logs/memory.log"
+			,"appenderArguments":"path:{tachyon-config}/logs/memory.log"
 			,"level":"error"
 			,"layout":"classic"
 		}
 		,"requesttimeout":{
 			"appender":"resource"
-			,"appenderArguments":"path:{lucee-config}/logs/requesttimeout.log"
+			,"appenderArguments":"path:{tachyon-config}/logs/requesttimeout.log"
 			,"level":"error"
 			,"layout":"classic"
 		}
 		,"deploy":{
 			"appender":"resource"
-			,"appenderArguments":"path:{lucee-config}/logs/deploy.log"
+			,"appenderArguments":"path:{tachyon-config}/logs/deploy.log"
 			,"level":"info"
 			,"layout":"classic"
 		}
 		,"thread":{
 			"appender":"resource"
-			,"appenderArguments":"path:{lucee-config}/logs/thread.log"
+			,"appenderArguments":"path:{tachyon-config}/logs/thread.log"
 			,"level":"error"
 			,"layout":"classic"
 		}
 		,"exception":{
 			"appender":"resource"
-			,"appenderArguments":"path:{lucee-config}/logs/exception.log"
+			,"appenderArguments":"path:{tachyon-config}/logs/exception.log"
 			,"level":"error"
 			,"layout":"classic"
 		}
 		,"application":{
 			"appender":"resource"
-			,"appenderArguments":"path:{lucee-config}/logs/application.log"
+			,"appenderArguments":"path:{tachyon-config}/logs/application.log"
 			,"level":"info"
 			,"layout":"classic"
 		}
 		,"scope":{
 			"appender":"resource"
-			,"appenderArguments":"path:{lucee-config}/logs/scope.log"
+			,"appenderArguments":"path:{tachyon-config}/logs/scope.log"
 			,"level":"error"
 			,"layout":"classic"
 		}
 		,"scheduler":{
 			"appender":"resource"
-			,"appenderArguments":"path:{lucee-config}/logs/scheduler.log"
+			,"appenderArguments":"path:{tachyon-config}/logs/scheduler.log"
 			,"level":"error"
 			,"layout":"classic"
 		}
 		,"search":{
 			"appender":"resource"
-			,"appenderArguments":"path:{lucee-config}/logs/search.log"
+			,"appenderArguments":"path:{tachyon-config}/logs/search.log"
 			,"level":"error"
 			,"layout":"classic"
 		}
 		,"mail":{
 			"appender":"resource"
-			,"appenderArguments":"path:{lucee-config}/logs/mail.log"
+			,"appenderArguments":"path:{tachyon-config}/logs/mail.log"
 			,"level":"error"
 			,"layout":"classic"
 		}
 		,"orm":{
 			"appender":"resource"
-			,"appenderArguments":"path:{lucee-config}/logs/orm.log"
+			,"appenderArguments":"path:{tachyon-config}/logs/orm.log"
 			,"level":"error"
 			,"layout":"classic"
 		}
 		,"remoteclient":{
 			"appender":"resource"
-			,"appenderArguments":"path:{lucee-config}/logs/remoteclient.log"
+			,"appenderArguments":"path:{tachyon-config}/logs/remoteclient.log"
 			,"level":"error"
 			,"layout":"classic"
 		}
 		,"gateway":{
 			"appender":"resource"
-			,"appenderArguments":"path:{lucee-config}/logs/gateway.log"
+			,"appenderArguments":"path:{tachyon-config}/logs/gateway.log"
 			,"level":"error"
 			,"layout":"classic"
 		}
 		,"rest":{
 			"appender":"resource"
-			,"appenderArguments":"path:{lucee-config}/logs/rest.log"
+			,"appenderArguments":"path:{tachyon-config}/logs/rest.log"
 			,"level":"error"
 			,"layout":"classic"
 		}
 		,"mapping":{
 			"appender":"resource"
-			,"appenderArguments":"path:{lucee-config}/logs/mapping.log"
+			,"appenderArguments":"path:{tachyon-config}/logs/mapping.log"
 			,"level":"error"
 			,"layout":"classic"
 		}
 	}
 	,"mappings":{
-		"/lucee/":{
+		"/tachyon/":{
 			"readonly":"yes"
-			,"physical":"{lucee-config}/context/"
-			,"archive":"{lucee-config}/context/lucee-context.lar"
+			,"physical":"{tachyon-config}/context/"
+			,"archive":"{tachyon-config}/context/tachyon-context.lar"
 			,"primary":"physical"
 			,"listenerMode":"modern"
 			,"listenerType":"curr2root"
 			,"inspectTemplate":"once"
 		}
-		,"/lucee-server/":{
+		,"/tachyon-server/":{
 			"readonly":"yes"
-			,"physical":"{lucee-server}/context/"
+			,"physical":"{tachyon-server}/context/"
 			,"archive":""
 			,"primary":"physical"
 			,"listenerMode":"modern"
@@ -228,50 +228,50 @@
 		}
 	}
 	,"orm":{
-		"engineClass":"lucee.runtime.orm.DummyORMEngine"
+		"engineClass":"tachyon.runtime.orm.DummyORMEngine"
 	}
 	,"remoteClients":{
-		"directory":"{lucee-config}remote-client/"
+		"directory":"{tachyon-config}remote-client/"
 	}
 	,"resourceProviders":[
 		{
 			"scheme":"ftp"
-			,"class":"lucee.commons.io.res.type.ftp.FTPResourceProvider"
+			,"class":"tachyon.commons.io.res.type.ftp.FTPResourceProvider"
 			,"arguments":"lock-timeout:20000;socket-timeout:-1;client-timeout:60000"
 		}
 		,{
 			"scheme":"zip"
-			,"class":"lucee.commons.io.res.type.zip.ZipResourceProvider"
+			,"class":"tachyon.commons.io.res.type.zip.ZipResourceProvider"
 			,"arguments":"lock-timeout:1000;case-sensitive:true;"
 		}
 		,{
 			"scheme":"tar"
-			,"class":"lucee.commons.io.res.type.tar.TarResourceProvider"
+			,"class":"tachyon.commons.io.res.type.tar.TarResourceProvider"
 			,"arguments":"lock-timeout:1000;case-sensitive:true;"
 		}
 		,{
 			"scheme":"tgz"
-			,"class":"lucee.commons.io.res.type.tgz.TGZResourceProvider"
+			,"class":"tachyon.commons.io.res.type.tgz.TGZResourceProvider"
 			,"arguments":"lock-timeout:1000;case-sensitive:true;"
 		}
 		,{
 			"scheme":"http"
-			,"class":"lucee.commons.io.res.type.http.HTTPResourceProvider"
+			,"class":"tachyon.commons.io.res.type.http.HTTPResourceProvider"
 			,"arguments":"lock-timeout:10000;case-sensitive:false;"
 		}
 		,{
 			"scheme":"https"
-			,"class":"lucee.commons.io.res.type.http.HTTPSResourceProvider"
+			,"class":"tachyon.commons.io.res.type.http.HTTPSResourceProvider"
 			,"arguments":"lock-timeout:10000;case-sensitive:false;"
 		}
 		,{
 			"scheme":"s3"
-			,"class":"lucee.commons.io.res.type.s3.S3ResourceProvider"
+			,"class":"tachyon.commons.io.res.type.s3.S3ResourceProvider"
 			,"arguments":"lock-timeout:10000;"
 		}
 		,{
 			"scheme":"ram"
-			,"class":"lucee.commons.io.res.type.cache.CacheResourceProvider"
+			,"class":"tachyon.commons.io.res.type.cache.CacheResourceProvider"
 			,"arguments":"case-sensitive:true;lock-timeout:1000;"
 		}
 	]

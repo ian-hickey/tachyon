@@ -1,7 +1,7 @@
 ﻿<!--- 
  *
  * Copyright (c) 2014, the Railo Company LLC. All rights reserved.
- * Copyright (c) 2016, Lucee Assosication Switzerland. All rights reserved.
+ * Copyright (c) 2016, Tachyon Assosication Switzerland. All rights reserved.
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -18,7 +18,7 @@
  * 
  ---><cfscript>
 	pageencoding "utf-8"; 
-component extends="org.lucee.cfml.test.LuceeTestCase" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" {
 
 	public void function testReplaceNoCase() {
 		var str="LİELİELİELİE....";

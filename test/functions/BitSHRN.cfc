@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 	function run( testResults , testBox ) {
 		describe( title="Test suite for BitSHRN()", body=function() {
 			it(title="Checking BitSHRN() function", body = function( currentSpec ) {

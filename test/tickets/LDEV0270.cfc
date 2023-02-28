@@ -1,6 +1,6 @@
 <!--- 
  *
- * Copyright (c) 2015, Lucee Assosication Switzerland. All rights reserved.*
+ * Copyright (c) 2015, Tachyon Assosication Switzerland. All rights reserved.*
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -17,7 +17,7 @@
  * 
  ---><cfscript>
 
-component extends="org.lucee.cfml.test.LuceeTestCase"	{
+component extends="org.tachyon.cfml.test.TachyonTestCase"	{
 
 	variables.pack="LDEV0270";
 	variables.path='./#pack#/';

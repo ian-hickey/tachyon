@@ -5,7 +5,7 @@
     "version": "0.2.0",
         "configurations": [{
             "type": "java",
-            "name": "Attach Lucee Tomcat port 8000",
+            "name": "Attach Tachyon Tomcat port 8000",
             "request": "attach",
             "hostName": "localhost",
             "port": "8000",

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2016, Lucee Assosication Switzerland. All rights reserved.*
+ * Copyright (c) 2016, Tachyon Assosication Switzerland. All rights reserved.*
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -14,10 +14,10 @@
  * You should have received a copy of the GNU Lesser General Public 
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
-component extends="org.lucee.cfml.test.LuceeTestCase"	{
+component extends="org.tachyon.cfml.test.TachyonTestCase"	{
 	
 	public void function testNew3Args() localmode="true" {
-		local.qry = org.lucee.cfml.Query::new( "name,age,whatever", "varchar,date,int", [
+		local.qry = org.tachyon.cfml.Query::new( "name,age,whatever", "varchar,date,int", [
 	    [ "Susi", CreateDate( 1970, 1, 1 ), 5 ],
 	    [ "Urs" , CreateDate( 1995, 1, 1 ), 7 ],
 	    [ "Fred", CreateDate( 1960, 1, 1 ), 9 ],
@@ -44,7 +44,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase"	{
 	}
 
 	public void function testNew2Args() localmode="true" {
-		local.qry = org.lucee.cfml.Query::new( "name,age,whatever", "varchar,date,int");
+		local.qry = org.tachyon.cfml.Query::new( "name,age,whatever", "varchar,date,int");
 		local.meta=getMetaData(qry);
 
 		assertEquals(0,qry.recordcount);
@@ -65,7 +65,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase"	{
 	}
 
 	public void function testNew1Args() localmode="true" {
-		local.qry = org.lucee.cfml.Query::new( "name,age,whatever");
+		local.qry = org.tachyon.cfml.Query::new( "name,age,whatever");
 		local.meta=getMetaData(qry);
 
 		assertEquals(0,qry.recordcount);

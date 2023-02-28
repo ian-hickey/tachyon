@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE func-lib PUBLIC "-//Lucee//DTD CFML Function Library 1.0//EN"
+<!DOCTYPE func-lib PUBLIC "-//Tachyon//DTD CFML Function Library 1.0//EN"
 	"dtd/web-cfmfunctionlibrary_1_0.dtd">
 <func-lib>
 	<flib-version>1.00</flib-version>
 	<short-name>fbase</short-name>
-	<uri>https://www.lucee.org/cf-fld-3-1</uri>
-	<display-name>Lucee Core Function Library</display-name>
-	<description>All built in Functions of Lucee</description>
+	<uri>https://www.tachyon.org/cf-fld-3-1</uri>
+	<display-name>Tachyon Core Function Library</display-name>
+	<description>All built in Functions of Tachyon</description>
 	
 	<!-- componentCacheClear -->
 	<function>
 		<name>componentCacheClear</name>
 		<status>hidden</status>
-		<class>lucee.runtime.functions.component.ComponentCacheClear</class>
+		<class>tachyon.runtime.functions.component.ComponentCacheClear</class>
 		<description>flush the component path cache</description>
 		<return>
 			<type>void</type>
@@ -23,7 +23,7 @@
 	<function>
 		<name>componentCacheList</name>
 		<status>hidden</status>
-		<class>lucee.runtime.functions.component.ComponentCacheList</class>
+		<class>tachyon.runtime.functions.component.ComponentCacheList</class>
 		<description>list elements in the component path cache</description>
 		<return>
 			<type>struct</type>
@@ -33,7 +33,7 @@
 	<!-- datePart -->
 	<function>
 		<name>datePart</name>
-		<class>lucee.runtime.functions.international.LSDatePart</class>
+		<class>tachyon.runtime.functions.international.LSDatePart</class>
 		<member-name>part</member-name>
 		<member-position>2</member-position>
 		<description>Extracts the given date part from the date object</description>
@@ -89,7 +89,7 @@ You can find a list of all available timezones in the Railo administrator (Setti
 	<!-- DateFormat -->
 	<function>
 		<name>DateFormat</name>
-		<class>lucee.runtime.functions.international.LSDateFormat</class>
+		<class>tachyon.runtime.functions.international.LSDateFormat</class>
 		<keywords>date,string,formatting</keywords>
 		<description>Formats a date string to a given output using the current sessions locale</description>
 		<argument>
@@ -118,8 +118,8 @@ You can find a list of all available timezones in the Railo administrator (Setti
 		<description>
 A datetime object is independent of a specific timezone, it is only an offset in milliseconds from 1970-1-1 00.00:00 UTC (Coordinated Universal Time).
 This means that the timezone only comes into play when you need specific information like hours in a day, minutes in a hour or which day it is since those calculations depend on the timezone.
-For these calculations, a timezone must be specified in order to translate the date object to something else. If you do not provide the timezone in the function call, it will default to the timezone specified in the Lucee Administrator (Settings/Regional), or the timezone specified for the current request using the function setTimezone.
-You can find a list of all available timezones in the Lucee administrator (Settings/Regional). Some examples of valid timezones:
+For these calculations, a timezone must be specified in order to translate the date object to something else. If you do not provide the timezone in the function call, it will default to the timezone specified in the Tachyon Administrator (Settings/Regional), or the timezone specified for the current request using the function setTimezone.
+You can find a list of all available timezones in the Tachyon administrator (Settings/Regional). Some examples of valid timezones:
        - AGT (for time in Argentina)
        - Europe/Zurich (for time in Zurich/Switzerland)
        - HST (Hawaiian Standard Time in the USA)
@@ -134,7 +134,7 @@ You can find a list of all available timezones in the Lucee administrator (Setti
 	<!-- DateFormat (Member function) -->
 	<function>
 		<name>_DateFormat</name>
-		<class>lucee.runtime.functions.international.LSDateFormat</class>
+		<class>tachyon.runtime.functions.international.LSDateFormat</class>
 		<keywords>date,string,formatting</keywords>
 		<member-name>dateFormat</member-name>
         <description>Formats a date string to a given output using the current sessions locale</description>
@@ -164,8 +164,8 @@ You can find a list of all available timezones in the Lucee administrator (Setti
 		<description>
 A datetime object is independent of a specific timezone, it is only an offset in milliseconds from 1970-1-1 00.00:00 UTC (Coordinated Universal Time).
 This means that the timezone only comes into play when you need specific information like hours in a day, minutes in a hour or which day it is since those calculations depend on the timezone.
-For these calculations, a timezone must be specified in order to translate the date object to something else. If you do not provide the timezone in the function call, it will default to the timezone specified in the Lucee Administrator (Settings/Regional), or the timezone specified for the current request using the function setTimezone.
-You can find a list of all available timezones in the Lucee administrator (Settings/Regional). Some examples of valid timezones:
+For these calculations, a timezone must be specified in order to translate the date object to something else. If you do not provide the timezone in the function call, it will default to the timezone specified in the Tachyon Administrator (Settings/Regional), or the timezone specified for the current request using the function setTimezone.
+You can find a list of all available timezones in the Tachyon administrator (Settings/Regional). Some examples of valid timezones:
        - AGT (for time in Argentina)
        - Europe/Zurich (for time in Zurich/Switzerland)
        - HST (Hawaiian Standard Time in the USA)
@@ -179,7 +179,7 @@ You can find a list of all available timezones in the Lucee administrator (Setti
 	<!-- dayOfWeek -->
 	<function>
 		<name>dayOfWeek</name>
-		<class>lucee.runtime.functions.international.LSDayOfWeek</class>
+		<class>tachyon.runtime.functions.international.LSDayOfWeek</class>
 		<member-name>dayOfWeek</member-name>
 		<description>Returns the day of the week the date represents in locale format</description>
 		<argument>
@@ -216,7 +216,7 @@ You can find a list of all available timezones in the Railo administrator (Setti
 	<!-- dayOfYear -->
 	<function>
 		<name>dayOfYear</name>
-		<class>lucee.runtime.functions.international.LSDayOfYear</class>
+		<class>tachyon.runtime.functions.international.LSDayOfYear</class>
 		<member-name>dayOfYear</member-name>
 		<description>Determines the day of the year, in a date.</description>
 		<argument>
@@ -253,8 +253,8 @@ You can find a list of all available timezones in the Railo administrator (Setti
 	<!-- isDefined -->
 	<function>
 		<name>isDefined</name>
-		<class>lucee.runtime.functions.decision.IsDefined</class>
-		<tte-class>lucee.transformer.cfml.evaluator.func.impl.IsDefined</tte-class>
+		<class>tachyon.runtime.functions.decision.IsDefined</class>
+		<tte-class>tachyon.transformer.cfml.evaluator.func.impl.IsDefined</tte-class>
 		<keywords>decision</keywords>
 		<status>hidden</status>
 		<description>Evaluates a string value to determine whether the variable
@@ -273,7 +273,7 @@ You can find a list of all available timezones in the Railo administrator (Setti
 	<!-- IsDate -->
 	<function>
 		<name>IsDate</name>
-		<class>lucee.runtime.functions.international.LSIsDate</class>
+		<class>tachyon.runtime.functions.international.LSIsDate</class>
 		<description>Determines whether a string is a valid representation of a
         date/time value in the current locale.</description>
 		<argument>
@@ -297,8 +297,8 @@ You can find a list of all available timezones in the Railo administrator (Setti
 		<description>
 A datetime object is independent of a specific timezone, it is only an offset in milliseconds from 1970-1-1 00.00:00 UTC (Coordinated Universal Time).
 This means that the timezone only comes into play when you need specific information like hours in a day, minutes in a hour or which day it is since those calculations depend on the timezone.
-For these calculations, a timezone must be specified in order to translate the date object to something else. If you do not provide the timezone in the function call, it will default to the timezone specified in the Lucee Administrator (Settings/Regional), or the timezone specified for the current request using the function setTimezone.
-You can find a list of all available timezones in the Lucee administrator (Settings/Regional). Some examples of valid timezones:
+For these calculations, a timezone must be specified in order to translate the date object to something else. If you do not provide the timezone in the function call, it will default to the timezone specified in the Tachyon Administrator (Settings/Regional), or the timezone specified for the current request using the function setTimezone.
+You can find a list of all available timezones in the Tachyon administrator (Settings/Regional). Some examples of valid timezones:
        - AGT (for time in Argentina)
        - Europe/Zurich (for time in Zurich/Switzerland)
        - HST (Hawaiian Standard Time in the USA)
@@ -312,7 +312,7 @@ You can find a list of all available timezones in the Lucee administrator (Setti
 	<!-- isNull -->
 	<function>
 		<name>isNull</name>
-		<class>lucee.runtime.functions.other.IsNull</class>
+		<class>tachyon.runtime.functions.other.IsNull</class>
 		<keywords>decision</keywords>
 		<description>Determines whether given object is null or not</description>
 		<argument>
@@ -329,7 +329,7 @@ You can find a list of all available timezones in the Lucee administrator (Setti
 	<!-- CurrencyFormat -->
 	<function>
 		<name>CurrencyFormat</name>
-		<class>lucee.runtime.functions.international.CurrencyFormat</class>
+		<class>tachyon.runtime.functions.international.CurrencyFormat</class>
 		<keywords>date,string,formatting</keywords>
 		<description>Formats a number in a locale-specific currency format.</description>
 		<argument>
@@ -361,7 +361,7 @@ You can find a list of all available timezones in the Lucee administrator (Setti
 	<!-- IsCurrency -->
 	<function>
 		<name>IsCurrency</name>
-		<class>lucee.runtime.functions.international.LSIsCurrency</class>
+		<class>tachyon.runtime.functions.international.LSIsCurrency</class>
 		<keywords>currency,string,formatting</keywords>
 		<description>Determines whether a string is a valid representation of a
         currency amount in the current locale.</description>
@@ -386,7 +386,7 @@ You can find a list of all available timezones in the Lucee administrator (Setti
 	<!-- IsNumeric -->
 	<function>
 		<name>IsNumeric</name>
-		<class>lucee.runtime.functions.international.LSIsNumeric</class>
+		<class>tachyon.runtime.functions.international.LSIsNumeric</class>
 		<description>Determines whether a string is a valid representation of a
         number in the current locale.</description>
 		<argument>
@@ -410,7 +410,7 @@ You can find a list of all available timezones in the Lucee administrator (Setti
 	<!-- NumberFormat -->
 	<function>
 		<name>NumberFormat</name>
-		<class>lucee.runtime.functions.international.LSNumberFormat</class>
+		<class>tachyon.runtime.functions.international.LSNumberFormat</class>
 		<keywords>number,string,formatting</keywords>
 		<description>Formats a number to the given format mask in the current locale</description>
 		<argument>
@@ -438,7 +438,7 @@ You can find a list of all available timezones in the Lucee administrator (Setti
 	<!-- ParseCurrency -->
 	<function>
 		<name>ParseCurrency</name>
-		<class>lucee.runtime.functions.international.LSParseCurrency</class>
+		<class>tachyon.runtime.functions.international.LSParseCurrency</class>
 		<keywords>currency,string,parsing</keywords>
 		<description>Converts a locale-specific currency string into a formatted
         number. Attempts conversion by comparing the string with each
@@ -466,7 +466,7 @@ You can find a list of all available timezones in the Lucee administrator (Setti
 	<!-- ObjectNew -->
 	<function>
 		<name>ObjectNew</name>
-		<class>lucee.runtime.functions.other.CreateComponent</class>
+		<class>tachyon.runtime.functions.other.CreateComponent</class>
 		<description>loads a component, in different to "CreateObject("component",...)" this function always is calling the "init" method of the component (if there is any).</description>
 		<argument>
 			<name>componentName</name>
@@ -490,7 +490,7 @@ You can find a list of all available timezones in the Lucee administrator (Setti
 	<!-- JavaNew -->
 	<function>
 		<name>JavaNew</name>
-		<class>lucee.runtime.functions.other.JavaProxy</class>
+		<class>tachyon.runtime.functions.other.JavaProxy</class>
 		<description>create a Java Proxy object (not an object instance)</description>
 		
 		<argument>
@@ -539,7 +539,7 @@ You can find a list of all available timezones in the Lucee administrator (Setti
 	<!-- ParseDateTime -->
 	<function>
 		<name>ParseDateTime</name>
-		<class>lucee.runtime.functions.international.LSParseDateTime</class>
+		<class>tachyon.runtime.functions.international.LSParseDateTime</class>
 		<description>Converts a string that is a valid date/time representation in
         the current locale into a date/time object.</description>
 		<member-name>parseDateTime</member-name>
@@ -564,8 +564,8 @@ You can find a list of all available timezones in the Lucee administrator (Setti
 		<description>
 A datetime object is independent of a specific timezone, it is only an offset in milliseconds from 1970-1-1 00.00:00 UTC (Coordinated Universal Time).
 This means that the timezone only comes into play when you need specific information like hours in a day, minutes in a hour or which day it is since those calculations depend on the timezone.
-For these calculations, a timezone must be specified in order to translate the date object to something else. If you do not provide the timezone in the function call, it will default to the timezone specified in the Lucee Administrator (Settings/Regional), or the timezone specified for the current request using the function setTimezone.
-You can find a list of all available timezones in the Lucee administrator (Settings/Regional). Some examples of valid timezones:
+For these calculations, a timezone must be specified in order to translate the date object to something else. If you do not provide the timezone in the function call, it will default to the timezone specified in the Tachyon Administrator (Settings/Regional), or the timezone specified for the current request using the function setTimezone.
+You can find a list of all available timezones in the Tachyon administrator (Settings/Regional). Some examples of valid timezones:
        - AGT (for time in Argentina)
        - Europe/Zurich (for time in Zurich/Switzerland)
        - HST (Hawaiian Standard Time in the USA)
@@ -639,7 +639,7 @@ The function follows Java date time mask.  For details, see the section Date and
 	<!-- ParseNumber -->
 	<function>
 		<name>ParseNumber</name>
-		<class>lucee.runtime.functions.international.LSParseNumber</class>
+		<class>tachyon.runtime.functions.international.LSParseNumber</class>
 		<keywords>number,string,parsing</keywords>
 		<description>Converts a string that is a valid numeric representation in
         the current locale into a formatted number.</description>
@@ -663,7 +663,7 @@ The function follows Java date time mask.  For details, see the section Date and
 	<!-- TimeFormat -->
 	<function>
 		<name>TimeFormat</name>
-		<class>lucee.runtime.functions.international.TimeFormat</class>
+		<class>tachyon.runtime.functions.international.TimeFormat</class>
 		<keywords>date,string,formatting</keywords>
 		<description>Formats a time string to a given output using the current locale.</description>
 		<argument>
@@ -692,8 +692,8 @@ The function follows Java date time mask.  For details, see the section Date and
 		<description>
 A datetime object is independent of a specific timezone, it is only an offset in milliseconds from 1970-1-1 00.00:00 UTC (Coordinated Universal Time).
 This means that the timezone only comes into play when you need specific information like hours in a day, minutes in a hour or which day it is since those calculations depend on the timezone.
-For these calculations, a timezone must be specified in order to translate the date object to something else. If you do not provide the timezone in the function call, it will default to the timezone specified in the Lucee Administrator (Settings/Regional), or the timezone specified for the current request using the function setTimezone.
-You can find a list of all available timezones in the Lucee administrator (Settings/Regional). Some examples of valid timezones:
+For these calculations, a timezone must be specified in order to translate the date object to something else. If you do not provide the timezone in the function call, it will default to the timezone specified in the Tachyon Administrator (Settings/Regional), or the timezone specified for the current request using the function setTimezone.
+You can find a list of all available timezones in the Tachyon administrator (Settings/Regional). Some examples of valid timezones:
        - AGT (for time in Argentina)
        - Europe/Zurich (for time in Zurich/Switzerland)
        - HST (Hawaiian Standard Time in the USA)
@@ -707,7 +707,7 @@ You can find a list of all available timezones in the Lucee administrator (Setti
 	<!-- monthShortAsString -->
 	<function>
 		<name>monthShortAsString</name>
-		<class>lucee.runtime.functions.string.MonthShortAsString</class>
+		<class>tachyon.runtime.functions.string.MonthShortAsString</class>
 		<description>Returns the string label for the given month in short format</description>
 		<argument>
 			<name>monthNumber</name>
@@ -729,7 +729,7 @@ You can find a list of all available timezones in the Lucee administrator (Setti
 	<!-- inspectTemplates -->
 	<function>
 		<name>inspectTemplates</name>
-		<class>lucee.runtime.functions.system.InspectTemplates</class>
+		<class>tachyon.runtime.functions.system.InspectTemplates</class>
 		<description>reset pages in pools, so they are checked again for changes, used when inspectTemplates is set to never</description>
 		<return>
 			<type>boolean</type>
@@ -739,7 +739,7 @@ You can find a list of all available timezones in the Lucee administrator (Setti
 	<!-- pagePoolClear -->
 	<function>
 		<name>pagePoolClear</name>
-		<class>lucee.runtime.functions.system.PagePoolClear</class>
+		<class>tachyon.runtime.functions.system.PagePoolClear</class>
 		<status>hidden</status>
 		<description>clear pages in pools</description>
 		<return>
@@ -750,7 +750,7 @@ You can find a list of all available timezones in the Lucee administrator (Setti
 	<!-- pagePoolList -->
 	<function>
 		<name>pagePoolList</name>
-		<class>lucee.runtime.functions.system.PagePoolList</class>
+		<class>tachyon.runtime.functions.system.PagePoolList</class>
 		<status>hidden</status>
 		<description>list all pages in pools</description>
 		<return>
@@ -762,7 +762,7 @@ You can find a list of all available timezones in the Lucee administrator (Setti
 	<!-- week -->
 	<function>
 		<name>week</name>
-		<class>lucee.runtime.functions.international.LSWeek</class>
+		<class>tachyon.runtime.functions.international.LSWeek</class>
 		<description>Returns the week number in the year of the date referenced, based on the local influence. not everywhere the week begins on Monday by definition.</description>
 		<argument>
 			<name>date</name>
@@ -783,8 +783,8 @@ You can find a list of all available timezones in the Lucee administrator (Setti
 		<description>
 A datetime object is independent of a specific timezone, it is only an offset in milliseconds from 1970-1-1 00.00:00 UTC (Coordinated Universal Time).
 This means that the timezone only comes into play when you need specific information like hours in a day, minutes in a hour or which day it is since those calculations depend on the timezone.
-For these calculations, a timezone must be specified in order to translate the date object to something else. If you do not provide the timezone in the function call, it will default to the timezone specified in the Lucee Administrator (Settings/Regional), or the timezone specified for the current request using the function setTimezone.
-You can find a list of all available timezones in the Lucee administrator (Settings/Regional). Some examples of valid timezones:
+For these calculations, a timezone must be specified in order to translate the date object to something else. If you do not provide the timezone in the function call, it will default to the timezone specified in the Tachyon Administrator (Settings/Regional), or the timezone specified for the current request using the function setTimezone.
+You can find a list of all available timezones in the Tachyon administrator (Settings/Regional). Some examples of valid timezones:
        - AGT (for time in Argentina)
        - Europe/Zurich (for time in Zurich/Switzerland)
        - HST (Hawaiian Standard Time in the USA)
@@ -797,7 +797,7 @@ You can find a list of all available timezones in the Lucee administrator (Setti
 	<!-- DateTimeFormat -->
 	<function>
 		<name>DateTimeFormat</name>
-		<class>lucee.runtime.functions.international.LSDateTimeFormat</class>
+		<class>tachyon.runtime.functions.international.LSDateTimeFormat</class>
 		<keywords>date,string,formatting</keywords>
 		<description>Formats a date string to a given output using the current locale</description>
 		<argument>
@@ -828,8 +828,8 @@ You can find a list of all available timezones in the Lucee administrator (Setti
 		<description>
 A datetime object is independent of a specific timezone, it is only an offset in milliseconds from 1970-1-1 00.00:00 UTC (Coordinated Universal Time).
 This means that the timezone only comes into play when you need specific information like hours in a day, minutes in a hour or which day it is since those calculations depend on the timezone.
-For these calculations, a timezone must be specified in order to translate the date object to something else. If you do not provide the timezone in the function call, it will default to the timezone specified in the Lucee Administrator (Settings/Regional), or the timezone specified for the current request using the function setTimezone.
-You can find a list of all available timezones in the Lucee administrator (Settings/Regional). Some examples of valid timezones:
+For these calculations, a timezone must be specified in order to translate the date object to something else. If you do not provide the timezone in the function call, it will default to the timezone specified in the Tachyon Administrator (Settings/Regional), or the timezone specified for the current request using the function setTimezone.
+You can find a list of all available timezones in the Tachyon administrator (Settings/Regional). Some examples of valid timezones:
        - AGT (for time in Argentina)
        - Europe/Zurich (for time in Zurich/Switzerland)
        - HST (Hawaiian Standard Time in the USA)

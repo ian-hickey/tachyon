@@ -1,6 +1,6 @@
-component extends = "org.lucee.cfml.test.LuceeTestCase" {
+component extends = "org.tachyon.cfml.test.TachyonTestCase" {
 
-	variables.isModernHibernate=left(bundleInfo(createObject("java","org.lucee.extension.orm.hibernate.HibernateORMEngine")).version,1)>=5;
+	variables.isModernHibernate=left(bundleInfo(createObject("java","org.tachyon.extension.orm.hibernate.HibernateORMEngine")).version,1)>=5;
 
 
 

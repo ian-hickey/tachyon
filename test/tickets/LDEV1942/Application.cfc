@@ -13,7 +13,7 @@ component {
 	}
 
 	this.cache.connections["myCache"] = {
-		class: 'lucee.runtime.cache.ram.RamCache'
+		class: 'tachyon.runtime.cache.ram.RamCache'
 		, storage: true
 		, custom: {
 			"timeToIdleSeconds":"5",

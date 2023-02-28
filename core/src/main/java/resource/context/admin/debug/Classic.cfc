@@ -22,7 +22,7 @@
 
 
 		,field("General Debug Information ","general",true,false,
-				"Select this option to show general information about this request. General items are Lucee Version, Template, Time Stamp, User Locale, User Agent, User IP, and Host Name. ","checkbox")
+				"Select this option to show general information about this request. General items are Tachyon Version, Template, Time Stamp, User Locale, User Agent, User IP, and Host Name. ","checkbox")
 		
 		,field("Scope Variables","scopes","Application,CGI,Client,Cookie,Form,Request,Server,Session,URL",true,"Enable Scope reporting","checkbox","Application,CGI,Client,Cookie,Form,Request,Server,Session,URL")
 		
@@ -45,7 +45,7 @@ string function getDescription(){
 	return "The old style debug template";
 }
 string function getid(){
-	return "lucee-classic"; 
+	return "tachyon-classic";
 }
 
 string function readDebug(struct custom, struct debugging, string context){
@@ -162,9 +162,9 @@ millisecond:"ms"
 		<tr>
 			<td class="cfdebug" colspan="2" nowrap>
 			#server.coldfusion.productname#
-			<cfif StructKeyExists(server.lucee,'versionName')>(<a href="#server.lucee.versionNameExplanation#" target="_blank">#server.lucee.versionName#</a>)</cfif>
+			<cfif StructKeyExists(server.tachyon,'versionName')>(<a href="#server.tachyon.versionNameExplanation#" target="_blank">#server.tachyon.versionName#</a>)</cfif>
 			#ucFirst(server.coldfusion.productlevel)# 
-			#server.lucee.version#
+			#server.tachyon.version#
 			(CFML Version #server.ColdFusion.ProductVersion#)
 			</td>
 		</tr>

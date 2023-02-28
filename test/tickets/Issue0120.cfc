@@ -1,6 +1,6 @@
 <!--- 
  *
- * Copyright (c) 2015, Lucee Associaction Switzerland. All rights reserved.
+ * Copyright (c) 2015, Tachyon Associaction Switzerland. All rights reserved.
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -16,7 +16,7 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  * 
  ---><cfscript>
-component extends="org.lucee.cfml.test.LuceeTestCase" skip=true	{
+component extends="org.tachyon.cfml.test.TachyonTestCase" skip=true	{
 	wsUrl = "https://sb1.geolearning.com/geonext/testhudexchangelearn/webservices/geonext.asmx?wsdl";
 	argSct.username = "scrubbed";
 	argSct.password = "scrubbed";

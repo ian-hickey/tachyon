@@ -16,7 +16,7 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  *
  **/
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="list" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="list" {
 	
 	function testListRest(){
 		assertEquals("",ListRest(''));
@@ -24,10 +24,10 @@ component extends="org.lucee.cfml.test.LuceeTestCase" labels="list" {
 		assertEquals("/a/b/c",listRest("//a/b/c", "/", true));
 		assertEquals("/a/b/c",listRest("//a/b/c", "/", 3));
 		assertEquals("b/c",listRest("//a/b/c", "/", true, 3));
-		assertEquals("localhost:8888/lucee-tests/index.cfm",listRest("http://localhost:8888/lucee-tests/index.cfm", "/"));
-		assertEquals("/localhost:9999/lucee-tests/index.cfm",listRest("http://localhost:9999/lucee-tests/index.cfm", "/", true));
-		assertEquals("lucee-tests/index9.cfm",listRest("http://localhost:8888/lucee-tests/index9.cfm", "/", true, 3));
-		assertEquals("index1.cfm",listRest("http://localhost:8888/lucee-tests/index1.cfm", "/", false, 3));
+		assertEquals("localhost:8888/tachyon-tests/index.cfm",listRest("http://localhost:8888/tachyon-tests/index.cfm", "/"));
+		assertEquals("/localhost:9999/tachyon-tests/index.cfm",listRest("http://localhost:9999/tachyon-tests/index.cfm", "/", true));
+		assertEquals("tachyon-tests/index9.cfm",listRest("http://localhost:8888/tachyon-tests/index9.cfm", "/", true, 3));
+		assertEquals("index1.cfm",listRest("http://localhost:8888/tachyon-tests/index1.cfm", "/", false, 3));
 
 		assertEquals("bb/cc",listRest("aa//bb/cc", "/", false, 1));
 		assertEquals("bb/cc",listRest("aa////bb/cc", "/", false, 1));
@@ -61,10 +61,10 @@ component extends="org.lucee.cfml.test.LuceeTestCase" labels="list" {
 		assertEquals("/a/b/c","//a/b/c".listRest("/", true));
 		assertEquals("/a/b/c","//a/b/c".listRest("/", 3));
 		assertEquals("b/c","//a/b/c".listRest("/", true, 3));
-		assertEquals("localhost:8888/lucee-tests/index.cfm","http://localhost:8888/lucee-tests/index.cfm".listRest("/"));
-		assertEquals("/localhost:9999/lucee-tests/index.cfm","http://localhost:9999/lucee-tests/index.cfm".listRest("/", true));
-		assertEquals("lucee-tests/index9.cfm","http://localhost:8888/lucee-tests/index9.cfm".listRest("/", true, 3));
-		assertEquals("index1.cfm","http://localhost:8888/lucee-tests/index1.cfm".listRest("/", false, 3));
+		assertEquals("localhost:8888/tachyon-tests/index.cfm","http://localhost:8888/tachyon-tests/index.cfm".listRest("/"));
+		assertEquals("/localhost:9999/tachyon-tests/index.cfm","http://localhost:9999/tachyon-tests/index.cfm".listRest("/", true));
+		assertEquals("tachyon-tests/index9.cfm","http://localhost:8888/tachyon-tests/index9.cfm".listRest("/", true, 3));
+		assertEquals("index1.cfm","http://localhost:8888/tachyon-tests/index1.cfm".listRest("/", false, 3));
 
 		assertEquals("bb/cc","aa//bb/cc".listRest("/", false, 1));
 		assertEquals("bb/cc","aa////bb/cc".listRest("/", false, 1));

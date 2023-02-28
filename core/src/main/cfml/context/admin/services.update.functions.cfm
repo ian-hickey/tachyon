@@ -6,9 +6,9 @@
 			password="#session["password"&request.adminType]#"
 			returnvariable="local.update";
 			
-		// this should not be necessary, but needed for testing with dealing with current admin code and older Lucee versions
-		if(update.location=="http://snapshot.lucee.org" || update.location=="https://snapshot.lucee.org") update.location="https://update.lucee.org";
-		if(update.location=="http://release.lucee.org" || update.location=="https://release.lucee.org") update.location="https://update.lucee.org";
+		// this should not be necessary, but needed for testing with dealing with current admin code and older Tachyon versions
+		if(update.location=="http://snapshot.tachyon.org" || update.location=="https://snapshot.tachyon.org") update.location="https://update.tachyon.org";
+		if(update.location=="http://release.tachyon.org" || update.location=="https://release.tachyon.org") update.location="https://update.tachyon.org";
 		return update;
 	}
 
@@ -25,7 +25,7 @@
 			var update=getUpdateData();
 
 			http cachedWithin=createTimespan(0,0,5,0)
-			url="#update.location##restBasePath#info/#server.lucee.version#"
+			url="#update.location##restBasePath#info/#server.tachyon.version#"
 			method="get" resolveurl="no" result="local.http" {
 				if(!isNull(apiKey))httpparam type="header" name="ioid" value="#apikey#";
 			}

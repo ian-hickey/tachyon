@@ -14,7 +14,7 @@ Defaults --->
 </cfif>
 
 
-<cfset current.label = "Lucee " & server.lucee.version & " - " & current.label>
+<cfset current.label = "Tachyon " & server.tachyon.version & " - " & current.label>
 <cfset error.message="">
 <cfset error.detail="">
 <cfparam name="form.mainAction" default="none">
@@ -98,7 +98,7 @@ Error Output --->
     <script src="../res/js/echarts-all.js.cfm" type="text/javascript"></script>
     <script type="text/javascript">
     	var chartTimer;
-    	labels={'heap':"Heap",'nonheap':"Non-Heap",'cpuSystem':"Whole System",'cpuProcess':"Lucee Process"};
+    	labels={'heap':"Heap",'nonheap':"Non-Heap",'cpuSystem':"Whole System",'cpuProcess':"Tachyon Process"};
 		function requestData(){
 			jQuery.ajax({
 				type: "POST",
@@ -201,7 +201,7 @@ Error Output --->
 				}
 			},
 			legend: {
-				data:['System CPU', 'Lucee CPU']
+				data:['System CPU', 'Tachyon CPU']
 			},
 
 			color: ["<cfoutput>#request.adminType EQ "server" ? '##3399CC': '##BF4F36'#</cfoutput>", "<cfoutput>#request.adminType EQ "server" ? '##BF4F36': '##3399CC'#</cfoutput>"],
@@ -231,7 +231,7 @@ Error Output --->
 				'data': [0]
 				},
 				{
-				'name': 'Lucee CPU',
+				'name': 'Tachyon CPU',
 				'type':'line',
 				smooth:true,
 				itemStyle: {normal: {areaStyle: {type: 'default'}}},
@@ -354,13 +354,13 @@ Error Output --->
 
 	<cfset stText.Overview.modeMulti="You are in Multi Mode">
 	<cfset stText.Overview.modeSingle="You are in Single Mode">
-	<cfset stText.Overview.modeMultiDesc="You are running Lucee in Multi Mode, this means you have a single Server Administrator where you can set settings for all web contexts/webs and a Web Administrator for every single web context/web.">
-	<cfset stText.Overview.modeSingleDesc="You are running Lucee in Single Mode, this means you only have a single Administrator, one place where you do all your configurations for all web contexts/webs.
+	<cfset stText.Overview.modeMultiDesc="You are running Tachyon in Multi Mode, this means you have a single Server Administrator where you can set settings for all web contexts/webs and a Web Administrator for every single web context/web.">
+	<cfset stText.Overview.modeSingleDesc="You are running Tachyon in Single Mode, this means you only have a single Administrator, one place where you do all your configurations for all web contexts/webs.
 "> 
 	
 	<cfset stText.Overview.modeMultiSwitch="Switch to Single Mode?">
 	<cfset stText.Overview.modeSingleSwitch="Switch to Multi Mode?">
-	<cfset stText.Overview.modeMultiSwitchDesc="You wanna activate Lucee in Single Mode, this means you only have a single Administrator, one place where you do all your configurations for all web contexts/webs.">
+	<cfset stText.Overview.modeMultiSwitchDesc="You wanna activate Tachyon in Single Mode, this means you only have a single Administrator, one place where you do all your configurations for all web contexts/webs.">
 	<cfset stText.Overview.modeSingleSwitchDesc="You wanna activate Multi Mode, mean having a Server Administrator where you can set settings for all web contexts/webs and a Web Administrator for every single web context/web, you can simply switch to Multi Mode here.">
 
 
@@ -593,15 +593,15 @@ Error Output --->
 
 								<tr>
 									<th scope="row">#stText.Overview.Version#</th>
-									<td>Lucee #server.lucee.version#</td>
+									<td>Tachyon #server.tachyon.version#</td>
 								</tr>
 								<tr>
 									<th scope="row">#stText.Overview.VersionName#</th>
-									<td><a href="#server.lucee.versionNameExplanation#" target="_blank">#server.lucee.versionName#</a></td>
+									<td><a href="#server.tachyon.versionNameExplanation#" target="_blank">#server.tachyon.versionName#</a></td>
 								</tr>
 								<tr>
 									<th nowrap="nowrap" scope="row">#stText.Overview.ReleaseDate#</th>
-									<td>#lsDateFormat(server.lucee['release-date'])#</td>
+									<td>#lsDateFormat(server.tachyon['release-date'])#</td>
 								</tr>
 								<cfif request.singleMode or request.adminType EQ "web">
 								<tr>
@@ -615,7 +615,7 @@ Error Output --->
 									<th nowrap="nowrap" scope="row">#stText.Overview.InstalledTLs#</th>
 									<td>
 										<cfloop index="idx" from="1" to="#arrayLen(tlds)#">
-											- #tlds[idx]# <!--- ( #iif(tlds[idx].type EQ "cfml",de('lucee'),de('jsp'))# ) ---><br>
+											- #tlds[idx]# <!--- ( #iif(tlds[idx].type EQ "cfml",de('tachyon'),de('jsp'))# ) ---><br>
 										</cfloop>
 									</td>
 								</tr>
@@ -769,21 +769,21 @@ Error Output --->
 						<!--- Prof Support --->
 						<tr>
 							<td>
-								<a href="https://lucee.org/support.html" target="_blank">#stText.Overview.Professional#</a>
+								<a href="https://tachyon.org/support.html" target="_blank">#stText.Overview.Professional#</a>
 								<div class="comment">#stText.Overview.ProfessionalDesc#</div>
 							</td>
 						</tr>
 						<!--- Doc --->
 						<tr>
 							<td>
-								<a href="https://docs.lucee.org" target="_blank">#stText.Overview.onlineDocsLink#</a>
+								<a href="https://docs.tachyon.org" target="_blank">#stText.Overview.onlineDocsLink#</a>
 								<div class="comment">#stText.Overview.onlineDocsDesc#</div>
 							</td>
 						</tr>
 						<!--- Reference --->
 						<tr>
 							<td>
-								<cfif Listfind(valueList(docsServer.name),"Lucee Documentation") eq 0 && Listfind(valueList(docsWeb.name),"Lucee Documentation") eq 0>
+								<cfif Listfind(valueList(docsServer.name),"Tachyon Documentation") eq 0 && Listfind(valueList(docsWeb.name),"Tachyon Documentation") eq 0>
 									<a href="#cgi.script_name#?action=ext.applications" title="#stText.overview.installDocsLink#">
 										#stText.overview.installDocsLink#</a>
 								<cfelse>
@@ -795,28 +795,28 @@ Error Output --->
 						<!--- Mailing List --->
 						<tr>
 							<td>
-								<a href="https://groups.google.com/group/lucee" target="_blank">#stText.Overview.Mailinglist#</a>
+								<a href="https://groups.google.com/group/tachyon" target="_blank">#stText.Overview.Mailinglist#</a>
 								<div class="comment">#stText.Overview.MailinglistDesc#</div>
 							</td>
 						</tr>
 						<!--- Jira --->
 						<tr>
 							<td>
-								<a href="http://issues.lucee.org/" target="_blank">#stText.Overview.issueTracker#</a>
+								<a href="http://issues.tachyon.org/" target="_blank">#stText.Overview.issueTracker#</a>
 								<div class="comment">#stText.Overview.issueTrackerDesc#</div>
 							</td>
 						</tr>
 						<!--- Blog --->
 						<tr>
 							<td>
-								<a href="http://blog.lucee.org" target="_blank">#stText.Overview.blog#</a>
+								<a href="http://blog.tachyon.org" target="_blank">#stText.Overview.blog#</a>
 								<div class="comment">#stText.Overview.blogDesc#</div>
 							</td>
 						</tr>
 						<!--- Twitter --->
 						<tr>
 							<td>
-								<a href="https://twitter.com/##!/lucee_server" target="_blank">#stText.Overview.twitter#</a>
+								<a href="https://twitter.com/##!/tachyon_server" target="_blank">#stText.Overview.twitter#</a>
 								<div class="comment">#stText.Overview.twitterDesc#</div>
 							</td>
 						</tr>
@@ -850,7 +850,7 @@ Error Output --->
 								<input type="hidden" name="hash_#rst.currentrow#" value="#rst.hash#"/>
 								<input type="text" style="width:99%" name="label_#rst.currentrow#" value="#rst.label#"/>
 							</td>
-							<td><cfif len(rst.url)><a target="_blank" href="#rst.url#/lucee/admin/web.cfm">#rst.url#</a></cfif></td>
+							<td><cfif len(rst.url)><a target="_blank" href="#rst.url#/tachyon/admin/web.cfm">#rst.url#</a></cfif></td>
 							<td><input type="text" class="xlarge" name="path_#rst.currentrow#" value="#rst.path#" readonly="readonly"/></td>
 							<td><input type="text" class="xlarge" style="width:99%" name="cf_#rst.currentrow#" value="#rst.config_file#" readonly="readonly"/></td>
 						</tr>

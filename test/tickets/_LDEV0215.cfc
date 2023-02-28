@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="mssql,mysql"{
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="mssql,mysql"{
 	function isMySqlNotSupported() {
 		var mySql = mySqlCredentials();
 		if(!isNull(mysql)){

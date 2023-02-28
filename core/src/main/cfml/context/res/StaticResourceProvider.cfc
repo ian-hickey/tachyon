@@ -48,7 +48,7 @@ component {
 			
 		if(!resInfo.exists) {
 			// maybe the name has the version appendix
-			nameAppendix=hash(server.lucee.version&server.lucee['release-date'],'quick');
+			nameAppendix=hash(server.tachyon.version&server.tachyon['release-date'],'quick');
 			if(find("-"&nameAppendix,filename)) {
 				var resInfo = getResInfo( replace(filename,"-"&nameAppendix,""),nameAppendix );
 			}
@@ -103,7 +103,7 @@ component {
 		result.isText = left( result.mimeType, 4 ) == "text";
 
 		result.contents = 
-			result.isText ? replace(fileRead( result.path ),'{appendix}',hash(server.lucee.version&server.lucee['release-date'],'quick'),'all') : 
+			result.isText ? replace(fileRead( result.path ),'{appendix}',hash(server.tachyon.version&server.tachyon['release-date'],'quick'),'all') :
 			fileReadBinary( result.path );
 
 		result.etag = hash( result.contents&":"&arguments.nameAppendix );

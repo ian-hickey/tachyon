@@ -32,7 +32,7 @@ component {
 	        echo("INSERT INTO empty_table VALUES ('1', ''), ('2', ''), ('3', '');");
         }
         query {
-	        echo("INSERT INTO value_table VALUES ('1', 'lucee'), ('2', 'test'), ('3', 'lucee test');");
+	        echo("INSERT INTO value_table VALUES ('1', 'tachyon'), ('2', 'test'), ('3', 'tachyon test');");
 		}
 	}
 

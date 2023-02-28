@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="syntax" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="syntax" {
 	function run( testResults , testBox ) {
 		describe( "Elvis operator on array", function() {
 			it(title="simple array with Elvis operator", body=function() {

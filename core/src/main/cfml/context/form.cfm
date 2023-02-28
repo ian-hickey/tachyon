@@ -2,7 +2,7 @@
 /**
 * represent a cfform 
 */
-function LuceeForms(form,onError) {
+function TachyonForms(form,onError) {
 	var pub=this;
 	var prv={};
 	

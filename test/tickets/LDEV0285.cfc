@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" skip="true" labels="syntax" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" skip="true" labels="syntax" {
 	function run( testResults , testBox ) {
 		describe( "Test suite for LDEV-285", function() {
 			it(title="Check parsing, with coldfusion tag in commented out before 'cfscript' tag", body = function( currentSpec ) {

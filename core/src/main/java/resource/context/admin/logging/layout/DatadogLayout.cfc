@@ -4,7 +4,7 @@
 		)>
     
 	<cffunction name="getClass" returntype="string">
-    	<cfreturn "lucee.commons.io.log.log4j2.layout.DataDogLayout">
+    	<cfreturn "tachyon.commons.io.log.log4j2.layout.DataDogLayout">
     </cffunction>
     
 	<cffunction name="getLabel" returntype="string" output="false">

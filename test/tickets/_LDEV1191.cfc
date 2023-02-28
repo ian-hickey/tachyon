@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 	function run( testResults , testBox ) {
 		describe( "Test suite for LDEV-1191", function() {
 			it( title='Checking query, include and function cache without using cachedwithin in application.cfc', body=function( currentSpec ) {

@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="threads" skip=true {
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="threads" skip=true {
 
 	function testThreadUnscopedVar () {
 		thread name="thread-2773" {

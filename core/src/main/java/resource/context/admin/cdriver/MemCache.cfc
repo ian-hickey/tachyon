@@ -23,7 +23,7 @@
 	)>
     
 	<cffunction name="getClass" returntype="string">
-    	<cfreturn "lucee.extension.io.cache.memcache.MemCacheRaw">
+    	<cfreturn "tachyon.extension.io.cache.memcache.MemCacheRaw">
     </cffunction>
     
 	<cffunction name="getLabel" returntype="string">

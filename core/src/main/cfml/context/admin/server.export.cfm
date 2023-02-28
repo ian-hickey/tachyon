@@ -172,7 +172,7 @@ component {
 	this.compression = #outputSetting.AllowCompression#;
 	this.suppressRemoteComponentContent = #outputSetting.suppressContent#;
 	
-	// If set to false Lucee ignores type definitions with function arguments and return values
+	// If set to false Tachyon ignores type definitions with function arguments and return values
 	this.typeChecking = #PerformanceSettings.typeChecking#;
 	
 	
@@ -258,7 +258,7 @@ if(datasources.readOnly) optional.append('readOnly:#datasources.readOnly# // def
 //////////////////////////////////////////////
 //               MAPPINGS                   //
 //////////////////////////////////////////////
-<cfloop query="mappings"><cfif mappings.hidden || mappings.virtual=="/lucee" || mappings.virtual=="/lucee-server"><cfcontinue></cfif><cfset del=""><cfset count=0>
+<cfloop query="mappings"><cfif mappings.hidden || mappings.virtual=="/tachyon" || mappings.virtual=="/tachyon-server"><cfcontinue></cfif><cfset del=""><cfset count=0>
 this.mappings["#mappings.virtual#"]=<cfif len(mappings.strPhysical) && !len(mappings.strArchive)>"#mappings.strPhysical#"<cfelse>{<cfif len(mappings.strPhysical)><cfset count++>
 		physical:"#mappings.strPhysical#"<cfset del=","></cfif><cfif len(mappings.strArchive)><cfset count++>
 		#del#archive:"#mappings.strArchive#"<cfset del=","></cfif><cfif count==2 && !mappings.PhysicalFirst>

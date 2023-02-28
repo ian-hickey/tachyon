@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="orm"{
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="orm"{
 	function run( testResults , testBox ) {
 		describe( "Test suite for LDEV-305", function() {
 			it(title="checking property data type, attribute type='numeric' set with unsavedvalue='0' ", body = function( currentSpec ) {

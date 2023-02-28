@@ -16,7 +16,7 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  * 
  ---><cfscript>
-component extends="org.lucee.cfml.test.LuceeTestCase"	{
+component extends="org.tachyon.cfml.test.TachyonTestCase"	{
 	
 	public void function testArraySome() localMode="true" {
 		_arraySome (false);
@@ -82,9 +82,9 @@ component extends="org.lucee.cfml.test.LuceeTestCase"	{
 		}
 		assertEquals('{"1":"a","2":1,"3":"a,c","4":","}{"1":"c","2":2,"3":"a,c","4":","}',c);
 
-		var list2 = "I@love@lucee@";
+		var list2 = "I@love@tachyon@";
 		var result = listSome(list2,function(item){
-			return item=="lucee";
+			return item=="tachyon";
 		},'@');
 		assertEquals(true, result);
 
@@ -93,7 +93,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase"	{
 		res=list.listSome(function(value ){return value =='b';},',',false,true,parallel);
 		assertEquals(true,res);
 
-		var list3 = "I,love,lucee,";
+		var list3 = "I,love,tachyon,";
 		var result2 = list3.listSome(function(item){
 			return item=="testcase";
 		});

@@ -1,4 +1,4 @@
-component extends = "org.lucee.cfml.test.LuceeTestCase" labels="qoq" {
+component extends = "org.tachyon.cfml.test.TachyonTestCase" labels="qoq" {
 
 	function run( testResults, textbox ) {
 
@@ -88,13 +88,13 @@ component extends = "org.lucee.cfml.test.LuceeTestCase" labels="qoq" {
 					['Luis',10,'luis@test.com']
 				]);
 
-				// Lucee will try to convert 'false' to 0 so make sure that isn't allowed
+				// Tachyon will try to convert 'false' to 0 so make sure that isn't allowed
 				expect( ()=>QueryExecute(
 					sql = "SELECT age from employees ORDER BY false",
 					options = { dbtype: 'query' }
 				) ).toThrow();
 
-				// Lucee will try to convert 'true' to 1 so make sure that isn't allowed
+				// Tachyon will try to convert 'true' to 1 so make sure that isn't allowed
 				expect( ()=>QueryExecute(
 					sql = "SELECT age from employees ORDER BY true",
 					options = { dbtype: 'query' }

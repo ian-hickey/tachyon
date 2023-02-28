@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="mysql,orm" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="mysql,orm" {
 	function run(){
 		describe( title="Test suite for LDEV-233", skip=checkMySqlEnvVarsAvailable(), body=function(){
 			it(title="Checking ORM with cftransaction", body=function(){

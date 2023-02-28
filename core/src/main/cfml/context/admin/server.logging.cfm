@@ -26,8 +26,8 @@
 <!--- load available appenders --->
 <cfset arr=[]>
 <cfset names=structnew("linked")>
-<cfset names=ComponentListPackageAsStruct("lucee-server.admin.logging.appender",names)>
-<cfset names=ComponentListPackageAsStruct("lucee.admin.logging.appender",names)>
+<cfset names=ComponentListPackageAsStruct("tachyon-server.admin.logging.appender",names)>
+<cfset names=ComponentListPackageAsStruct("tachyon.admin.logging.appender",names)>
 <cfset names=ComponentListPackageAsStruct("logging.appender",names)>
 <cfloop collection="#names#" index="n" item="fn">
 	<cfif n NEQ "Appender" and n NEQ "Field" and n NEQ "Group">
@@ -39,8 +39,8 @@
 <!--- load available layouts --->
 <cfset arr=[]>
 <cfset names=structnew("linked")>
-<cfset names=ComponentListPackageAsStruct("lucee-server.admin.logging.layout",names)>
-<cfset names=ComponentListPackageAsStruct("lucee.admin.logging.layout",names)>
+<cfset names=ComponentListPackageAsStruct("tachyon-server.admin.logging.layout",names)>
+<cfset names=ComponentListPackageAsStruct("tachyon.admin.logging.layout",names)>
 <cfset names=ComponentListPackageAsStruct("logging.layout",names)>
 <cfloop collection="#names#" index="n" item="fn">
 	<cfif n NEQ "Layout" and n NEQ "Field" and n NEQ "Group">

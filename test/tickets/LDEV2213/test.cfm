@@ -1,7 +1,7 @@
 <cfscript>
 	function doSomething (
 	    any onComplete) {
-	    writeOutput("I Love Lucee!");
+	    writeOutput("I Love Tachyon!");
 	    onComplete();
 	}
 

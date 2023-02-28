@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="cache" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="cache" {
 	
 	variables.cacheName="Test"&ListFirst(ListLast(getCurrentTemplatePath(),"\/"),".");
 	
@@ -17,7 +17,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase" labels="cache" {
 				type="web"
 				password="#request.webadminpassword#"
 				name="_cacheClear"&id 
-				class= 'org.lucee.mongodb.cache.MongoDBCache'
+				class= 'org.tachyon.mongodb.cache.MongoDBCache'
 				bundleName= 'mongodb.extension'
 				storage="false"
 				default="object" 
@@ -37,7 +37,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase" labels="cache" {
 				type="web"
 				password="#request.webadminpassword#"
 				name="_cacheClear"&id 
-				class="lucee.runtime.cache.ram.RamCache" 
+				class="tachyon.runtime.cache.ram.RamCache"
 				storage="false"
 				default="object" 
 				custom="#{timeToLiveSeconds:86400,timeToIdleSeconds:86400}#";
@@ -142,7 +142,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase" labels="cache" {
 				
 				
 				name="#cacheName#" 
-				class="lucee.runtime.cache.ram.RamCache" 
+				class="tachyon.runtime.cache.ram.RamCache"
 				storage="false"
 				default="object" 
 				custom="#{timeToLiveSeconds:86400
@@ -157,7 +157,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase" labels="cache" {
 				
 				
 				name="#cacheName#" 
-				class="org.lucee.extension.cache.eh.EHCache" 
+				class="org.tachyon.extension.cache.eh.EHCache"
 				storage="false"
 				default="object" 
 				custom="#{timeToLiveSeconds:86400
@@ -180,7 +180,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase" labels="cache" {
 				
 				default="object"
 				name="#cacheName#" 
-				class="lucee.extension.cache.jboss.JBossCache" 
+				class="tachyon.extension.cache.jboss.JBossCache"
 				storage="false"
 				custom="#{timeToLiveSeconds:86400.0
 					,minTimeToLiveSeconds:0

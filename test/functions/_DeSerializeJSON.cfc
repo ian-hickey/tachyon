@@ -1,4 +1,4 @@
-<cfcomponent extends="org.lucee.cfml.test.LuceeTestCase">
+<cfcomponent extends="org.tachyon.cfml.test.TachyonTestCase">
 	<cfscript>
 	function run( testResults , testBox ) {
 		describe( title="Test suite for DeserializeJson()", body=function() {

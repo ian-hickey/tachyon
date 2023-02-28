@@ -1,4 +1,4 @@
-<cfset form.name = "lucee">
+<cfset form.name = "tachyon">
 <cfset form.age = "4">
 <cftry>
 	<cfinsert tablename="LDEV2566_mssql" datasource="ldev2566_MSSQL" formfields="name,age">

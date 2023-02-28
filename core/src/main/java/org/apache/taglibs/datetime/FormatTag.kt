@@ -152,7 +152,7 @@ class FormatTag : BodyTagSupport() {
 
     @Override
     fun release() {
-        // lucee.print.ln("release FormatTag");
+        // tachyon.print.ln("release FormatTag");
         super.release()
         locale_flag = false
         pattern = null

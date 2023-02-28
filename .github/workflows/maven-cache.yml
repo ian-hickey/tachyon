@@ -13,18 +13,18 @@ jobs:
       with:
         java-version: '11'
         distribution: 'adopt' 
-    - name: Cache Lucee extensions 
+    - name: Cache Tachyon extensions
       uses: actions/cache@v2
       with:
-        path: ~/work/Lucee/Lucee/cache/
-        key: lucee-extensions
-        restore-keys: lucee-extensions
+        path: ~/work/Tachyon/Tachyon/cache/
+        key: tachyon-extensions
+        restore-keys: tachyon-extensions
     - name: Cache Maven packages
       uses: actions/cache@v2
       with:
         path: |
           ~/.m2/repository/*
-          !~/.m2/repository/org/lucee/lucee/
+          !~/.m2/repository/org/tachyon/tachyon/
         key: ${{ runner.os }}-m2
-    - name: Build Lucee with Maven
+    - name: Build Tachyon with Maven
       run: ant -noinput -buildfile loader/build.xml quick 

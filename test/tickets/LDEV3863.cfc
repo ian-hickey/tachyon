@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" {
     function run( testResults,testBox ){
         describe("Testcase for LDEV-3873", function(){
             variables.qry = queryNew("id,name,num", "integer,varchar,integer", [[1,"foo",1],[2,"bar",2]]);

@@ -1,4 +1,4 @@
-<cfcomponent extends="org.lucee.cfml.test.LuceeTestCase"  labels="pdf">
+<cfcomponent extends="org.tachyon.cfml.test.TachyonTestCase"  labels="pdf">
 	<cfscript>
 		
 		public function beforeAll(){
@@ -99,13 +99,13 @@
 	<!-- Private Functions --->
 	<cffunction name="defaultDocumentSection" access="private" output="false">
 		<cfdocumentsection>
-			Lucee test document
+			Tachyon test document
 		</cfdocumentsection>
 	</cffunction>
 
 	<cffunction name="DocumentSectionWithDynamicVariable" access="private" output="false">
 		<cfdocumentsection>
-			Lucee test document
+			Tachyon test document
 		</cfdocumentsection>
 	</cffunction>
 </cfcomponent>

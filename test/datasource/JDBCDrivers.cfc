@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 	
 	function run( testResults , testBox ) {
 		describe( "Checking JDBC drivers", function() {
@@ -29,14 +29,14 @@ component extends="org.lucee.cfml.test.LuceeTestCase"{
 				loadJDBCDriverClass("mssqljdbc4","4.2.6420.100");
 				//loadJDBCDriverClass("com.microsoft.sqlserver.mssql-jdbc","6.4.0.jre9");
 				//loadJDBCDriverClass("com.microsoft.sqlserver.mssql-jdbc","6.5.4");
-				loadJDBCDriverClass("org.lucee.mssql","7.2.2.jre8");
-				loadJDBCDriverClass("org.lucee.mssql","7.4.1.jre8");
-				loadJDBCDriverClass("org.lucee.mssql","8.4.1.jre8");
-				//loadJDBCDriverClass("org.lucee.mssql","9.4.1.jre16");
+				loadJDBCDriverClass("org.tachyon.mssql","7.2.2.jre8");
+				loadJDBCDriverClass("org.tachyon.mssql","7.4.1.jre8");
+				loadJDBCDriverClass("org.tachyon.mssql","8.4.1.jre8");
+				//loadJDBCDriverClass("org.tachyon.mssql","9.4.1.jre16");
 			});
 
 			it( title='Postgre', body=function( currentSpec ) {
-				loadJDBCDriverClass("org.lucee.postgresql","8.3.0.jdbc4");
+				loadJDBCDriverClass("org.tachyon.postgresql","8.3.0.jdbc4");
 				loadJDBCDriverClass("org.postgresql.jdbc42","9.4.1212");
 				loadJDBCDriverClass("org.postgresql.jdbc42","42.1.4");
 				loadJDBCDriverClass("org.postgresql.jdbc","42.2.17");
@@ -44,19 +44,19 @@ component extends="org.lucee.cfml.test.LuceeTestCase"{
 			});
 
 			it( title='Exasol',body=function( currentSpec ) {
-				loadJDBCDriverClass("org.lucee.exasol","7.1.2");
+				loadJDBCDriverClass("org.tachyon.exasol","7.1.2");
 			});
 
 			/* orcalc eitself does not like when we load more than one driver! 
 			it( title='Oracle',body=function( currentSpec ) {
 				loadJDBCDriverClass("ojdbc6","11.2.0.4L0001");
 				loadJDBCDriverClass("ojdbc7","12.1.0.2L0001");
-				loadJDBCDriverClass("org.lucee.oracle","19.12.0.0000L");
-				loadJDBCDriverClass("org.lucee.oracle","21.3.0.0000L");
+				loadJDBCDriverClass("org.tachyon.oracle","19.12.0.0000L");
+				loadJDBCDriverClass("org.tachyon.oracle","21.3.0.0000L");
 			});*/
 
 			it( title='H2',body=function( currentSpec ) {
-				loadJDBCDriverClass("org.lucee.h2","2.1.214.0001L");
+				loadJDBCDriverClass("org.tachyon.h2","2.1.214.0001L");
 			});
 
 			it( title='HSQLDB',body=function( currentSpec ) {
@@ -71,8 +71,8 @@ component extends="org.lucee.cfml.test.LuceeTestCase"{
 	}
 
 	private function loadJDBCDriverClass(bundleName,bundleVersion) {
-		var OSGiUtil=createObject("java","lucee.runtime.osgi.OSGiUtil");
-		var IOUtil=createObject("java","lucee.commons.io.IOUtil");
+		var OSGiUtil=createObject("java","tachyon.runtime.osgi.OSGiUtil");
+		var IOUtil=createObject("java","tachyon.commons.io.IOUtil");
 		var bundle=OSGiUtil.loadBundle(bundleName,OSGiUtil.toVersion(bundleVersion), nullValue(), nullValue(), true);
 		var driver=bundle.getResource("META-INF/services/java.sql.Driver");
 		var is=driver.openStream();

@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="session" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="session" {
 
 	function run( testResults , testBox ) {
 		describe( "Test suite for LDEV3448", function() {

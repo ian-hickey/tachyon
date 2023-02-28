@@ -22,7 +22,7 @@
     
 </cffunction>
 <cfoutput>
-<language key="#lCase(session.lucee_admin_lang)#">
+<language key="#lCase(session.tachyon_admin_lang)#">
 #out('',stText)#
 </language>
 </cfoutput>

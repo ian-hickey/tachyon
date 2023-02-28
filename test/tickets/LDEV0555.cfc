@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 	function run( testResults , testBox ) {
 		describe( "binary encode with less than 88 character", function() {
 			it("simple binary decode with length less than 88 without '=' ", function( currentSpec ) {

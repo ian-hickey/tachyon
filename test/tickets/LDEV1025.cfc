@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 	function beforeALL(){
 		dateandtime = createDateTime(2009,8,9,11,22,33);
 		serverTZ = {

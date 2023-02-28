@@ -37,7 +37,7 @@ component {
 },
 		"abort": {required:false, type:"boolean",default:false,hint="stops further processing of request."},
 		"contextlevel": {required:false, type:"number",default:2,hidden:true},
-		"async": {required:false, type="boolean", default=false, hint="if true and output is not to browser, Lucee builds the output in a new thread that runs in parallel to the thread that called the dump.  please note that if the calling thread modifies the data before the dump takes place, it is possible that the dump will show the modified data."},
+		"async": {required:false, type="boolean", default=false, hint="if true and output is not to browser, Tachyon builds the output in a new thread that runs in parallel to the thread that called the dump.  please note that if the calling thread modifies the data before the dump takes place, it is possible that the dump will show the modified data."},
 		"enabled": { required: false, type: "boolean", default: true, hint: "dumps are enabled by default, pass false to short circuit a dump execution and effectively disable it" }
 	];
 
@@ -70,7 +70,7 @@ component {
 			/*try {}
 			catch(local.e){
 				if(isSimpleValue(attrib.eval)) rethrow;
-				throw "attribute ""eval"" cannot be evaluated because it is not a string, the attribute ""eval"" is not supported for the Lucee dialect.";
+				throw "attribute ""eval"" cannot be evaluated because it is not a string, the attribute ""eval"" is not supported for the Tachyon dialect.";
 			}*/
 		}
 
@@ -140,7 +140,7 @@ component {
 		if (arguments.attrib.output == "browser") {
 
 			echo(variables.NEWLINE & '<!-- ==start== dump #now()# format: #arguments.attrib.format# -->' & variables.NEWLINE);
-			echo('<div id="#dumpID#" class="-lucee-dump">#result#</div>' & variables.NEWLINE);
+			echo('<div id="#dumpID#" class="-tachyon-dump">#result#</div>' & variables.NEWLINE);
 			echo('<!-- ==stop== dump -->' & variables.NEWLINE);
 		}
 		else if (arguments.attrib.output == "console") {
@@ -153,7 +153,7 @@ component {
 			if(arguments.attrib.format == 'text')
 				file action="append" addnewline="yes" file="#arguments.attrib.output#" output="#result#";
 			else
-				file action="append" addnewline="yes" file="#arguments.attrib.output#" output="<div id=""#dumpID#"" class=""-lucee-dump"">#result#</div>";
+				file action="append" addnewline="yes" file="#arguments.attrib.output#" output="<div id=""#dumpID#"" class=""-tachyon-dump"">#result#</div>";
 		}
 	}
 
@@ -331,8 +331,8 @@ component {
 					variables.colorKeys[k]=count++;
 					var bc=darkenColor(darkenColor(v.highLightColor));
 					var fc=(bc);
-					head&="#prefix# td.luceeN#variables.colorKeys[k]# {color:#fc#;border-color:#bc#;background-color:#v.normalColor#;}"& variables.NEWLINE;
-					head&="#prefix# td.luceeH#variables.colorKeys[k]# {color:#fc#;border-color:#bc#;background-color:#v.highLightColor#;}"& variables.NEWLINE;
+					head&="#prefix# td.tachyonN#variables.colorKeys[k]# {color:#fc#;border-color:#bc#;background-color:#v.normalColor#;}"& variables.NEWLINE;
+					head&="#prefix# td.tachyonH#variables.colorKeys[k]# {color:#fc#;border-color:#bc#;background-color:#v.highLightColor#;}"& variables.NEWLINE;
 				}
 
 
@@ -356,7 +356,7 @@ component {
 			tempStruct.META.ID=arguments.hasReference && structKeyExists(arguments.meta,'id') ? ' [#arguments.meta.id#]' : '';
 			tempStruct.META.COMMENT=structKeyExists(arguments.meta,'comment') ? "<br />" & (left(arguments.meta.comment,4)=="<img"?arguments.meta.comment:replace(HTMLEditFormat(arguments.meta.comment),chr(10),' <br>','all')) : '';
 			tempStruct.META.TITLE=arguments.meta.title;
-			tempStruct.META.TDCLASS="luceeH#variables.colorKeys[arguments.meta.colorId]#";
+			tempStruct.META.TDCLASS="tachyonH#variables.colorKeys[arguments.meta.colorId]#";
 			tempStruct.META.ONCLICK="dumpOC('#id#')";
 			tempStruct.META.COLSPAN=columnCount;
 		}else{
@@ -372,7 +372,7 @@ component {
 				tempStruct.META.DATA[arguments.meta.data.currentRow].NODEDATA=[];
 				for(var col=1; col <= columnCount-1; col++){
 					var node = arguments.meta.data["data" & col];
-					tempStruct.META.DATA[arguments.meta.data.currentRow].NODEDATA[col].CLASS="#doHighlight(arguments.meta,c)?'luceeH':'luceeN'##variables.colorKeys[arguments.meta.colorId]#";
+					tempStruct.META.DATA[arguments.meta.data.currentRow].NODEDATA[col].CLASS="#doHighlight(arguments.meta,c)?'tachyonH':'tachyonN'##variables.colorKeys[arguments.meta.colorId]#";
 					if(isStruct(node)){
 						tempStruct.META.DATA[arguments.meta.data.currentRow].TITLE="";
 						var value=this.javascript(node, "", arguments.expand, arguments.output, arguments.hasReference, arguments.level+1,arguments.dumpID,arguments.cssColors);
@@ -428,10 +428,10 @@ component {
 			var colors = arguments.meta.colors[arguments.meta.colorId];
 
 			head&=('<style>' & variables.NEWLINE);
-			head&=('.-lucee-dump .disp-none { display: none; }' & variables.NEWLINE);
+			head&=('.-tachyon-dump .disp-none { display: none; }' & variables.NEWLINE);
 			head&=('</style>' & variables.NEWLINE);
 			head&=('<script>' & variables.NEWLINE);
-			head&=('window.__Lucee = { initialized : false,
+			head&=('window.__Tachyon = { initialized : false,
 				addEventListeners : function(selector, event, handler, useCapture){
 					useCapture = useCapture || false;
 					Array.prototype.forEach.call(
@@ -452,7 +452,7 @@ component {
 					return result;
 				}
 				,onDocumentReady		   : function(){
-					var L = window.__Lucee;
+					var L = window.__Tachyon;
 					if (L.initialized)
 						return;
 					L.addEventListeners(".collapse-trigger", "click", function(evt){
@@ -467,7 +467,7 @@ component {
 			}
 			' & variables.NEWLINE);
 
-			head&=('document.addEventListener("DOMContentLoaded", __Lucee.onDocumentReady);' & variables.NEWLINE);
+			head&=('document.addEventListener("DOMContentLoaded", __Tachyon.onDocumentReady);' & variables.NEWLINE);
 			head&=('</script>' & variables.NEWLINE);
 
 			// styles
@@ -481,8 +481,8 @@ component {
 				variables.colorKeys[k]=count++;
 				var bc=darkenColor(darkenColor(v.highLightColor));
 				var fc=(bc);
-				head&="#prefix# td.luceeN#variables.colorKeys[k]# {color:#fc#;border-color:#bc#;background-color:#v.normalColor#;}"& NL;
-				head&="#prefix# td.luceeH#variables.colorKeys[k]# {color:#fc#;border-color:#bc#;background-color:#v.highLightColor#;}"& NL;
+				head&="#prefix# td.tachyonN#variables.colorKeys[k]# {color:#fc#;border-color:#bc#;background-color:#v.normalColor#;}"& NL;
+				head&="#prefix# td.tachyonH#variables.colorKeys[k]# {color:#fc#;border-color:#bc#;background-color:#v.highLightColor#;}"& NL;
 			}
 
 
@@ -505,7 +505,7 @@ component {
 				: '';
 
 			arrayAppend(rows, '<tr>');
-			arrayAppend(rows, '<td class="collapse-trigger luceeH#variables.colorKeys[arguments.meta.colorId]#" colspan="#columnCount#" style="cursor:pointer;">');
+			arrayAppend(rows, '<td class="collapse-trigger tachyonH#variables.colorKeys[arguments.meta.colorId]#" colspan="#columnCount#" style="cursor:pointer;">');
 
 			arrayAppend(rows, '<span>#arguments.meta.title##metaID#</span>');
 			arrayAppend(rows, comment & '</td>');
@@ -533,13 +533,13 @@ component {
 
 						var value = this.html(node, "", arguments.expand, arguments.output, arguments.hasReference, arguments.level + 1,arguments.dumpID, arguments.cssColors);
 
-						arrayAppend(rows, '<td class="#doHighlight(arguments.meta, c) ? 'luceeH' : 'luceeN'##variables.colorKeys[arguments.meta.colorId]#">');
+						arrayAppend(rows, '<td class="#doHighlight(arguments.meta, c) ? 'tachyonH' : 'tachyonN'##variables.colorKeys[arguments.meta.colorId]#">');
 						arrayAppend(rows, value);
 						arrayAppend(rows, '</td>');
 					}
 					else {
 
-						arrayAppend(rows, '<td class="#doHighlight(arguments.meta,c)?'luceeH':'luceeN'##variables.colorKeys[arguments.meta.colorId]#">' & HTMLEditFormat(node) & '</td>');
+						arrayAppend(rows, '<td class="#doHighlight(arguments.meta,c)?'tachyonH':'tachyonN'##variables.colorKeys[arguments.meta.colorId]#">' & HTMLEditFormat(node) & '</td>');
 					}
 
 					c *= 2;
@@ -612,9 +612,9 @@ component {
 					var h2Color = (v.normalColor);
 					var borderColor = darkenColor(darkenColor(v.highLightColor));
 					variables.colorKeys[k]=count++;
-					rtn&="#prefix# td.luceeN#variables.colorKeys[k]# {background-color:white;border-color:#borderColor#; color:black;cursor:pointer;}"& variables.NEWLINE;
-					rtn&="#prefix# td.luceeH1#variables.colorKeys[k]# {background-color:#h1Color#;border-color:#borderColor#; color:white;cursor:pointer;}"& variables.NEWLINE;
-					rtn&="#prefix# td.luceeH2#variables.colorKeys[k]# {background-color:#h2Color#;border-color:#borderColor#; color:black;cursor:pointer;}"& variables.NEWLINE;
+					rtn&="#prefix# td.tachyonN#variables.colorKeys[k]# {background-color:white;border-color:#borderColor#; color:black;cursor:pointer;}"& variables.NEWLINE;
+					rtn&="#prefix# td.tachyonH1#variables.colorKeys[k]# {background-color:#h1Color#;border-color:#borderColor#; color:white;cursor:pointer;}"& variables.NEWLINE;
+					rtn&="#prefix# td.tachyonH2#variables.colorKeys[k]# {background-color:#h2Color#;border-color:#borderColor#; color:black;cursor:pointer;}"& variables.NEWLINE;
 				}
 
 
@@ -629,7 +629,7 @@ component {
 				var comment = structKeyExists(arguments.meta,'comment') ? "<br />" & replace(HTMLEditFormat(arguments.meta.comment),chr(10),' <br>','all') : '';
 
 				rtn&=('<tr>');
-				rtn&=('<td onclick="dumpOC(''#id#'');" colspan="#columnCount#" class="luceeH1#variables.colorKeys[arguments.meta.colorId]#">');
+				rtn&=('<td onclick="dumpOC(''#id#'');" colspan="#columnCount#" class="tachyonH1#variables.colorKeys[arguments.meta.colorId]#">');
 				rtn&=('<span>#arguments.meta.title##metaID#</span>');
 				rtn&=(comment & '</td>');
 				rtn&=('</tr>');
@@ -653,12 +653,12 @@ component {
 						if(isStruct(node)) {
 							var value = this.classic(node, "", arguments.expand, arguments.output, arguments.hasReference, arguments.level+1);
 
-							rtn&=('<td class="#doHighlight(arguments.meta,c)?'luceeH2':'luceeN'##variables.colorKeys[arguments.meta.colorId]#">');
+							rtn&=('<td class="#doHighlight(arguments.meta,c)?'tachyonH2':'tachyonN'##variables.colorKeys[arguments.meta.colorId]#">');
 							rtn&=(value);
 							rtn&=('</td>');
 						}
 						else {
-							rtn&=('<td class="#doHighlight(arguments.meta,c)?'luceeH2':'luceeN'##variables.colorKeys[arguments.meta.colorId]#">' & HTMLEditFormat(node) & '</td>');
+							rtn&=('<td class="#doHighlight(arguments.meta,c)?'tachyonH2':'tachyonN'##variables.colorKeys[arguments.meta.colorId]#">' & HTMLEditFormat(node) & '</td>');
 						}
 						c *= 2;
 					}

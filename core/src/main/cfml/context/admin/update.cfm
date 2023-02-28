@@ -40,9 +40,9 @@
 	<!--- Core --->
 		<cfif adminType == "server">
 			
-			<cfset curr=server.lucee.version>
+			<cfset curr=server.tachyon.version>
 			<cfset updateInfo=getAvailableVersion()>
-			<cfif server.lucee.state EQ "RC">
+			<cfif server.tachyon.state EQ "RC">
 				<cfset get_rc = "">
 				<cfloop index="rcList" array="#updateInfo.otherVersions#">
 					<cfif listContainsNoCase(rcList,"-RC") EQ 1>
@@ -51,7 +51,7 @@
 				</cfloop>
 				<cfset available = listlast(get_rc)>
 				<cfset hasUpdate = curr LT available>
-			<cfelseif server.lucee.state EQ "stable">
+			<cfelseif server.tachyon.state EQ "stable">
 				<cfset get_stable = "">
 				<cfloop index="stableList" array="#updateInfo.otherVersions#">
 					<cfif ( !listContainsNoCase(stableList,"-SNAPSHOT") EQ 1 ) AND ( !listContainsNoCase(stableList,"-BETA") EQ 1 AND (!listContainsNoCase(stableList,"-RC") EQ 1) )>
@@ -157,7 +157,7 @@
 				<cfif adminType == "server" and hasUpdate>
 					<div class="error">
 						<a href="server.cfm?action=services.update" style="color:red;text-decoration:none;">
-							<cfif server.lucee.state eq "SNAPSHOT" OR server.lucee.state eq "BETA">
+							<cfif server.tachyon.state eq "SNAPSHOT" OR server.tachyon.state eq "BETA">
 								#replace( stText.services.update.update, { '{available}': updateinfo.available, '{current}': curr } )#
 							<cfelse>	
 								#replace( stText.services.update.update, { '{available}': available, '{current}': curr } )#

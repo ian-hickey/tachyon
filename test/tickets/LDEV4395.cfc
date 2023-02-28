@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"  labels="mysql" {
+component extends="org.tachyon.cfml.test.TachyonTestCase"  labels="mysql" {
 	
 	function run( testResults , testBox ) {
 		describe( title="Test suite for LDEV-4395", body=function() {
@@ -6,7 +6,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase"  labels="mysql" {
 				transaction {
 					transaction action="setSavepoint" savepoint="foo";
 					doQuery();
-					// this throws // lucee.runtime.exp.DatabaseException: There are no savepoint with name [foo] set
+					// this throws // tachyon.runtime.exp.DatabaseException: There are no savepoint with name [foo] set
 					transaction action="rollback" savepoint="foo"; 
 				}
 			});

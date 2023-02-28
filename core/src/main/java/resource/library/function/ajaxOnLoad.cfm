@@ -7,5 +7,5 @@
 		---><cfajaximport /><!--- 
 		
 		subscribe to the onload event
-		 ---><cfoutput><script type="text/javascript">Lucee.Events.subscribe(#arguments.functionname#,'onLoad');</script></cfoutput></cfif><!--- 
+		 ---><cfoutput><script type="text/javascript">Tachyon.Events.subscribe(#arguments.functionname#,'onLoad');</script></cfoutput></cfif><!---
 ---></cffunction>

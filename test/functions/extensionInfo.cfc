@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="extensions"{
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="extensions"{
 	function run( testResults , testBox ) {
 		describe( "test case for extensionInfo()", function() {
 			it(title = "Checking with extensionInfo()", body = function( currentSpec ) {
@@ -21,7 +21,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase" labels="extensions"{
 
 			it(title = "Checking extensionInfo() to return correct extension Info", body = function( currentSpec ) {
 				var ext = ExtensionInfo( 'CED6227E-0F49-6367-A68D21AACA6B07E8' );
-				expect( ext.name ).toBe('Lucee Administrator');
+				expect( ext.name ).toBe('Tachyon Administrator');
 			});
 		});
 	}

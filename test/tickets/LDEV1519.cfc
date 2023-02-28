@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"  labels="pdf"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"  labels="pdf"{
 
     function testPDFWaterMark (){
         cfdocument (format="PDF", name="local.test") {
@@ -9,7 +9,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase"  labels="pdf"{
 
         pdf action = "addWaterMark"
             source ="test"
-            image="LDEV1519/lucee-screens-500px.jpg"
+            image="LDEV1519/tachyon-screens-500px.jpg"
             pages="1"
             name="watermarkedPDF"
             overwrite="true"

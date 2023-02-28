@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" skip=true{
+component extends="org.tachyon.cfml.test.TachyonTestCase" skip=true{
 	function beforeAll() {
 		variables.path = getDirectoryFromPath(getCurrentTemplatePath())&"LDEV3780\";
 		variables.file = path&"test.cfc";

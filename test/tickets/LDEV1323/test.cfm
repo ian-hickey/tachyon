@@ -1,7 +1,7 @@
 <cftransaction> 
 	<cftry>
 		<cfquery name="qry1" datasource="sampledsn">
-			update users1323 SET FirstName = 'lucee' WHERE Title = 'sample'
+			update users1323 SET FirstName = 'tachyon' WHERE Title = 'sample'
 		</cfquery>
 		<cftransaction action="commit" />
 		<cftransaction action="setsavepoint" savepoint="SavePoint1"/>

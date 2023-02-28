@@ -1,6 +1,6 @@
 <!--- 
  *
- * Copyright (c) 2016, Lucee Assosication Switzerland. All rights reserved.*
+ * Copyright (c) 2016, Tachyon Assosication Switzerland. All rights reserved.*
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -16,7 +16,7 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  * 
  ---><cfscript>
-component extends="org.lucee.cfml.test.LuceeTestCase"	{
+component extends="org.tachyon.cfml.test.TachyonTestCase"	{
 	
 	
 	//public function afterTests(){}
@@ -56,7 +56,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase"	{
 	private string function defineCache(){
 		application action="update" 
 			caches="#{susi:{
-		  class: 'lucee.runtime.cache.ram.RamCache'
+		  class: 'tachyon.runtime.cache.ram.RamCache'
 		, storage: false
 		, custom: {"timeToIdleSeconds":"1","timeToLiveSeconds":"1"}
 		, default: 'function'

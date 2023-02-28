@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project default="all" basedir="." name="LuceeBundles">
+<project default="all" basedir="." name="TachyonBundles">
 
 	<target name="addBundles">
 		<echots message="add bundles"/>
@@ -8,7 +8,7 @@
 			target="${goal}/bundles"
 			coremanifest="${coreManifest}"/>
 
-		<!-- first we copy the jars in place otherwise, Lucee downloads them
+		<!-- first we copy the jars in place otherwise, Tachyon downloads them
 		<copy todir="${goal}/bundles" flatten="true">
 		<path>
 		<pathelement path="${dependencies}"/>

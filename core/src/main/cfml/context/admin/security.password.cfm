@@ -1,4 +1,4 @@
-<!--- <cfset classConfig=createObject("java","lucee.runtime.config.ConfigWeb")>
+<!--- <cfset classConfig=createObject("java","tachyon.runtime.config.ConfigWeb")>
 <cfset STRICT=classConfig.SCOPE_STRICT>
 <cfset SMALL=classConfig.SCOPE_SMALL>
 <cfset STANDART=classConfig.SCOPE_STANDART> --->

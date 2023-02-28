@@ -1,4 +1,4 @@
-<cfcomponent extends="org.lucee.cfml.test.LuceeTestCase">
+<cfcomponent extends="org.tachyon.cfml.test.TachyonTestCase">
 	<cfscript>
 		function run(){
 			describe( title="Test cases for LDEV-1128", body=function(){
@@ -20,10 +20,10 @@
 
 	<cffunction name="testCase" returntype="String" access="private">
 		<cfset URLs = ArrayNew(1)>
-		<cfset ArrayAppend(URLs,"http://www.lucee.org")>
-		<cfset ArrayAppend(URLs,"http://lucee.org/downloads.html")>
-		<cfset ArrayAppend(URLs,"http://stable.lucee.org/download/?type=releases")>
-		<cfset ArrayAppend(URLs,"http://stable.lucee.org/download/?type=releases&major=5.2")>
+		<cfset ArrayAppend(URLs,"http://www.tachyon.org")>
+		<cfset ArrayAppend(URLs,"http://tachyon.org/downloads.html")>
+		<cfset ArrayAppend(URLs,"http://stable.tachyon.org/download/?type=releases")>
+		<cfset ArrayAppend(URLs,"http://stable.tachyon.org/download/?type=releases&major=5.2")>
 
 		<cfloop from="1" to="#ArrayLen(URLs)#" index="i">
 			<cfset threadName = "thread_#i#">

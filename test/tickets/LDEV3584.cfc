@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" skip=false {
+component extends="org.tachyon.cfml.test.TachyonTestCase" skip=false {
     function run( testResults , testBox ) {
         describe( "test case for LDEV-3584", function() {
             it( title = "getComponentMetadata() of final CFC using CFC object", body=function( currentSpec ) {

@@ -1,4 +1,4 @@
-component extends = "org.lucee.cfml.test.LuceeTestCase" labels="image" {
+component extends = "org.tachyon.cfml.test.TachyonTestCase" labels="image" {
 
 	function beforeAll(){
 		variables.path = "/test/#listLast(getDirectoryFromPath(getCurrenttemplatepath()),"\/")#/" &"ImageDrawText/";
@@ -12,7 +12,7 @@ component extends = "org.lucee.cfml.test.LuceeTestCase" labels="image" {
 
 			it(title = "Checking with ImageDrawText()", body = function( currentSpec ){
 				img = imageNew("",150,150,"RGB","149c82");
-				ImageDrawText(img, "I Love Lucee",40,70);
+				ImageDrawText(img, "I Love Tachyon",40,70);
 				cfimage(action = "write", source = img, destination = path&'imgDrawtext.jpg', overwrite = "yes");
 				expect(fileexists(path&'imgDrawtext.jpg')).tobe("true");
 			});

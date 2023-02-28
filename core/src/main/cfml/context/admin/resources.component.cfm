@@ -83,11 +83,11 @@ Defaults --->
 					
 					
 					<cfif not doDownload>
-						<cfset target=expandPath("#cgi.context_path#/lucee/archives/"&filename)>
+						<cfset target=expandPath("#cgi.context_path#/tachyon/archives/"&filename)>
 						<cfset count=0>
 						<cfwhile fileExists(target)>
 							<cfset count=count+1>
-							<cfset target="#cgi.context_path#/lucee/archives/"&filename>
+							<cfset target="#cgi.context_path#/tachyon/archives/"&filename>
 							<cfset target=replace(target,'.'&ext,count&'.'&ext)>
 							<cfset target=expandPath(target)>
 						</cfwhile>
@@ -199,7 +199,7 @@ Defaults --->
                     password="#session["password"&request.adminType]#"
                     
                     baseComponentTemplateCFML="#form.baseComponentTemplateCFML#"
-                    baseComponentTemplateLucee="#form.baseComponentTemplateLucee#"
+                    baseComponentTemplateTachyon="#form.baseComponentTemplateTachyon#"
                     componentDumpTemplate="#form.componentDumpTemplate#"
                     componentDataMemberDefaultAccess="#form.componentDataMemberDefaultAccess#"
                     triggerDataMember="#isDefined('form.triggerDataMember')#"

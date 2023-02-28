@@ -1,5 +1,5 @@
 <cfsetting showDebugOutput=false>
-<cfinclude template="/lucee/admin/resources/text.cfm">
+<cfinclude template="/tachyon/admin/resources/text.cfm">
 
 <cfset arrAllFunctions = Application.objects.utils.getAllFunctions()>
 <cfset arrAllCategories = arrayNew(1)>
@@ -83,7 +83,7 @@
 		};
 
 		$( function() {
-			$( '#lucee-docs-search-input' ).typeahead(
+			$( '#tachyon-docs-search-input' ).typeahead(
 				{
 					hint: true,
 					highlight: true,
@@ -99,7 +99,7 @@
 	</script>
 </cfsavecontent>
 
-<cfmodule template="doc_layout.cfm" title="Lucee Tag Reference" prevLinkItem="#prevLinkItem#" nextLinkItem="#nextLinkItem#">
+<cfmodule template="doc_layout.cfm" title="Tachyon Tag Reference" prevLinkItem="#prevLinkItem#" nextLinkItem="#nextLinkItem#">
 <cfoutput>
 	<div class="tile-wrap">
 		<div class="tile">

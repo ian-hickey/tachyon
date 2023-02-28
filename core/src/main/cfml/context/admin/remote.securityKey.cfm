@@ -32,7 +32,7 @@
 		#sttext.remote.securityKeyTitleDesc#
 	</div>
 	<div class="center">
-		<input type="text" id="remotekey" value="#getLuceeId()[request.adminType].securityKey#" size="50" readonly="readonly" />
+		<input type="text" id="remotekey" value="#getTachyonId()[request.adminType].securityKey#" size="50" readonly="readonly" />
 
 		<cfhtmlbody>
 

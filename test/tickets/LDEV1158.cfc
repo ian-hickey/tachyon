@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 	function run(){
 		describe( title="Test cases for LDEV-1158", body=function(){
 			it(title="checking LinkedhashMap object with init()", body=function(){

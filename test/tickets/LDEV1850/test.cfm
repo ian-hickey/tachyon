@@ -1,10 +1,10 @@
 <cfoutput>
-<cfset passwordPdf = "lucee-test">
-<cfdocument filename="testLucee.pdf" userpassword="#passwordPdf#" encryption="128-bit" format="pdf" overwrite="yes">
-	Lucee PDF
+<cfset passwordPdf = "tachyon-test">
+<cfdocument filename="testTachyon.pdf" userpassword="#passwordPdf#" encryption="128-bit" format="pdf" overwrite="yes">
+	Tachyon PDF
 </cfdocument>
 <cfset temp=structnew()>
-<cfset strDocumentWithPath = "testLucee.pdf">
+<cfset strDocumentWithPath = "testTachyon.pdf">
 
 <cfset temp.pwFiacWord="#passwordPdf#">
 <cfset temp.outfile = replacenocase(strDocumentWithPath,".pdf","down.pdf")>

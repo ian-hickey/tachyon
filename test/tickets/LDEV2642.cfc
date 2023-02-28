@@ -1,4 +1,4 @@
-component extends = "org.lucee.cfml.test.LuceeTestCase"{
+component extends = "org.tachyon.cfml.test.TachyonTestCase"{
 	function run( testResults, testbox ){
 		describe("Test case for LDEV2642", function(){
 			it(title = "Check isvalid function with boolean'", body = function( currentSpec ){
@@ -8,7 +8,7 @@ component extends = "org.lucee.cfml.test.LuceeTestCase"{
 				expect(isvalid("integer",'NO')).tobe(false);
 			});
 			it(title = "Check isvalid function with string and numbers'", body = function( currentSpec ){
-				expect(isvalid("integer",'lucee')).tobe(false);
+				expect(isvalid("integer",'tachyon')).tobe(false);
 				expect(isvalid("integer",11)).tobe(true);
 				expect(isvalid("integer",'31')).tobe(true);
 				expect(isValid("integer",235.)).tobe(true);

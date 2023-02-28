@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" skip=true{
+component extends="org.tachyon.cfml.test.TachyonTestCase" skip=true{
     function run( testResults , testBox ) {
         describe( "Test suite for LDEV-1827 & LDEV-280", function() {
             variables.obj = new LDEV0280.test();

@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 	function run( testResults , testBox ) {
 		describe( "test suite for LDEV-2161", function() {
 			it(title = "REFind() with sub expressions returns incorrect match elements", body = function( currentSpec ) {

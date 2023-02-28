@@ -1,4 +1,4 @@
-<cfcomponent extends="org.lucee.cfml.test.LuceeTestCase" labels="qoq">
+<cfcomponent extends="org.tachyon.cfml.test.TachyonTestCase" labels="qoq">
 
 
 <cfscript>
@@ -9,7 +9,7 @@
 			,"varchar,varchar"
 			,[
 				["Railo", "4.2"]
-				,["Lucee", "5.3"]
+				,["Tachyon", "5.3"]
 			]
 		);
 	}

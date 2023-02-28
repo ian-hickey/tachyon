@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="markdown" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="markdown" {
 
     variables.markdownString=trim("
     #### Headline with ID ####

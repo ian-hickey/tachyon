@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2016, Lucee Assosication Switzerland. All rights reserved.*
+ * Copyright (c) 2016, Tachyon Assosication Switzerland. All rights reserved.*
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU Lesser General Public 
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
- component extends="org.lucee.cfml.test.LuceeTestCase"	{
+ component extends="org.tachyon.cfml.test.TachyonTestCase"	{
 	
 	function afterAll(){
 		// create dir
@@ -38,7 +38,7 @@
 		// now we delete the file holding the udf
 		fileDelete("LDEV1058/udfs.cfm");
 
-		// now we make lucee recoize the template is gone
+		// now we make tachyon recoize the template is gone
 		//try{include "LDEV1058/udfs.cfm";}catch(local.e){dump(e.message);}
 		pagePoolClear();
 

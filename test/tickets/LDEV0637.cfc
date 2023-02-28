@@ -1,6 +1,6 @@
 <!--- 
  *
- * Copyright (c) 2016, Lucee Assosication Switzerland. All rights reserved.*
+ * Copyright (c) 2016, Tachyon Assosication Switzerland. All rights reserved.*
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -16,7 +16,7 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  * 
  ---><cfscript>
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="oracle"	{
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="oracle"	{
 	
 	
 	//public function afterTests(){}
@@ -31,7 +31,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase" labels="oracle"	{
 
 		query name="qry" {
 			echo("
-CREATE OR REPLACE package lucee_bug_test as
+CREATE OR REPLACE package tachyon_bug_test as
  PROCEDURE testproc;
  PROCEDURE testproc2(p1 varchar2);
 end;
@@ -40,7 +40,7 @@ end;
 
 		query name="qry" {
 			echo("
-CREATE OR REPLACE package body lucee_bug_test as
+CREATE OR REPLACE package body tachyon_bug_test as
   PROCEDURE testproc IS
   BEGIN
     NULL;
@@ -57,28 +57,28 @@ END;
 
 	public void function testStoredProc(){
 		if(!variables.has) return;
-		// calling lucee_bug_test.testproc
-		storedproc procedure="lucee_bug_test.testproc";
+		// calling tachyon_bug_test.testproc
+		storedproc procedure="tachyon_bug_test.testproc";
 	}
 
 	public void function testStoredProc2() skip="true"{  // no system access
 		if(!variables.has) return;
-		// calling people_web_app.lucee_bug_test.testproc
-  		storedproc procedure="system.lucee_bug_test.testproc";
+		// calling people_web_app.tachyon_bug_test.testproc
+  		storedproc procedure="system.tachyon_bug_test.testproc";
 	}
 
 	public void function testStoredProcIn(){
 		if(!variables.has) return;
-		// calling lucee_bug_test.testproc2('foo')
-  		storedproc procedure="lucee_bug_test.testproc2" {
+		// calling tachyon_bug_test.testproc2('foo')
+  		storedproc procedure="tachyon_bug_test.testproc2" {
 			procparam cfsqltype="cf_sql_varchar" value="foo";
 		}
 	}
 
 	public void function testStoredProcIn2() skip="true"{  // no system access
 		if(!variables.has) return;
-		// calling people_web_app.lucee_bug_test.testproc2('foo')
-  		storedproc procedure="system.lucee_bug_test.testproc2" {
+		// calling people_web_app.tachyon_bug_test.testproc2('foo')
+  		storedproc procedure="system.tachyon_bug_test.testproc2" {
 			procparam cfsqltype="cf_sql_varchar" value="foo";
 		}
 	}

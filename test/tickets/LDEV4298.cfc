@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="qoq" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="qoq" {
 	variables.typeList = 'BIGINT,BINARY,BIT,BOOLEAN,CHAR,DATE,DECIMAL,DOUBLE,INTEGER,LONGVARBINARY,LONGVARCHAR,NCHAR,NUMERIC,NVARCHAR,REAL,SMALLINT,TIME,TIMESTAMP,TINYINT,VARBINARY,VARCHAR';
 
 	function beforeAll() {

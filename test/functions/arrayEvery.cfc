@@ -1,4 +1,4 @@
-component extends = "org.lucee.cfml.test.LuceeTestCase" {
+component extends = "org.tachyon.cfml.test.TachyonTestCase" {
 	function run( testResults, textbox ) {
 		describe("testcase for ArrayEvery()", function() {
 			it(title="checking ArrayEvery() function", body=function( currentSpec ) {

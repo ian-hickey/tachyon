@@ -4,7 +4,7 @@
 		param name="url.check";
 		echo( structKeyExists(server.LDEV3264_endedSessions, url.check ) );
 	} else {
-		session.luceeRocks=true;
+		session.tachyonRocks=true;
 		echo( session.sessionid );
 	}
 </cfscript>

@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" {
     function run() {
         describe("Test suite for LDEV-1298", function(){
             it("checking Built in function with call back", function(){

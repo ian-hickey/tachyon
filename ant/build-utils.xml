@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project default="all" basedir="." name="LuceeBuildUtils">
+<project default="all" basedir="." name="TachyonBuildUtils">
     
   <scriptdef name="readManifestEntry" language="javascript" loaderRef="sharedbuild-loaderRef">
     <attribute name="file" />
@@ -63,7 +63,7 @@
       var text = attributes.get("text");
       var date = attributes.get("date");
       
-      var index=text.indexOf("lucee.core.release.date");
+      var index=text.indexOf("tachyon.core.release.date");
       if(index!=-1) {
         var start=text.indexOf('"',index);
         var end=text.indexOf('"',start+1);

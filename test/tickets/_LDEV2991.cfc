@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" {
 	function run( testresults , testbox ) {
 		describe( "testcase for LDEV-2991", function () {
 			it( title = "Checking REReplaceNoCase ,with case conversation", body=function( currentSpec ) {

@@ -1,4 +1,4 @@
-// <cflucee>
+// <cftachyon>
 <cfcomponent output="false" >
 	
 	<cffunction  name="subFunction" >

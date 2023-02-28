@@ -1,20 +1,20 @@
-component extends = "org.lucee.cfml.test.LuceeTestCase" skip="true"{
+component extends = "org.tachyon.cfml.test.TachyonTestCase" skip="true"{
 	function run( testResults , testBox ) {
 		describe( title = "Test for === operator", body = function() {
 			it( title = 'Test case for === operator with strings',body = function( currentSpec ) localmode=true {
 
-				a = "lucee";
-				b = "lucee";
-				c = "Lucee";
+				a = "tachyon";
+				b = "tachyon";
+				c = "Tachyon";
 				d = duplicate(a);
 
 				expect ( a === d ).toBeTrue( "compare same values, variables" );
 				expect ( a === b ).toBeTrue( "compare duplicated value, variables" );
-				expect( "lucee" === "lucee").toBeTrue( "compare same values, inline" );
+				expect( "tachyon" === "tachyon").toBeTrue( "compare same values, inline" );
 
 				// ACF compat, differs to JS, cfml is case insensitive
 				expect ( a === c ).toBeTrue( "compare same values, different case" );
-				expect( "lucee" === "Lucee").toBeTrue( "compare same values, different case, inline" );
+				expect( "tachyon" === "Tachyon").toBeTrue( "compare same values, different case, inline" );
 			});
 
 			it( title = 'Test case for === operator with numbers',body = function( currentSpec ) localmode=true {

@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="qoq"{
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="qoq"{
 	function run( testResults , testBox ) {
 		describe( title="Test suite for LDEV-691", body=function() {
 			it( title='Checking QuQ Count with structure data',body=function( currentSpec ) {

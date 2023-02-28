@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"	{
+component extends="org.tachyon.cfml.test.TachyonTestCase"	{
 	function run( testResults , testBox ) {
 		describe( "test case for LDEV-2608", function() {
 			it(title = "Regression in struct implementation causing stack overflow", body = function( currentSpec ) {

@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" {
 
 	public void function testRJustify(){
 		expect ( "abc".rJustify( 10 ) ).toBe("       abc");

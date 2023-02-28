@@ -50,7 +50,7 @@
 #subscriberName=uniqueSubscriber
 --->
 	<cffunction name="getClass" returntype="string">
-    	<cfreturn "lucee.extension.gateway.jms.ActiveMQGateway">
+    	<cfreturn "tachyon.extension.gateway.jms.ActiveMQGateway">
     </cffunction>
 	<cffunction name="getCFCPath" returntype="string">
     	<cfreturn "">

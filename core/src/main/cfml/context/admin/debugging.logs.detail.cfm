@@ -3,8 +3,8 @@
 <cfscript>
 	//  load available drivers (i.e debug templates) 
 	driverNames=structnew("linked");
-	driverNames=ComponentListPackageAsStruct("lucee-server.admin.debug",driverNames);
-	driverNames=ComponentListPackageAsStruct("lucee.admin.debug",driverNames);
+	driverNames=ComponentListPackageAsStruct("tachyon-server.admin.debug",driverNames);
+	driverNames=ComponentListPackageAsStruct("tachyon.admin.debug",driverNames);
 	driverNames=ComponentListPackageAsStruct("debug",driverNames);
 
 	drivers={};
@@ -26,8 +26,8 @@
 		driver=drivers[session.debug.template];
 		template=session.debug.template;		
 	} else if ( IsEmpty(entries.type) || !StructKeyExists(drivers, entries.type) ) {
-		driver=drivers["lucee-simple"];
-		template= "lucee-simple";
+		driver=drivers["tachyon-simple"];
+		template= "tachyon-simple";
 	} else {
 		driver=drivers["#entries.type#"];
 		template=entries.type;
@@ -115,7 +115,7 @@
 	</tr>
 	</cfformClassic>
 	</table>
-	<cfif template EQ "lucee-modern">
+	<cfif template EQ "tachyon-modern">
 		<div id="blockerContainer" class="jquery-modal current">
 			<div id="mdlWnd" class="modal" >
 				<a href="#request.self#?action=#url.action#" rel="modal:close" class="close-modal ">Close</a>

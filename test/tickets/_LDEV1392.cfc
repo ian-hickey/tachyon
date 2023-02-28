@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 	function run( testResults , testBox ) {
 		describe( "Test suite for LDEV-1392", function() {
 			it(title="checking getThreadGroup()", body = function( currentSpec ) {
@@ -10,7 +10,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase"{
 
 			it(title="checking getThreadGroup(), after HTTP call", body = function( currentSpec ) {
 				var thrGrp1 = getPageContext().getThread().getThreadGroup();
-				http url="https://www.lucee.org" method="post" result="result";
+				http url="https://www.tachyon.org" method="post" result="result";
 				var thrGrp2 = getPageContext().getThread().getThreadGroup();
 				try{
 					var result = isInstanceOf(thrGrp2, "java.lang.ThreadGroup")

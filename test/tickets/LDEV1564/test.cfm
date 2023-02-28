@@ -5,7 +5,7 @@
 	wequery.setSQL(sql);
 	try{
 		transaction{
-			theCust.setTheName('lucee');
+			theCust.setTheName('tachyon');
 			wequery.execute();
 			writeoutput(theCust.getTheName());
 		}

@@ -1,4 +1,4 @@
-component extends = "org.lucee.cfml.test.LuceeTestCase"{
+component extends = "org.tachyon.cfml.test.TachyonTestCase"{
 	function beforeAll(){
 		variables.base = GetDirectoryFromPath(GetCurrentTemplatePath());
 		if(!directoryExists(variables.base&"LDEV2533")){
@@ -10,7 +10,7 @@ component extends = "org.lucee.cfml.test.LuceeTestCase"{
 			it(title = "Status showing open - when using fileClose()", body = function( currentSpec ) {
 				var path = variables.base&"/LDEV2533/sample.txt";
 				var result=fileopen(path,'write');
-				fileWrite(result,'I love lucee');
+				fileWrite(result,'I love tachyon');
 				expect(result.status).tobe('open');
 				fileclose(result);
 				expect(result.status).tobe('close');

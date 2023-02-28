@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 	function run( testResults , testBox ) {
 		describe( "test suite for LDEV-1946", function() {
 			it(title = "checking onMissingMethod() & onError() ", body = function( currentSpec ) {

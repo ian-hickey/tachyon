@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 
 	function beforeAll() {
 		application name="LDEV-3690" regex={"type":"java"}; // sets java as regex engine

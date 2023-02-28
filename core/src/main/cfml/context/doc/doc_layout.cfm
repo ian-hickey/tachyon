@@ -8,9 +8,9 @@
 		<!DOCTYPE html>
 		<html>
 			<head>
-				<title>Lucee documentation :: #Attributes.Title#</title>
+				<title>Tachyon documentation :: #Attributes.Title#</title>
 				<base href="">
-				<meta content="Lucee Server Documentation" name="description">
+				<meta content="Tachyon Server Documentation" name="description">
 				<meta content="initial-scale=1.0, width=device-width" name="viewport">
 				<meta name="ROBOTS" content="NOINDEX,NOFOLLOW">
 				<link href="assets/css/base.min.css.cfm" rel="stylesheet">
@@ -19,8 +19,8 @@
 			</head>
 
 	</cfif> <!--- iAR1 end --->
-	<link href="/lucee/doc/assets/css/base.min.css.cfm" rel="stylesheet" >
-	<link href="/lucee/doc/assets/css/highlight.css.cfm" rel="stylesheet" >
+	<link href="/tachyon/doc/assets/css/base.min.css.cfm" rel="stylesheet" >
+	<link href="/tachyon/doc/assets/css/highlight.css.cfm" rel="stylesheet" >
 	<cfif structKeyExists(url, "isAjaxRequest")>
 		<cfif !structKeyExists(url, "fromAdmin") OR url.fromAdmin NEQ true>
 			<style type="text/css">
@@ -50,7 +50,7 @@
 				<div class="menu-scroll">
 					<div class="menu-wrap">
 						<div class="menu-content">
-							<a class="nav-drawer-logo" href="index.cfm"><img class="Lucee" src="assets/images/lucee-logo-bw.png.cfm"></a>
+							<a class="nav-drawer-logo" href="index.cfm"><img class="Tachyon" src="assets/images/tachyon-logo-bw.png.cfm"></a>
 							<ul class="nav">
 								<li class=" ">
 									<a href="tags.cfm">Tags</a>
@@ -92,7 +92,7 @@
 						</a>
 					</li>
 				</ul>
-				<a class="header-logo hidden-lg" href="index.cfm"><img alt="Lucee" src="assets/images/lucee-logo.png.cfm"></a>
+				<a class="header-logo hidden-lg" href="index.cfm"><img alt="Tachyon" src="assets/images/tachyon-logo.png.cfm"></a>
 				<ul class="nav nav-list pull-right">
 					<cfif len(Attributes.prevLinkItem)>
 						<li>
@@ -129,8 +129,8 @@
 					<div class="menu-wrap">
 						<div class="menu-content">
 							<div class="menu-content-inner">
-								<label class="access-hide" for="lucee-docs-search-input">Search</label>
-								<input class="form-control form-control-lg menu-search-focus" id="lucee-docs-search-input" placeholder="Search" type="search">
+								<label class="access-hide" for="tachyon-docs-search-input">Search</label>
+								<input class="form-control form-control-lg menu-search-focus" id="tachyon-docs-search-input" placeholder="Search" type="search">
 							</div>
 						</div>
 					</div>
@@ -164,7 +164,7 @@
 
 			<footer class="footer">
 				<div class="container">
-					<p>The Lucee Documentation is developed and maintained by the Lucee Association Switzerland and is licensed under a
+					<p>The Tachyon Documentation is developed and maintained by the Tachyon Association Switzerland and is licensed under a
 						<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png"></a>
 						<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.
 					</p>

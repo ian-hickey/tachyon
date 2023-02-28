@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" skip="true" labels="array" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" skip="true" labels="array" {
 	function run( testResults, testBox ) {
 		describe( "Test suite for LDEV-1813", function() {
 			it( title='Array Slice Implementation', body=function( currentSpec ) {

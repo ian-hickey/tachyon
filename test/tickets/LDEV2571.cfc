@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"	{
+component extends="org.tachyon.cfml.test.TachyonTestCase"	{
 	function run( testResults , testBox ) {
 		describe( "test case for LDEV-2571", function() {
 			it(title = "serialize", body = function( currentSpec ) {

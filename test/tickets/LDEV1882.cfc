@@ -1,10 +1,10 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="syntax" skip=true {
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="syntax" skip=true {
 	function run( testResults , testBox ) {
 		describe( "test suite for LDEV-1882", function() {
 			it(title = "checking cfcontinue within script", body = function( currentSpec ) {
 				var myQry = queryNew(	'id,title,content','integer,string,string',
 								[	{"id":1, "title":"sas", "content":"sample"},
-									{"id":2, "title":"sas", "content":"lucee"},
+									{"id":2, "title":"sas", "content":"tachyon"},
 									{"id":3, "title":"arg", "content":"test"},
 									{"id":4, "title":"arg", "content":"case"},
 									{"id":5, "title":"arg", "content":"result"} ]);

@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 	function run( testResults , testBox ) {
 		describe( title="Test suite for LDEV-1614", body=function() {
 			it( title='Checking createobject() with try catch block inside the cfsaveContent',body=function( currentSpec ) {

@@ -106,7 +106,7 @@ Error Output --->
 					<tr>
 						<th scope="row">#stText.err.errorTemplate[statusCode]#</th>
 						<td class="tblContent#css#" title="#err.str[statusCode]##chr(10)##err.str[statusCode]#">
-							<cfif LCase(left(err.templates[statusCode], 41)) eq "#cgi.context_path#/lucee/admin/templates/error/">
+							<cfif LCase(left(err.templates[statusCode], 41)) eq "#cgi.context_path#/tachyon/admin/templates/error/">
 								<cfset bDisableFile = True>
 							<cfelse>
 								<cfset bDisableFile = False>

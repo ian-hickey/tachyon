@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 	function run(){
 		describe( title="Test cases for LDEV-1142", body=function(){
 			it(title="listToArray with temporary list using QueryObject.columnList", body=function(){

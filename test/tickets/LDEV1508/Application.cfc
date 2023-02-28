@@ -15,7 +15,7 @@ component {
 			echo("CREATE TABLE test_asset( asset_id INT , asset_name VARCHAR(50) )");
 		}
 		query{
-			echo("INSERT INTO test_asset VALUES(1,'micha'), (2, 'lucee')");
+			echo("INSERT INTO test_asset VALUES(1,'micha'), (2, 'tachyon')");
 		}
 	}
 

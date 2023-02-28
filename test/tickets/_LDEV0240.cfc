@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 	public function run( testResults , testBox ) {
 		describe( title="Test suite for LDEV-240 ( checking with the files in same folders )", body=function() {
 			it(title="Creating object for a component which has an init() with package access, from a cfm file of same folder", body=function( currentSpec ) {

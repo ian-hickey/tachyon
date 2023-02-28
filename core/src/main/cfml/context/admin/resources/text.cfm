@@ -1,9 +1,9 @@
 <!--- TODO: cleanup! !--->
-<!--- language files are deployed to {lucee-web}/context/admin/resources/language by ConfigWebFactory.java and are read from there !--->
+<!--- language files are deployed to {tachyon-web}/context/admin/resources/language by ConfigWebFactory.java and are read from there !--->
 
 <cfscript>
 	if(isNull(request.singlemode))request.singlemode=false;
-	sHelpURL = "https://www.lucee.org/help/stHelp.json";
+	sHelpURL = "https://www.tachyon.org/help/stHelp.json";
 	param name="request.stLocalHelp" default="#structNew()#";
 	param name="request.stWebMediaHelp" default="#structNew()#";
 	param name="request.stWebHelp" default="#structNew()#";
@@ -13,8 +13,8 @@
 	//structDelete(application, "stWebHelp");
 	if ( structKeyExists( form, "lang" )
 			|| !structKeyExists( application, "languages" )
-			|| !structKeyExists( application.stText, session.lucee_admin_lang ) 
-			|| isNull( application.stText[session.lucee_admin_lang].setting.externalizeStringGTE ) 
+			|| !structKeyExists( application.stText, session.tachyon_admin_lang )
+			|| isNull( application.stText[session.tachyon_admin_lang].setting.externalizeStringGTE )
 			|| structKeyExists( url, "reinit" )){
 
 		cfinclude( template="menu.cfm" );
@@ -26,22 +26,22 @@
 		}
 		application.languages = languages;
 
-		if ( !application.languages.keyExists( session.lucee_admin_lang ) ){
-			systemOutput("Admin language file for [#session.lucee_admin_lang#] was not found, defaulting to English", true);
-			session.lucee_admin_lang = "en";
+		if ( !application.languages.keyExists( session.tachyon_admin_lang ) ){
+			systemOutput("Admin language file for [#session.tachyon_admin_lang#] was not found, defaulting to English", true);
+			session.tachyon_admin_lang = "en";
 		}
 
 		application.stText.en = GetFromXMLNode( langData.en.xml.XMLRoot.XMLChildren );
 		StructDelete( application, "notTranslated" );
 
 		//  now read the actual file when not english
-		if ( session.lucee_admin_lang != "en" ){
-			langXml = langData[ session.lucee_admin_lang ].xml;
+		if ( session.tachyon_admin_lang != "en" ){
+			langXml = langData[ session.tachyon_admin_lang ].xml;
 			// load the translation, using english as the fallback, thus allowing incomplete translations
-			application.stText[ session.lucee_admin_lang ] = GetFromXMLNode( langXml.XMLRoot.XMLChildren, application.stText.en );
+			application.stText[ session.tachyon_admin_lang ] = GetFromXMLNode( langXml.XMLRoot.XMLChildren, application.stText.en );
 		}
 
-		stText = application.stText[ session.lucee_admin_lang ];
+		stText = application.stText[ session.tachyon_admin_lang ];
 
 		// TODO why is this here??
 		try {
@@ -60,7 +60,7 @@
 
 	} else{
 		languages=application.languages;
-		stText = application.stText[session.lucee_admin_lang];
+		stText = application.stText[session.tachyon_admin_lang];
 	}
 </cfscript>
 
@@ -91,9 +91,9 @@ You can use this code in order to write the structs into an XML file correspondi
 
 <cfset stLang = {"de":"German","en":"English","nl":"Dutch"}>
 <cfsavecontent variable="sXML"><cfoutput><?xml version="1.0" encoding="UTF-8"?>
-<language key="#session.lucee_admin_lang#" label="#stLang[session.lucee_admin_lang]#">
+<language key="#session.tachyon_admin_lang#" label="#stLang[session.tachyon_admin_lang]#">
 #generateXML(stText)#</language></cfoutput></cfsavecontent>
-<cffile action="WRITE" file="language/#session.lucee_admin_lang#.xml" output="#sXML#">
+<cffile action="WRITE" file="language/#session.tachyon_admin_lang#.xml" output="#sXML#">
 <cfabort>
 
 <cffunction name="generateXML" returntype="string" output="no">

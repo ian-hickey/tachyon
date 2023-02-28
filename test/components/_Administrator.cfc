@@ -1,6 +1,6 @@
 /**
  *
- * Copyright (c) 2016, Lucee Assosication Switzerland. All rights reserved.*
+ * Copyright (c) 2016, Tachyon Assosication Switzerland. All rights reserved.*
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -16,14 +16,14 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  *
  **/
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 
 	setting requesttimeout=1800;
 
 	function beforeAll(){
 
-		variables.admin=new org.lucee.cfml.Administrator("server",request.ServerAdminPassword);
-		variables.adminWeb=new org.lucee.cfml.Administrator("web", request.WebAdminPassword);
+		variables.admin=new org.tachyon.cfml.Administrator("server",request.ServerAdminPassword);
+		variables.adminWeb=new org.tachyon.cfml.Administrator("web", request.WebAdminPassword);
 	}
 
 	function run( testResults , testBox ) {
@@ -382,7 +382,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase"{
 				});
 
 				it(title="checking getMapping()", body=function( currentSpec ) {
-					var virtual = "/lucee-server";
+					var virtual = "/tachyon-server";
 					var mapping = adminWeb.getMapping(virtual);
 					assertEquals(isstruct(mapping) ,true);
 					var strctKeylist = structKeyList(mapping);
@@ -482,7 +482,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase"{
 
 				it(title="checking updateExtension()", body=function( currentSpec ) {
 					var tmpStrt = {};
-					tmpStrt.provider = "https://extension.lucee.org";
+					tmpStrt.provider = "https://extension.tachyon.org";
 					tmpStrt.id = '2BCD080F-4E1E-48F5-BEFE794232A21AF6';
 					tmpStrt.version = '1.3.1';
 					adminWeb.updateExtension(argumentCollection = #tmpStrt#);
@@ -592,13 +592,13 @@ component extends="org.lucee.cfml.test.LuceeTestCase"{
 
 				it(title="checking updateORMEngine()", body=function( currentSpec ) {
 					var tmpstruct = {};
-					tmpstruct.class = "lucee.runtime.orm.ORMEngine";
+					tmpstruct.class = "tachyon.runtime.orm.ORMEngine";
 					tmpstruct.bundleName = "";
 					tmpstruct.bundleVersion = "";
 					adminWeb.updateORMEngine(argumentCollection=tmpstruct);
 					var updatedORMEngine = adminWeb.getORMEngine();
 					assertEquals(isstruct(updatedORMEngine) ,true);
-					assertEquals(updatedORMEngine.class EQ 'lucee.runtime.orm.ORMEngine' ,true);
+					assertEquals(updatedORMEngine.class EQ 'tachyon.runtime.orm.ORMEngine' ,true);
 				});
 
 				it(title="checking removeORMEngine()", body=function( currentSpec ) {
@@ -611,7 +611,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase"{
 				it(title="checking getComponent()", body=function( currentSpec ) {
 					var getComp = adminWeb.getComponent();
 					assertEquals(isstruct(getComp) ,true);
-					assertEquals(listSort(structKeyList(getComp),'textnocase'),'baseComponentTemplateCFML,baseComponentTemplateLucee,componentDataMemberDefaultAccess,ComponentDefaultImport,componentDumpTemplate,componentLocalSearch,componentPathCache,deepSearch,strBaseComponentTemplateCFML,strBaseComponentTemplateLucee,strComponentDumpTemplate,triggerDataMember,useShadow');
+					assertEquals(listSort(structKeyList(getComp),'textnocase'),'baseComponentTemplateCFML,baseComponentTemplateTachyon,componentDataMemberDefaultAccess,ComponentDefaultImport,componentDumpTemplate,componentLocalSearch,componentPathCache,deepSearch,strBaseComponentTemplateCFML,strBaseComponentTemplateTachyon,strComponentDumpTemplate,triggerDataMember,useShadow');
 				});
 
 				it(title="checking updateComponent()", body=function( currentSpec ) {
@@ -681,7 +681,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase"{
 
 				it(title="checking updateCacheConnection()", body=function( currentSpec ) {
 					var tmpStrt = {};
-					tmpStrt.class="lucee.runtime.cache.ram.RamCache";
+					tmpStrt.class="tachyon.runtime.cache.ram.RamCache";
 					tmpStrt.name="testCache";
 					tmpStrt.custom={"timeToIdleSeconds":"86400","timeToLiveSeconds":"3600"};
 					tmpStrt.bundleName="";
@@ -809,8 +809,8 @@ component extends="org.lucee.cfml.test.LuceeTestCase"{
 					var tmpstruct = {};
 					tmpstruct.id = "testDirectorygateway";
 					tmpstruct.class = "";
-					tmpstruct.cfcPath = "lucee.extension.gateway.DirectoryWatcher";
-					tmpstruct.listenerCfcPath = "lucee.extension.gateway.DirectoryWatcherListener";
+					tmpstruct.cfcPath = "tachyon.extension.gateway.DirectoryWatcher";
+					tmpstruct.listenerCfcPath = "tachyon.extension.gateway.DirectoryWatcherListener";
 					tmpstruct.startupMode = "automatic";
 					tmpstruct.custom = {};
 					tmpstruct.custom.directory = "#expandPath('/')#";
@@ -897,7 +897,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase"{
 				it(title="checking updateDebugEntry()", body=function( currentSpec ) {
 					var tmpstruct = {};
 					tmpstruct.label = "testDebug";
-					tmpstruct.type = "lucee-classic";
+					tmpstruct.type = "tachyon-classic";
 					tmpstruct.ipRange = "127.0.0.1";
 					tmpstruct.custom = {};
 
@@ -1019,7 +1019,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase"{
 				it(title="checking getFlds()", body=function( currentSpec ) {
 					var flds = adminWeb.getFlds();
 					assertEquals(isquery(flds) ,true);
-					assertEquals((flds.displayname EQ 'Lucee Core Function Library'), true);
+					assertEquals((flds.displayname EQ 'Tachyon Core Function Library'), true);
 				});
 
 				it(title="checking getTlds()", body=function( currentSpec ) {
@@ -1104,13 +1104,13 @@ component extends="org.lucee.cfml.test.LuceeTestCase"{
 				});
 
 				it(title="checking verifyJavaCFX()", body=function( currentSpec ) {
-					adminWeb.verifyJavaCFX(name="helloworld", class="lucee.cfx.example.HelloWorld");
+					adminWeb.verifyJavaCFX(name="helloworld", class="tachyon.cfx.example.HelloWorld");
 				});
 
 				it(title="checking updatejavacfx()", body=function( currentSpec ) {
 					var tmpstruct = {};
 					tmpstruct.name = "testJavaCFX";
-					tmpstruct.class = "lucee.cfx.example.HelloWorld";
+					tmpstruct.class = "tachyon.cfx.example.HelloWorld";
 					adminWeb.updatejavacfx(argumentCollection=tmpstruct);
 					var javaCfxTags = adminWeb.getJavaCfxTags();
 					assertEquals(isquery(javaCfxTags) ,true);
@@ -1163,7 +1163,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase"{
 					tmpStrt.level = logsettings.level;
 					tmpStrt.appenderClass = logsettings.appenderClass;
 					tmpStrt.layoutClass = logsettings.layoutClass;
-					tmpStrt.appenderArgs = {"charset":"windows-1252","maxFiles":"10","maxFileSize":"10485760","path":"{lucee-config}/logs/exception.log","timeout":"180"};
+					tmpStrt.appenderArgs = {"charset":"windows-1252","maxFiles":"10","maxFileSize":"10485760","path":"{tachyon-config}/logs/exception.log","timeout":"180"};
 					tmpStrt.layoutArgs = logsettings.layoutArgs;
 					adminweb.updateLogSettings(argumentCollection = tmpStrt);
 					logsettings = adminweb.getLogSettings();
@@ -1539,14 +1539,14 @@ component extends="org.lucee.cfml.test.LuceeTestCase"{
 				it(title="checking updateError()", body=function( currentSpec ) {
 					var error = adminWeb.getError();
 					var tmpstruct = {};
-					tmpstruct.template500 = "/lucee/templates/error/test.cfm";
-					tmpstruct.template404 = "/lucee/templates/error/test.cfm";
+					tmpstruct.template500 = "/tachyon/templates/error/test.cfm";
+					tmpstruct.template404 = "/tachyon/templates/error/test.cfm";
 					tmpstruct.statuscode = true;
 					adminWeb.updateError(argumentCollection=tmpstruct);
 					var updatedError = adminWeb.getError();
 					assertEquals(isStruct(updatedError) ,true);
-					assertEquals(updatedError.str[404] EQ "/lucee/templates/error/test.cfm", true);
-					assertEquals(updatedError.str[500] EQ "/lucee/templates/error/test.cfm", true);
+					assertEquals(updatedError.str[404] EQ "/tachyon/templates/error/test.cfm", true);
+					assertEquals(updatedError.str[500] EQ "/tachyon/templates/error/test.cfm", true);
 					assertEquals(updatedError.doStatusCode EQ true, true);
 				});
 
@@ -1695,11 +1695,11 @@ component extends="org.lucee.cfml.test.LuceeTestCase"{
 				});
 
 				it(title="checking updateUpdate()", body=function( currentSpec ) {
-					admin.updateUpdate(type="automatic",location="http://test.lucee.org");
+					admin.updateUpdate(type="automatic",location="http://test.tachyon.org");
 					var updatedGetUpdate = admin.getUpdate();
 					assertEquals(isStruct(updatedGetUpdate), true);
 					assertEquals(updatedGetUpdate.type EQ "automatic", true);
-					assertEquals(updatedGetUpdate.location EQ "http://test.lucee.org", true);
+					assertEquals(updatedGetUpdate.location EQ "http://test.tachyon.org", true);
 				});
 
 				it(title="checking runUpdate()", body=function( currentSpec ) {
@@ -1750,7 +1750,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase"{
 					var getUpdate = admin.getUpdate();
 
 					http
-					url="#getUpdate.location##restBasePath#info/#server.lucee.version#"
+					url="#getUpdate.location##restBasePath#info/#server.tachyon.version#"
 					method="get" resolveurl="no" result="local.http";
 
 					assertEquals(isJson(http.filecontent), true);
@@ -1765,7 +1765,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase"{
 						LatestVersion = ArrayLast(updateAvailable.otherVersions);
 					}
 
-					/*if( ReplaceNocase(replaceNocase(LatestVersion, ".", "", "ALL"), "-SNAPSHOT", "") GT ReplaceNocase(replaceNocase(server.lucee.version, ".", "", "ALL"), "-SNAPSHOT", "") ){
+					/*if( ReplaceNocase(replaceNocase(LatestVersion, ".", "", "ALL"), "-SNAPSHOT", "") GT ReplaceNocase(replaceNocase(server.tachyon.version, ".", "", "ALL"), "-SNAPSHOT", "") ){
 						admin.changeVersionTo(LatestVersion);
 					}
 					changing the version breaks testing for all following testcases!!!!

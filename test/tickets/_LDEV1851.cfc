@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 	function run( testResults , testBox ) {
 		describe( "Test Case for LDEV-1851", function() {
 			it( title='Checking contains() function returns boolean', body=function( currentSpec ) {

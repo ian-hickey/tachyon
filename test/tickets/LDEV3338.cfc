@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
     function run( testResults, testBox ){
         describe(title="Testcase for LDEV-3338", body=function( currentSpec ) {
             variables.CFCwithoutSpace = getComponentMetadata(new LDEV3338.IMPLwithoutSpace());

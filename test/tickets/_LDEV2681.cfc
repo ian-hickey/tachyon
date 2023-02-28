@@ -1,16 +1,16 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" {
 
 	function run( testResults , testBox ) {
 		struct1 = {
-		  	user_name: "Lucee",
-		  	company_name: "Lucee",
-  			company_url: "Lucee.org"
+		  	user_name: "Tachyon",
+		  	company_name: "Tachyon",
+  			company_url: "Tachyon.org"
 		};
 
 		struct2 = {
-			userName: "Lucee",
-			companyname: "Lucee",
-  			companyurl: "Lucee.org"
+			userName: "Tachyon",
+			companyname: "Tachyon",
+  			companyurl: "Tachyon.org"
 		};
 
 		struct1.each(function(key,value){

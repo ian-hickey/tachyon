@@ -1,4 +1,4 @@
-<cfcomponent extends="org.lucee.cfml.test.LuceeTestCase" labels="qoq">
+<cfcomponent extends="org.tachyon.cfml.test.TachyonTestCase" labels="qoq">
 	<cfscript>
 		function beforeAll(){
 			variables.query = queryNew("Name", "CF_SQL_VARCHAR");

@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
     function run( testResults, testBox ){
         describe("Testcase for LDEV-3465", function() {
             it( title="Access static variable directly", body=function( currentSpec ){

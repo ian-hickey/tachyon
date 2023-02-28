@@ -26,8 +26,8 @@
 	NL = "
 ";
 
-	src.jar = server.system.properties.luceejar;
-	src.core = server.system.properties.luceeCore;
+	src.jar = server.system.properties.tachyonjar;
+	src.core = server.system.properties.tachyonCore;
 	src.dir = getDirectoryFromPath( src.jar );
 	src.jarName = listLast( src.jar,"\/" );
 	src.coreName = listLast( src.core,"\/" );
@@ -39,7 +39,7 @@
 		throw "missing jar or .lco file";
 	}
 
-	s3_bucket = "lucee-downloads";
+	s3_bucket = "tachyon-downloads";
 	trg.dir = "s3://#server.system.environment.S3_ACCESS_ID_DOWNLOAD#:#server.system.environment.S3_SECRET_KEY_DOWNLOAD#@/#s3_bucket#/";
 	
 	// test s3 access
@@ -70,7 +70,7 @@
 	fileCopy( src.core, trg.core );
 
 	// create war
-	src.warName = "lucee-" & src.version & ".war";
+	src.warName = "tachyon-" & src.version & ".war";
 	src.war = src.dir & src.warName;
 	trg.war = trg.dir & src.warName;
 
@@ -79,7 +79,7 @@
 	zip action = "zip" file = src.war overwrite = true {
 
 		// loader
-		zipparam source = src.jar entrypath = "WEB-INF/lib/lucee.jar";
+		zipparam source = src.jar entrypath = "WEB-INF/lib/tachyon.jar";
 
 		// common files
 		// zipparam source = commonDir;
@@ -93,9 +93,9 @@
 	fileCopy( src.war,trg.war );
 	*/
 
-	// Lucee light build (disabled, done on provider)
+	// Tachyon light build (disabled, done on provider)
 	/*
-	src.lightName = "lucee-light-" & src.version & ".jar";
+	src.lightName = "tachyon-light-" & src.version & ".jar";
 	src.light = src.dir & src.lightName;
 	trg.light = trg.dir & src.lightName;
 	// createLight( src.jar,src.light,src.version );
@@ -105,15 +105,15 @@
 	// update provider
 
 	systemOutput("Trigger builds", true);
-	http url="https://update.lucee.org/rest/update/provider/buildLatest" method="GET" timeout=90 result="buildLatest";
+	http url="https://update.tachyon.org/rest/update/provider/buildLatest" method="GET" timeout=90 result="buildLatest";
 	systemOutput(buildLatest.fileContent, true);
 
 	systemOutput("Update Extension Provider", true);
-	http url="https://extension.lucee.org/rest/extension/provider/reset" method="GET" timeout=90 result="extensionReset";
+	http url="https://extension.tachyon.org/rest/extension/provider/reset" method="GET" timeout=90 result="extensionReset";
 	systemOutput(extensionReset.fileContent, true);
 
 	systemOutput("Update Downloads Page", true);
-	http url="https://download.lucee.org/?type=snapshots&reset=force" method="GET" timeout=90 result="downloadUpdate";
+	http url="https://download.tachyon.org/?type=snapshots&reset=force" method="GET" timeout=90 result="downloadUpdate";
 	systemOutput("Server response status code: " & downloadUpdate.statusCode, true);
 
 	// forgebox
@@ -125,36 +125,36 @@
 		"event_type": "forgebox_deploy"
 	};
 	try {
-		http url="https://api.github.com/repos/Ortus-Lucee/forgebox-cfengine-publisher/dispatches" method="POST" result="result" timeout="90"{
+		http url="https://api.github.com/repos/Ortus-Tachyon/forgebox-cfengine-publisher/dispatches" method="POST" result="result" timeout="90"{
 			httpparam type="header" name='authorization' value='Bearer #gha_pat_token#';
 			httpparam type="body" value='#body.toJson()#';
 			
 		}
-		systemOutput("Forgebox build triggered, #result.statuscode# (always returns a 204 no content, see https://github.com/Ortus-Lucee/forgebox-cfengine-publisher/actions for output)", true);
+		systemOutput("Forgebox build triggered, #result.statuscode# (always returns a 204 no content, see https://github.com/Ortus-Tachyon/forgebox-cfengine-publisher/actions for output)", true);
 	} catch (e){
 		systemOutput("Forgebox build ERRORED?", true);
 		echo(e);
 	}
 	
-	// Lucee Docker builds
+	// Tachyon Docker builds
 
-	systemOutput("Trigger Lucee Docker builds", true);
+	systemOutput("Trigger Tachyon Docker builds", true);
 
 	gha_pat_token = server.system.environment.LUCEE_DOCKER_FILES_PAT_TOKEN; // github person action token
 	body = {
 		"event_type": "build-docker-images", 
 		"client_payload": { 
-			"LUCEE_VERSION": server.system.properties.luceeVersion
+			"LUCEE_VERSION": server.system.properties.tachyonVersion
 		} 
 	};
 	try {
-		http url="https://api.github.com/repos/lucee/lucee-dockerfiles/dispatches" method="POST" result="result" timeout="90"{
+		http url="https://api.github.com/repos/tachyon/tachyon-dockerfiles/dispatches" method="POST" result="result" timeout="90"{
 			httpparam type="header" name='authorization' value='Bearer #gha_pat_token#';
 			httpparam type="body" value='#body.toJson()#';
 		}
-		systemOutput("Lucee Docker builds triggered, #result.statuscode# (always returns a 204 no content, see https://github.com/lucee/lucee-dockerfiles/actions for output)", true);
+		systemOutput("Tachyon Docker builds triggered, #result.statuscode# (always returns a 204 no content, see https://github.com/tachyon/tachyon-dockerfiles/actions for output)", true);
 	} catch (e){
-		systemOutput("Lucee Docker build ERRORED?", true);
+		systemOutput("Tachyon Docker build ERRORED?", true);
 		echo(e);
 	}
 
@@ -166,7 +166,7 @@
 		var sep = server.separator.file;
 		var tmpDir = getDirectoryFromPath( loader );
 
-		local.tmpLoader = tmpDir & "lucee-loader-" & createUniqueId(  ); // the jar
+		local.tmpLoader = tmpDir & "tachyon-loader-" & createUniqueId(  ); // the jar
 		if ( directoryExists( tmpLoader ) ) 
 			directoryDelete( tmpLoader,true );
 		directoryCreate( tmpLoader );
@@ -178,11 +178,11 @@
 		var extDir = tmpLoader&sep&"extensions";
 		if ( directoryExists( extDir ) )
 			directoryDelete( extDir, true ); // deletes directory with all files inside
-		directoryCreate( extDir ); // create empty dir again ( maybe Lucee expect this directory to exist )
+		directoryCreate( extDir ); // create empty dir again ( maybe Tachyon expect this directory to exist )
 
 		// unzip core
 		var lcoFile = tmpLoader & sep & "core" & sep & "core.lco";
-		local.tmpCore = tmpDir & "lucee-core-" & createUniqueId(  ); // the jar
+		local.tmpCore = tmpDir & "tachyon-core-" & createUniqueId(  ); // the jar
 		directoryCreate( tmpCore );
 		zip action = "unzip" file = lcoFile destination = tmpCore;
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project default="all" basedir="." name="Lucee">
+<project default="all" basedir="." name="Tachyon">
 
 	<property name="srcCFML" location="${src}"/>
 	<property name="srcAdmin" location="${src}/cfml/admin"/>
@@ -19,10 +19,10 @@
 
 <target name="all">
 
-	<echots message="Starting Lucee"/>
+	<echots message="Starting Tachyon"/>
 	<script language="CFML">
 	<![CDATA[
-	systemOutput("---------- #DateTimeFormat(now(),'yyyy-mm-dd HH:nn:ss')# - Lucee Started ----------", true);
+	systemOutput("---------- #DateTimeFormat(now(),'yyyy-mm-dd HH:nn:ss')# - Tachyon Started ----------", true);
 
 	SystemOutput("srcCFML: #srcCFML#", true);
 	SystemOutput("srcAdmin: #srcAdmin#", true);
@@ -31,7 +31,7 @@
 	try {
 
 // set a password for the admin
-	if(!server.lucee.singleContext) {
+	if(!server.tachyon.singleContext) {
 		admin 
 			action="updatePassword"
 			type="web"
@@ -48,8 +48,8 @@
 /************************************
 			   LUCEE
 ************************************/
-// create "/lucee" mapping
-	systemOutput("#DateTimeFormat(now(),'yyyy-mm-dd HH:nn:ss')# Generating archive #temp#/lucee-context.lar ", true);
+// create "/tachyon" mapping
+	systemOutput("#DateTimeFormat(now(),'yyyy-mm-dd HH:nn:ss')# Generating archive #temp#/tachyon-context.lar ", true);
 	// set a mapping
 	admin 
 		action="updateMapping"
@@ -68,7 +68,7 @@
 		type="web"
 		password="webweb"
 		
-		file="#temp#/lucee-context.lar"
+		file="#temp#/tachyon-context.lar"
 		virtual="/context"
 		addCFMLFiles="true"
 		addNonCFMLFiles="true"
@@ -80,8 +80,8 @@
 			   LUCEE/ADMIN
 ************************************/
 
-	systemOutput("#DateTimeFormat(now(),'yyyy-mm-dd HH:nn:ss')# Generating archive #temp#/lucee-admin.lar ", true);
-	// create "/lucee/admin" mapping
+	systemOutput("#DateTimeFormat(now(),'yyyy-mm-dd HH:nn:ss')# Generating archive #temp#/tachyon-admin.lar ", true);
+	// create "/tachyon/admin" mapping
 	admin 
 		action="updateMapping"
 		type="web"
@@ -99,7 +99,7 @@
 		type="web"
 		password="webweb"
 		
-		file="#temp#/lucee-admin.lar"
+		file="#temp#/tachyon-admin.lar"
 		virtual="/admin"
 		addCFMLFiles="true"
 		addNonCFMLFiles="true"
@@ -110,8 +110,8 @@
 /************************************
 			   LUCEE/DOC
 ************************************/
-	systemOutput("#DateTimeFormat(now(),'yyyy-mm-dd HH:nn:ss')# Generating archive #temp#/lucee-doc.lar ", true);
-	// create "/lucee/doc" mapping
+	systemOutput("#DateTimeFormat(now(),'yyyy-mm-dd HH:nn:ss')# Generating archive #temp#/tachyon-doc.lar ", true);
+	// create "/tachyon/doc" mapping
 	admin 
 		action="updateMapping"
 		type="web"
@@ -129,7 +129,7 @@
 		type="web"
 		password="webweb"
 		
-		file="#temp#/lucee-doc.lar"
+		file="#temp#/tachyon-doc.lar"
 		virtual="/doc"
 		addCFMLFiles="true"
 		addNonCFMLFiles="true"

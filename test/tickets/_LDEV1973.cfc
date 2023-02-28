@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 	function run( testResults , testBox ) {
 		describe( title="Test case for LDEV-1973", body=function(){
 			it(title="Checking deserializeJSON with 8 zeros", body=function(){

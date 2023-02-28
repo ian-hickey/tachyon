@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE taglib PUBLIC "-//Lucee//DTD CFML Tag Library 1.0//EN"
+<!DOCTYPE taglib PUBLIC "-//Tachyon//DTD CFML Tag Library 1.0//EN"
 	"dtd/web-cfmtaglibrary_1_0.dtd">
 <taglib>
 	<tlib-version>1.0</tlib-version>
 	<cfml-version>1.0</cfml-version>
 	<short-name>tbase</short-name>
-	<uri>https://www.lucee.org/cf-tld-3-1</uri>
-	<display-name>Lucee Core Tag Library</display-name>
+	<uri>https://www.tachyon.org/cf-tld-3-1</uri>
+	<display-name>Tachyon Core Tag Library</display-name>
 	<description></description>
 	<name-space></name-space>
 	<name-space-separator>:</name-space-separator>
 	<ignore-unknow-tags>false</ignore-unknow-tags>
 	<el>
-		<el-class>lucee.transformer.cfml.expression.CFMLExprTransformer</el-class>
+		<el-class>tachyon.transformer.cfml.expression.CFMLExprTransformer</el-class>
 	</el>
 	
 	
 	<!-- Application-->
 	<tag>
 		<name>application</name>
-		<tag-class>lucee.runtime.tag.Application</tag-class>
+		<tag-class>tachyon.runtime.tag.Application</tag-class>
 		<body-content>empty</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<script>
@@ -122,7 +122,7 @@
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
 			<description>
-Specifies how Lucee stores client variables:
+Specifies how Tachyon stores client variables:
 - memory: the session is only kept in memory
 - cookie: the session is stored in the client cookie
 - file (default): the session is stored in a local file
@@ -136,10 +136,10 @@ Specifies how Lucee stores client variables:
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
 <description>
-Lucee provide 2 kind of sessions:
-- application: session handled by Lucee
+Tachyon provide 2 kind of sessions:
+- application: session handled by Tachyon
 - jee: session handled by the Servlet Engine used
-Default value is defined in the Lucee Web Administrator. "jee" can not use a session storage.
+Default value is defined in the Tachyon Web Administrator. "jee" can not use a session storage.
 </description>
 		</attribute>
 		<attribute>
@@ -148,7 +148,7 @@ Default value is defined in the Lucee Web Administrator. "jee" can not use a ses
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
 <description>
-Specifies how Lucee stores session variables:
+Specifies how Tachyon stores session variables:
 - memory (default): the session is only kept in memory
 - cookie: the session is stored in the client cookie
 - file: the session is stored in a local file
@@ -160,16 +160,16 @@ Specifies how Lucee stores session variables:
 			<name>clientCluster</name>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
-			<description>if set to true, lucee uses the storage backend for the client scope as master and Lucee checks for changes in the storage backend with every request,
-			if set to false (default), the storage is only used as slave, lucee only initially gets the data from the storage. Ignored for storage type "memory".</description>
+			<description>if set to true, tachyon uses the storage backend for the client scope as master and Tachyon checks for changes in the storage backend with every request,
+			if set to false (default), the storage is only used as slave, tachyon only initially gets the data from the storage. Ignored for storage type "memory".</description>
 		</attribute>
 		<attribute>
 			<type>boolean</type>
 			<name>sessionCluster</name>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
-			<description>if set to true, lucee uses the storage backend for the session scope as master and Lucee checks for changes in the storage backend with every request,
-			if set to false (default), the storage is only used as slave, lucee only initially gets the data from the storage. Ignored for storage type "memory".</description>
+			<description>if set to true, tachyon uses the storage backend for the session scope as master and Tachyon checks for changes in the storage backend with every request,
+			if set to false (default), the storage is only used as slave, tachyon only initially gets the data from the storage. Ignored for storage type "memory".</description>
 		</attribute>
 		<attribute>
 			<type>boolean</type>
@@ -177,7 +177,7 @@ Specifies how Lucee stores session variables:
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
 			<description>Yes or No. Yes enables client cookies. Default is Yes. If you set this attribute to
-		"No", Lucee does not automatically send the CFID and CFTOKEN cookies to the client browser;
+		"No", Tachyon does not automatically send the CFID and CFTOKEN cookies to the client browser;
 		you must manually code CFID and CFTOKEN on the URL for every page that uses Session or Client variables.</description>
 		</attribute>
 		<attribute>
@@ -194,7 +194,7 @@ Specifies how Lucee stores session variables:
 			<rtexprvalue>true</rtexprvalue>
 			<description>Enter the CreateTimeSpan function and values in days, hours, minutes, and seconds, separated
 		by commas, to specify the lifespan of session variables. The default value is specified in the
-		Variables page of the Lucee Administrator.</description>
+		Variables page of the Tachyon Administrator.</description>
 		</attribute>
 		<attribute>
 			<type>timeSpan</type>
@@ -203,7 +203,7 @@ Specifies how Lucee stores session variables:
 			<rtexprvalue>true</rtexprvalue>
 			<description>Enter the CreateTimeSpan function and values in days, hours, minutes, and seconds, separated
 		by commas, to specify the lifespan of client variables. The default value is specified in the
-		Variables page of the Lucee Administrator.</description>
+		Variables page of the Tachyon Administrator.</description>
 		</attribute>
 		<attribute>
 			<type>timeSpan</type>
@@ -212,7 +212,7 @@ Specifies how Lucee stores session variables:
 			<rtexprvalue>true</rtexprvalue>
 			<description>Enter the CreateTimeSpan function and values in days, hours, minutes, and seconds, separated
 		by commas, to specify the lifespan of application variables. The default value is specified in
-		the Variables page of the Lucee Administrator.</description>
+		the Variables page of the Tachyon Administrator.</description>
 		</attribute>
 		<attribute>
 			<type>timeSpan</type>
@@ -220,7 +220,7 @@ Specifies how Lucee stores session variables:
 			<alias>timeout</alias>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
-			<description>Sets the amount of time Lucee will wait for a request to finish before a request timeout will be raised. This means that the execution of the request will be stopped.</description>
+			<description>Sets the amount of time Tachyon will wait for a request to finish before a request timeout will be raised. This means that the execution of the request will be stopped.</description>
 		</attribute>
 		<attribute>
 			<type>boolean</type>
@@ -297,14 +297,14 @@ Specifies how Lucee stores session variables:
 			<required>false</required>
 			<default-value>true</default-value>
 			<rtexprvalue>true</rtexprvalue>
-			<description>If disabled, Lucee ignores type definitions with function arguments and return values</description>
+			<description>If disabled, Tachyon ignores type definitions with function arguments and return values</description>
 		</attribute>
 		<attribute>
 			<type>boolean</type>
 			<name>compression</name>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
-			<description>Enable compression (GZip) for the Lucee Response stream for text-based responses when supported by the client (Web Browser).</description>
+			<description>Enable compression (GZip) for the Tachyon Response stream for text-based responses when supported by the client (Web Browser).</description>
 		</attribute>
 		<attribute>
 			<type>boolean</type>
@@ -345,26 +345,26 @@ Specifies how Lucee stores session variables:
 			<rtexprvalue>true</rtexprvalue>
 			<description>
 A struct that defines all the ORM settings, the following keys are supported:
-- autogenmap(default:true): Specifies whether Lucee should automatically generate mapping for the persistent CFCs. If autogenmap=false, mapping should be provided in the form of "{cfc-name}.cfc.hbm.xml" files.
-- automanageSession(default:true; not supported yet): Lets you specify if Lucee must manage Hibernate session automatically. If enabled: Lucee manages the session completely. That is, it decides when to flush the session, when to clear the session, and when to close the session. If disabled: The application is responsible for managing flushing, clearing, or closing of the session. The only exception is (in the case of transaction), when the transaction commits, the application flushes the session. Lucee closes the ORM session at the end of request irrespective of this flag being enabled or disabled.
+- autogenmap(default:true): Specifies whether Tachyon should automatically generate mapping for the persistent CFCs. If autogenmap=false, mapping should be provided in the form of "{cfc-name}.cfc.hbm.xml" files.
+- automanageSession(default:true; not supported yet): Lets you specify if Tachyon must manage Hibernate session automatically. If enabled: Tachyon manages the session completely. That is, it decides when to flush the session, when to clear the session, and when to close the session. If disabled: The application is responsible for managing flushing, clearing, or closing of the session. The only exception is (in the case of transaction), when the transaction commits, the application flushes the session. Tachyon closes the ORM session at the end of request irrespective of this flag being enabled or disabled.
 - cacheconfig: Specifies the location of the configuration file that should be used by the secondary cache provider.This setting is used only when secondarycacheenabled=true.
 - cacheprovider: Specifies the cache provider that should be used by ORM as secondary cache.
 - catalog: Specifies the default Catalog that should be used by ORM.
-- cfclocation: Specifies the directory (or array of directories) that should be used by Lucee to search for persistent CFCs to generate the mapping. If cfclocation is set, Lucee looks at only the paths specified in it. If it is not set, Lucee looks at the application directory, its sub-directories, and its mapped directories to search for persistent CFCs.
+- cfclocation: Specifies the directory (or array of directories) that should be used by Tachyon to search for persistent CFCs to generate the mapping. If cfclocation is set, Tachyon looks at only the paths specified in it. If it is not set, Tachyon looks at the application directory, its sub-directories, and its mapped directories to search for persistent CFCs.
 - datasource: Specifies the data source that should be used by ORM. If it is not specified here, then the data source specified for the application is picked up.
 - dbcreate(default:none): Hibernate can automatically create the tables for your application in the database. dbCreate takes the following values:
 -- update: Setting this value creates the table if it does not exist or update the table if it exists.
 -- dropcreate: Setting this value drops the table if it exists and then creates it.
 -- none: Setting this value does not change anything in the database schema.
-- dialect: Specifies the dialect.Lucee supports the following dialects: [Cache 2007.1, Cache71, Cache 2007.1, DB2, DB2/390, DB2/400, DB2390, DB2400, DB2AS400, DB2OS390, DataDirectOracle9, Derby, Firebird, FrontBase, H2, H2DB, HSQL, HSQLDB, Informix, Ingres, Interbase, JDataStore, MSSQL, Mckoi, MckoiSQL, MicrosoftSQLServer, Mimer, MimerSQL, MySQL, MySQL/InnoDB, MySQL/MyISAM, MySQL5, MySQL5/InnoDB, MySQL5InnoDB, MySQLInnoDB, MySQLMyISAM, MySQLwithInnoDB, MySQLwithMyISAM, Oracle, Oracle10g, Oracle8i, Oracle9, Oracle9i, Pointbase, PostgreSQL, PostgresPlus, Progress, SAPDB, SQLServer, Sybase, Sybase11, SybaseASE15, SybaseAnywhere, com.ddtek.jdbc.db2.DB2Driver, com.microsoft.jdbc.sqlserver.SQLServerDriver, oracle.jdbc.driver.OracleDriver, org.firebirdsql.jdbc.FBDriver, org.gjt.mm.mysql.Driver, org.h2.Driver, org.hsqldb.jdbcDriver, org.postgresql.Driver]
+- dialect: Specifies the dialect.Tachyon supports the following dialects: [Cache 2007.1, Cache71, Cache 2007.1, DB2, DB2/390, DB2/400, DB2390, DB2400, DB2AS400, DB2OS390, DataDirectOracle9, Derby, Firebird, FrontBase, H2, H2DB, HSQL, HSQLDB, Informix, Ingres, Interbase, JDataStore, MSSQL, Mckoi, MckoiSQL, MicrosoftSQLServer, Mimer, MimerSQL, MySQL, MySQL/InnoDB, MySQL/MyISAM, MySQL5, MySQL5/InnoDB, MySQL5InnoDB, MySQLInnoDB, MySQLMyISAM, MySQLwithInnoDB, MySQLwithMyISAM, Oracle, Oracle10g, Oracle8i, Oracle9, Oracle9i, Pointbase, PostgreSQL, PostgresPlus, Progress, SAPDB, SQLServer, Sybase, Sybase11, SybaseASE15, SybaseAnywhere, com.ddtek.jdbc.db2.DB2Driver, com.microsoft.jdbc.sqlserver.SQLServerDriver, oracle.jdbc.driver.OracleDriver, org.firebirdsql.jdbc.FBDriver, org.gjt.mm.mysql.Driver, org.h2.Driver, org.hsqldb.jdbcDriver, org.postgresql.Driver]
 - eventHandling(default:false): Specifies whether ORM Event callbacks should be given.
 - flushatrequestend(default:true): Specifies whether ormflush should be called automatically at request end. If flushatrequestend is false, ormflush is not called automatically at request end.
 - logSQL(default:false): Specifies whether the SQL queries that are executed by ORM will be logged. If LogSQL=true, the SQL queries are logged to the console.
-- ormconfig: The Hibernate configuration file. This file contains various configuration parameters like, dialect, cache settings, and mapping files that are required for the application. For more details, see www.hibernate.org/hib_docs/reference/en/html/session-configuration.html. The settings defined in the ormsettings override the settings defined in the Hibernate Configuration XML file.The connection information in the Hibernate Configuration XML file is however ignored because Lucee uses its own connection pool. You will need to use this only when you need to use a hibernate setting that is not available using ormsetting.
+- ormconfig: The Hibernate configuration file. This file contains various configuration parameters like, dialect, cache settings, and mapping files that are required for the application. For more details, see www.hibernate.org/hib_docs/reference/en/html/session-configuration.html. The settings defined in the ormsettings override the settings defined in the Hibernate Configuration XML file.The connection information in the Hibernate Configuration XML file is however ignored because Tachyon uses its own connection pool. You will need to use this only when you need to use a hibernate setting that is not available using ormsetting.
 - savemapping(default:false): Specifies whether the generated Hibernate mapping file has to be saved to disc. If you set the value to true, the Hibernate mapping XML file is saved with the filename "CFC name".hbm.xml in the same directory as the CFC. If any value of savemapping is specified in CFC, it will override the value specified in the ormsetting.
 - schema: Specifies the default Schema that should be used by ORM.
 - secondarycacheenabled(default:false): Specifies whether secondary caching should be enabled
-- skipCFCWithError(default:false;not implemented yet): Lets you specify if Lucee must skip the CFCs that have errors. If set to true, Lucee ignores the CFCs that have errors.
+- skipCFCWithError(default:false;not implemented yet): Lets you specify if Tachyon must skip the CFCs that have errors. If set to true, Tachyon ignores the CFCs that have errors.
 - sqlscript: Path to the SQL script file that gets executed after ORM is initialized. This applies if dbcreate is set to dropcreate. This must be the absolute file path or the path relative to the application.The SQL script file lets you populate the tables before the application is accessed.
 - useDBForMapping(default:true): Specifies whether the database has to be inspected to identify the missing information required to generate the Hibernate mapping. The database is inspected to get the column data type, primary key and foreign key information.
 </description>
@@ -393,7 +393,7 @@ A struct that defines default ftp settings, this settings can be overwritten as 
 - username: username to access the ftp server
 - password: password to access the ftp server
 - port: port of the FTP server
-- host: hostname of the FTP server (lucee.org)
+- host: hostname of the FTP server (tachyon.org)
 </description>
 		</attribute>
 		
@@ -403,11 +403,11 @@ A struct that defines default ftp settings, this settings can be overwritten as 
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
 			<description>???If there is no accessible data member (property, element of the this scope) inside a component, 
-			Lucee searches for available matching &amp;quot;getters&amp;quot; or &amp;quot;setters&amp;quot; for the requested property. 
+			Tachyon searches for available matching &amp;quot;getters&amp;quot; or &amp;quot;setters&amp;quot; for the requested property.
 			The following example should clarify this behaviour. 
 			&amp;quot;somevar = myComponent.propertyName&amp;quot;. 
 			If &amp;quot;myComponent&amp;quot; has no accessible data member named &amp;quot;propertyName&amp;quot;, 
-			Lucee searches for a function member (method) named &amp;quot;getPropertyName&amp;quot;.</description>
+			Tachyon searches for a function member (method) named &amp;quot;getPropertyName&amp;quot;.</description>
 		</attribute>
 		
 		<attribute>
@@ -525,7 +525,7 @@ A struct that defines default ftp settings, this settings can be overwritten as 
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
 			<description>
-Depending on this setting Lucee scans certain scopes to find a variable called from the CFML source. This will only happen, when the variable is called without a scope. (Example: #myVar# instead of #variables.myVar#), the following values are supported:
+Depending on this setting Tachyon scans certain scopes to find a variable called from the CFML source. This will only happen, when the variable is called without a scope. (Example: #myVar# instead of #variables.myVar#), the following values are supported:
 - strict: scans only the variables scope
 - small: scans the scopes variables,url,form
 - standard: scans the scopes variables,cgi,url,form,cookie
@@ -598,8 +598,8 @@ Depending on this setting Lucee scans certain scopes to find a variable called f
 	<!-- Argument -->
 	<tag>
 		<name>argument</name>
-		<tag-class>lucee.runtime.tag.Argument</tag-class>
-		<tte-class>lucee.transformer.cfml.evaluator.impl.Argument</tte-class>
+		<tag-class>tachyon.runtime.tag.Argument</tag-class>
+		<tte-class>tachyon.transformer.cfml.evaluator.impl.Argument</tte-class>
 		<att-default-value></att-default-value>
 		<body-content>empty</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
@@ -654,9 +654,9 @@ Depending on this setting Lucee scans certain scopes to find a variable called f
 	<!-- Class -->
 	<tag>
 		<name>class</name>
-		<tag-class>lucee.runtime.tag.Component</tag-class>
-		<tte-class>lucee.transformer.cfml.evaluator.impl.Component</tte-class>
-		<ttt-class>lucee.transformer.bytecode.statement.tag.TagComponent</ttt-class>
+		<tag-class>tachyon.runtime.tag.Component</tag-class>
+		<tte-class>tachyon.transformer.cfml.evaluator.impl.Component</tte-class>
+		<ttt-class>tachyon.transformer.bytecode.statement.tag.TagComponent</ttt-class>
 		<att-default-value></att-default-value>
 		<body-content>must</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
@@ -666,7 +666,7 @@ Depending on this setting Lucee scans certain scopes to find a variable called f
 			<context>component</context>
 		</script>
 		<description>Creates and defines a component object; encloses functionality that you build in CFML and enclose within cffunction tags. This tag contains one or more cffunction tags that define methods. Code within the body of this tag, other than cffunction tags, is executed when the component is instantiated. </description>
-		<att-class>lucee.transformer.cfml.attributes.impl.Component</att-class>
+		<att-class>tachyon.transformer.cfml.attributes.impl.Component</att-class>
 		<attribute-type>mixed</attribute-type>
 		<attribute>
 			<type>boolean</type>
@@ -734,7 +734,7 @@ Depending on this setting Lucee scans certain scopes to find a variable called f
 		    <status>unimplemented</status>
 			<description>Specifies the namespace used in the WSDL when
             using the CFC as a document-literal style web service.
-            If you don't specify this attribute, Lucee
+            If you don't specify this attribute, Tachyon
             derives the namespace from the CFC class name.
             This attribute applies only when style="document".</description>
 		</attribute>
@@ -753,7 +753,7 @@ Depending on this setting Lucee scans certain scopes to find a variable called f
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
 			<status>unimplemented</status>
-			<description>Specifies the SOAP URL of the web service. If you don't specify this attribute, Lucee uses the URL of the CFC in the WSDL service description.
+			<description>Specifies the SOAP URL of the web service. If you don't specify this attribute, Tachyon uses the URL of the CFC in the WSDL service description.
 			Use this attribute to specify the protocol, for example, by specifying a URL that starts with https://. This attribute applies only for web services.</description>
 		</attribute>
 		<attribute>
@@ -780,7 +780,7 @@ Depending on this setting Lucee scans certain scopes to find a variable called f
 			<rtexprvalue>true</rtexprvalue>
 		    <status>unimplemented</status>
 			<description>A properly formatted WSDL file to be used instead of
-            WSDL generated by Lucee.
+            WSDL generated by Tachyon.
             This attribute applies only when style="document".</description>
 		</attribute>
 		<attribute>
@@ -804,15 +804,15 @@ Depending on this setting Lucee scans certain scopes to find a variable called f
 	<!-- Function -->
 	<tag>
 		<name>function</name>
-		<tag-class>lucee.runtime.tag.Function</tag-class>
-		<tte-class>lucee.transformer.cfml.evaluator.impl.Function</tte-class>
-		<ttt-class>lucee.transformer.bytecode.statement.tag.TagFunction</ttt-class>
+		<tag-class>tachyon.runtime.tag.Function</tag-class>
+		<tte-class>tachyon.transformer.cfml.evaluator.impl.Function</tte-class>
+		<ttt-class>tachyon.transformer.bytecode.statement.tag.TagFunction</ttt-class>
 		<att-default-value></att-default-value>
-		<!-- <tdbt-class>lucee.transformer.cfml.script.CFMLScriptTransformer</tdbt-class> -->
+		<!-- <tdbt-class>tachyon.transformer.cfml.script.CFMLScriptTransformer</tdbt-class> -->
 		<body-content>must</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<description>Defines table column header, width, alignment, and text. Used only inside a cftable.</description>
-		<att-class>lucee.transformer.cfml.attributes.impl.Function</att-class>
+		<att-class>tachyon.transformer.cfml.attributes.impl.Function</att-class>
 		<attribute-type>mixed</attribute-type>
 		<attribute>
 			<type>string</type>
@@ -927,7 +927,7 @@ To use cached data, the function must be called with the exact same arguments.</
 	<!-- Header -->
 	<tag>
 		<name>ResponseHeader</name>
-		<tag-class>lucee.runtime.tag.Header</tag-class>
+		<tag-class>tachyon.runtime.tag.Header</tag-class>
 		<body-content>empty</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<script>
@@ -979,9 +979,9 @@ To use cached data, the function must be called with the exact same arguments.</
 	<!-- Output -->
 	<tag>
 		<name>Output</name>
-		<tag-class>lucee.runtime.tag.Output</tag-class>
-		<tte-class>lucee.transformer.cfml.evaluator.impl.Output</tte-class>
-		<ttt-class>lucee.transformer.bytecode.statement.tag.TagOutput</ttt-class>
+		<tag-class>tachyon.runtime.tag.Output</tag-class>
+		<tte-class>tachyon.transformer.cfml.evaluator.impl.Output</tte-class>
+		<ttt-class>tachyon.transformer.bytecode.statement.tag.TagOutput</ttt-class>
 		<allow-removing-literal>yes</allow-removing-literal>
 		<body-content>must</body-content>
 		<body-rtexprvalue>true</body-rtexprvalue>
@@ -1010,10 +1010,10 @@ To use cached data, the function must be called with the exact same arguments.</
 	<!-- ScriptX -->
 	<tag>
 		<name>Script</name>
-		<tag-class>lucee.runtime.tag.Script</tag-class>
-		<tdbt-class>lucee.transformer.cfml.script.CFMLScriptTransformer</tdbt-class>
-		<ttt-class>lucee.transformer.bytecode.statement.tag.TagScript</ttt-class>
-		<tte-class>lucee.transformer.cfml.evaluator.impl.Script</tte-class>
+		<tag-class>tachyon.runtime.tag.Script</tag-class>
+		<tdbt-class>tachyon.transformer.cfml.script.CFMLScriptTransformer</tdbt-class>
+		<ttt-class>tachyon.transformer.bytecode.statement.tag.TagScript</ttt-class>
+		<tte-class>tachyon.transformer.cfml.evaluator.impl.Script</tte-class>
 		<body-content>tagDependent</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<description>Encloses a code segment containing cfscript.</description>
@@ -1029,9 +1029,9 @@ To use cached data, the function must be called with the exact same arguments.</
 	<!-- Silent -->
 	<tag>
 		<name>Silent</name>
-		<tag-class>lucee.runtime.tag.Silent</tag-class>
-		<tte-class>lucee.transformer.cfml.evaluator.impl.Silent</tte-class>
-		<!-- removed to have in "getBaseTagList" ttt-class>lucee.transformer.bytecode.statement.tag.TagSilent</ttt-class -->
+		<tag-class>tachyon.runtime.tag.Silent</tag-class>
+		<tte-class>tachyon.transformer.cfml.evaluator.impl.Silent</tte-class>
+		<!-- removed to have in "getBaseTagList" ttt-class>tachyon.transformer.bytecode.statement.tag.TagSilent</ttt-class -->
 		<body-content>must</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<handle-exception>true</handle-exception>

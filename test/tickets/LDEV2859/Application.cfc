@@ -25,7 +25,7 @@ component {
 			echo("CREATE TABLE test( id int, name varchar(20))");
 		}
 		query{
-			echo("INSERT INTO test VALUES( '1', 'lucee' )");
+			echo("INSERT INTO test VALUES( '1', 'tachyon' )");
 			echo("INSERT INTO test VALUES( '2', 'railo' )");
 		}
 	}

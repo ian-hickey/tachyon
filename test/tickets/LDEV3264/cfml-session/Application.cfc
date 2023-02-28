@@ -5,7 +5,7 @@ component {
 	this.setclientcookies="yes";
 	this.applicationtimeout="#createTimeSpan(0,0,0,10)#";
 	this.name="onsessionend-cfml";
-	this.sessionType="cfml"; // lucee default
+	this.sessionType="cfml"; // tachyon default
 
 	function onApplicationStart(){
 		//systemOutput("application start #cgi.SCRIPT_NAME#", true);

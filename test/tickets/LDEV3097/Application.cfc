@@ -1,6 +1,6 @@
 component {
 
-	this.name = "luceetest";
+	this.name = "tachyontest";
 	this.datasources["LDEV3097_DSN"] = server.getDatasource("mssql");
 	this.datasource = "LDEV3097_DSN";
 

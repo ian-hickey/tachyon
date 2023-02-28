@@ -16,18 +16,18 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  * 
  ---><cfscript>
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="temp,file" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="temp,file" {
 	
 	
 	public void function testGetTempFilePrefix() {
-		var tmp = getTempFile( getTempDirectory(), "lucee-getTempFile" );
-        expect( listLast( tmp, "/\" ) ).toInclude( "lucee-getTempFile" );
+		var tmp = getTempFile( getTempDirectory(), "tachyon-getTempFile" );
+        expect( listLast( tmp, "/\" ) ).toInclude( "tachyon-getTempFile" );
         expect( listLast( listLast( tmp, "/\" ), ". ") ).toBe( "tmp" );
 	}
 
     public void function testGetTempFileExtension() {
-		var tmp = getTempFile( getTempDirectory(), "lucee-getTempFile-ext", ".txt" );
-        expect( listLast( tmp, "/\" ) ).toInclude( "lucee-getTempFile-ext" );
+		var tmp = getTempFile( getTempDirectory(), "tachyon-getTempFile-ext", ".txt" );
+        expect( listLast( tmp, "/\" ) ).toInclude( "tachyon-getTempFile-ext" );
         expect( listLast( listLast( tmp, "/\" ), ". ") ).toBe( "txt" );
 	}
 

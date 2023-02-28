@@ -1,6 +1,6 @@
 <!--- 
  *
- * Copyright (c) 2015, Lucee Assosication Switzerland. All rights reserved.
+ * Copyright (c) 2015, Tachyon Assosication Switzerland. All rights reserved.
  * Copyright (c) 2014, the Railo Company LLC. All rights reserved.
  *
  * This library is free software; you can redistribute it and/or
@@ -17,15 +17,15 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  * 
  ---><cfscript>
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="s3" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="s3" {
 		  
 	public function setUp(){
 		/*  note, we're testing a range of s3 functions in a single test so we can re-use buckets,
 			rather than creating and deleting lots of buckets with a test suite for each individual s3Function
 		*/
 
-		variables.bucket = "lucee-s3func1-#lcase(hash(CreateGUID()))#";
-		variables.bucket2 = "lucee-s3func2-#lcase(hash(CreateGUID()))#";
+		variables.bucket = "tachyon-s3func1-#lcase(hash(CreateGUID()))#";
+		variables.bucket2 = "tachyon-s3func2-#lcase(hash(CreateGUID()))#";
 
 		variables.dir = "s3://#bucket#";
 		variables.dir2 = "s3://#bucket2#";

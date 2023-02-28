@@ -1,4 +1,4 @@
-component extends = "org.lucee.cfml.test.LuceeTestCase" skip=true labels="syntax" {
+component extends = "org.tachyon.cfml.test.TachyonTestCase" skip=true labels="syntax" {
 
 	function switchDefault(required numeric input){
         switch(arguments.input){

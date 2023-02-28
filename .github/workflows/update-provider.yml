@@ -10,7 +10,7 @@ jobs:
 
     runs-on: ubuntu-latest
     env:
-      luceeVersion: light-6.0.0.294-SNAPSHOT
+      tachyonVersion: light-6.0.0.294-SNAPSHOT
 
     steps:
     - uses: actions/checkout@v2
@@ -23,10 +23,10 @@ jobs:
       uses: actions/cache@v2
       with:
         path: ~/.m2
-        key: lucee-script-runner-maven-cache
-    - name: Trigger Lucee Update Providers
-      uses: lucee/script-runner@main
+        key: tachyon-script-runner-maven-cache
+    - name: Trigger Tachyon Update Providers
+      uses: tachyon/script-runner@main
       with:
         webroot: ${{ github.workspace }}/test
         execute: /update-provider.cfm
-        luceeVersion: ${{ env.luceeVersion }}
+        tachyonVersion: ${{ env.tachyonVersion }}

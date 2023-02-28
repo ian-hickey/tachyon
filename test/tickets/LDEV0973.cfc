@@ -1,6 +1,6 @@
 <!--- 
  *
- * Copyright (c) 2016, Lucee Assosication Switzerland. All rights reserved.
+ * Copyright (c) 2016, Tachyon Assosication Switzerland. All rights reserved.
  * Copyright (c) 2014, the Railo Company LLC. All rights reserved.
  *
  * This library is free software; you can redistribute it and/or
@@ -17,11 +17,11 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  * 
  ---><cfscript>
-component extends="org.lucee.cfml.test.LuceeTestCase"	{
+component extends="org.tachyon.cfml.test.TachyonTestCase"	{
 
 			
 	public void function testImplicit(){
-		http url="https://update.lucee.org/rest/update/provider/echoGet?filtername=henk+patat" result="local.res";
+		http url="https://update.tachyon.org/rest/update/provider/echoGet?filtername=henk+patat" result="local.res";
 		res=evaluate(res.filecontent);
 		assertEquals("henk+patat",res.url.filtername);
 	}

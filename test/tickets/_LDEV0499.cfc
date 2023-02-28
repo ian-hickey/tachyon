@@ -1,4 +1,4 @@
-<cfcomponent extends="org.lucee.cfml.test.LuceeTestCase"  labels="pdf">
+<cfcomponent extends="org.tachyon.cfml.test.TachyonTestCase"  labels="pdf">
 	<cfscript>
 		function beforeAll(){
 			uri = createURI("LDEV0499");
@@ -37,7 +37,7 @@
 		<cfset path ="#getDirectoryFromPath(getCurrenttemplatepath())#"/>
 		<cfdocument format="PDF" overwrite="true" encryption="40-bit" filename="#path#LDEV0499/test.pdf">
 			<cfdocumentsection>
-				Lucee test documents
+				Tachyon test documents
 			</cfdocumentsection>
 		</cfdocument>
 		<cfpdf action="read" name="pdfDetails" source="#path#LDEV0499/test.pdf"/>
@@ -48,7 +48,7 @@
 		<cfset path ="#getDirectoryFromPath(getCurrenttemplatepath())#"/>
 		<cfdocument format="PDF"  overwrite="true" userpassword="" encryption="40-bit"  filename="#path#LDEV0499/test.pdf">
 			<cfdocumentsection>
-				Lucee test documents
+				Tachyon test documents
 			</cfdocumentsection>
 		</cfdocument>
 		<cfpdf action="read" name="pdfDetails" source="#path#LDEV0499/test.pdf"/>
@@ -59,7 +59,7 @@
 		<cfset path ="#getDirectoryFromPath(getCurrenttemplatepath())#"/>
 		<cfdocument format="PDF" overwrite="true" encryption="40-bit" filename="#path#LDEV0499/test.pdf">
 			<cfdocumentsection>
-				Lucee test documents
+				Tachyon test documents
 			</cfdocumentsection>
 		</cfdocument>
 		<cfpdf action="read" name="pdfDetails" source="#path#LDEV0499/test.pdf" password=""/>

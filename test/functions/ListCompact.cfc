@@ -16,7 +16,7 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  * 
  **/
-component extends="org.lucee.cfml.test.LuceeTestCase" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" {
 	function testListAvg(){
 		var arr="1,2,3";
 
@@ -43,10 +43,10 @@ component extends="org.lucee.cfml.test.LuceeTestCase" {
 	assertEquals("V1,V2,V3", ListCompact(",;V1,V2,V3,;",",;",true));
 	
 	assertEquals("V1,V2,V3", ListTrim(",V1,V2,V3,"));
-	assertEquals("I,love,Lucee", listTrim(",I,love,lucee,"));
-	assertEquals(",I$love$lucee", listTrim(",I$love$lucee", "$"));
-	assertEquals("I$love$lucee", listTrim("$I$love$lucee", "$"));
-	assertEquals("I$love$lucee", listTrim("$,I$love$lucee", "$,"));
+	assertEquals("I,love,Tachyon", listTrim(",I,love,tachyon,"));
+	assertEquals(",I$love$tachyon", listTrim(",I$love$tachyon", "$"));
+	assertEquals("I$love$tachyon", listTrim("$I$love$tachyon", "$"));
+	assertEquals("I$love$tachyon", listTrim("$,I$love$tachyon", "$,"));
 	
 
 	}

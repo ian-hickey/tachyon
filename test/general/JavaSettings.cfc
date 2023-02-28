@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 	function beforeAll(){
 		variables.origSerSettings =  getApplicationSettings().serialization;
 	}
@@ -16,10 +16,10 @@ component extends="org.lucee.cfml.test.LuceeTestCase"{
 				var res=_InternalRequest(addToken:true,template:uri);
 				var data=deserializeJson(res.fileContent);
 				
-				expect(data.bundle1.name).toBe("lucee.mockup");
+				expect(data.bundle1.name).toBe("tachyon.mockup");
 				expect(data.bundle1.version).toBe("1.0.0.0");
 
-				expect(data.bundle2.name).toBe("lucee.mockup");
+				expect(data.bundle2.name).toBe("tachyon.mockup");
 				expect(data.bundle2.version).toBe("1.0.0.0");
 			});
 
@@ -37,10 +37,10 @@ component extends="org.lucee.cfml.test.LuceeTestCase"{
 				var res=_InternalRequest(addToken:true,template:uri);
 				var data=deserializeJson(res.fileContent);
 				
-				expect(data.bundle1.name).toBe("lucee.mockup");
+				expect(data.bundle1.name).toBe("tachyon.mockup");
 				expect(data.bundle1.version).toBe("1.0.0.0");
 
-				expect(data.bundle2.name).toBe("lucee.mockup");
+				expect(data.bundle2.name).toBe("tachyon.mockup");
 				expect(data.bundle2.version).toBe("1.0.0.0");
 			});
 
@@ -50,7 +50,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase"{
 				var res=_InternalRequest(addToken:true,template:uri);
 				var data=deserializeJson(res.fileContent);
 				
-				expect(data.bundle.name).toBe("lucee.mockup2");
+				expect(data.bundle.name).toBe("tachyon.mockup2");
 				expect(data.bundle.version).toBe("1.0.0.0");
 			});
 

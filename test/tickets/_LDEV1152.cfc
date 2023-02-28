@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 	function run(){
 		describe( title="Test cases for LDEV-1152", body=function(){
 			it(title="Checking with CFML content/code as text in script based component", body=function(){

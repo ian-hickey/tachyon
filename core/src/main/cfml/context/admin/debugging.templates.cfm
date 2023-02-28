@@ -29,8 +29,8 @@
     
 <!--- load available drivers --->
 <cfset driverNames=structnew("linked")>
-<cfset driverNames=ComponentListPackageAsStruct("lucee-server.admin.debug",driverNames)>
-<cfset driverNames=ComponentListPackageAsStruct("lucee.admin.debug",driverNames)>
+<cfset driverNames=ComponentListPackageAsStruct("tachyon-server.admin.debug",driverNames)>
+<cfset driverNames=ComponentListPackageAsStruct("tachyon.admin.debug",driverNames)>
 <cfset driverNames=ComponentListPackageAsStruct("debug",driverNames)>
 
 
@@ -45,7 +45,7 @@
 <!--- 
 <span class="CheckError">
 The Gateway Implementation is currently in Beta State. Its functionality can change before it's final release.
-If you have any problems while using the Gateway Implementation, please post the bugs and errors in our <a href="https://jira.jboss.org/jira/browse/Lucee" target="_blank" class="CheckError">bugtracking system</a>. 
+If you have any problems while using the Gateway Implementation, please post the bugs and errors in our <a href="https://jira.jboss.org/jira/browse/Tachyon" target="_blank" class="CheckError">bugtracking system</a>.
 </span><br /><br />
 --->
 

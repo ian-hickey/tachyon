@@ -1,11 +1,11 @@
-component extends = "org.lucee.cfml.test.LuceeTestCase" labels="qoq" skip="true" {
+component extends = "org.tachyon.cfml.test.TachyonTestCase" labels="qoq" skip="true" {
 	function run( testResults, textbox ) {
 		describe("testcase for LDEV-4186", function() {
 			variables.myQuery = queryNew( "id,name","CF_SQL_integer,CF_SQL_varchar");
 				queryAddRow(myQuery, {id:1, name:'011'});
 				queryAddRow(myQuery, {id:2, name:'11'});
 				queryAddRow(myQuery, {id:3, name:'    123'}); // column value with trailing space
-				queryAddRow(myQuery, {id:4, name:'lucee '}); // column value with trailing space
+				queryAddRow(myQuery, {id:4, name:'tachyon '}); // column value with trailing space
 
 			it(title = "Checking QoQ string column with numeric values", body = function ( currentSpec ) {
 
@@ -27,11 +27,11 @@ component extends = "org.lucee.cfml.test.LuceeTestCase" labels="qoq" skip="true"
 			it(title = "Checking QoQ string column with trailing space", body = function ( currentSpec ) {
 				
 				cfquery(name="queryresult1", dbtype="query") {
-					echo(" select * from myQuery where name='lucee ' ");
+					echo(" select * from myQuery where name='tachyon ' ");
 				}
 
 				cfquery(name="queryresult2", dbtype="query") { 
-					echo(" select * from myQuery where name='    lucee   ' ");
+					echo(" select * from myQuery where name='    tachyon   ' ");
 				}
 
 				cfquery(name="queryresult3", dbtype="query") {

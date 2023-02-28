@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2016, Lucee Assosication Switzerland. All rights reserved.*
+ * Copyright (c) 2016, Tachyon Assosication Switzerland. All rights reserved.*
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -14,11 +14,11 @@
  * You should have received a copy of the GNU Lesser General Public 
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
-component extends="org.lucee.cfml.test.LuceeTestCase"	{
+component extends="org.tachyon.cfml.test.TachyonTestCase"	{
 
 	public void function testArgumentIntKey() localmode="true" {
 		
-		var k=createObject("java","lucee.runtime.type.scope.ArgumentIntKey").init(1);
+		var k=createObject("java","tachyon.runtime.type.scope.ArgumentIntKey").init(1);
 		var os=ObjectSave(k);
 		var k2=ObjectLoad(os);
 		assertEquals(k,k2);

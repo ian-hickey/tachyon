@@ -1,14 +1,14 @@
-component extends = "org.lucee.cfml.test.LuceeTestCase"{
+component extends = "org.tachyon.cfml.test.TachyonTestCase"{
 	function beforeAll(){
 		variables.uri = createURI("LDEV2534");
 	}
 	function run( testResults , testBox ) {
 		describe( "Test case for LDEV-2534", function() {
-			it(title = "Multiple function with same name - lucee doesn't throw an error", body = function( currentSpec ) {
+			it(title = "Multiple function with same name - tachyon doesn't throw an error", body = function( currentSpec ) {
 				local.result = _InternalRequest(
 					template : "#uri#/test.cfm"
 				);
-				expect(trim(result.filecontent)).toBe("Lucee shouldn't call more function with same name");
+				expect(trim(result.filecontent)).toBe("Tachyon shouldn't call more function with same name");
 			});
 		});
 	}

@@ -11,7 +11,7 @@
     </cfif>
 
     <cfif form.scene eq 2>
-        <cfset testArr = ["lucee","testcase"] />
+        <cfset testArr = ["tachyon","testcase"] />
         <cfset funTwo(getArr = testArr)>
         <cffunction name="funTwo">
             <cfargument name="getArr" passby="value">

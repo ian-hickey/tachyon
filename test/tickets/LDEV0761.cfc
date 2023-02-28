@@ -1,6 +1,6 @@
 <!--- 
  *
- * Copyright (c) 2015, Lucee Assosication Switzerland. All rights reserved.
+ * Copyright (c) 2015, Tachyon Assosication Switzerland. All rights reserved.
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -16,14 +16,14 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  * 
  ---><cfscript>
-component extends="org.lucee.cfml.test.LuceeTestCase"	{
+component extends="org.tachyon.cfml.test.TachyonTestCase"	{
 
 	LF=chr(10);
 	CR=chr(13);
 	CRLF=CR&LF;
 
 	str="firstname,lastname<>Susi,Sorglos<>Sami,Chlaus";
-	CSVParser=createObject("java","lucee.runtime.text.csv.CSVParser");
+	CSVParser=createObject("java","tachyon.runtime.text.csv.CSVParser");
 	
 
 	public void function testLF(){

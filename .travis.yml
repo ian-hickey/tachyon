@@ -1,11 +1,11 @@
 language: java
 
 # cache the maven dependancies
-# cache lucee extension cache
+# cache tachyon extension cache
 cache:
   directories:
     - $HOME/.m2
-    - $HOME/build/lucee/Lucee/cache/
+    - $HOME/build/tachyon/Tachyon/cache/
 
 jdk:
 #  - oraclejdk9
@@ -42,7 +42,7 @@ before_script:
   # - mongo testdb --eval 'db.auth({user:"travis", pwd:"testpw"})'
 
 script:
-# maven deploy process (builds lucee and deploys to sonatype)
+# maven deploy process (builds tachyon and deploys to sonatype)
 - echo "${TRAVIS_PULL_REQUEST} $TRAVIS_BRANCH $TRAVIS_BUILD_NUMBER $TRAVIS_BUILD_ID "
 
 #- if [ "${TRAVIS_PULL_REQUEST}" == "false" && ${TRAVIS_BRANCH} == "5.2" ]; then  always false even both seperatly are true
@@ -83,23 +83,23 @@ script:
 # - git add -f loader/pom.xml # add the updated pom
 # - git commit -m "update maven version"
 # - git remote -v
-# - git remote set-url origin https://github.com/lucee/Lucee.git
+# - git remote set-url origin https://github.com/tachyon/Tachyon.git
 # - git push origin master
 
 #deploy:
 # skip_cleanup: true
 
 notifications:
-  slack: luceeserver:ZTfbu4bVSLFmakRcLInrNZIT
+  slack: tachyonserver:ZTfbu4bVSLFmakRcLInrNZIT
   email:
-    - michael@lucee.org
-    - igal@lucee.org
+    - michael@tachyon.org
+    - igal@tachyon.org
 
 after_success:
 # - version=$(mvn org.apache.maven.plugins:maven-help-plugin:2.1.1:evaluate -Dexpression=project.version | egrep -v '^\[|Downloading:' | tr -d ' \n')
-- curl "https://update.lucee.org/rest/update/provider/buildLatest"
-- curl "https://extension.lucee.org/rest/extension/provider/reset"
-- curl "https://download.lucee.org/?type=snapshots&reset=force"
+- curl "https://update.tachyon.org/rest/update/provider/buildLatest"
+- curl "https://extension.tachyon.org/rest/extension/provider/reset"
+- curl "https://download.tachyon.org/?type=snapshots&reset=force"
 
 - chmod +x travis-docker-build.sh && ./travis-docker-build.sh
 

@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 	function run( testResults , testBox ) {
 		describe( title="Test suite for LDEV-2019", body=function() {
 			it( title='Checking rereplace() with backslash before a numeric value',body=function( currentSpec ) {

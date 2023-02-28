@@ -19,7 +19,7 @@
 package com.allaire.cfx
 
 import kotlin.Throws
-import lucee.loader.util.Util
+import tachyon.loader.util.Util
 import kotlin.jvm.Synchronized
 import kotlin.jvm.Transient
 import org.osgi.framework.Version

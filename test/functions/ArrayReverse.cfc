@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU Lesser General Public 
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  * 
- ---><cfcomponent extends="org.lucee.cfml.test.LuceeTestCase">
+ ---><cfcomponent extends="org.tachyon.cfml.test.TachyonTestCase">
 	<!---
 	<cffunction name="beforeTests"></cffunction>
 	<cffunction name="afterTests"></cffunction>
@@ -24,7 +24,7 @@
 	<cffunction name="testArrayReverse" localMode="modern">
  	
 <!--- begin old test code --->
-<cfif server.ColdFusion.ProductName EQ "lucee">
+<cfif server.ColdFusion.ProductName EQ "tachyon">
 <cfset arr1=arrayNew(1)>
 <cfset ArrayAppend( arr1, 1 )>
 <cfset ArrayAppend( arr1, 2 )>

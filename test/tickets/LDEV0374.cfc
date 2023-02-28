@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="orm"{
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="orm"{
 	public function run( testResults , testBox ) {
 		describe( title="Testing date functions & its equivalent member functions for ORM entity's date", body=function() {
 			it(title="Testing dateDiff function", body=function( currentSpec ) {

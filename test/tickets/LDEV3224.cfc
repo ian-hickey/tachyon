@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="admin" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="admin" {
 
 	function beforeAll() {
 		variables.adm = new Administrator("server",request.SERVERADMINPASSWORD?:server.SERVERADMINPASSWORD);

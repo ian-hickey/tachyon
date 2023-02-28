@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 	function run( testResults , testBox ) {
 		describe( title="Test suite for LDEV-1419", body=function() {
 			it(title="comparing decimal numbers with decimal numbers as string data type ", body = function( currentSpec ) {

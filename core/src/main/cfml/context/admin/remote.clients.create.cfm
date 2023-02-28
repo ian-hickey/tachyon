@@ -132,7 +132,7 @@ Error Output--->
 	<cfelse>
 		<cfset actionType="create">
 		<cfset rc.url_server="">
-		<cfset rc.url_path="/lucee/admin.cfc?wsdl">
+		<cfset rc.url_path="/tachyon/admin.cfc?wsdl">
 		<cfset rc.serverpassword="">
 		<cfset rc.serverpasswordh="">
 		<cfset rc.adminpassword="">

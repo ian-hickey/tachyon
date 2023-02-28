@@ -3,7 +3,7 @@ component {
 	this.name = hash( getCurrentTemplatePath() );
     
 	this.javasettings={
-    	bundles = ["../../../artifacts/jars/lucee-mockup-osgi-1.0.0.0.jar"], 
+    	bundles = ["../../../artifacts/jars/tachyon-mockup-osgi-1.0.0.0.jar"],
     	loadCFMLClassPath = true, 
     	reloadOnChange = false
 	}

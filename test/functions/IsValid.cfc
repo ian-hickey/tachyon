@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2015, Lucee Assosication Switzerland. All rights reserved.
+ * Copyright (c) 2015, Tachyon Assosication Switzerland. All rights reserved.
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU Lesser General Public 
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
-component extends="org.lucee.cfml.test.LuceeTestCase" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" {
 	
 	//public function beforeTests(){}
 	
@@ -290,13 +290,13 @@ component extends="org.lucee.cfml.test.LuceeTestCase" {
 	}
 
 	public void function testURL() localmode="true"{
-		assertTrue(IsValid("url",'https://www.lucee.org/'));
+		assertTrue(IsValid("url",'https://www.tachyon.org/'));
 		assertTrue(IsValid("url",  "http://a"));
-		assertTrue(IsValid("url", "http://www.lucee.com/svn.cfm?repositorypath=viewCount%2FviewCount-plugin-Mangoblog-v1.4.zip%3A108&download=1"));
+		assertTrue(IsValid("url", "http://www.tachyon.com/svn.cfm?repositorypath=viewCount%2FviewCount-plugin-Mangoblog-v1.4.zip%3A108&download=1"));
 		assertFalse(IsValid("url",  "http://.-"));
 		assertFalse(IsValid("url",'1.678.256.3011'));
 		assertFalse(IsValid("url",  "http://."));
-		// MUST assertFalse(IsValid("url", "http://www.lucee.com/svn.cfm?repositorypath=viewCount/viewCount-plugin-Mangoblog-v1.4.zip:108&download=1"));
+		// MUST assertFalse(IsValid("url", "http://www.tachyon.com/svn.cfm?repositorypath=viewCount/viewCount-plugin-Mangoblog-v1.4.zip:108&download=1"));
 
 	}
 
@@ -390,7 +390,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase" {
 
 	public void function testObject() localmode="true"{
 		assertTrue(isValid("object",createObject("java", "java.lang.System")));
-        assertTrue(isValid("object",createObject("component","org.lucee.cfml.test.LuceeTestCase")));
+        assertTrue(isValid("object",createObject("component","org.tachyon.cfml.test.TachyonTestCase")));
         assertFalse(isValid("object","string"));
         assertFalse(isValid("object",1));
         assertFalse(isValid("object",true));

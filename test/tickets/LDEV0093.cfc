@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"  labels="pdf"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"  labels="pdf"{
 
 	function beforeAll() {
 		variables.path = getDirectoryFromPath(getCurrentTemplatePath())&"LDEV0093/";

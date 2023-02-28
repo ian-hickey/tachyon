@@ -1,6 +1,6 @@
 /**
  *
- * Copyright (c) 2015, Lucee Assosication Switzerland. All rights reserved.*
+ * Copyright (c) 2015, Tachyon Assosication Switzerland. All rights reserved.*
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -19,7 +19,7 @@
 component {
 		this.name=getCurrentTemplatePath();
 		this.cache.object={
-			class="org.lucee.extension.cache.eh.EHCache"
+			class="org.tachyon.extension.cache.eh.EHCache"
 			,storage=false
 			,custom={timeToLiveSeconds:86400
 					,maxelementsondisk:10000000

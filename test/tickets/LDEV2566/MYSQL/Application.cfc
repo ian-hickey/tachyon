@@ -2,7 +2,7 @@ component {
 
 	mySQL = getCredentials();
 
-	this.name = "luceedfdftefdfst";
+	this.name = "tachyondfdftefdfst";
 	this.datasources["ldev2566_MYSQL"] = mySQL;
 	this.datasource = "ldev2566_MYSQL";
 

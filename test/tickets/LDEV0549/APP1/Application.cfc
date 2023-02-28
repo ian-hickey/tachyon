@@ -1,7 +1,7 @@
 component {
 	this.name = 'AppA549';
 	this.cache.connections["default"] = {
-	  class: 'org.lucee.extension.cache.eh.EHCache'
+	  class: 'org.tachyon.extension.cache.eh.EHCache'
 	, bundleName: 'ehcache.extension'
 	//, bundleVersion: '2.10.0.18'
 	, storage: true

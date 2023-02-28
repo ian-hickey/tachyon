@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 	function beforeAll() {
 		variables.cfcFile = getDirectoryFromPath(getCurrentTemplatePath()) & "cfc/testComp.cfc";
 		variables.uri = createURI("cfc")

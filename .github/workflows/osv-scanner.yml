@@ -13,7 +13,7 @@ jobs:
       with:
         java-version: '11'
         distribution: 'adopt'
-    - name: Build Lucee without using a Maven cache
+    - name: Build Tachyon without using a Maven cache
       run: ant -noinput -buildfile loader/build.xml fast
     - name: Set up Go
       uses: actions/setup-go@v3

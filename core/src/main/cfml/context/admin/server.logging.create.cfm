@@ -44,8 +44,8 @@
 				<cfset error.message = "No Datasource has been defined">
 			<cfelseif structKeyExists(form,"custom_3_appender_path")>
 				<cfset path = getDirectoryFromPath(form.custom_3_appender_path)>
-				<cfif findNoCase("{lucee-config}",path) NEQ 0>
-					<cfset path = "#expandpath(replaceNoCase(path,"{lucee-config}","{lucee-server}"))#">
+				<cfif findNoCase("{tachyon-config}",path) NEQ 0>
+					<cfset path = "#expandpath(replaceNoCase(path,"{tachyon-config}","{tachyon-server}"))#">
 				</cfif>
 			
 				<cfif !directoryExists(path)>

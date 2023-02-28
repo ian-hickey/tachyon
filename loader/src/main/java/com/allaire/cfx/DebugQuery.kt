@@ -18,7 +18,7 @@
  */
 package com.allaire.cfx
 
-import lucee.loader.engine.CFMLEngineFactory
+import tachyon.loader.engine.CFMLEngineFactory
 
 /**
  * Implementation of the DebugQuery
@@ -44,8 +44,8 @@ class DebugQuery : QueryWrap {
     constructor(name: String, columns: Array<String>) : super(toQuery(name, columns, 0), name) {}
 
     companion object {
-        private fun toQuery(name: String, columns: Array<String>, data: Array<Array<String>>): lucee.runtime.type.Query {
-            val query: lucee.runtime.type.Query = toQuery(name, columns, data.size)
+        private fun toQuery(name: String, columns: Array<String>, data: Array<Array<String>>): tachyon.runtime.type.Query {
+            val query: tachyon.runtime.type.Query = toQuery(name, columns, data.size)
             for (row in data.indices) {
                 val len = if (data[row].length > columns.size) columns.size else data[row].length
                 for (col in 0 until len) try {
@@ -56,7 +56,7 @@ class DebugQuery : QueryWrap {
             return query
         }
 
-        private fun toQuery(name: String, columns: Array<String>, rows: Int): lucee.runtime.type.Query {
+        private fun toQuery(name: String, columns: Array<String>, rows: Int): tachyon.runtime.type.Query {
             return CFMLEngineFactory.getInstance().getCreationUtil().createQuery(columns, rows, name)
         }
     }

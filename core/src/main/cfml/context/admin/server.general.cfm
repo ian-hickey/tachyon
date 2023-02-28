@@ -20,7 +20,7 @@
 		componentPathCache:false,
 		deepSearch:false,
 		baseComponentTemplateCFML:component.strBaseComponentTemplateCFML,
-		baseComponentTemplateLucee:component.baseComponentTemplateLucee,
+		baseComponentTemplateTachyon:component.baseComponentTemplateTachyon,
 		componentDefaultImport:component.ComponentDefaultImport
 	},
 	strict:{
@@ -34,7 +34,7 @@
 		componentPathCache:false,
 		deepSearch:false,
 		baseComponentTemplateCFML:component.strBaseComponentTemplateCFML,
-		baseComponentTemplateLucee:component.baseComponentTemplateLucee,
+		baseComponentTemplateTachyon:component.baseComponentTemplateTachyon,
 		componentDefaultImport:component.ComponentDefaultImport
 	},
 	speed:{
@@ -48,7 +48,7 @@
 		componentPathCache:false,
 		deepSearch:false,
 		baseComponentTemplateCFML:component.strBaseComponentTemplateCFML,
-		baseComponentTemplateLucee:component.baseComponentTemplateLucee,
+		baseComponentTemplateTachyon:component.baseComponentTemplateTachyon,
 		componentDefaultImport:component.ComponentDefaultImport
 	}
 }>

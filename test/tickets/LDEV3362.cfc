@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="static,metadata"{
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="static,metadata"{
     function run( testResults, testBox ){
         describe("Testcase for LDEV-3362", function( currentSpec ) {
             it(title="Checking static and non-static functions in getComponentMetaData()", body=function( currentSpec )  {

@@ -26,8 +26,8 @@
 <!--- load available drivers --->
 <cfset variables.drivers={}>
 <cfset driverNames=structnew("linked")>
-<cfset driverNames=ComponentListPackageAsStruct("lucee-server.admin.gdriver",driverNames)>
-<cfset driverNames=ComponentListPackageAsStruct("lucee.admin.gdriver",driverNames)>
+<cfset driverNames=ComponentListPackageAsStruct("tachyon-server.admin.gdriver",driverNames)>
+<cfset driverNames=ComponentListPackageAsStruct("tachyon.admin.gdriver",driverNames)>
 <cfset driverNames=ComponentListPackageAsStruct("gdriver",driverNames)>
 
 <cfloop collection="#driverNames#" index="n" item="fn">

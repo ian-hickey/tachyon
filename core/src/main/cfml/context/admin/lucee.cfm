@@ -1,3 +1,3 @@
 
-<cfset adminServer=createObject("java","lucee.runtime.config.ServletConfigAdminServer").newInstance(config,session.password)>
+<cfset adminServer=createObject("java","tachyon.runtime.config.ServletConfigAdminServer").newInstance(config,session.password)>
 		

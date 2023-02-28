@@ -1,4 +1,4 @@
-<cfcomponent extends="org.lucee.cfml.test.LuceeTestCase" labels="pdf">
+<cfcomponent extends="org.tachyon.cfml.test.TachyonTestCase" labels="pdf">
 	<cfscript>
 		function beforeAll(){
 			afterAll();
@@ -21,7 +21,7 @@
 
 				it("checking script based", function( currentSpec ) {
 					cfdocument(format="PDF" name="pdf2" filename="#variables.uri#/test2.pdf" overwrite="true"){
-						writeOutput("Lucee");
+						writeOutput("Tachyon");
 					}
 					cfpdf ( action = "extracttext" source = "pdf2" name="result" ) {
 					}
@@ -41,7 +41,7 @@
 		<cfset path ="#getDirectoryFromPath(getCurrenttemplatepath())#"/>
 		<cfdocument format="PDF" overwrite="true" name="pdf" filename="#variables.uri#/test.pdf">
 			<cfdocumentsection>
-				Lucee test documents
+				Tachyon test documents
 			</cfdocumentsection>
 		</cfdocument>
 		<cfpdf action = "extracttext" source = "pdf" name="read" >

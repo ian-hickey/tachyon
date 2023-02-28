@@ -16,7 +16,7 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  * 
  ---><cfscript>
-component extends="org.lucee.cfml.test.LuceeTestCase"	{
+component extends="org.tachyon.cfml.test.TachyonTestCase"	{
 	
 	//public function beforeTests(){}
 	
@@ -82,10 +82,10 @@ component extends="org.lucee.cfml.test.LuceeTestCase"	{
 		res=list.listReduce(function( result,value,index){return result&";"&index&":"&value;},"merge:");
 		assertEquals("merge:;1:a;2:b;3:c",res);
 
-		var result = listReduce("I,Love,Lucee",function(previousValue,element){
+		var result = listReduce("I,Love,Tachyon",function(previousValue,element){
 			return element;
 		});
-		assertEquals(listLast("I,Love,Lucee"), result);
+		assertEquals(listLast("I,Love,Tachyon"), result);
 
 		var list="1,2,3,4";
 		var result2 = listReduce(list,function(previousValue,element){

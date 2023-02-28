@@ -16,7 +16,7 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  * 
  ---><cfscript>
-component extends="org.lucee.cfml.test.LuceeTestCase"	{
+component extends="org.tachyon.cfml.test.TachyonTestCase"	{
 	
 	//public function beforeTests(){}
 	
@@ -42,7 +42,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase"	{
 	}
 
 	public void function testComponent() localmode="modern" {
-		src = new "lucee.Component"();
+		src = new "tachyon.Component"();
 		src["a&1"]=1;
 		wddx action="cfml2wddx" input="#src#" output="wddx" validate='yes';
 		

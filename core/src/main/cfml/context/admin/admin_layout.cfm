@@ -1,26 +1,26 @@
 <cfif (thisTag.executionMode == "end" || !thisTag.hasEndTag)>
 	<cfscript>
 
-		param name="session.lucee_admin_lang" default="en";
+		param name="session.tachyon_admin_lang" default="en";
 		param name="attributes.navigation"    default="";
 		param name="attributes.title"         default="";
 		param name="attributes.content"       default="";
 		param name="attributes.right"         default="";
 		param name="attributes.width"         default="780";
 
-		variables.stText = application.stText[session.lucee_admin_lang];
+		variables.stText = application.stText[session.tachyon_admin_lang];
 		ad=request.adminType;
 		hasNavigation = len(attributes.navigation) GT 0;
 		home = request.adminType & ".cfm";
 		homeQS = URL.keyExists("action") ? "?action=" & url.action : "";
 		request.mode = "full";
-		resNameAppendix = hash(server.lucee.version & server.lucee["release-date"], "quick");
+		resNameAppendix = hash(server.tachyon.version & server.tachyon["release-date"], "quick");
 	</cfscript>
 <cfcontent reset="yes"><!DOCTYPE html>
 <cfoutput>
 <html>
 <head>
-	<title>#attributes.title# - Lucee #ucFirst(request.adminType)# Administrator</title>
+	<title>#attributes.title# - Tachyon #ucFirst(request.adminType)# Administrator</title>
 	<link rel="stylesheet" href="../res/css/admin6-#resNameAppendix#.css.cfm" type="text/css">
 	<meta name="robots" content="noindex,nofollow">
 	<cfhtmlhead action="flush">
@@ -53,7 +53,7 @@
 
 								<form method="get" action="#cgi.SCRIPT_NAME#">
 									<input type="hidden" name="action" value="admin.search">
-									<input type="text" name="q" size="15"  class="navSearch" id="lucee-admin-search-input" placeholder="#stText.buttons.search.ucase()#">
+									<input type="text" name="q" size="15"  class="navSearch" id="tachyon-admin-search-input" placeholder="#stText.buttons.search.ucase()#">
 									<button type="submit" class="sprite  btn-search"><!--- <span>#stText.buttons.search# ---></span></button>
 									<!--- btn-mini title="#stText.buttons.search#" --->
 								</form>
@@ -104,7 +104,7 @@
 					<td class="lotd" id="copyrighttd" colspan="#hasNavigation?2:1#">
 						<div id="copyright" class="copy">
 							&copy; #year(Now())#
-							<a href="https://www.lucee.org" target="_blank">Lucee Association Switzerland</a>.
+							<a href="https://www.tachyon.org" target="_blank">Tachyon Association Switzerland</a>.
 							All Rights Reserved
 						</div>
 					</td>

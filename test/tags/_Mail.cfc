@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2015, Lucee Association Switzerland. All rights reserved.
+ * Copyright (c) 2015, Tachyon Association Switzerland. All rights reserved.
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU Lesser General Public 
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
-component extends="org.lucee.cfml.test.LuceeTestCase" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" {
 
 	variables.PORT=2526;
 	variables.from="susi@sorglos.de";
@@ -47,7 +47,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase" {
 	}
 
 	function teardown( currentMethod ){
-		createObject("java", "java.lang.System").clearProperty("lucee.mail.use.7bit.transfer.encoding.for.html.parts");
+		createObject("java", "java.lang.System").clearProperty("tachyon.mail.use.7bit.transfer.encoding.for.html.parts");
 	}
 
 
@@ -254,7 +254,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase" {
 
 	public function testHtmlOnlyPartShouldUse7bitEncodingWhenSystemPropertySet() localmode="true"{
 		// fallback to the old behavior of using 7bit encoding
-		createObject("java", "java.lang.System").setProperty("lucee.mail.use.7bit.transfer.encoding.for.html.parts", "true");
+		createObject("java", "java.lang.System").setProperty("tachyon.mail.use.7bit.transfer.encoding.for.html.parts", "true");
 
 		try { 
 			smtpServer=start();
@@ -276,7 +276,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase" {
 
 	public function testMultiMailPartShouldUse7bitEncodingForTextAnd7bitEncodingForHtmlWhenSystemPropertySet() localmode="true"{
 		// fallback to the old behavior of using 7bit encoding
-		createObject("java", "java.lang.System").setProperty("lucee.mail.use.7bit.transfer.encoding.for.html.parts", "true");
+		createObject("java", "java.lang.System").setProperty("tachyon.mail.use.7bit.transfer.encoding.for.html.parts", "true");
 
 		try { 
 			smtpServer=start();

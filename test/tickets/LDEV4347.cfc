@@ -1,4 +1,4 @@
-component extends = "org.lucee.cfml.test.LuceeTestCase" labels="loop" skip="true" {
+component extends = "org.tachyon.cfml.test.TachyonTestCase" labels="loop" skip="true" {
 
     function beforeAll() {
         application name="test-4347";

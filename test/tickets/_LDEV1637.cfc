@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 	function run( testResults , testBox ) {
 		describe( "Test Case for LDEV1637", function() {
 			it( title='Checking evaluate() with keyArray', body=function( currentSpec ) {

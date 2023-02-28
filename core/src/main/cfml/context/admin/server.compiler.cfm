@@ -80,7 +80,7 @@ Defaults --->
 </cftry>
 
 
-<!---  	templates.error.error_cfm$cf.str(Llucee/runtime/PageContext;II)Ljava/lang/String;
+<!---  	templates.error.error_cfm$cf.str(Ltachyon/runtime/PageContext;II)Ljava/lang/String;
 Error Output --->
 <cfset printError(error)>
 
@@ -144,7 +144,7 @@ Redirtect to entry --->
 					This feature is experimental.
 					If you have any problems while using this functionality,
 					please post the bugs and errors in our
-					<a href="https://issues.lucee.org" target="_blank">bugtracking system</a>. 
+					<a href="https://issues.tachyon.org" target="_blank">bugtracking system</a>.
 				</div>--->
 
 						<cfif hasAccess>

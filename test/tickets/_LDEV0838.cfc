@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 	function run( testResults , testBox ) {
 		describe( "Test suite for LDEV-838", function() {
 			it(title="checking isSafeHTML() function", body = function( currentSpec ) {
@@ -25,7 +25,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase"{
 					template:uri,
 					forms:{Scene=1}
 				);
-				expect(result).toBe("Lucee Starts Works on getSafeHTML()");
+				expect(result).toBe("Tachyon Starts Works on getSafeHTML()");
 			});
 
 			it(title="checking getSafeHTML() function, with attribute PolicyFile", body = function( currentSpec ) {

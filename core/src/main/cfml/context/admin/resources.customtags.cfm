@@ -1,10 +1,10 @@
 <cfset stText.CustomTags.name="Name">
-<cfset stText.CustomTags.nameMissing="Missing the name for the new Mapping, this name is used when you deploy a Lucee Archive (.lar) based on this Mapping.">
-<cfset stText.CustomTags.nameDesc="The name is used as identifier when you automatically import a Lucee Archive build based on this Mapping.">
+<cfset stText.CustomTags.nameMissing="Missing the name for the new Mapping, this name is used when you deploy a Tachyon Archive (.lar) based on this Mapping.">
+<cfset stText.CustomTags.nameDesc="The name is used as identifier when you automatically import a Tachyon Archive build based on this Mapping.">
 <cfset stText.CustomTags.PhysicalDesc="Directory path where the custom tags are located.">
-<cfset stText.CustomTags.archiveDesc="File path to a custom tag Lucee Archive (.lar).">
-<cfset stText.CustomTags.PrimaryDesc="Defines where Lucee looks first for a requested custom tags">
-<cfset stText.CustomTags.trustedDesc="When does Lucee checks for changes in the source file for an already loaded custom tags">
+<cfset stText.CustomTags.archiveDesc="File path to a custom tag Tachyon Archive (.lar).">
+<cfset stText.CustomTags.PrimaryDesc="Defines where Tachyon looks first for a requested custom tags">
+<cfset stText.CustomTags.trustedDesc="When does Tachyon checks for changes in the source file for an already loaded custom tags">
 
 
 <!--- <cfif isDefined("form")>
@@ -83,11 +83,11 @@
 					
 					
 					<cfif not doDownload>
-						<cfset target=expandPath("#cgi.context_path#/lucee/archives/"&filename)>
+						<cfset target=expandPath("#cgi.context_path#/tachyon/archives/"&filename)>
 						<cfset count=0>
 						<cfwhile fileExists(target)>
 							<cfset count=count+1>
-							<cfset target="#cgi.context_path#/lucee/archives/"&filename>
+							<cfset target="#cgi.context_path#/tachyon/archives/"&filename>
 							<cfset target=replace(target,'.'&ext,count&'.'&ext)>
 							<cfset target=expandPath(target)>
 						</cfwhile>

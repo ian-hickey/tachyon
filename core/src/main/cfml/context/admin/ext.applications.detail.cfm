@@ -100,7 +100,7 @@
 	<cfheader statuscode="404">
 	<cfthrow message="Extension [#url.id#] not found">
 </cfif>
-<cfset lasProvider=(app.provider?:"")=="local" || findNoCase("lucee.org",app.provider?:'') GT 0>
+<cfset lasProvider=(app.provider?:"")=="local" || findNoCase("tachyon.org",app.provider?:'') GT 0>
 <cfoutput encodeFor="html">
 	<!--- title and description --->
 	<div class="modheader">
@@ -371,7 +371,7 @@ if(isInstalled) installedVersion=toVersionSortable(installed.version);
 TODO
 
 
-<cfif isDefined('app.minCoreVersion') and (app.minCoreVersion GT server.lucee.version)>
+<cfif isDefined('app.minCoreVersion') and (app.minCoreVersion GT server.tachyon.version)>
 				<div class="error">#replace(stText.ext.toSmallVersion,'{version}',app.minCoreVersion,'all')#</div>
 			<cfelse>
 --->

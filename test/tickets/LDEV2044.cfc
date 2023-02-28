@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 	function run( testResults , testBox ) {
 		describe( "test case for LDEV-2044", function() {
 			it(title = "Diff member function for dateDiff incompatible with ACF", body = function( currentSpec ) {

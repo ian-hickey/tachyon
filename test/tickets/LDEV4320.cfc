@@ -1,4 +1,4 @@
-component extends = "org.lucee.cfml.test.LuceeTestCase" labels="h2" skip="false" {
+component extends = "org.tachyon.cfml.test.TachyonTestCase" labels="h2" skip="false" {
 
 	function beforeAll(){
 		application action="update" datasource=server.getDatasource( 

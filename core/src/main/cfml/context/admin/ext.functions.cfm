@@ -486,7 +486,7 @@
 			var start=getTickCount();
 
 			try{
-				http url="#uri#?type=all&coreVersion=#server.lucee.version#" cachedWithin=createTimespan(0,0,5,0) result="local.http" timeout=arguments.timeout {
+				http url="#uri#?type=all&coreVersion=#server.tachyon.version#" cachedWithin=createTimespan(0,0,5,0) result="local.http" timeout=arguments.timeout {
 					httpparam type="header" name="accept" value="application/json";
 					if(!isNull(apikey))httpparam type="url" name="ioid" value="#apikey#";
 				}
@@ -571,7 +571,7 @@
 			return local.ext;
 		}
 		else {
-			http url="#uri#?type=all&coreVersion=#server.lucee.version##len(arguments.version)?'&version='&arguments.version:''#" result="local.http"  cachedWithin=createTimespan(0,0,5,0) {
+			http url="#uri#?type=all&coreVersion=#server.tachyon.version##len(arguments.version)?'&version='&arguments.version:''#" result="local.http"  cachedWithin=createTimespan(0,0,5,0) {
 				httpparam type="header" name="accept" value="application/cfml";
 				if(!isNull(apiKey))httpparam type="url" name="ioid" value="#apikey#";
 

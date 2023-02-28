@@ -4,7 +4,7 @@
 	<cfapplication name='__LUCEE_STATIC_CONTENT' sessionmanagement='#false#' clientmanagement='#false#' applicationtimeout='#createtimespan( 1, 0, 0, 0 )#'>
 	
 	<cfset mimetype = "text/css" />
-	<cfset etag = hash( getCurrentTemplatePath() & '-' & Server.lucee.Version ) />
+	<cfset etag = hash( getCurrentTemplatePath() & '-' & Server.tachyon.Version ) />
 
 	<cfheader name='Expires' value='#getHttpTimeString( now() + 100 )#'>
 	<cfheader name='Cache-Control' value='max-age=#86400 * 100#'>		
@@ -138,10 +138,10 @@ body.full td#logotd {
 	display:none;
 }
 body.server #logo a {
-	background-image:url(../img/server-lucee.png.cfm);
+	background-image:url(../img/server-tachyon.png.cfm);
 }
 body.server.full #logo a {
-	background-image:url(../img/server-lucee-small.png.cfm);
+	background-image:url(../img/server-tachyon-small.png.cfm);
 }
 
 #layouttbl td#tabstd {

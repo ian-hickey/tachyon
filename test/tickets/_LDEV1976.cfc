@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 	function run( testResults , testBox ) {
 		describe( title="Test case for LDEV-1976", body=function(){
 			it(title="Checking CFHTTP fileContent binary to string", body=function(){

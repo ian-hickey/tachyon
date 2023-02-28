@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 	function beforeAll(){
 		variables.origSerSettings =  getApplicationSettings().serialization;
 	}
@@ -98,7 +98,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase"{
 				expect(find("DATEJOINED", jsonObject)).toBeGT(0);
 				expect(find("ID", jsonObject)).toBeGT(0);
 			});
-			// if we serializeQueryAs struct with preserveCaseForQueryColumn true lucee fails to maintain preserveCase for query column
+			// if we serializeQueryAs struct with preserveCaseForQueryColumn true tachyon fails to maintain preserveCase for query column
 			xit(title="Checking serializeJSON() with preserveCaseForQueryColumn is true & serializeQueryAs struct", body=function(){
 				var serSettings =  getApplicationSettings().serialization;
 				serSettings.serializeQueryAs = "struct";

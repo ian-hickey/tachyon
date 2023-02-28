@@ -1,6 +1,6 @@
 ﻿<!--- 
  *
- * Copyright (c) 2015, Lucee Assosication Switzerland. All rights reserved.
+ * Copyright (c) 2015, Tachyon Assosication Switzerland. All rights reserved.
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -16,13 +16,13 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  * 
  ---><cfscript>
-component extends="org.lucee.cfml.test.LuceeTestCase"	{
+component extends="org.tachyon.cfml.test.TachyonTestCase"	{
 
 	public void function testImplicit(){
 		
 		local.http = new http(); 
 		local.http.setMethod('put'); 
-		local.http.setURL('https://update.lucee.org/rest/update/provider/echoPut'); 
+		local.http.setURL('https://update.tachyon.org/rest/update/provider/echoPut');
 		local.http.addParam(type="formfield",name='email',value='test@test.com'); 
 		local.httpSendResult = local.http.send(); 
 		local.httpResult = httpSendResult.getPrefix(); 

@@ -3,7 +3,7 @@ component extends="testbox.system.compat.framework.TestSuite" {
 	
 	/**
 	* adding n testcases by defining a package that hold testcases 
-	* for example: "org.lucee.cfml.test"
+	* for example: "org.tachyon.cfml.test"
 	* @packageName name of the package that holds testcases
 	*/
 	public void function addPackage(required string packageName){
@@ -54,7 +54,7 @@ component extends="testbox.system.compat.framework.TestSuite" {
     remote function run(TestResult results,string testMethod="") {
     	systemOutput("run",true,true);
     	if(isNull(results))results=createObject("component","mxunit.framework.TestResult").TestResult();
-    	var testRunner = createObject("component", "LuceeTestSuiteRunner");
+    	var testRunner = createObject("component", "TachyonTestSuiteRunner");
 		testRunner.setMockingFramework(this.mockingFramework);
 		testRunner.setDataProviderHandler(this.dataProviderHandler);
 		if(variables.requestScopeDebuggingEnabled OR structKeyExists(url,"requestdebugenable"))

@@ -1,5 +1,5 @@
 component {
-	this.name = 'lucee-error-sameFormFieldsAsArray-false';
+	this.name = 'tachyon-error-sameFormFieldsAsArray-false';
 	this.sameFormFieldsAsArray = false;
 
 	public function onRequestStart() {

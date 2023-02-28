@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="xml"{
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="xml"{
 	function run( testResults , testBox ) {
 		describe( "Test suite for LDEV-1770", function() {
 			var getArt= QueryNew( "ARTID,ARTNAME,DESCRIPTION,ISSOLD,MEDIATYPE" );

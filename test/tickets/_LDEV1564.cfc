@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 	function beforeAll(){
 		variables.uri = createURI("LDEV1564");
 	}
@@ -9,7 +9,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase"{
 				local.result = _InternalRequest(
 					template:"#variables.uri#/test.cfm"
 				);
-				expect(local.result.filecontent.trim()).toBe("lucee");
+				expect(local.result.filecontent.trim()).toBe("tachyon");
 			});
 
 		});

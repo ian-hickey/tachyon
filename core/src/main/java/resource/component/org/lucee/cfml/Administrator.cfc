@@ -169,10 +169,10 @@ component {
 
 	/**
 	* @hint updates output settings for current context
-	* @cfmlWriter  Whitespace management in lucee Output settings
-	* @suppressContent  suppressContent in lucee Output settings
-	* @allowCompression  allowCompression in lucee Output settings
-	* @bufferOutput  bufferOutput in lucee Output settings
+	* @cfmlWriter  Whitespace management in tachyon Output settings
+	* @suppressContent  suppressContent in tachyon Output settings
+	* @allowCompression  allowCompression in tachyon Output settings
+	* @bufferOutput  bufferOutput in tachyon Output settings
 	*/
 	public void function updateOutputSetting( required string cfmlWriter, boolean suppressContent, boolean allowCompression, boolean bufferOutput ){
 		var existing = getOutputSetting();
@@ -248,7 +248,7 @@ component {
 
 	/**
 	* @hint update general datasource settings
-	* @psq if set to true, lucee preserves all single quotes within a query tag and escapes them
+	* @psq if set to true, tachyon preserves all single quotes within a query tag and escapes them
 	*/
 	public void function updateDatasourceSetting(boolean psq ){
 		var existing = getDatasourceSetting();
@@ -382,8 +382,8 @@ component {
 	){
 
 		var driverNames=structnew("linked");
-		driverNames=ComponentListPackageAsStruct("lucee-server.admin.dbdriver",driverNames);
-		driverNames=ComponentListPackageAsStruct("lucee.admin.dbdriver",driverNames);
+		driverNames=ComponentListPackageAsStruct("tachyon-server.admin.dbdriver",driverNames);
+		driverNames=ComponentListPackageAsStruct("tachyon.admin.dbdriver",driverNames);
 		driverNames=ComponentListPackageAsStruct("dbdriver",driverNames);
 
 		var driver=createObject("component", drivernames[ arguments.type ]);
@@ -766,11 +766,11 @@ component {
 			filename="archive-root."&ext;
 		}
 		filename=Replace(filename,"/","-","all");
-		var target=expandPath("#cgi.context_path#/lucee/"&filename);
+		var target=expandPath("#cgi.context_path#/tachyon/"&filename);
 		count=0;
 		while(fileExists(target)){
 			count=count+1;
-			target="#cgi.context_path#/lucee/"&filename;
+			target="#cgi.context_path#/tachyon/"&filename;
 			target=replace(target,'.'&ext,count&'.'&ext);
 			target=expandPath(target);
 		}
@@ -972,7 +972,7 @@ component {
 
 	/**
 	* @hint updates ORM settings
-	* @autoGenMap Specifies whether Lucee should automatically generate mapping for the persistent CFCs.
+	* @autoGenMap Specifies whether Tachyon should automatically generate mapping for the persistent CFCs.
 	* @eventHandling Specifies whether ORM Event callbacks should be given.
 	* @flushAtRequestEnd Specifies whether ormflush should be called automatically at request end.
 	* @logSQL Specifies whether the SQL queries that are executed by ORM will be logged.
@@ -980,7 +980,7 @@ component {
 	* @useDBForMapping Specifies whether the database has to be inspected to identify the missing information required to generate the Hibernate mapping.
 	* @catalog Specifies the default Catalog that should be used by ORM.
 	* @cfcLocation Specifies the directory that should be used to search for persistent CFCs to generate the mapping.
-	* @dbCreate Specifies whether Lucee should automatically generate mapping for the persistent CFCs, possible values are [none,update,dropcreate]
+	* @dbCreate Specifies whether Tachyon should automatically generate mapping for the persistent CFCs, possible values are [none,update,dropcreate]
 	* @schema Specifies the default Schema that should be used by ORM.
 	*/
 	public void function updateORMSetting( boolean autoGenMap, boolean eventHandling, boolean flushAtRequestEnd, boolean logSQL, boolean, boolean useDBForMapping, string catalog, string cfcLocation, string dbCreate, string schema ){
@@ -1076,24 +1076,24 @@ component {
 	/**
 	* @hint updates component mapping settings
 	* @baseComponentTemplateCFML Every component(CFC) that does not explicitly extend another component (attribute "extends") will by default extend this component.
-	* @baseComponentTemplateLucee Every component(lucee) that does not explicitly extend another component (attribute "extends") will by default extend this component.
+	* @baseComponentTemplateTachyon Every component(tachyon) that does not explicitly extend another component (attribute "extends") will by default extend this component.
 	* @componentDumpTemplate If you call a component directly, this template will be invoked to dump the component.
 	* @componentDataMemberDefaultAccess Define the accessor for the data-members of a component. This defines how variables of the "this" scope of a component can be accessed from outside of the component., values available for this argument are [private,public,package,remote]
-	* @triggerDataMember If there is no accessible data member (property, element of the this scope) inside a component, Lucee searches for available matching "getters" or "setters" for the requested property.
+	* @triggerDataMember If there is no accessible data member (property, element of the this scope) inside a component, Tachyon searches for available matching "getters" or "setters" for the requested property.
 	* @useShadow Defines whether a component has an independent variables scope parallel to the "this" scope (CFML standard) or not.
 	* @componentDefaultImport this package definition is imported into every template.
 	* @componentLocalSearch Search relative to the caller directory for the component
 	* @componentPathCache component path is cached and not resolved again
 	* @componentDeepSearchDesc Search for CFCs in the subdirectories of the "Additional Resources" below.
 	*/
-	public void function updateComponent(string baseComponentTemplateCFML="", string baseComponentTemplateLucee="", string componentDumpTemplate="", string componentDataMemberDefaultAccess="public", boolean triggerDataMember=false, boolean useShadow=true, string componentDefaultImport="org.lucee.cfml.*", boolean componentLocalSearch=false, boolean componentPathCache=false, boolean componentDeepSearchDesc=false){
+	public void function updateComponent(string baseComponentTemplateCFML="", string baseComponentTemplateTachyon="", string componentDumpTemplate="", string componentDataMemberDefaultAccess="public", boolean triggerDataMember=false, boolean useShadow=true, string componentDefaultImport="org.tachyon.cfml.*", boolean componentLocalSearch=false, boolean componentPathCache=false, boolean componentDeepSearchDesc=false){
 		admin
 			action="updateComponent"
 			type="#variables.type#"
 			password="#variables.password#"
 
 			baseComponentTemplateCFML="#arguments.baseComponentTemplateCFML#"
-			baseComponentTemplateLucee="#arguments.baseComponentTemplateLucee#"
+			baseComponentTemplateTachyon="#arguments.baseComponentTemplateTachyon#"
 			componentDumpTemplate="#arguments.componentDumpTemplate#"
 			componentDataMemberDefaultAccess="#arguments.componentDataMemberDefaultAccess#"
 			triggerDataMember="#arguments.triggerDataMember#"
@@ -1120,10 +1120,10 @@ component {
 
 	/**
 	* @hint updates the component mappings settings
-	* @virtual specifies as identifier when automatically import a Lucee Archive build based on this Mapping
+	* @virtual specifies as identifier when automatically import a Tachyon Archive build based on this Mapping
 	* @physical specifies directory path where the components are located, this path should not include the package
 	* @primary type of mapping, resource/archive
-	* @archive specifies file path to a components Lucee Archive (.lar).
+	* @archive specifies file path to a components Tachyon Archive (.lar).
 	* @inspect checks for changes in the source file for an already loaded component
 	*/
 	public void function updateComponentMapping(required string virtual, required string physical, required string archive, string inspect="never"){
@@ -1259,11 +1259,11 @@ component {
 	}
 
 	/**
-	* @hint updates the compiler settings for lucee server
+	* @hint updates the compiler settings for tachyon server
 	* @templateCharset Default characterset used to read templates (*.cfm and *.cfc files)
 	* @dotNotationUpperCase Convert all struct keys defined with "dot notation" to upper case or need to preserve case.
-	* @nullSupport If set, lucee has complete support for null, otherwise a partial null support.
-	* @suppressWSBeforeArg If set, Lucee suppresses whitespace defined between the "cffunction" starting tag and the last "cfargument" tag.
+	* @nullSupport If set, tachyon has complete support for null, otherwise a partial null support.
+	* @suppressWSBeforeArg If set, Tachyon suppresses whitespace defined between the "cffunction" starting tag and the last "cfargument" tag.
 	* @handleUnquotedAttrValueAsString Handle unquoted tag attribute values as strings.
 	* @externalizeStringGTE Externalize strings from generated class files to separate files.
 	*/
@@ -1320,7 +1320,7 @@ component {
 	/**
 	* @hint updates server caching settings
 	* @inspectTemplate sets the type of inspection for files inside the template cache
-	* @typeChecking If disabled Lucee ignores type definitions with function arguments and return values
+	* @typeChecking If disabled Tachyon ignores type definitions with function arguments and return values
 	*/
 	public void function updatePerformanceSettings( required string inspectTemplate, boolean typeChecking){
 		var existing = getPerformanceSettings();
@@ -1492,8 +1492,8 @@ component {
 	public void function updateDebugEntry( required string label, string type, string ipRange, struct custom ){
 		// load available drivers
 		var driverNames=structnew("linked");
-		driverNames=ComponentListPackageAsStruct("lucee-server.admin.debug",driverNames);
-		driverNames=ComponentListPackageAsStruct("lucee.admin.debug",driverNames);
+		driverNames=ComponentListPackageAsStruct("tachyon-server.admin.debug",driverNames);
+		driverNames=ComponentListPackageAsStruct("tachyon.admin.debug",driverNames);
 		driverNames=ComponentListPackageAsStruct("debug",driverNames);
 
 
@@ -1518,7 +1518,7 @@ component {
 			password="#variables.password#"
 
 			label="#arguments.label#"
-			debugtype=isNull(arguments.type) || isEmpty(arguments.type) ? (existing.type ?: "lucee-classic") : arguments.type
+			debugtype=isNull(arguments.type) || isEmpty(arguments.type) ? (existing.type ?: "tachyon-classic") : arguments.type
 			iprange=isNull(arguments.iprange) || isEmpty(arguments.iprange) ? (existing.iprange ?: "*") : arguments.iprange
 			fullname="#meta.fullName#"
 			path="#contractPath(meta.path)#"
@@ -1719,7 +1719,7 @@ component {
 			type="#variables.type#"
 			password="#variables.password#"
 			source="#arguments.source#"
-			destination="/lucee/admin/resources/language/#arguments.destination#";
+			destination="/tachyon/admin/resources/language/#arguments.destination#";
 	}
 
 	/**
@@ -2063,19 +2063,19 @@ component {
 
 	/**
 	* @hint updates scope settings
-	* @scopeCascadingType Depending on this setting Lucee scans certain scopes to find a variable called from the CFML source.
-	* @allowImplicidQueryCall When a variable has no scope defined, Lucee will search available result sets (CFML Standard) or not.
+	* @scopeCascadingType Depending on this setting Tachyon scans certain scopes to find a variable called from the CFML source.
+	* @allowImplicidQueryCall When a variable has no scope defined, Tachyon will search available result sets (CFML Standard) or not.
 	* @mergeFormAndUrl Defines if the scopes URL and Form will be merged together. If a key already exists in Form and URL Scopes, the value from the Form Scope is used.
 	* @sessionManagement Enable or disable session management.
 	* @clientManagement Enable or disable client management.
 	* @domainCookies Enable or disable domain cookies.
 	* @clientCookies Enable or disable client cookies.
-	* @clientTimeout Sets the amount of time Lucee will keep the client scope alive.
-	* @sessionTimeout Sets the amount of time Lucee will keep the session scope alive.
-	* @applicationTimeout Sets the amount of time Lucee will keep the application scope alive.
+	* @clientTimeout Sets the amount of time Tachyon will keep the client scope alive.
+	* @sessionTimeout Sets the amount of time Tachyon will keep the session scope alive.
+	* @applicationTimeout Sets the amount of time Tachyon will keep the application scope alive.
 	* @clientStorage Default storage for client, can be either [memory,file,cookie or any datasources or any caches defined]
 	* @sessionStorage Default storage for session, can be either [memory,file,cookie or any datasources or any caches defined]
-	* @sessionType type of session handled by lucee, can be either [application,jee]
+	* @sessionType type of session handled by tachyon, can be either [application,jee]
 	* @localMode Defines how the local scope of a function is invoked when a variable with no scope definition is used, can be either [classic,modern]
 	* @cgiReadonly Defines whether the CGI Scope is read only or not.
 	*/
@@ -2222,7 +2222,7 @@ component {
 	* @hint updates common application settings
 	* @requestTimeout Sets the amount of time the engine will wait for a request to finish before a request timeout will be raised.
 	* @scriptProtect secures your system from "cross-site scripting"
-	* @allowURLRequestTimeout Whether lucee needs to obey the URL parameter RequestTimeout or not
+	* @allowURLRequestTimeout Whether tachyon needs to obey the URL parameter RequestTimeout or not
 	*/
 	public void function updateApplicationSetting( timespan requestTimeout, string scriptProtect, boolean allowURLRequestTimeout ){
 		var existing = getApplicationSetting();
@@ -2390,11 +2390,11 @@ component {
 
 	/**
 	* @hint update exiting custom tag
-	* @virtual The name is used as identifier when you automatically import a Lucee Archive build based on this Mapping.
+	* @virtual The name is used as identifier when you automatically import a Tachyon Archive build based on this Mapping.
 	* @physical Directory path where the custom tags are located.
-	* @archive File path to a custom tag Lucee Archive (.lar).
-	* @primary Defines where Lucee looks first for a requested custom tags
-	* @inspect When does Lucee checks for changes in the source file for an already loaded custom tags.
+	* @archive File path to a custom tag Tachyon Archive (.lar).
+	* @primary Defines where Tachyon looks first for a requested custom tags
+	* @inspect When does Tachyon checks for changes in the source file for an already loaded custom tags.
 	*/
 	public void function updateCustomTag( required string virtual, required string physical, required string archive, string primary="Resource", string inspect="" ) {
 		admin
@@ -2412,7 +2412,7 @@ component {
 
 	/**
 	* @hint update exiting custom tag
-	* @virtual The name is used as identifier when you automatically import a Lucee Archive build based on this Mapping.
+	* @virtual The name is used as identifier when you automatically import a Tachyon Archive build based on this Mapping.
 	*/
 	public any function removecustomtag( required string virtual ) {
 		admin
@@ -2515,18 +2515,18 @@ component {
 	* @hints Update a particular security manager
 	* @id id of the web context
 	* @setting The settings (regional,component and scope) can be changed in the "web administrator"
-	* @file Defines how Lucee can interact with the local filesystem in a web context.
-	* @direct_java_access Allows access to Java methods and properties from the Lucee code
+	* @file Defines how Tachyon can interact with the local filesystem in a web context.
+	* @direct_java_access Allows access to Java methods and properties from the Tachyon code
 	* @mail The mail settings can be changed in the "web administrator"
 	* @datasource Defines how many datasources can be added in the "web administrator".
 	* @mapping Allows adding, removing and updating of mappings in the "web administrator".
-	* @remote It allows the settings in the administrator to be synchronized with other Lucee contexts
+	* @remote It allows the settings in the administrator to be synchronized with other Tachyon contexts
 	* @custom_tag The custom tag settings can be changed in the "web administrator"
 	* @cfx_setting The settings for the cfx tags can be changed. The globally defined CFX tags defined in the "server administrator" can be used as well.
 	* @cfx_usage CFX tags one can load Java classes which might have full access to the local hosts system.
 	* @debugging The debugging settings can be changed in the "web administrator"
 	* @tag_execute This tag is used to execute a process on the local hosts system
-	* @tag_import This tag can be used to import JSP and Lucee tag libraries
+	* @tag_import This tag can be used to import JSP and Tachyon tag libraries
 	* @tag_object The tag CFObject and the function CreateObject you can load Java objects. If disabled, you only can create objects of type "component"
 	* @tag_registry The tag CFRegistry you have full access to the registry of the local hosts system
 	* @cache The cache settings can be changed in the "web administrator"
@@ -2624,18 +2624,18 @@ component {
 	/**
 	* @hints Update a particular security manager
 	* @setting The settings (regional,component and scope) can be changed in the "web administrator"
-	* @file Defines how Lucee can interact with the local filesystem in a web context.
-	* @direct_java_access Allows access to Java methods and properties from the Lucee code
+	* @file Defines how Tachyon can interact with the local filesystem in a web context.
+	* @direct_java_access Allows access to Java methods and properties from the Tachyon code
 	* @mail The mail settings can be changed in the "web administrator"
 	* @datasource Defines how many datasources can be added in the "web administrator".
 	* @mapping Allows adding, removing and updating of mappings in the "web administrator".
-	* @remote It allows the settings in the administrator to be synchronized with other Lucee contexts
+	* @remote It allows the settings in the administrator to be synchronized with other Tachyon contexts
 	* @custom_tag The custom tag settings can be changed in the "web administrator"
 	* @cfx_setting The settings for the cfx tags can be changed. The globally defined CFX tags defined in the "server administrator" can be used as well.
 	* @cfx_usage CFX tags one can load Java classes which might have full access to the local hosts system.
 	* @debugging The debugging settings can be changed in the "web administrator"
 	* @tag_execute This tag is used to execute a process on the local hosts system
-	* @tag_import This tag can be used to import JSP and Lucee tag libraries
+	* @tag_import This tag can be used to import JSP and Tachyon tag libraries
 	* @tag_object The tag CFObject and the function CreateObject you can load Java objects. If disabled, you only can create objects of type "component"
 	* @tag_registry The tag CFRegistry you have full access to the registry of the local hosts system
 	* @cache The cache settings can be changed in the "web administrator"
@@ -2875,7 +2875,7 @@ component {
 	}
 
 	/**
-	* @hint Restart the Lucee engine.
+	* @hint Restart the Tachyon engine.
 	*/
 	public void function restart(){
 		admin
@@ -3061,7 +3061,7 @@ component {
 			return local.ext;
 		}
 		else {
-			http url="#uri#?coreVersion=#server.lucee.version##len(arguments.version)?'&version='&arguments.version:''#" result="local.http" {
+			http url="#uri#?coreVersion=#server.tachyon.version##len(arguments.version)?'&version='&arguments.version:''#" result="local.http" {
 				httpparam type="header" name="accept" value="application/cfml";
 				if(!isNull(apiKey))httpparam type="url" name="ioid" value="#apikey#";
 

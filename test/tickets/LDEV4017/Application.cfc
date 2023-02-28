@@ -13,7 +13,7 @@ component {
 
 	function onRequestStart(){
 		query {
-			echo("INSERT INTO persons(id, name) VALUES('#form.uuid#','lucee')");
+			echo("INSERT INTO persons(id, name) VALUES('#form.uuid#','tachyon')");
 		}
 		query {
 			echo("INSERT INTO thoughts(id, body, FK_person) VALUES('#createUUID()#','lazy-loaded works outside of transcation', '#form.uuid#')");

@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="orm"{
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="orm"{
 
 	function beforeAll() {
 		variables.uri = createURI("LDEV2859");
@@ -11,7 +11,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase" labels="orm"{
 					template : "#uri#/LDEV2859.cfm",
 					forms :	{ scene=1 }
 				);
-				expect(trim(result.filecontent)).toBe("lucee");
+				expect(trim(result.filecontent)).toBe("tachyon");
 			});
 
 			it(title = "Orm entitytoquery with entityName", body = function( currentSpec ) {
@@ -19,7 +19,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase" labels="orm"{
 					template : "#uri#/LDEV2859.cfm",
 					forms :	{ scene = 2 }
 				);
-				expect(trim(result.filecontent)).toBe('Lucee');
+				expect(trim(result.filecontent)).toBe('Tachyon');
 			});
 		});
 	}

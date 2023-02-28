@@ -1,20 +1,20 @@
 # How to contribute
 
-Thanks for considering contributing to the Lucee Server platform.  
+Thanks for considering contributing to the Tachyon Server platform.  
 
 We love community input and we'll look at your pulls as soon as we can, but keep in mind we may not be able to merge your changes right away if they require a lot of review.
 
-If you want to make a large change, consider posting on our [mailing list](https://dev.lucee.org/) first to get direction.
+If you want to make a large change, consider posting on our [mailing list](https://dev.tachyon.org/) first to get direction.
 
-# Lucee Core vs Extensions
+# Tachyon Core vs Extensions
 
-This repo contains the code for the main Lucee engine.  
+This repo contains the code for the main Tachyon engine.  
 
 If you would like to help improve an extension, please find the appropriate repo for it.
 
 # Getting Started
 
-* Make sure you have a JIRA account https://luceeserver.atlassian.net/
+* Make sure you have a JIRA account https://tachyonserver.atlassian.net/
 * Make sure you have a GitHub account
 * File a proposal on the mailing list first
 * Then once it's been discussed, file a ticket for your issue, assuming one does not already exist.
@@ -22,7 +22,7 @@ If you would like to help improve an extension, please find the appropriate repo
 * Make sure you fill in the earliest version that you know has the issue.
 * Fork the repository on GitHub, start coding and running tests!
 
-Please read our docs on working with the Lucee source code: https://docs.lucee.org/guides/working-with-source.html
+Please read our docs on working with the Tachyon source code: https://docs.tachyon.org/guides/working-with-source.html
 
 # Branch Status
 
@@ -49,12 +49,12 @@ Java 8 is still our base line, we recommend Java 11 for production, but as long 
 
 # Documentation
 
-If your change affects a documented feature of Lucee, please submit a pull to our doc site as well.  The Lucee docs are stored in a GitHub repo as markdown.
-https://docs.lucee.org/
+If your change affects a documented feature of Tachyon, please submit a pull to our doc site as well.  The Tachyon docs are stored in a GitHub repo as markdown.
+https://docs.tachyon.org/
 
 # Additional Resources
 
-* [Lucee Site](https://lucee.org/)
-* [Lucee docs](https://docs.lucee.org/) 
-* [Bug Tracker](https://luceeserver.atlassian.net/)
-* [Lucee discourse forum](https://dev.lucee.org/) (For discussions about improving Lucee)
+* [Tachyon Site](https://tachyon.org/)
+* [Tachyon docs](https://docs.tachyon.org/) 
+* [Bug Tracker](https://tachyonserver.atlassian.net/)
+* [Tachyon discourse forum](https://dev.tachyon.org/) (For discussions about improving Tachyon)

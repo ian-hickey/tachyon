@@ -13,11 +13,11 @@ Tracks runtime logic flow, variable values, and execution time. Displays output 
 	---><cfargument name="inline" type="boolean" required="no" default="#false#" hint="if true displays trace code in line on the page in the location of the trace function, 
 addition to the debugging information output."><!---
 	---><cfargument name="abort" type="boolean" required="no" default="#false#" hint="stops further processing of the request."><!---
-	---><cfargument name="follow" type="boolean" required="no" default="#false#" hint="If true, Lucee follows the variable defined in the [var] attribute and will log any changes to it. Ignored when attribute [var] is not defined."><!---
+	---><cfargument name="follow" type="boolean" required="no" default="#false#" hint="If true, Tachyon follows the variable defined in the [var] attribute and will log any changes to it. Ignored when attribute [var] is not defined."><!---
 	---><cftrace attributeCollection="#arguments#"><!---
 	---></cffunction>
 
-<!--- older Lucee Version does not support the caller attribute and it is possible this file remain after a downgrade --->
+<!--- older Tachyon Version does not support the caller attribute and it is possible this file remain after a downgrade --->
 <cffunction name="oldTrace" returntype="void" 
 	hint="Displays and logs debugging data about the state of an application at the time this function executes. 
 Tracks runtime logic flow, variable values, and execution time. Displays output at the end of the request or in the debugging section at the end of the request."><!---
@@ -35,7 +35,7 @@ addition to the debugging information output."><!---
 	---><cftrace attributeCollection="#arguments#"><!---
 	---></cffunction>
 
-<cfset shortVersion=left(server.lucee.version,3)>
-<cfif (shortVersion EQ "3.3" and server.lucee.version LT "3.3.0.004") or server.lucee.version LT "3.2.1.005">
+<cfset shortVersion=left(server.tachyon.version,3)>
+<cfif (shortVersion EQ "3.3" and server.tachyon.version LT "3.3.0.004") or server.tachyon.version LT "3.2.1.005">
 	<cfset trace=oldTrace>
 </cfif>

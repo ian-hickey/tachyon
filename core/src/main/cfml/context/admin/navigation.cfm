@@ -54,7 +54,7 @@
 
 			$( function() {
 
-				$( '##lucee-admin-search-input' ).typeahead(
+				$( '##tachyon-admin-search-input' ).typeahead(
 					{
 						hint: true,
 						highlight: true,
@@ -80,7 +80,7 @@
 				}
 			});
 			function moreInfo() {
-				val = $( '##lucee-admin-search-input' ).val();
+				val = $( '##tachyon-admin-search-input' ).val();
 				window.location.href = '#request.self#?action=admin.search&q='+ val;
 			}
 		</script>

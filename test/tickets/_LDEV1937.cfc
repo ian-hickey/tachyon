@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 	
 	function run( testResults , testBox ) {
 		describe( "Test suite for LDEV-1992", function() {
@@ -16,7 +16,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase"{
 	}
 
 	function afterAll(){
-		variables.adminWeb = new org.lucee.cfml.Administrator("web", server.WebAdminPassword);
+		variables.adminWeb = new org.tachyon.cfml.Administrator("web", server.WebAdminPassword);
 		var datasource1 = adminWeb.getDatasource('testmysql');
 		var datasource2 = adminWeb.getDatasource('testMssql');
 		if (!StructIsEmpty(datasource1)){

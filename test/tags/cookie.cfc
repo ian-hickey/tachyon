@@ -1,5 +1,5 @@
 
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="cookie" skip=true	{
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="cookie" skip=true	{
 
 	public void function testCookieEncode(){
 		var uri = createURI("cookie/encode.cfm")
@@ -8,7 +8,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase" labels="cookie" skip=true	
 		);
 		dumpCookies(local.res);
 
-		expect( getCookie(res, "simple") ).toBe("lucee"); 
+		expect( getCookie(res, "simple") ).toBe("tachyon");
 
 		expect( getCookie(res, "ENCODED_GUID") ).toBe("376B3346-463E-4F79-83FFE7C41451304A");
 		expect( getCookie(res, "ENCODED_HTML") ).toBe("space%26%20%26%20space%20%26%20%26nbsp%3B");

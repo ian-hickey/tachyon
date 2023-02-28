@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" skip=true	{
+component extends="org.tachyon.cfml.test.TachyonTestCase" skip=true	{
 	
 	private void function test() localmode=true { 
 		fileName = 'foo-' & createUUID() & '.cfm';
@@ -11,7 +11,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase" skip=true	{
 		try{
 			include fileName;
 			fail("include above shold fail");
-		}catch(e) {}// fails because the file no longer exist, but because of that lucee removes the template from pool
+		}catch(e) {}// fails because the file no longer exist, but because of that tachyon removes the template from pool
 	
 		assertEquals("barx",foo());
 	}

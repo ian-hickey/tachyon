@@ -1,5 +1,5 @@
 <cfscript>
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="image" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="image" {
 	public void function testImageFormats() localmode="true" {
 		var imgf = ImageFormats();
 

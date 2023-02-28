@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 	function run( testResults , testBox ) {
 		describe( "Test suite for LDEV-1068 with preserve case true", function() {
 			it("Checking serializeJSON() for serializing query with preserve case true", function( currentSpec ){

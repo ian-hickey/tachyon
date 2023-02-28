@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="orm"{
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="orm"{
 	function beforeAll(){
 		variables.uri = createURI("LDEV1992");
 	}
@@ -16,7 +16,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase" labels="orm"{
 		return baseURI&""&calledName;
 	}
 	function afterAll(){
-		variables.adminWeb = new org.lucee.cfml.Administrator("web", request.WebAdminPassword);
+		variables.adminWeb = new org.tachyon.cfml.Administrator("web", request.WebAdminPassword);
 		var datasource = adminWeb.getDatasource('TestDSN1');
 		if (!StructIsEmpty(datasource)){
 			adminWeb.removeDatasource('TestDSN1');

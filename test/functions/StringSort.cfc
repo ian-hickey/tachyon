@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
     function run( testResults, testBox ){
         describe( "testcase for stringSort", function(){
             it(title="Check with stringSort()", body=function( currentSpec ){
@@ -7,7 +7,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase"{
                 assertEquals(stringSort("testSTRING123"), "123GINRSTestt");
                 assertEquals(stringSort("StringSort!@$%{}?"), "!$%?@SSginorrtt{}");
                 assertEquals(stringSort("test.string.sort"), "..eginorrssstttt");
-                assertEquals(stringSort("https://download.lucee.org/"), "..///:acddeeghllnoooprsttuw");
+                assertEquals(stringSort("https://download.tachyon.org/"), "..///:acddeeghllnoooprsttuw");
             });
             it(title="Check with stringSort() member functions", body=function( currentSpec ){
                 assertEquals("teststring".Sort(), "eginrssttt");
@@ -15,7 +15,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase"{
                 assertEquals("testSTRING123".Sort(), "123GINRSTestt");
                 assertEquals("StringSort!@$%{}?".Sort(), "!$%?@SSginorrtt{}");
                 assertEquals("test.string.sort".Sort(), "..eginorrssstttt");
-                assertEquals("https://download.lucee.org/".Sort(), "..///:acddeeghllnoooprsttuw");
+                assertEquals("https://download.tachyon.org/".Sort(), "..///:acddeeghllnoooprsttuw");
             })
         });
     }

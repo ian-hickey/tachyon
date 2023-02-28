@@ -23,9 +23,9 @@ component {
 
 	then add an ENV var pointing to the .json file
 	
-	LUCEE_BUILD_ENV=c:\work\lucee_build_env.json"
+	LUCEE_BUILD_ENV=c:\work\tachyon_build_env.json"
 
-	You can also pass "-DLUCEE_BUILD_ENV=c:/work/lucee_build_env.json" directly to ANT
+	You can also pass "-DLUCEE_BUILD_ENV=c:/work/tachyon_build_env.json" directly to ANT
 	to have it passed to the JVM.
 	*/
 
@@ -64,28 +64,28 @@ component {
 	public function loadCustomEnvStubs(){
 		server.custom_build_env = {
 			"MSSQL_SERVER": "127.0.0.1",
-			"MSSQL_USERNAME": "lucee",
+			"MSSQL_USERNAME": "tachyon",
 			"MSSQL_PASSWORD": "", // DON'T COMMIT
 			"MSSQL_PORT": 1433,
-			"MSSQL_DATABASE": "lucee", 
+			"MSSQL_DATABASE": "tachyon",
 
 			"MYSQL_SERVER": "localhost",
-			"MYSQL_USERNAME": "lucee",
+			"MYSQL_USERNAME": "tachyon",
 			"MYSQL_PASSWORD": "",  // DON'T COMMIT
 			"MYSQL_PORT": 3306,
-			"MYSQL_DATABASE": "lucee",
+			"MYSQL_DATABASE": "tachyon",
 
 			"POSTGRES_SERVER": "localhost",
-			"POSTGRES_USERNAME": "lucee",
+			"POSTGRES_USERNAME": "tachyon",
 			"POSTGRES_PASSWORD": "",  // DON'T COMMIT
 			"POSTGRES_PORT": 5432,
-			"POSTGRES_DATABASE": "lucee",
+			"POSTGRES_DATABASE": "tachyon",
 
 			"MONGODB_SERVER": "localhost",
 			"MONGODB_USERNAME": "",
 			"MONGODB_PASSWORD": "",  // DON'T COMMIT
 			// "MONGODB_PORT": 27017, // DON'T COMMIT
-			"MONGODB_DB": "lucee",
+			"MONGODB_DB": "tachyon",
 			/*
 			-- USER SQL
 				CREATE USER "C##LUCEE" INDENTIFIED BY "LUCEE"
@@ -101,19 +101,19 @@ component {
 				ALTER USER "C##LUCEE" DEFAULT ROLE "CONNECT, RESOURCE";
 			*/
 			"ORACLE_SERVER": "localhost",
-			"ORACLE_USERNAME": "c####lucee",
+			"ORACLE_USERNAME": "c####tachyon",
 			"ORACLE_PASSWORD": "",  // DON'T COMMIT
 			"ORACLE_PORT": 1521,
 			"ORACLE_DATABASE": "XE",
 			
 			"FTP_SERVER": "localhost",
-			"FTP_USERNAME": "lucee",
+			"FTP_USERNAME": "tachyon",
 			"FTP_PASSWORD": "",  // DON'T COMMIT
 			"FTP_PORT": 21,
 			"FTP_BASE_PATH": "/",
 
 			"SFTP_SERVER"="localhost",
-			"SFTP_USERNAME": "lucee",
+			"SFTP_USERNAME": "tachyon",
 			"SFTP_PASSWORD": "",  // DON'T COMMIT
 			"SFTP_PORT": 990,
 			"SFTP_BASE_PATH": "/",
@@ -134,19 +134,19 @@ component {
 			"IMAP_SERVER": "localhost",
 			"IMAP_PORT_SECURE": 993,
 			"IMAP_PORT_INSECURE": 143,
-			"IMAP_USERNAME": "lucee",
+			"IMAP_USERNAME": "tachyon",
 			"IMAP_PASSWORD": "", // DON'T COMMIT
 
 			"POP_SERVER": "localhost",
 			"POP_PORT_SECURE": 995,
 			"POP_PORT_INSECURE": 110,
-			"POP_USERNAME": "lucee",
+			"POP_USERNAME": "tachyon",
 			"POP_PASSWORD": "", // DON'T COMMIT
 
 			"SMTP_SERVER": "localhost",
 			"SMTP_PORT_SECURE": 25,
 			"SMTP_PORT_INSECURE": 587,
-			"SMTP_USERNAME": "lucee",
+			"SMTP_USERNAME": "tachyon",
 			"SMTP_PASSWORD": "", // DON'T COMMIT
 
 			"MEMCACHED_SERVER": "localhost",
@@ -308,14 +308,14 @@ component {
 	}
 
 	public function verifyS3 ( s3 ) localmode=true{
-		bucketName = "lucee-testsuite";
+		bucketName = "tachyon-testsuite";
 		base = "s3://#arguments.s3.ACCESS_KEY_ID#:#arguments.s3.SECRET_KEY#@/#bucketName#";
 		DirectoryExists( base );
 		return "s3 Connection Verified";
 	}
 
 	public function verifyS3Custom ( s3 ) localmode=true{
-		bucketName = "lucee-testsuite";
+		bucketName = "tachyon-testsuite";
 		base = "s3://#arguments.s3.ACCESS_KEY_ID#:#arguments.s3.SECRET_KEY#@#arguments.s3.HOST#/#bucketName#";
 		if ( ! DirectoryExists( base ) )
 			DirectoryCreate( base ); // for GHA, the local service starts empty
@@ -330,7 +330,7 @@ component {
 					action="update" 
 					caches="#{
 						testMemcached: {
-							class: 'org.lucee.extension.cache.mc.MemcachedCache'
+							class: 'org.tachyon.extension.cache.mc.MemcachedCache'
 							, bundleName: 'memcached.extension'
 							, bundleVersion: '4.0.0.7-SNAPSHOT'
 							, storage: false
@@ -410,9 +410,9 @@ component {
 	public function addSupportFunctions() {
 		server._getTempDir = function ( string prefix="" ) localmode=true{
 			if ( len( arguments.prefix ) eq 0 ) {
-				local.dir = getTempDirectory() & "lucee-tests\" & createGUID();
+				local.dir = getTempDirectory() & "tachyon-tests\" & createGUID();
 			} else {
-				local.dir = getTempDirectory() & "lucee-tests\" & arguments.prefix;
+				local.dir = getTempDirectory() & "tachyon-tests\" & arguments.prefix;
 			}
 			if ( !directoryExists( dir ) )
 				directoryCreate( dir, true );
@@ -481,8 +481,8 @@ component {
 						return msSql;
 					return {
 						class: 'com.microsoft.sqlserver.jdbc.SQLServerDriver'
-						, bundleName: 'org.lucee.mssql'
-						, bundleVersion: server.getDefaultBundleVersion( 'org.lucee.mssql', '4.0.2206.100' )
+						, bundleName: 'org.tachyon.mssql'
+						, bundleVersion: server.getDefaultBundleVersion( 'org.tachyon.mssql', '4.0.2206.100' )
 						, connectionString: 'jdbc:sqlserver://#msSQL.SERVER#:#msSQL.PORT#;DATABASENAME=#msSQL.DATABASE#;sendStringParametersAsUnicode=true;SelectMethod=direct' & arguments.connectionString
 						, username: msSQL.username
 						, password: msSQL.password
@@ -529,8 +529,8 @@ component {
 				if ( Len( arguments.dbFile ) ){
 					return {
 						class: 'org.h2.Driver'
-						, bundleName: 'org.lucee.h2'
-						, bundleVersion: server.getDefaultBundleVersion( 'org.lucee.h2', '2.1.214.0001L' )
+						, bundleName: 'org.tachyon.h2'
+						, bundleVersion: server.getDefaultBundleVersion( 'org.tachyon.h2', '2.1.214.0001L' )
 						, connectionString: 'jdbc:h2:#arguments.dbFile#/db;MODE=MySQL' & arguments.connectionString
 					}.append( arguments.options );
 				}
@@ -556,8 +556,8 @@ component {
 						return oracle;
 					return {
 						class: 'oracle.jdbc.OracleDriver'
-						, bundleName: 'org.lucee.oracle'
-						, bundleVersion: server.getDefaultBundleVersion( 'org.lucee.oracle', '19.17.0.0-ojdbc8' )
+						, bundleName: 'org.tachyon.oracle'
+						, bundleVersion: server.getDefaultBundleVersion( 'org.tachyon.oracle', '19.17.0.0-ojdbc8' )
 						, connectionString: 'jdbc:oracle:thin:@#oracle.server#:#oracle.port#/#oracle.database#' & arguments.connectionString
 						, username: oracle.username
 						, password: oracle.password

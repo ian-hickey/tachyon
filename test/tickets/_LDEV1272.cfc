@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="qoq"{
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="qoq"{
 	function beforeAll(){
 		variables.test = QueryNew("id,title,name");
 		QueryAddRow(test, 4);

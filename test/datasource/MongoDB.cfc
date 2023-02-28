@@ -1,6 +1,6 @@
 <!---
  *
- * Copyright (c) 2015, Lucee Assosication Switzerland. All rights reserved.
+ * Copyright (c) 2015, Tachyon Assosication Switzerland. All rights reserved.
  * Copyright (c) 2014, the Railo Company LLC. All rights reserved.
  *
  * This library is free software; you can redistribute it and/or
@@ -17,7 +17,7 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  *
  ---><cfscript>
-component extends="org.lucee.cfml.test.LuceeTestCase"  labels="mongodb"	{
+component extends="org.tachyon.cfml.test.TachyonTestCase"  labels="mongodb"	{
 
 	// skip closure
 	function isNotSupported() {
@@ -215,7 +215,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase"  labels="mongodb"	{
 		$assert.isEqual( 0, coll.count() );
 	}
 
-	public void function testAggregateResults() skip="true" { // TODO broken https://luceeserver.atlassian.net/browse/LDEV-3432
+	public void function testAggregateResults() skip="true" { // TODO broken https://tachyonserver.atlassian.net/browse/LDEV-3432
 		if(isNotSupported()) return;
 		var coll = resetTestCollection();
 
@@ -296,7 +296,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase"  labels="mongodb"	{
 		// group is not implemented yet!
 	}
 
-	public void function testMapReduce() skip="true" { // TODO broken https://luceeserver.atlassian.net/browse/LDEV-3432
+	public void function testMapReduce() skip="true" { // TODO broken https://tachyonserver.atlassian.net/browse/LDEV-3432
 		if(isNotSupported()) return;
 		var coll = resetTestCollection();
 		var fMap = "function() {

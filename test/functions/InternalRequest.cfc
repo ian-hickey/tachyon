@@ -16,7 +16,7 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  * 
  ---><cfscript>
-    component extends="org.lucee.cfml.test.LuceeTestCase" labels="internalRequest" {
+    component extends="org.tachyon.cfml.test.TachyonTestCase" labels="internalRequest" {
 
         function beforeAll() {
             variables.uri = createURI("internalRequest");
@@ -115,8 +115,8 @@
 
         /*
         TODO throws
-        lucee.runtime.exp.Abort: Page request is aborted
-        [java]    [script]         at lucee.runtime.tag.Abort.doStartTag(Abort.java:69)
+        tachyon.runtime.exp.Abort: Page request is aborted
+        [java]    [script]         at tachyon.runtime.tag.Abort.doStartTag(Abort.java:69)
         */
 
         public void function testAbort() localmode=true skip=true {
@@ -129,8 +129,8 @@
 
         /*
         TODO throws
-        lucee.runtime.exp.Abort: Page request is aborted
-        [java]    [script]         at lucee.runtime.tag.Abort.doStartTag(Abort.java:69)
+        tachyon.runtime.exp.Abort: Page request is aborted
+        [java]    [script]         at tachyon.runtime.tag.Abort.doStartTag(Abort.java:69)
         */
 
 
@@ -144,8 +144,8 @@
 
         /*
         TODO throws
-        lucee.runtime.exp.Abort: Page request is aborted
-        [java]    [script]         at lucee.runtime.tag.Abort.doStartTag(Abort.java:69)
+        tachyon.runtime.exp.Abort: Page request is aborted
+        [java]    [script]         at tachyon.runtime.tag.Abort.doStartTag(Abort.java:69)
         */
 
         public void function testContentFile() localmode=true skip=true {

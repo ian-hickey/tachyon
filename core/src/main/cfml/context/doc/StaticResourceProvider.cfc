@@ -50,7 +50,7 @@ component {
 		
 		if(!resInfo.exists) {
 			// maybe the name has the version appendix
-			nameAppendix=hash(server.lucee.version&server.lucee['release-date'],'quick');
+			nameAppendix=hash(server.tachyon.version&server.tachyon['release-date'],'quick');
 			if(find("-"&nameAppendix,filename)) {
 				var resInfo = getResInfo( replace(filename,"-"&nameAppendix,"") );
 			}

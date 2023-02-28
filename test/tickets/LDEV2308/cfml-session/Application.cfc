@@ -5,7 +5,7 @@ component {
 	this.setclientcookies="yes";
 	this.applicationtimeout="#createTimeSpan(0,0,0,10)#";
 	this.name="thread-session-cfml";
-	this.sessionType="cfml"; // lucee default
+	this.sessionType="cfml"; // tachyon default
 	
 	public function onRequestStart() {
 		setting requesttimeout=10;

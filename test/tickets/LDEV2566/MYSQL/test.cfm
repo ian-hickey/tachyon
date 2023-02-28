@@ -1,4 +1,4 @@
-<cfset form.emp_name = "lucee_core">
+<cfset form.emp_name = "tachyon_core">
 <cfset form.emp_age = "31">
 <cftry>
 	<cfinsert tablename="LDEV2566_mysql" datasource="ldev2566_MYSQL" formfields="emp_name,emp_age">

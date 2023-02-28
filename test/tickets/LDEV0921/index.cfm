@@ -17,7 +17,7 @@
 	}
 
 	/*
-		The following works on Lucee 4.5, but not on 5
+		The following works on Tachyon 4.5, but not on 5
 	*/
 	transaction {
 		e = entityLoadByPK( 'RandomEntity', id );

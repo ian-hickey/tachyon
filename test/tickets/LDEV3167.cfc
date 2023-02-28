@@ -1,4 +1,4 @@
-component extends = "org.lucee.cfml.test.LuceeTestCase" {
+component extends = "org.tachyon.cfml.test.TachyonTestCase" {
 	function run ( testResults , testbox ){
 		describe( title="Testcase for LDEV-3167", body=function(){
 			it( title = "Check with invalid struct member function", body = function( currentSpec ){

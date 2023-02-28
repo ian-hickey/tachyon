@@ -30,7 +30,7 @@ component {
 	        )");
 		}
 		query {
-	        echo("INSERT INTO LDEV1793(id, name) VALUES ('10001100010', 'lucee');");
+	        echo("INSERT INTO LDEV1793(id, name) VALUES ('10001100010', 'tachyon');");
 		}
 	}
 

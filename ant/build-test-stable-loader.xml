@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project default="all" basedir="." name="Lucee">
+<project default="all" basedir="." name="Tachyon">
 
 	<property name="srcCFML" location="${src}"/>
 	<property name="srcAdmin" location="${src}/cfml/admin"/>
@@ -19,12 +19,12 @@
 
 <target name="all">
 
-	<echots message="Starting Lucee with Stable Loader"/>
+	<echots message="Starting Tachyon with Stable Loader"/>
 	<script language="CFML">
 	<![CDATA[
-	systemOutput("---------- #DateTimeFormat(now(),'yyyy-mm-dd HH:nn:ss')# - Lucee Started with stable loader ----------", true);
+	systemOutput("---------- #DateTimeFormat(now(),'yyyy-mm-dd HH:nn:ss')# - Tachyon Started with stable loader ----------", true);
 
-	systemOutput("Core version: " & server.lucee.version, true);
+	systemOutput("Core version: " & server.tachyon.version, true);
 	systemOutput("Loader version: " & stableLoader, true);
 
 	]]>

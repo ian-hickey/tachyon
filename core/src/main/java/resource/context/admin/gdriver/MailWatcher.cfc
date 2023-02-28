@@ -23,7 +23,7 @@
     	<cfreturn "">
     </cffunction>
 	<cffunction name="getCFCPath" returntype="string">
-    	<cfreturn "lucee.extension.gateway.MailWatcher">
+    	<cfreturn "tachyon.extension.gateway.MailWatcher">
     </cffunction>
     
 	<cffunction name="getLabel" returntype="string" output="no">
@@ -62,7 +62,7 @@
 		<cfreturn "required">
 	</cffunction>
 	<cffunction name="getListenerPath" returntype="string" output="no">
-		<cfreturn "lucee.extension.gateway.MailWatcherListener">
+		<cfreturn "tachyon.extension.gateway.MailWatcherListener">
 	</cffunction>
 </cfcomponent>
 

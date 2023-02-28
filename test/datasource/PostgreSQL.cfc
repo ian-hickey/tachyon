@@ -1,6 +1,6 @@
 <!---
  *
- * Copyright (c) 2016, Lucee Assosication Switzerland. All rights reserved.*
+ * Copyright (c) 2016, Tachyon Assosication Switzerland. All rights reserved.*
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -16,7 +16,7 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  *
  ---><cfscript>
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="postgres"	{
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="postgres"	{
 
 
 	//public function afterTests(){}
@@ -120,7 +120,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase" labels="postgres"	{
 		var pgsql = getCredentials();
 		if(pgsql.count()==0) return false;
 
-		pgsql.bundleName = 'org.lucee.postgresql';
+		pgsql.bundleName = 'org.tachyon.postgresql';
 		pgsql.bundleVersion = '8.3.0.jdbc4';
 		application action="update" datasource="#pgSQL#";
 		return true;

@@ -1,6 +1,6 @@
 ﻿<!--- 
  *
- * Copyright (c) 2016, Lucee Assosication Switzerland. All rights reserved.*
+ * Copyright (c) 2016, Tachyon Assosication Switzerland. All rights reserved.*
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -16,12 +16,12 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  * 
  ---><cfscript>
-component extends="org.lucee.cfml.test.LuceeTestCase"	{
+component extends="org.tachyon.cfml.test.TachyonTestCase"	{
 		
 	public void function testImplicit(){
 		var data=chr(228)&chr(246)&chr(252); // äöü
 		data="{aaa:'#data#'}";
-		http url="https://update.lucee.org/rest/update/provider/echoPut" result="local.res" method="put" throwonerror="no" charset="utf-8"{
+		http url="https://update.tachyon.org/rest/update/provider/echoPut" result="local.res" method="put" throwonerror="no" charset="utf-8"{
 			httpparam type="body" value=data;
 		}
 		res=evaluate(res.filecontent);
@@ -31,7 +31,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase"	{
 	public void function testExplicit(){
 		var data=chr(228)&chr(246)&chr(252); // äöü
 		data="{aaa:'#data#'}";
-		http url="https://update.lucee.org/rest/update/provider/echoPut" result="local.res" method="put" throwonerror="no" charset="utf-8"{
+		http url="https://update.tachyon.org/rest/update/provider/echoPut" result="local.res" method="put" throwonerror="no" charset="utf-8"{
 			httpparam type="body" mimetype="text/plain; charset=UTF-8" value=data;
 		}
 		res=evaluate(res.filecontent);

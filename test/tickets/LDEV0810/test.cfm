@@ -1,4 +1,4 @@
 <cfscript>
-	result =  reescape("lucee?[]^");
+	result =  reescape("tachyon?[]^");
 	writeOutput(result);
 </cfscript>

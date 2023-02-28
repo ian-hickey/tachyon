@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 	function beforeAll(){
 		variables.uri = createURI("LDEV1840");
 	}
@@ -18,7 +18,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase"{
 					template:"#variables.uri#/test.cfm",
 					forms:{Scene:2}
 				);
-				expect(local.result.filecontent.trim()).toBe("lucee");
+				expect(local.result.filecontent.trim()).toBe("tachyon");
 			});
 
 			it(title = "Checking structure value return as string while using structure loop  ", body = function( currentSpec ) {

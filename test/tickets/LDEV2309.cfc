@@ -1,8 +1,8 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="schedule" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="schedule" {
 	function run( testResults , testBox ) {
 		describe( "Testcase for LDEV-2309", function() {
 			it( title="checking schedule task url http with standard port", body=function( currentSpec ) {
-				var testURL = "http://testLucee#createUniqueID()#.com";
+				var testURL = "http://testTachyon#createUniqueID()#.com";
 				var taskName = "schedule_url_test1";
 
 				schedule task = "#taskName#"
@@ -19,7 +19,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase" labels="schedule" {
 			});
 
 			it( title="checking schedule task url http with non-standard port", body=function( currentSpec ) {
-				var testURL = "http://testLucee#createUniqueID()#.com";
+				var testURL = "http://testTachyon#createUniqueID()#.com";
 				var taskName = "schedule_url_test2";
 
 				schedule task = "#taskName#"
@@ -36,7 +36,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase" labels="schedule" {
 			});
 
 			it( title="checking schedule task url https with standard port", body=function( currentSpec ) {
-				var testURL = "https://testLucee#createUniqueID()#.com";
+				var testURL = "https://testTachyon#createUniqueID()#.com";
 				var taskName = "schedule_url_test3";
 
 				schedule task = "#taskName#"
@@ -53,7 +53,7 @@ component extends="org.lucee.cfml.test.LuceeTestCase" labels="schedule" {
 			});
 
 			it( title="checking schedule task url https with non-standard port", body=function( currentSpec ) {
-				var testURL = "https://testLucee#createUniqueID()#.com";
+				var testURL = "https://testTachyon#createUniqueID()#.com";
 				var taskName = "schedule_url_test4";
 
 				schedule task = "#taskName#"

@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE taglib PUBLIC "-//Lucee//DTD CFML Tag Library 1.0//EN"
+<!DOCTYPE taglib PUBLIC "-//Tachyon//DTD CFML Tag Library 1.0//EN"
 	"dtd/web-cfmtaglibrary_1_0.dtd">
 <taglib>
 	<tlib-version>1.0</tlib-version>
 	<cfml-version>1.0</cfml-version>
 	<short-name>tbase</short-name>
-	<uri>https://www.lucee.org/cf-tld-3-1</uri>
-	<display-name>Lucee Core Tag Library</display-name>
+	<uri>https://www.tachyon.org/cf-tld-3-1</uri>
+	<display-name>Tachyon Core Tag Library</display-name>
 	<description></description>
 	<name-space>cf</name-space>
 	<name-space-separator/>
 	<ignore-unknow-tags>false</ignore-unknow-tags>
 	<el>
-		<el-class>lucee.transformer.cfml.expression.CFMLExprTransformer</el-class>
+		<el-class>tachyon.transformer.cfml.expression.CFMLExprTransformer</el-class>
 	</el>
 	<!-- Abort -->
 	<tag>
 		<name>abort</name>
-		<tag-class>lucee.runtime.tag.Abort</tag-class>
+		<tag-class>tachyon.runtime.tag.Abort</tag-class>
 		<body-content>empty</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<script>
@@ -51,7 +51,7 @@
 	<!-- Admin -->
 	<tag>
 		<name>admin</name>
-		<tag-class>lucee.runtime.tag.Admin</tag-class>
+		<tag-class>tachyon.runtime.tag.Admin</tag-class>
 		<body-content>empty</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<script>
@@ -59,7 +59,7 @@
 			<rtexprvalue>true</rtexprvalue>
 		</script>
 		<status>hidden</status>
-		<description>Tag for the Lucee web/server administrator</description>
+		<description>Tag for the Tachyon web/server administrator</description>
 		<attribute-type>dynamic</attribute-type>
 		<attribute>
 			<type>string</type>
@@ -95,7 +95,7 @@
 	<!-- Associate -->
 	<tag>
 		<name>associate</name>
-		<tag-class>lucee.runtime.tag.Associate</tag-class>
+		<tag-class>tachyon.runtime.tag.Associate</tag-class>
 		<body-content>empty</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<script>
@@ -122,7 +122,7 @@
 	<!-- Authenticate -->
 	<tag>
 		<name>authenticate</name>
-		<tag-class>lucee.runtime.tag.Authenticate</tag-class>
+		<tag-class>tachyon.runtime.tag.Authenticate</tag-class>
 		<body-content>empty</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<status>deprecated</status>
@@ -135,9 +135,9 @@
 	<!-- Break -->
 	<tag>
 		<name>break</name>
-		<tag-class>lucee.runtime.tag.Break</tag-class>
-		<tte-class>lucee.transformer.cfml.evaluator.impl.Break</tte-class>
-		<ttt-class>lucee.transformer.bytecode.statement.tag.TagBreak</ttt-class>
+		<tag-class>tachyon.runtime.tag.Break</tag-class>
+		<tte-class>tachyon.transformer.cfml.evaluator.impl.Break</tte-class>
+		<ttt-class>tachyon.transformer.bytecode.statement.tag.TagBreak</ttt-class>
 		<script>
 			<type>single</type>
 			<rtexprvalue>true</rtexprvalue>
@@ -160,9 +160,9 @@
 	<!-- Retry -->
 	<tag>
 		<name>retry</name>
-		<tag-class>lucee.runtime.tag.Retry</tag-class>
-		<tte-class>lucee.transformer.cfml.evaluator.impl.Retry</tte-class>
-		<ttt-class>lucee.transformer.bytecode.statement.tag.TagRetry</ttt-class>
+		<tag-class>tachyon.runtime.tag.Retry</tag-class>
+		<tte-class>tachyon.transformer.cfml.evaluator.impl.Retry</tte-class>
+		<ttt-class>tachyon.transformer.bytecode.statement.tag.TagRetry</ttt-class>
 		<script>
 			<type>single</type>
 			<rtexprvalue>true</rtexprvalue>
@@ -176,8 +176,8 @@
 	<!-- Cache -->
 	<tag>
 		<name>cache</name>
-		<tag-class>lucee.runtime.tag.Cache</tag-class>
-		<tte-class>lucee.transformer.cfml.evaluator.impl.Cache</tte-class>
+		<tag-class>tachyon.runtime.tag.Cache</tag-class>
+		<tte-class>tachyon.transformer.cfml.evaluator.impl.Cache</tte-class>
 		<body-content>free</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<script>
@@ -260,7 +260,7 @@ block, for example, if a specified id value is invalid</description>
 			<name>cacheName</name>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
-		<description>definition of the cache used by name, when not set the "default Object Cache" defined in Lucee Administrator is used instead.</description>
+		<description>definition of the cache used by name, when not set the "default Object Cache" defined in Tachyon Administrator is used instead.</description>
     </attribute>
 		<attribute>
 			<type>string</type>
@@ -332,7 +332,7 @@ A return value from the CreateTimeSpan function, for example, "#CreateTimeSpan(0
 			<name>expireURL</name>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
-			<description>A URL reference. Can include wildcards, for example: "*/view.cfm?id=*". Lucee flushes, from the cache, pages that match the specified URL or pattern.</description>
+			<description>A URL reference. Can include wildcards, for example: "*/view.cfm?id=*". Tachyon flushes, from the cache, pages that match the specified URL or pattern.</description>
 		</attribute>
 		<attribute>
 			<type>number</type>
@@ -340,13 +340,13 @@ A return value from the CreateTimeSpan function, for example, "#CreateTimeSpan(0
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
 			<description>Port number of the web server from which the URL for the cached page is requested.
-			In the internal call from cfcache to cfhttp, Lucee resolves each URL variable in the page; this ensures that links in the page remain functional.</description>
+			In the internal call from cfcache to cfhttp, Tachyon resolves each URL variable in the page; this ensures that links in the page remain functional.</description>
 		</attribute>
 	</tag>
 	<!-- Calendar -->
 	<tag>
 		<name>calendar</name>
-		<tag-class>lucee.runtime.tag.Calendar</tag-class>
+		<tag-class>tachyon.runtime.tag.Calendar</tag-class>
 		<body-content>empty</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<status>unimplemented</status>
@@ -516,8 +516,8 @@ A return value from the CreateTimeSpan function, for example, "#CreateTimeSpan(0
 	<!-- Case -->
 	<tag>
 		<name>case</name>
-		<tag-class>lucee.runtime.tag.Case</tag-class>
-		<tte-class>lucee.transformer.cfml.evaluator.impl.Case</tte-class>
+		<tag-class>tachyon.runtime.tag.Case</tag-class>
+		<tte-class>tachyon.transformer.cfml.evaluator.impl.Case</tte-class>
 		<body-content>must</body-content>
 		<allow-removing-literal>yes</allow-removing-literal>
 		<body-rtexprvalue>false</body-rtexprvalue>
@@ -544,8 +544,8 @@ A return value from the CreateTimeSpan function, for example, "#CreateTimeSpan(0
 	<!-- Catch -->
 	<tag>
 		<name>catch</name>
-		<tag-class>lucee.runtime.tag.Catch</tag-class>
-		<tte-class>lucee.transformer.cfml.evaluator.impl.Catch</tte-class>
+		<tag-class>tachyon.runtime.tag.Catch</tag-class>
+		<tte-class>tachyon.transformer.cfml.evaluator.impl.Catch</tte-class>
 		<allow-removing-literal>yes</allow-removing-literal>
 		<body-content>must</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
@@ -572,7 +572,7 @@ A return value from the CreateTimeSpan function, for example, "#CreateTimeSpan(0
 	<!-- Collection -->
 	<tag>
 		<name>collection</name>
-		<tag-class>lucee.runtime.tag.Collection</tag-class>
+		<tag-class>tachyon.runtime.tag.Collection</tag-class>
 		<body-content>empty</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<script>
@@ -587,7 +587,7 @@ A return value from the CreateTimeSpan function, for example, "#CreateTimeSpan(0
 			<name>engine</name>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
-			<description>This attribute only exists for compatibility reasons to other CFML engines, the attribute is completely ignored by Lucee.</description>
+			<description>This attribute only exists for compatibility reasons to other CFML engines, the attribute is completely ignored by Tachyon.</description>
 		</attribute>
 		<attribute>
 			<type>boolean</type>
@@ -640,9 +640,9 @@ A return value from the CreateTimeSpan function, for example, "#CreateTimeSpan(0
 	<!-- Component -->
 	<tag>
 		<name>component</name>
-		<tag-class>lucee.runtime.tag.Component</tag-class>
-		<tte-class>lucee.transformer.cfml.evaluator.impl.Component</tte-class>
-		<ttt-class>lucee.transformer.bytecode.statement.tag.TagComponent</ttt-class>
+		<tag-class>tachyon.runtime.tag.Component</tag-class>
+		<tte-class>tachyon.transformer.cfml.evaluator.impl.Component</tte-class>
+		<ttt-class>tachyon.transformer.bytecode.statement.tag.TagComponent</ttt-class>
 		<att-default-value></att-default-value>
 		<body-content>must</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
@@ -652,7 +652,7 @@ A return value from the CreateTimeSpan function, for example, "#CreateTimeSpan(0
 			<context>component</context>
 		</script>
 		<description>Creates and defines a component object; encloses functionality that you build in CFML and enclose within cffunction tags. This tag contains one or more cffunction tags that define methods. Code within the body of this tag, other than cffunction tags, is executed when the component is instantiated. </description>
-		<att-class>lucee.transformer.cfml.attributes.impl.Component</att-class>
+		<att-class>tachyon.transformer.cfml.attributes.impl.Component</att-class>
 		<attribute-type>mixed</attribute-type>
 		<attribute>
 			<type>boolean</type>
@@ -720,7 +720,7 @@ A return value from the CreateTimeSpan function, for example, "#CreateTimeSpan(0
 		    <status>unimplemented</status>
 			<description>Specifies the namespace used in the WSDL when
             using the CFC as a document-literal style web service.
-            If you don't specify this attribute, Lucee
+            If you don't specify this attribute, Tachyon
             derives the namespace from the CFC class name.
             This attribute applies only when style="document".</description>
 		</attribute>
@@ -739,7 +739,7 @@ A return value from the CreateTimeSpan function, for example, "#CreateTimeSpan(0
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
 			<status>unimplemented</status>
-			<description>Specifies the SOAP URL of the web service. If you don't specify this attribute, Lucee uses the URL of the CFC in the WSDL service description.
+			<description>Specifies the SOAP URL of the web service. If you don't specify this attribute, Tachyon uses the URL of the CFC in the WSDL service description.
 			Use this attribute to specify the protocol, for example, by specifying a URL that starts with https://. This attribute applies only for web services.</description>
 		</attribute>
 		<attribute>
@@ -766,7 +766,7 @@ A return value from the CreateTimeSpan function, for example, "#CreateTimeSpan(0
 			<rtexprvalue>true</rtexprvalue>
 		    <status>unimplemented</status>
 			<description>A properly formatted WSDL file to be used instead of
-            WSDL generated by Lucee.
+            WSDL generated by Tachyon.
             This attribute applies only when style="document".</description>
 		</attribute>
 		<attribute>
@@ -789,9 +789,9 @@ A return value from the CreateTimeSpan function, for example, "#CreateTimeSpan(0
 	<!-- Continue -->
 	<tag>
 		<name>Continue</name>
-		<tag-class>lucee.runtime.tag.Continue</tag-class>
-		<tte-class>lucee.transformer.cfml.evaluator.impl.Continue</tte-class>
-		<ttt-class>lucee.transformer.bytecode.statement.tag.TagContinue</ttt-class>
+		<tag-class>tachyon.runtime.tag.Continue</tag-class>
+		<tte-class>tachyon.transformer.cfml.evaluator.impl.Continue</tte-class>
+		<ttt-class>tachyon.transformer.bytecode.statement.tag.TagContinue</ttt-class>
 		<script>
 			<type>single</type>
 		</script>
@@ -812,7 +812,7 @@ A return value from the CreateTimeSpan function, for example, "#CreateTimeSpan(0
 	<!-- Content -->
 	<tag>
 		<name>Content</name>
-		<tag-class>lucee.runtime.tag.Content</tag-class>
+		<tag-class>tachyon.runtime.tag.Content</tag-class>
 		<body-content>free</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<script>
@@ -878,7 +878,7 @@ A return value from the CreateTimeSpan function, for example, "#CreateTimeSpan(0
 	<!-- Cookie -->
 	<tag>
 		<name>Cookie</name>
-		<tag-class>lucee.runtime.tag.Cookie</tag-class>
+		<tag-class>tachyon.runtime.tag.Cookie</tag-class>
 		<body-content>empty</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<script>
@@ -960,7 +960,7 @@ A return value from the CreateTimeSpan function, for example, "#CreateTimeSpan(0
 			<name>preserveCase</name>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
-			<description>if set to true Lucee keep the original case for the name, otherwise the name is converted to a upper case string</description>
+			<description>if set to true Tachyon keep the original case for the name, otherwise the name is converted to a upper case string</description>
 		</attribute>
 		<attribute>
 			<type>boolean</type>
@@ -968,7 +968,7 @@ A return value from the CreateTimeSpan function, for example, "#CreateTimeSpan(0
 			<alias>encode</alias>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
-			<description>if set to true, Lucee url encodes the given name and value if necessary.</description>
+			<description>if set to true, Tachyon url encodes the given name and value if necessary.</description>
 		</attribute>
 		<attribute>
 			<type>string</type>
@@ -983,7 +983,7 @@ A return value from the CreateTimeSpan function, for example, "#CreateTimeSpan(0
 	<!-- DBInfo -->
 	<tag>
 		<name>DBInfo</name>
-		<tag-class>lucee.runtime.tag.DBInfo</tag-class>
+		<tag-class>tachyon.runtime.tag.DBInfo</tag-class>
 		<body-content>empty</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<script>
@@ -1097,7 +1097,7 @@ Patterns are also supported, i.e.
 	<!-- DefaultCase -->
 	<tag>
 		<name>defaultCase</name>
-		<tag-class>lucee.runtime.tag.Defaultcase</tag-class>
+		<tag-class>tachyon.runtime.tag.Defaultcase</tag-class>
 		<allow-removing-literal>yes</allow-removing-literal>
 		<body-content>must</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
@@ -1108,8 +1108,8 @@ Patterns are also supported, i.e.
 	<!-- Directory -->
 	<tag>
 		<name>directory</name>
-		<tag-class>lucee.runtime.tag.Directory</tag-class>
-		<!-- tte-class>lucee.transformer.cfml.evaluator.impl.Directory</tte-class -->
+		<tag-class>tachyon.runtime.tag.Directory</tag-class>
+		<!-- tte-class>tachyon.transformer.cfml.evaluator.impl.Directory</tte-class -->
 		<body-content>empty</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<script>
@@ -1243,7 +1243,7 @@ Example:
 			<name>recurse</name>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
-			<description>Whether Lucee performs the action on subdirectories</description>
+			<description>Whether Tachyon performs the action on subdirectories</description>
 		</attribute>
 		<attribute>
 			<type>string</type>
@@ -1266,8 +1266,8 @@ Example:
 	<!-- Else -->
 	<tag>
 		<name>else</name>
-		<tag-class>lucee.runtime.tag.Else</tag-class>
-		<tte-class>lucee.transformer.cfml.evaluator.impl.Else</tte-class>
+		<tag-class>tachyon.runtime.tag.Else</tag-class>
+		<tte-class>tachyon.transformer.cfml.evaluator.impl.Else</tte-class>
 		<body-content>empty</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<description>Used with cfelse and cfelseif, cfif lets you create simple and compound conditional statements
@@ -1277,8 +1277,8 @@ Example:
 	<!-- ElseIf -->
 	<tag>
 		<name>elseIf</name>
-		<tag-class>lucee.runtime.tag.ElseIf</tag-class>
-		<tte-class>lucee.transformer.cfml.evaluator.impl.ElseIf</tte-class>
+		<tag-class>tachyon.runtime.tag.ElseIf</tag-class>
+		<tte-class>tachyon.transformer.cfml.evaluator.impl.ElseIf</tte-class>
 		<body-content>empty</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<description>
@@ -1296,7 +1296,7 @@ Example:
 	<!-- Execute -->
 	<tag>
 		<name>Execute</name>
-		<tag-class>lucee.runtime.tag.Execute</tag-class>
+		<tag-class>tachyon.runtime.tag.Execute</tag-class>
 		<body-content>free</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<script>
@@ -1382,7 +1382,7 @@ Example:
 	<!-- Exit -->
 	<tag>
 		<name>Exit</name>
-		<tag-class>lucee.runtime.tag.Exit</tag-class>
+		<tag-class>tachyon.runtime.tag.Exit</tag-class>
 		<body-content>empty</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<script>
@@ -1407,7 +1407,7 @@ Example:
 	<!-- Feed -->
 	<tag>
 		<name>Feed</name>
-		<tag-class>lucee.runtime.tag.Feed</tag-class>
+		<tag-class>tachyon.runtime.tag.Feed</tag-class>
 		<body-content>empty</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<script>
@@ -1450,8 +1450,8 @@ Example:
 		<description>Used only for the read action.
             Path to the directory in which to save any enclosures that are available in the feed being read.
             The path can be absolute or relative to the CFML file.
-            If the directory does not exist, Lucee generates an error.
-            If you omit this attribute, Lucee does not save enclosures.
+            If the directory does not exist, Tachyon generates an error.
+            If you omit this attribute, Tachyon does not save enclosures.
             To specify the directory that contains the current page, set this attribute to .(period). </description>
     </attribute>
 		<attribute>
@@ -1459,10 +1459,10 @@ Example:
 			<name>ignoreEnclosureError</name>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
-		<description>If this attribute is true, Lucee attempts to save all enclosures.
+		<description>If this attribute is true, Tachyon attempts to save all enclosures.
             If it encounters an error downloading one enclosure, it continues downloading other enclosures and writes the
             error information in the server log.
-            If this attribute is false, Lucee stops downloading all enclosures and generates an error when it encounters
+            If this attribute is false, Tachyon stops downloading all enclosures and generates an error when it encounters
             an error downloading an enclosure.
             Note: Enclosure errors can occur if the specified enclosure is of a type that the web server does not allow to be
             downloaded. (optional, default=false)</description>
@@ -1492,7 +1492,7 @@ Example:
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
 		<description>Whether to overwrite the XML feed file if it already exists.
-            If you do not set this attribute to true and the cffeed tag tries to write to a file that exists, Lucee
+            If you do not set this attribute to true and the cffeed tag tries to write to a file that exists, Tachyon
             generates an error. (optional, default=false)</description>
     </attribute>
 		<attribute>
@@ -1502,7 +1502,7 @@ Example:
 			<rtexprvalue>true</rtexprvalue>
 		<description>Used only for the read action.
             Whether to overwrite files in the enclosure directory if they already exist.
-            If you do not set this attribute to true and the cffeed tag tries to write to a file that exists, Lucee
+            If you do not set this attribute to true and the cffeed tag tries to write to a file that exists, Tachyon
             generates an error. (optional, default=false)</description>
     </attribute>
 		<attribute>
@@ -1590,7 +1590,7 @@ Example:
 	<!-- Finally -->
 	<tag>
 		<name>Finally</name>
-		<tag-class>lucee.runtime.tag.Finally</tag-class>
+		<tag-class>tachyon.runtime.tag.Finally</tag-class>
 		<allow-removing-literal>yes</allow-removing-literal>
 		<body-content>must</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
@@ -1602,8 +1602,8 @@ Example:
 	<!-- File -->
 	<tag>
 		<name>File</name>
-		<tag-class>lucee.runtime.tag.FileTag</tag-class>
-		<tte-class>lucee.transformer.cfml.evaluator.impl.File</tte-class>
+		<tag-class>tachyon.runtime.tag.FileTag</tag-class>
+		<tte-class>tachyon.transformer.cfml.evaluator.impl.File</tte-class>
 		<body-content>free</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<script>
@@ -1798,7 +1798,7 @@ To use cached data, the tag must be called with the exact same arguments. Only u
 	<!-- Flush -->
 	<tag>
 		<name>flush</name>
-		<tag-class>lucee.runtime.tag.Flush</tag-class>
+		<tag-class>tachyon.runtime.tag.Flush</tag-class>
 		<body-content>empty</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<script>
@@ -1822,7 +1822,7 @@ To use cached data, the tag must be called with the exact same arguments. Only u
 	<!-- Forward -->
 	<tag>
 		<name>forward</name>
-		<tag-class>lucee.runtime.tag.Forward</tag-class>
+		<tag-class>tachyon.runtime.tag.Forward</tag-class>
 		<body-content>empty</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<script>
@@ -1846,7 +1846,7 @@ To use cached data, the tag must be called with the exact same arguments. Only u
 	<!-- Ftp -->
 	<tag>
 		<name>ftp</name>
-		<tag-class>lucee.runtime.tag.Ftp</tag-class>
+		<tag-class>tachyon.runtime.tag.Ftp</tag-class>
 		<body-content>empty</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<script>
@@ -2079,7 +2079,7 @@ To use cached data, the tag must be called with the exact same arguments. Only u
 	<!-- Graph -->
 	<tag>
 		<name>graph</name>
-		<tag-class>lucee.runtime.tag.Graph</tag-class>
+		<tag-class>tachyon.runtime.tag.Graph</tag-class>
 		<body-content>must</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<status>deprecated</status>
@@ -2387,7 +2387,7 @@ To use cached data, the tag must be called with the exact same arguments. Only u
 	<!-- GraphData -->
 	<tag>
 		<name>graphData</name>
-		<tag-class>lucee.runtime.tag.GraphData</tag-class>
+		<tag-class>tachyon.runtime.tag.GraphData</tag-class>
 		<body-content>empty</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<status>deprecated</status>
@@ -2429,7 +2429,7 @@ To use cached data, the tag must be called with the exact same arguments. Only u
 	<!-- Grid -->
 	<tag>
 		<name>Grid</name>
-		<tag-class>lucee.runtime.tag.Grid</tag-class>
+		<tag-class>tachyon.runtime.tag.Grid</tag-class>
 		<body-content>must</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<status>unimplemented</status>
@@ -2894,7 +2894,7 @@ To use cached data, the tag must be called with the exact same arguments. Only u
 	<!-- GridColumn -->
 	<tag>
 		<name>GridColumn</name>
-		<tag-class>lucee.runtime.tag.GridColumn</tag-class>
+		<tag-class>tachyon.runtime.tag.GridColumn</tag-class>
 		<body-content>empty</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<status>unimplemented</status>
@@ -2916,7 +2916,7 @@ To use cached data, the tag must be called with the exact same arguments. Only u
 			<rtexprvalue>true</rtexprvalue>
 			<description>A mask pattern that controls the character pattern
             that the form displays or allows users to input and
-            sends to Lucee.
+            sends to Tachyon.
             For currency type data, use currency symbol.
             For text or numeric type data use:
              - A = [A-Za-z]
@@ -3131,7 +3131,7 @@ To use cached data, the tag must be called with the exact same arguments. Only u
 	<!-- GridRow -->
 	<tag>
 		<name>GridRow</name>
-		<tag-class>lucee.runtime.tag.GridRow</tag-class>
+		<tag-class>tachyon.runtime.tag.GridRow</tag-class>
 		<body-content>empty</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<status>unimplemented</status>
@@ -3150,7 +3150,7 @@ To use cached data, the tag must be called with the exact same arguments. Only u
 	<!-- GridUpdate -->
 	<tag>
 		<name>GridUpdate</name>
-		<tag-class>lucee.runtime.tag.GridUpdate</tag-class>
+		<tag-class>tachyon.runtime.tag.GridUpdate</tag-class>
 		<body-content>empty</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<status>unimplemented</status>
@@ -3209,7 +3209,7 @@ To use cached data, the tag must be called with the exact same arguments. Only u
 			<required>true</required>
 			<rtexprvalue>true</rtexprvalue>
 			<description>The contents of a connection string to send to the ODBC server. When connecting to a data
-	source defined in the Lucee Administrator, you can use this attribute to specify additional
+	source defined in the Tachyon Administrator, you can use this attribute to specify additional
 	connection details or to override connection information specified in the Administrator. If you are
 	dynamically connecting to a datasource by specifying dbType = "dynamic", the connection string must
 	specify all required ODBC connection attributes.</description>
@@ -3273,7 +3273,7 @@ To use cached data, the tag must be called with the exact same arguments. Only u
 	<!-- Header -->
 	<tag>
 		<name>Header</name>
-		<tag-class>lucee.runtime.tag.Header</tag-class>
+		<tag-class>tachyon.runtime.tag.Header</tag-class>
 		<body-content>empty</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<script>
@@ -3325,7 +3325,7 @@ To use cached data, the tag must be called with the exact same arguments. Only u
 	<!-- HtmlBody -->
 	<tag>
 		<name>htmlBody</name>
-		<tag-class>lucee.runtime.tag.HtmlBody</tag-class>
+		<tag-class>tachyon.runtime.tag.HtmlBody</tag-class>
 		<body-content>free</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<script>
@@ -3385,7 +3385,7 @@ To use cached data, the tag must be called with the exact same arguments. Only u
 	<!-- HtmlHead -->
 	<tag>
 		<name>htmlHead</name>
-		<tag-class>lucee.runtime.tag.HtmlHead</tag-class>
+		<tag-class>tachyon.runtime.tag.HtmlHead</tag-class>
 		<body-content>free</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<script>
@@ -3446,7 +3446,7 @@ To use cached data, the tag must be called with the exact same arguments. Only u
 	<!-- Http -->
 	<tag>
 		<name>http</name>
-		<tag-class>lucee.runtime.tag.Http</tag-class>
+		<tag-class>tachyon.runtime.tag.Http</tag-class>
 		<body-content>free</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<script>
@@ -3552,7 +3552,7 @@ Use POST to send information to a server page or a CGI program for processing. P
 			<name>preAuth</name>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
-			<description>if set to true (default), Lucee sends the basic authentication (username password) always (Preemptive Basic Authentication),
+			<description>if set to true (default), Tachyon sends the basic authentication (username password) always (Preemptive Basic Authentication),
 			if set to false the authentication is only send when the server ask for it (status code 401).</description>
 		</attribute>
 		<attribute>
@@ -3560,7 +3560,7 @@ Use POST to send information to a server page or a CGI program for processing. P
 			<name>multipart</name>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
-			<description>Tells Lucee to send all data specified by cfhttpparam type="formField" tags as multipart form data, with a Content-Type of multipart/form-data.</description>
+			<description>Tells Tachyon to send all data specified by cfhttpparam type="formField" tags as multipart form data, with a Content-Type of multipart/form-data.</description>
 		</attribute>
 		<attribute>
 			<type>string</type>
@@ -3695,8 +3695,8 @@ Use POST to send information to a server page or a CGI program for processing. P
 	to No and throwOnError = "yes", execution stops if cfhttp fails, and the status code and associated
 	error message are returned in the variable cfhttp.statusCode. To see where execution would have been
 	redirected, use the variable cfhttp.responseHeader[LOCATION]. The key LOCATION identifies the path of
-	redirection. Lucee will follow up to five redirections on a request. if this limit is exceeded,
-	Lucee behaves as if redirect = "no".</description>
+	redirection. Tachyon will follow up to five redirections on a request. if this limit is exceeded,
+	Tachyon behaves as if redirect = "no".</description>
 		</attribute>
 		<attribute>
 			<type>any</type>
@@ -3704,12 +3704,12 @@ Use POST to send information to a server page or a CGI program for processing. P
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
 			<description>A value, in seconds or a TimeSpan object. When a URL timeout is specified in the browser, the timeout attribute setting
-		takes precedence over the Lucee Administrator timeout. The server then uses the lesser
+		takes precedence over the Tachyon Administrator timeout. The server then uses the lesser
 		of the URL timeout and the timeout passed in the timeout attribute, so that the request always times
-		out before or at the same time as the page times out. If there is no URL timeout specified, Lucee
-		takes the lesser of the Lucee Administrator timeout and the timeout passed in the timeout attribute.
-		If there is no timeout set on the URL in the browser, no timeout set in the Lucee Administrator,
-		and no timeout set with the timeout attribute, Lucee waits indefinitely for the cfhttp request to
+		out before or at the same time as the page times out. If there is no URL timeout specified, Tachyon
+		takes the lesser of the Tachyon Administrator timeout and the timeout passed in the timeout attribute.
+		If there is no timeout set on the URL in the browser, no timeout set in the Tachyon Administrator,
+		and no timeout set with the timeout attribute, Tachyon waits indefinitely for the cfhttp request to
 		process.</description>
 		</attribute>
 		<attribute>
@@ -3788,7 +3788,7 @@ To use cached data, the tag must be called with the exact same arguments.</descr
 	<!-- HttpParam -->
 	<tag>
 		<name>httpparam</name>
-		<tag-class>lucee.runtime.tag.HttpParam</tag-class>
+		<tag-class>tachyon.runtime.tag.HttpParam</tag-class>
 		<body-content>empty</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<script>
@@ -3816,7 +3816,7 @@ To use cached data, the tag must be called with the exact same arguments.</descr
 - CGI: specifies an HTTP header. encodes the value depending on the attribute "encoded
 - body: specifies the body of the HTTP request.
 - XML: identifies the request as having a content-type of text/xml. Specifies that the value attribute contains the body of the HTTP request. Used to send XML to the destination URL.
-- file: tells Lucee to send the contents of the specified file.
+- file: tells Tachyon to send the contents of the specified file.
 - URL: specifies a URL query string name-value pair to append to the cfhttp url attribute.
 - form,formField: specifies a form field to send.
 - cookie: specifies a cookie to send as an HTTP header.
@@ -3863,8 +3863,8 @@ To use cached data, the tag must be called with the exact same arguments.</descr
 	<!-- if -->
 	<tag>
 		<name>if</name>
-		<tag-class>lucee.runtime.tag.If</tag-class>
-		<ttt-class>lucee.transformer.bytecode.statement.tag.TagIf</ttt-class>
+		<tag-class>tachyon.runtime.tag.If</tag-class>
+		<ttt-class>tachyon.transformer.bytecode.statement.tag.TagIf</ttt-class>
 		<allow-removing-literal>yes</allow-removing-literal>
 		<body-content>must</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
@@ -3881,7 +3881,7 @@ To use cached data, the tag must be called with the exact same arguments.</descr
 	<!-- Imap -->
 	<tag>
 		<name>Imap</name>
-		<tag-class>lucee.runtime.tag.Imap</tag-class>
+		<tag-class>tachyon.runtime.tag.Imap</tag-class>
 		<body-content>empty</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<script>
@@ -4063,9 +4063,9 @@ To use cached data, the tag must be called with the exact same arguments.</descr
 	<!-- Import -->
 	<tag>
 		<name>Import</name>
-		<tag-class>lucee.runtime.tag.ImportTag</tag-class>
-		<tte-class>lucee.transformer.cfml.evaluator.impl.Import</tte-class>
-		<ttt-class>lucee.transformer.bytecode.statement.tag.TagImport</ttt-class>
+		<tag-class>tachyon.runtime.tag.ImportTag</tag-class>
+		<tte-class>tachyon.transformer.cfml.evaluator.impl.Import</tte-class>
+		<ttt-class>tachyon.transformer.bytecode.statement.tag.TagImport</ttt-class>
 		<body-content>empty</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<script>
@@ -4108,9 +4108,9 @@ If you import a CFML custom tag directory and specify an empty value, "", for th
 	<!-- Interface -->
 	<tag>
 		<name>Interface</name>
-		<tag-class>lucee.runtime.tag.Interface</tag-class>
-		<tte-class>lucee.transformer.cfml.evaluator.impl.Interface</tte-class>
-		<ttt-class>lucee.transformer.bytecode.statement.tag.TagInterface</ttt-class>
+		<tag-class>tachyon.runtime.tag.Interface</tag-class>
+		<tte-class>tachyon.transformer.cfml.evaluator.impl.Interface</tte-class>
+		<ttt-class>tachyon.transformer.bytecode.statement.tag.TagInterface</ttt-class>
 		<body-content>must</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<script>
@@ -4152,8 +4152,8 @@ both functions must have the same attributes; otherwise
 	<!-- Include -->
 	<tag>
 		<name>Include</name>
-		<tag-class>lucee.runtime.tag.Include</tag-class>
-		<ttt-class>lucee.transformer.bytecode.statement.tag.TagInclude</ttt-class>
+		<tag-class>tachyon.runtime.tag.Include</tag-class>
+		<ttt-class>tachyon.transformer.bytecode.statement.tag.TagInclude</ttt-class>
 		<body-content>empty</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<script>
@@ -4200,7 +4200,7 @@ To use cached data, the function must be called with the exact same arguments.
 	<!-- Index -->
 	<tag>
 		<name>Index</name>
-		<tag-class>lucee.runtime.tag.Index</tag-class>
+		<tag-class>tachyon.runtime.tag.Index</tag-class>
 		<body-content>empty</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<script>
@@ -4210,7 +4210,7 @@ To use cached data, the function must be called with the exact same arguments.
 		<description>Populates collections with indexed data. The cfindex and cfsearch tags encapsulate the
   indexing and searching utilities. Collections can be populated from text files in a directory
   you specify, or from a query generated by a query. Before you can populate a collection,
-  you must create the collection using either the cfcollection tag or the Lucee Administrator. Use
+  you must create the collection using either the cfcollection tag or the Tachyon Administrator. Use
   cfsearch to search collections you populate with cfindex.</description>
 		<attribute-type>fixed</attribute-type>
 		<attribute>
@@ -4324,7 +4324,7 @@ Permits searching collections by title or displaying a separate title from the k
 			<name>extensions</name>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
-			<description>Specifies the comma-separated list of file extensions that Lucee uses to index files if
+			<description>Specifies the comma-separated list of file extensions that Tachyon uses to index files if
 	type = "Path". Default is HTM, HTML, CFM, CFML, DBM, DBML.
 	An entry of "*." returns files with no extension</description>
 		</attribute>
@@ -4383,7 +4383,7 @@ Permits searching collections by title or displaying a separate title from the k
 			<name>status</name>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
-			<description>The name of the structure into which Lucee
+			<description>The name of the structure into which Tachyon
             returns status information.</description>
 		</attribute>
 		<attribute>
@@ -4392,7 +4392,7 @@ Permits searching collections by title or displaying a separate title from the k
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
 		    <status>unimplemented</status>
-			<description>Specifies the location of files to index when the computer that contains the K2 Search Service is not the computer on which you installed Lucee, and when you index files with the type attribute set to path.</description>
+			<description>Specifies the location of files to index when the computer that contains the K2 Search Service is not the computer on which you installed Tachyon, and when you index files with the type attribute set to path.</description>
 		</attribute>
 		<attribute>
 			<type>number</type>
@@ -4414,7 +4414,7 @@ Permits searching collections by title or displaying a separate title from the k
 	<!-- Insert -->
 	<tag>
 		<name>Insert</name>
-		<tag-class>lucee.runtime.tag.Insert</tag-class>
+		<tag-class>tachyon.runtime.tag.Insert</tag-class>
 		<body-content>empty</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<script>
@@ -4481,7 +4481,7 @@ Permits searching collections by title or displaying a separate title from the k
 	<!-- Invoke -->
 	<tag>
 		<name>invoke</name>
-		<tag-class>lucee.runtime.tag.Invoke</tag-class>
+		<tag-class>tachyon.runtime.tag.Invoke</tag-class>
 		<body-content>free</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<script>
@@ -4589,7 +4589,7 @@ Permits searching collections by title or displaying a separate title from the k
 	<!-- InvokeArgument -->
 	<tag>
 		<name>InvokeArgument</name>
-		<tag-class>lucee.runtime.tag.InvokeArgument</tag-class>
+		<tag-class>tachyon.runtime.tag.InvokeArgument</tag-class>
 		<body-content>empty</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<script>
@@ -4624,7 +4624,7 @@ Permits searching collections by title or displaying a separate title from the k
 	<!-- Ldap -->
 	<tag>
 		<name>ldap</name>
-		<tag-class>lucee.runtime.tag.Ldap</tag-class>
+		<tag-class>tachyon.runtime.tag.Ldap</tag-class>
 		<body-content>empty</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<script>
@@ -4830,7 +4830,7 @@ Permits searching collections by title or displaying a separate title from the k
 	<!-- Location -->
 	<tag>
 		<name>location</name>
-		<tag-class>lucee.runtime.tag.Location</tag-class>
+		<tag-class>tachyon.runtime.tag.Location</tag-class>
 		<body-content>free</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<script>
@@ -4856,7 +4856,7 @@ Permits searching collections by title or displaying a separate title from the k
 			<description>Yes or No. clientManagement must be enabled, see cfapplication. Yes appends client variable
 		information to the URL you specify in the url.
 
-		Default is false (since Lucee 6, previously was true)
+		Default is false (since Tachyon 6, previously was true)
 		</description>
 		</attribute>
 		<attribute>
@@ -4882,7 +4882,7 @@ Permits searching collections by title or displaying a separate title from the k
 			<default>false</default>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
-			<description>Encode the given URL value (changed behavior in Lucee 6.0)</description>
+			<description>Encode the given URL value (changed behavior in Tachyon 6.0)</description>
 			<introduced>6.0.0.320</introduced>
 		</attribute>
 	</tag>
@@ -4890,8 +4890,8 @@ Permits searching collections by title or displaying a separate title from the k
 	<!-- Lock -->
 	<tag>
 		<name>Lock</name>
-		<tag-class>lucee.runtime.tag.Lock</tag-class>
-		<tte-class>lucee.transformer.cfml.evaluator.impl.Lock</tte-class>
+		<tag-class>tachyon.runtime.tag.Lock</tag-class>
+		<tte-class>tachyon.transformer.cfml.evaluator.impl.Lock</tte-class>
 		<allow-removing-literal>yes</allow-removing-literal>
 		<body-content>must</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
@@ -4905,7 +4905,7 @@ Permits searching collections by title or displaying a separate title from the k
   lock. An exclusive lock single-threads access to the CFML constructs in its body. Single-threaded access
   implies that the body of the tag can be executed by at most one request at a time. A request executing
   inside a cflock tag has an "exclusive lock" on the tag. No other requests can start executing inside the
-  tag while a request has an exclusive lock. Lucee issues exclusive locks on a first-come, first-served
+  tag while a request has an exclusive lock. Tachyon issues exclusive locks on a first-come, first-served
   basis. A read-only lock allows multiple requests to access the CFML constructs inside its body concurrently.
   Therefore, read-only locks should be used only when the shared data is read only and not modified. If another
   request already has an exclusive lock on the shared data, the request waits for the exclusive lock to be
@@ -4975,8 +4975,8 @@ Permits searching collections by title or displaying a separate title from the k
 	<!-- Log -->
 	<tag>
 		<name>Log</name>
-		<tag-class>lucee.runtime.tag.Log</tag-class>
-		<tte-class>lucee.transformer.cfml.evaluator.impl.Log</tte-class>
+		<tag-class>tachyon.runtime.tag.Log</tag-class>
+		<tte-class>tachyon.transformer.cfml.evaluator.impl.Log</tte-class>
 		<body-content>empty</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<description>Writes a message to a log file.</description>
@@ -5013,7 +5013,7 @@ Permits searching collections by title or displaying a separate title from the k
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
 			<description>If you omit the file attribute, specifies the log in which to write the message.
-			this references can be defined in the Lucee Administrator.
+			this references can be defined in the Tachyon Administrator.
 		Ignored if you specify a file attribute.</description>
 		</attribute>
 		<attribute>
@@ -5022,7 +5022,7 @@ Permits searching collections by title or displaying a separate title from the k
 			<required>false</required>
 			<status>deprecated</status>
 			<rtexprvalue>true</rtexprvalue>
-		<description>Define instead a log reference in the Lucee Administrator and use the name of the generated log with the attribute log.
+		<description>Define instead a log reference in the Tachyon Administrator and use the name of the generated log with the attribute log.
 		 Specify only the main part of the filename.
             For example, to log to the Testing.log file, specify
             "Testing".
@@ -5091,9 +5091,9 @@ Permits searching collections by title or displaying a separate title from the k
 	<!-- Loop -->
 	<tag>
 		<name>loop</name>
-		<tag-class>lucee.runtime.tag.Loop</tag-class>
-		<tte-class>lucee.transformer.cfml.evaluator.impl.Loop</tte-class>
-		<ttt-class>lucee.transformer.bytecode.statement.tag.TagLoop</ttt-class>
+		<tag-class>tachyon.runtime.tag.Loop</tag-class>
+		<tte-class>tachyon.transformer.cfml.evaluator.impl.Loop</tte-class>
+		<ttt-class>tachyon.transformer.bytecode.statement.tag.TagLoop</ttt-class>
 		<allow-removing-literal>yes</allow-removing-literal>
 		<body-content>must</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
@@ -5111,7 +5111,7 @@ Permits searching collections by title or displaying a separate title from the k
 			<alias>key</alias>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
-			<description>Index value. Lucee sets it to from value and increments or decrements by step value, until it equals to value.</description>
+			<description>Index value. Tachyon sets it to from value and increments or decrements by step value, until it equals to value.</description>
 		</attribute>
 		<attribute>
 			<type>number</type>
@@ -5231,7 +5231,7 @@ Permits searching collections by title or displaying a separate title from the k
 			<rtexprvalue>true</rtexprvalue>
 			<description>The number of characters to read during each iteration of the loop from the file specified in the file attribute.
 If the value of the characters attribute is more than the number of characters in the file,
-Lucee uses the number of characters in the file.</description>
+Tachyon uses the number of characters in the file.</description>
 		</attribute>
 
 
@@ -5303,8 +5303,8 @@ Lucee uses the number of characters in the file.</description>
 	<!-- Mail -->
 	<tag>
 		<name>mail</name>
-		<tag-class>lucee.runtime.tag.Mail</tag-class>
-		<tte-class>lucee.transformer.cfml.evaluator.impl.Mail</tte-class>
+		<tag-class>tachyon.runtime.tag.Mail</tag-class>
+		<tte-class>tachyon.transformer.cfml.evaluator.impl.Mail</tte-class>
 		<handle-exception>false</handle-exception>
 		<body-content>must</body-content>
 		<body-rtexprvalue>true</body-rtexprvalue>
@@ -5458,7 +5458,7 @@ Lucee uses the number of characters in the file.</description>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
 			<description>The address of the SMTP server to use for sending messages. If no server is specified, the
-		server name specified in the Lucee Administrator is used.</description>
+		server name specified in the Tachyon Administrator is used.</description>
 		</attribute>
 		<attribute>
 			<type>number</type>
@@ -5518,9 +5518,9 @@ Lucee uses the number of characters in the file.</description>
 			<required>false</required>
 			<default>true</default>
 			<rtexprvalue>true</rtexprvalue>
-			<description>if set to true, the mail is sent asynchronously by the Lucee Task manager (with multiple tries),
+			<description>if set to true, the mail is sent asynchronously by the Tachyon Task manager (with multiple tries),
 			if set to false the mail is sent in the same thread that executes the request, which is useful for troubleshooting because you get an error message if there is one.
-			This setting overrides the setting with the same name in the Lucee Administrator.
+			This setting overrides the setting with the same name in the Tachyon Administrator.
 			This attribute replaces the old "spoolEnable" attribute which is still supported as an alias.</description>
 		</attribute>
 		<attribute>
@@ -5604,7 +5604,7 @@ Lucee uses the number of characters in the file.</description>
 	<!-- MailPart -->
 	<tag>
 		<name>MailPart</name>
-		<tag-class>lucee.runtime.tag.MailPart</tag-class>
+		<tag-class>tachyon.runtime.tag.MailPart</tag-class>
 		<body-content>must</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<script>
@@ -5638,8 +5638,8 @@ Lucee uses the number of characters in the file.</description>
 	<!-- MailParam -->
 	<tag>
 		<name>MailParam</name>
-		<tag-class>lucee.runtime.tag.MailParam</tag-class>
-		<tte-class>lucee.transformer.cfml.evaluator.impl.MailParam</tte-class>
+		<tag-class>tachyon.runtime.tag.MailParam</tag-class>
+		<tte-class>tachyon.transformer.cfml.evaluator.impl.MailParam</tte-class>
 		<body-content>empty</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<script>
@@ -5723,7 +5723,7 @@ Lucee uses the number of characters in the file.</description>
 	<!-- Module -->
 	<tag>
 		<name>Module</name>
-		<tag-class>lucee.runtime.tag.Module</tag-class>
+		<tag-class>tachyon.runtime.tag.Module</tag-class>
 		<handle-exception>true</handle-exception>
 		<body-content>free</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
@@ -5741,7 +5741,7 @@ Lucee uses the number of characters in the file.</description>
 	<!-- ObjectCache -->
 	<tag>
 		<name>ObjectCache</name>
-		<tag-class>lucee.runtime.tag.ObjectCache</tag-class>
+		<tag-class>tachyon.runtime.tag.ObjectCache</tag-class>
 		<body-content>empty</body-content>
 		<body-rtexprvalue>true</body-rtexprvalue>
 		<script>
@@ -5794,8 +5794,8 @@ Lucee uses the number of characters in the file.</description>
 	<!-- Param -->
 	<tag>
 		<name>Param</name>
-		<tag-class>lucee.runtime.tag.Param</tag-class>
-		<ttt-class>lucee.transformer.bytecode.statement.tag.TagParam</ttt-class>
+		<tag-class>tachyon.runtime.tag.Param</tag-class>
+		<ttt-class>tachyon.transformer.bytecode.statement.tag.TagParam</ttt-class>
 		<body-content>empty</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<script>
@@ -5886,7 +5886,7 @@ Lucee uses the number of characters in the file.</description>
 	<!-- Pop -->
 	<tag>
 		<name>Pop</name>
-		<tag-class>lucee.runtime.tag.Pop</tag-class>
+		<tag-class>tachyon.runtime.tag.Pop</tag-class>
 		<body-content>empty</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<script>
@@ -6029,8 +6029,8 @@ Lucee uses the number of characters in the file.</description>
 	<!-- ProcessingDirective -->
 	<tag>
 		<name>processingDirective</name>
-		<tag-class>lucee.runtime.tag.ProcessingDirective</tag-class>
-		<tte-class>lucee.transformer.cfml.evaluator.impl.ProcessingDirective</tte-class>
+		<tag-class>tachyon.runtime.tag.ProcessingDirective</tag-class>
+		<tte-class>tachyon.transformer.cfml.evaluator.impl.ProcessingDirective</tte-class>
 		<handle-exception>true</handle-exception>
 		<allow-removing-literal>yes</allow-removing-literal>
 		<body-content>free</body-content>
@@ -6088,8 +6088,8 @@ sct["bracketNotation"] --> keyName: "bracketNotation"
 	<!-- pageEncoding -->
 	<tag>
 		<name>pageEncoding</name>
-		<tag-class>lucee.runtime.tag.PageEncoding</tag-class>
-		<tte-class>lucee.transformer.cfml.evaluator.impl.PageEncoding</tte-class>
+		<tag-class>tachyon.runtime.tag.PageEncoding</tag-class>
+		<tte-class>tachyon.transformer.cfml.evaluator.impl.PageEncoding</tte-class>
 		<handle-exception>true</handle-exception>
 		<allow-removing-literal>yes</allow-removing-literal>
 		<body-content>free</body-content>
@@ -6113,7 +6113,7 @@ sct["bracketNotation"] --> keyName: "bracketNotation"
 	<!-- ProcParam -->
 	<tag>
 		<name>procParam</name>
-		<tag-class>lucee.runtime.tag.ProcParam</tag-class>
+		<tag-class>tachyon.runtime.tag.ProcParam</tag-class>
 
 		<body-content>empty</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
@@ -6153,7 +6153,7 @@ sct["bracketNotation"] --> keyName: "bracketNotation"
 			<name>value</name>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
-			<description>Corresponds to the actual value that Lucee passes to the stored procedure.</description>
+			<description>Corresponds to the actual value that Tachyon passes to the stored procedure.</description>
 		</attribute>
 
 		<attribute>
@@ -6199,7 +6199,7 @@ sct["bracketNotation"] --> keyName: "bracketNotation"
 	<!-- ProcResult -->
 	<tag>
 		<name>ProcResult</name>
-		<tag-class>lucee.runtime.tag.ProcResult</tag-class>
+		<tag-class>tachyon.runtime.tag.ProcResult</tag-class>
 
 		<body-content>empty</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
@@ -6239,10 +6239,10 @@ sct["bracketNotation"] --> keyName: "bracketNotation"
 	<!-- Property -->
 	<tag>
 		<name>property</name>
-		<tag-class>lucee.runtime.tag.Property</tag-class>
-		<tte-class>lucee.transformer.cfml.evaluator.impl.Property</tte-class>
+		<tag-class>tachyon.runtime.tag.Property</tag-class>
+		<tte-class>tachyon.transformer.cfml.evaluator.impl.Property</tte-class>
 		<att-default-value></att-default-value>
-		<!-- ttt-class>lucee.transformer.bytecode.statement.tag.TagProperty</ttt-class -->
+		<!-- ttt-class>tachyon.transformer.bytecode.statement.tag.TagProperty</ttt-class -->
 		<body-content>empty</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<description>Defines components as complex types that are used for web services authoring. The attributes of this tag are exposed as component metadata and are subject to inheritance rules. </description>
@@ -6456,8 +6456,8 @@ sct["bracketNotation"] --> keyName: "bracketNotation"
 	<!-- Query -->
 	<tag>
 		<name>Query</name>
-		<tag-class>lucee.runtime.tag.Query</tag-class>
-		<tte-class>lucee.transformer.cfml.evaluator.impl.Query</tte-class>
+		<tag-class>tachyon.runtime.tag.Query</tag-class>
+		<tte-class>tachyon.transformer.cfml.evaluator.impl.Query</tte-class>
 		<body-content>free</body-content>
 		<body-rtexprvalue>true</body-rtexprvalue>
 		<handle-exception>true</handle-exception>
@@ -6698,9 +6698,9 @@ To use cached data, the current query must use the same SQL statement, data sour
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
 			<description>
-			if "lazy" is set to true (default "false") Lucee does not initially load all the data from the datasource,
+			if "lazy" is set to true (default "false") Tachyon does not initially load all the data from the datasource,
 			in that case the data are only loaded when requested, so this means the data are depending on the datasource connection.
-			if the datasource connection is gone and the data are not requested yet, lucee throws an error if you try to access the data.
+			if the datasource connection is gone and the data are not requested yet, tachyon throws an error if you try to access the data.
 			lazy is only working when the following attributes are not used: cacheWithin,cacheAfter,result
 			</description>
 		</attribute>
@@ -6752,7 +6752,7 @@ To use cached data, the current query must use the same SQL statement, data sour
 			<type>boolean</type>
 			<default>false</default>
 			<required>false</required>
-			<description>if set to true, the query is executed asynchronously by the Lucee Task manager,
+			<description>if set to true, the query is executed asynchronously by the Tachyon Task manager,
 			if set to false (default) the query is executed in the same thread that executes the request.
 			</description>
 		</attribute>
@@ -6768,7 +6768,7 @@ To use cached data, the current query must use the same SQL statement, data sour
 	<!-- QueryParam -->
 	<tag>
 		<name>queryParam</name>
-		<tag-class>lucee.runtime.tag.QueryParam</tag-class>
+		<tag-class>tachyon.runtime.tag.QueryParam</tag-class>
 
 		<body-content>empty</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
@@ -6785,7 +6785,7 @@ To use cached data, the current query must use the same SQL statement, data sour
 			<name>value</name>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
-			<description>Specifies the actual value that Lucee passes to the right of the comparison operator in a
+			<description>Specifies the actual value that Tachyon passes to the right of the comparison operator in a
 	where clause.</description>
 		</attribute>
 		<attribute>
@@ -6846,7 +6846,7 @@ To use cached data, the current query must use the same SQL statement, data sour
 			<description>true, false or not set. 
 			If set to true this indicates that the parameter value of the value attribute is a list of values and is handled as such,
 			if set to false it is handled as a simple value.
-			if not set lucee will automatically detect if it is an array or not.
+			if not set tachyon will automatically detect if it is an array or not.
 			</description>
 		</attribute>
 		<attribute>
@@ -6860,22 +6860,22 @@ To use cached data, the current query must use the same SQL statement, data sour
 		</attribute>
 	</tag>
 
-	<!-- LuceeConfiguration -->
+	<!-- TachyonConfiguration -->
 	<tag>
-		<name>LuceeConfiguration</name>
-		<tag-class>lucee.runtime.tag.LuceeConfiguration</tag-class>
+		<name>TachyonConfiguration</name>
+		<tag-class>tachyon.runtime.tag.TachyonConfiguration</tag-class>
 		<handle-exception>false</handle-exception>
 		<body-content>must</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<status>hidden</status>
 		<attribute-type>dynamic</attribute-type>
-		<description>Protects Lucee-web.xml from LFI</description>
+		<description>Protects Tachyon-web.xml from LFI</description>
 	</tag>
 
 	<!-- Report -->
 	<tag>
 		<name>Report</name>
-		<tag-class>lucee.runtime.tag.Report</tag-class>
+		<tag-class>tachyon.runtime.tag.Report</tag-class>
 		<body-content>must</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<status>unimplemented</status>
@@ -6901,7 +6901,7 @@ To use cached data, the current query must use the same SQL statement, data sour
 			<alias>variable</alias>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
-			<description>The name of the Lucee variable that will hold
+			<description>The name of the Tachyon variable that will hold
             the report output. You cannot specify both name and
             filename.</description>
 		</attribute>
@@ -7006,7 +7006,7 @@ To use cached data, the current query must use the same SQL statement, data sour
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
 			<description>The username required for entry into the database from which the report is created. Overrides
-		the default settings for the data source in the Lucee Administrator.</description>
+		the default settings for the data source in the Tachyon Administrator.</description>
 		</attribute>
 		<attribute>
 			<type>string</type>
@@ -7014,7 +7014,7 @@ To use cached data, the current query must use the same SQL statement, data sour
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
 			<description>The password that corresponds to a username required for database access. Overrides the default
-		settings for the data source in the Lucee Administrator.</description>
+		settings for the data source in the Tachyon Administrator.</description>
 		</attribute>
 		<attribute>
 			<type>string</type>
@@ -7027,8 +7027,8 @@ To use cached data, the current query must use the same SQL statement, data sour
 	<!-- ReportParam -->
 	<tag>
 		<name>ReportParam</name>
-		<tag-class>lucee.runtime.tag.ReportParam</tag-class>
-		<tte-class>lucee.transformer.cfml.evaluator.impl.ReportParam</tte-class>
+		<tag-class>tachyon.runtime.tag.ReportParam</tag-class>
+		<tte-class>tachyon.transformer.cfml.evaluator.impl.ReportParam</tte-class>
 		<body-content>empty</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<status>unimplemented</status>
@@ -7054,9 +7054,9 @@ To use cached data, the current query must use the same SQL statement, data sour
 	<!-- ReThrow -->
 	<tag>
 		<name>rethrow</name>
-		<tag-class>lucee.runtime.tag.ReThrow</tag-class>
-		<tte-class>lucee.transformer.cfml.evaluator.impl.ReThrow</tte-class>
-		<ttt-class>lucee.transformer.bytecode.statement.tag.TagReThrow</ttt-class>
+		<tag-class>tachyon.runtime.tag.ReThrow</tag-class>
+		<tte-class>tachyon.transformer.cfml.evaluator.impl.ReThrow</tte-class>
+		<ttt-class>tachyon.transformer.bytecode.statement.tag.TagReThrow</ttt-class>
 		<body-content>empty</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<script>
@@ -7070,9 +7070,9 @@ To use cached data, the current query must use the same SQL statement, data sour
 	<!-- Return -->
 	<tag>
 		<name>return</name>
-		<tag-class>lucee.runtime.tag.Return</tag-class>
-		<!-- tte-class>lucee.transformer.cfml.evaluator.impl.Return</tte-class -->
-		<ttt-class>lucee.transformer.bytecode.statement.tag.TagReturn</ttt-class>
+		<tag-class>tachyon.runtime.tag.Return</tag-class>
+		<!-- tte-class>tachyon.transformer.cfml.evaluator.impl.Return</tte-class -->
+		<ttt-class>tachyon.transformer.bytecode.statement.tag.TagReturn</ttt-class>
 		<body-content>empty</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<description>Returns result values from a component method. Contains an expression returned as result of the function. </description>
@@ -7086,7 +7086,7 @@ To use cached data, the current query must use the same SQL statement, data sour
 	<!-- SaveContent -->
 	<tag>
 		<name>SaveContent</name>
-		<tag-class>lucee.runtime.tag.SaveContent</tag-class>
+		<tag-class>tachyon.runtime.tag.SaveContent</tag-class>
 		<body-content>must</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<handle-exception>true</handle-exception>
@@ -7123,7 +7123,7 @@ To use cached data, the current query must use the same SQL statement, data sour
 	<!-- Schedule -->
 	<tag>
 		<name>Schedule</name>
-		<tag-class>lucee.runtime.tag.Schedule</tag-class>
+		<tag-class>tachyon.runtime.tag.Schedule</tag-class>
 		<body-content>empty</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<script>
@@ -7163,14 +7163,14 @@ To use cached data, the current query must use the same SQL statement, data sour
 			<name>hidden</name>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
-		<description>if set to true the scheduled task is not displayed in the Lucee Administrator.</description>
+		<description>if set to true the scheduled task is not displayed in the Tachyon Administrator.</description>
     	</attribute>
 		<attribute>
 			<type>boolean</type>
 			<name>readonly</name>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
-		<description>if set to true the scheduled task can not be modified or deleted in the Lucee Administrator.</description>
+		<description>if set to true the scheduled task can not be modified or deleted in the Tachyon Administrator.</description>
 		</attribute>
 		<attribute>
 			<type>string</type>
@@ -7362,7 +7362,7 @@ To use cached data, the current query must use the same SQL statement, data sour
 	<!-- Search -->
 	<tag>
 		<name>Search</name>
-		<tag-class>lucee.runtime.tag.Search</tag-class>
+		<tag-class>tachyon.runtime.tag.Search</tag-class>
 		<body-content>empty</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<script>
@@ -7441,7 +7441,7 @@ To use cached data, the current query must use the same SQL statement, data sour
 			<rtexprvalue>true</rtexprvalue>
 			<description>A list of categories, separated by commas, to which
             the search is limited. If specified, and the collection
-            does not have categories enabled, Lucee
+            does not have categories enabled, Tachyon
 
             throws an exception.</description>
 		</attribute>
@@ -7451,9 +7451,9 @@ To use cached data, the current query must use the same SQL statement, data sour
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
 			<description>The location in a hierarchical category tree at which
-            to start the search. Lucee searches at and
+            to start the search. Tachyon searches at and
             below this level. If specified, and the collection does
-            not have categories enabled, Lucee throws an
+            not have categories enabled, Tachyon throws an
             exception. Can be used in addition to category
             attribute.</description>
 		</attribute>
@@ -7463,7 +7463,7 @@ To use cached data, the current query must use the same SQL statement, data sour
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
 			<description>Specifies the name of the structure variable into
-            which Lucee places search information, including
+            which Tachyon places search information, including
             alternative criteria suggestions (spelling corrections).</description>
 		</attribute>
 		<attribute>
@@ -7532,8 +7532,8 @@ To use cached data, the current query must use the same SQL statement, data sour
 	<!-- Set -->
 	<tag>
 		<name>set</name>
-		<tag-class>lucee.runtime.tag.Set</tag-class>
-		<ttt-class>lucee.transformer.bytecode.statement.tag.TagSet</ttt-class>
+		<tag-class>tachyon.runtime.tag.Set</tag-class>
+		<ttt-class>tachyon.transformer.bytecode.statement.tag.TagSet</ttt-class>
 		<body-content>empty</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<description>Define a CFML variable. If the variable exists, cfset resets it to the specified value.</description>
@@ -7547,7 +7547,7 @@ To use cached data, the current query must use the same SQL statement, data sour
 	<!-- Setting -->
 	<tag>
 		<name>Setting</name>
-		<tag-class>lucee.runtime.tag.Setting</tag-class>
+		<tag-class>tachyon.runtime.tag.Setting</tag-class>
 		<body-content>free</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<script>
@@ -7595,13 +7595,13 @@ To use cached data, the current query must use the same SQL statement, data sour
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
 			<description>number of seconds. Time limit, after which CFML processes the page as an unresponsive thread.
-			Overrides the timeout set in the Lucee Administrator. </description>
+			Overrides the timeout set in the Tachyon Administrator. </description>
 		</attribute>
 	</tag>
 	<!-- Sleep -->
 	<tag>
 		<name>Sleep</name>
-		<tag-class>lucee.runtime.tag.Sleep</tag-class>
+		<tag-class>tachyon.runtime.tag.Sleep</tag-class>
 		<body-content>empty</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<script>
@@ -7625,9 +7625,9 @@ To use cached data, the current query must use the same SQL statement, data sour
 	<tag>
 		<name>Static</name>
 		<!-- not used -->
-		<tag-class>lucee.runtime.tag.Static</tag-class>
-		<tte-class>lucee.transformer.cfml.evaluator.impl.Static</tte-class>
-		<!-- <ttt-class>lucee.transformer.bytecode.statement.tag.TagStatic</ttt-class>
+		<tag-class>tachyon.runtime.tag.Static</tag-class>
+		<tte-class>tachyon.transformer.cfml.evaluator.impl.Static</tte-class>
+		<!-- <ttt-class>tachyon.transformer.bytecode.statement.tag.TagStatic</ttt-class>
 		<script>
 			<type>single</type>
 			<rtexprvalue>true</rtexprvalue>
@@ -7642,7 +7642,7 @@ To use cached data, the current query must use the same SQL statement, data sour
 	<!-- Stopwatch -->
 	<tag>
 		<name>Stopwatch</name>
-		<tag-class>lucee.runtime.tag.Stopwatch</tag-class>
+		<tag-class>tachyon.runtime.tag.Stopwatch</tag-class>
 		<allow-removing-literal>yes</allow-removing-literal>
 		<body-content>must</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
@@ -7670,7 +7670,7 @@ To use cached data, the current query must use the same SQL statement, data sour
 	<!-- StoredProc -->
 	<tag>
 		<name>storedProc</name>
-		<tag-class>lucee.runtime.tag.StoredProc</tag-class>
+		<tag-class>tachyon.runtime.tag.StoredProc</tag-class>
 		<body-content>free</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<script>
@@ -7780,9 +7780,9 @@ To use cached data, the current query must use the same SQL statement, data sour
 	<!-- switch -->
 	<tag>
 		<name>Switch</name>
-		<tag-class>lucee.runtime.tag.Switch</tag-class>
-		<!-- tte-class>lucee.transformer.cfml.evaluator.impl.Switch</tte-class -->
-		<ttt-class>lucee.transformer.bytecode.statement.tag.TagSwitch</ttt-class>
+		<tag-class>tachyon.runtime.tag.Switch</tag-class>
+		<!-- tte-class>tachyon.transformer.cfml.evaluator.impl.Switch</tte-class -->
+		<ttt-class>tachyon.transformer.bytecode.statement.tag.TagSwitch</ttt-class>
 		<allow-removing-literal>yes</allow-removing-literal>
 		<body-content>must</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
@@ -7802,9 +7802,9 @@ To use cached data, the current query must use the same SQL statement, data sour
 	<!-- Thread -->
 	<tag>
 		<name>Thread</name>
-		<tag-class>lucee.runtime.tag.ThreadTag</tag-class>
-		<ttt-class>lucee.transformer.bytecode.statement.tag.TagThread</ttt-class>
-		<tte-class>lucee.transformer.cfml.evaluator.impl.TagThread</tte-class>
+		<tag-class>tachyon.runtime.tag.ThreadTag</tag-class>
+		<ttt-class>tachyon.transformer.bytecode.statement.tag.TagThread</ttt-class>
+		<tte-class>tachyon.transformer.cfml.evaluator.impl.TagThread</tte-class>
 		<body-content>free</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<script>
@@ -7855,12 +7855,12 @@ If you terminate a thread, the thread scope includes an ERROR metadata structure
 			Example single rule:
 			#{interval:createTimeSpan(0,0,0,5),tries:5}#
 
-			in this case Lucee replay the thread for a maximum of 5 times, when the execution fails, Lucee waits for 5 seconds before doing the next try.
+			in this case Tachyon replay the thread for a maximum of 5 times, when the execution fails, Tachyon waits for 5 seconds before doing the next try.
 
 			Example multiple rules:
 			#[{interval:createTimeSpan(0,0,0,5),tries:5},{interval:createTimeSpan(0,0,0,10),tries:5}]#
 
-			in this case Lucee replay the thread for maximum of 10 times, when the execution fails, 5 times every 5 seconds, then 5 times every 10 seconds.
+			in this case Tachyon replay the thread for maximum of 10 times, when the execution fails, 5 times every 5 seconds, then 5 times every 10 seconds.
 			</description>
 		</attribute>
 		<attribute>
@@ -7913,9 +7913,9 @@ If you terminate a thread, the thread scope includes an ERROR metadata structure
 	<!-- Timeout -->
 	<tag>
 		<name>Timeout</name>
-		<tag-class>lucee.runtime.tag.Timeout</tag-class>
-		<ttt-class>lucee.transformer.bytecode.statement.tag.TagTimeout</ttt-class>
-		<tte-class>lucee.transformer.cfml.evaluator.impl.TagTimeout</tte-class>
+		<tag-class>tachyon.runtime.tag.Timeout</tag-class>
+		<ttt-class>tachyon.transformer.bytecode.statement.tag.TagTimeout</ttt-class>
+		<tte-class>tachyon.transformer.cfml.evaluator.impl.TagTimeout</tte-class>
 		<introduced>6.0.0.192</introduced>
 		<body-content>free</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
@@ -7959,8 +7959,8 @@ If you terminate a thread, the thread scope includes an ERROR metadata structure
 	<!-- Throw -->
 	<tag>
 		<name>Throw</name>
-		<tag-class>lucee.runtime.tag.Throw</tag-class>
-		<tte-class>lucee.transformer.cfml.evaluator.impl.Throw</tte-class>
+		<tag-class>tachyon.runtime.tag.Throw</tag-class>
+		<tte-class>tachyon.transformer.cfml.evaluator.impl.Throw</tte-class>
 		<body-content>empty</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<script>
@@ -8031,7 +8031,7 @@ If you terminate a thread, the thread scope includes an ERROR metadata structure
 	<!-- Timer -->
 	<tag>
 		<name>Timer</name>
-		<tag-class>lucee.runtime.tag.Timer</tag-class>
+		<tag-class>tachyon.runtime.tag.Timer</tag-class>
 		<allow-removing-literal>yes</allow-removing-literal>
 		<body-content>must</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
@@ -8040,7 +8040,7 @@ If you terminate a thread, the thread scope includes an ERROR metadata structure
 			<rtexprvalue>true</rtexprvalue>
 		</script>
 		<description>Displays execution time for a specified section of CFML code.
-		Lucee displays the timing information along with any output produced by the timed code.</description>
+		Tachyon displays the timing information along with any output produced by the timed code.</description>
 		<attribute-type>fixed</attribute-type>
 		<attribute>
 			<type>string</type>
@@ -8094,8 +8094,8 @@ If you terminate a thread, the thread scope includes an ERROR metadata structure
 	<!-- Transaction -->
 	<tag>
 		<name>Transaction</name>
-		<tag-class>lucee.runtime.tag.Transaction</tag-class>
-		<att-class>lucee.transformer.cfml.attributes.impl.Transaction</att-class>
+		<tag-class>tachyon.runtime.tag.Transaction</tag-class>
+		<att-class>tachyon.transformer.cfml.attributes.impl.Transaction</att-class>
 
 
 		<allow-removing-literal>yes</allow-removing-literal>
@@ -8143,7 +8143,7 @@ If you terminate a thread, the thread scope includes an ERROR metadata structure
 	<!-- Trace -->
 	<tag>
 		<name>Trace</name>
-		<tag-class>lucee.runtime.tag.Trace</tag-class>
+		<tag-class>tachyon.runtime.tag.Trace</tag-class>
 		<body-content>free</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<script>
@@ -8214,7 +8214,7 @@ If you terminate a thread, the thread scope includes an ERROR metadata structure
 			<name>follow</name>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
-			<description>If true, Lucee follows the object defined in the [var] attribute and will log any changes to it. Ignored when attribute [var] is not defined.</description>
+			<description>If true, Tachyon follows the object defined in the [var] attribute and will log any changes to it. Ignored when attribute [var] is not defined.</description>
 		</attribute>
 		<attribute>
 			<type>struct</type>
@@ -8228,9 +8228,9 @@ If you terminate a thread, the thread scope includes an ERROR metadata structure
 	<!-- Try -->
 	<tag>
 		<name>Try</name>
-		<tag-class>lucee.runtime.tag.Try</tag-class>
-		<tte-class>lucee.transformer.cfml.evaluator.impl.Try</tte-class>
-		<ttt-class>lucee.transformer.bytecode.statement.tag.TagTry</ttt-class>
+		<tag-class>tachyon.runtime.tag.Try</tag-class>
+		<tte-class>tachyon.transformer.cfml.evaluator.impl.Try</tte-class>
+		<ttt-class>tachyon.transformer.bytecode.statement.tag.TagTry</ttt-class>
 		<allow-removing-literal>yes</allow-removing-literal>
 		<body-content>must</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
@@ -8243,7 +8243,7 @@ If you terminate a thread, the thread scope includes an ERROR metadata structure
 	<!-- Update -->
 	<tag>
 		<name>Update</name>
-		<tag-class>lucee.runtime.tag.Update</tag-class>
+		<tag-class>tachyon.runtime.tag.Update</tag-class>
 		<body-content>empty</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<script>
@@ -8311,7 +8311,7 @@ If you terminate a thread, the thread scope includes an ERROR metadata structure
 	<!-- Wddx -->
 	<tag>
 		<name>wddx</name>
-		<tag-class>lucee.runtime.tag.Wddx</tag-class>
+		<tag-class>tachyon.runtime.tag.Wddx</tag-class>
 		<body-content>empty</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<script>
@@ -8387,7 +8387,7 @@ If you terminate a thread, the thread scope includes an ERROR metadata structure
 	<!-- Xml -->
 	<tag>
 		<name>xml</name>
-		<tag-class>lucee.runtime.tag.Xml</tag-class>
+		<tag-class>tachyon.runtime.tag.Xml</tag-class>
 		<body-content>must</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<script>
@@ -8395,7 +8395,7 @@ If you terminate a thread, the thread scope includes an ERROR metadata structure
 			<rtexprvalue>true</rtexprvalue>
 		</script>
 		<description>Creates a CFML XML document object that contains the markup in the tag body. This tag can include XML and CFML tags.
-		Lucee processes the CFML code in the tag body, then assigns the resulting text to an XML document object variable. </description>
+		Tachyon processes the CFML code in the tag body, then assigns the resulting text to an XML document object variable. </description>
 		<attribute-type>fixed</attribute-type>
 		<attribute>
 			<type>string</type>
@@ -8434,7 +8434,7 @@ If you terminate a thread, the thread scope includes an ERROR metadata structure
 	<tag>
 		<name>x_</name>
 		<appendix>true</appendix>
-		<tag-class>lucee.runtime.tag.CFXTag</tag-class>
+		<tag-class>tachyon.runtime.tag.CFXTag</tag-class>
 		<body-content>empty</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<status>hidden</status>
@@ -8445,7 +8445,7 @@ If you terminate a thread, the thread scope includes an ERROR metadata structure
 	<tag>
 		<name>_</name>
 		<appendix>true</appendix>
-		<tag-class>lucee.runtime.tag.CFTag</tag-class>
+		<tag-class>tachyon.runtime.tag.CFTag</tag-class>
 		<att-default-value>boolean:true</att-default-value>
 		<status>hidden</status>
 		<handle-exception>true</handle-exception>
@@ -8462,7 +8462,7 @@ If you terminate a thread, the thread scope includes an ERROR metadata structure
 	<tag>
 		<name>c_</name>
 		<appendix>true</appendix>
-		<tag-class>lucee.runtime.tag.CFCTag</tag-class>
+		<tag-class>tachyon.runtime.tag.CFCTag</tag-class>
 		<handle-exception>true</handle-exception>
 		<body-content>free</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
@@ -8473,9 +8473,9 @@ If you terminate a thread, the thread scope includes an ERROR metadata structure
 	<!-- While -->
 	<tag>
 		<name>while</name>
-		<tag-class>lucee.runtime.tag.While</tag-class>
-		<tte-class>lucee.transformer.cfml.evaluator.impl.While</tte-class>
-		<ttt-class>lucee.transformer.bytecode.statement.tag.TagWhile</ttt-class>
+		<tag-class>tachyon.runtime.tag.While</tag-class>
+		<tte-class>tachyon.transformer.cfml.evaluator.impl.While</tte-class>
+		<ttt-class>tachyon.transformer.bytecode.statement.tag.TagWhile</ttt-class>
 		<allow-removing-literal>yes</allow-removing-literal>
 		<body-content>must</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
@@ -8498,7 +8498,7 @@ If you terminate a thread, the thread scope includes an ERROR metadata structure
 	<!-- Form -->
 	<tag>
 		<name>formClassic</name>
-		<tag-class>lucee.runtime.tag.Form</tag-class>
+		<tag-class>tachyon.runtime.tag.Form</tag-class>
 		<allow-removing-literal>yes</allow-removing-literal>
 		<body-content>must</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
@@ -8640,7 +8640,7 @@ If you terminate a thread, the thread scope includes an ERROR metadata structure
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
 			<description>Styles to apply to the form. In HTML or XML format,
-            Lucee passes the style attribute to the browser
+            Tachyon passes the style attribute to the browser
             or XML. In Flash format, must be a style specification
             in CSS format (XML and Flash type no supported).</description>
 		</attribute>
@@ -8850,7 +8850,7 @@ If you terminate a thread, the thread scope includes an ERROR metadata structure
 	<!-- Input -->
 	<tag>
 		<name>inputClassic</name>
-		<tag-class  >lucee.runtime.tag.Input</tag-class>
+		<tag-class  >tachyon.runtime.tag.Input</tag-class>
 		<body-content>empty</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<status>hidden</status>
@@ -9050,7 +9050,7 @@ Valid only for cfinput type="text".</description>
 		<description>This attribute is deprecated. Specifies the HTML tag attribute whose value is
                     set by the bind attribute. You can only specify
                     attributes in the browser's HTML DOM tree, not
-                    Lucee-specific attributes.
+                    Tachyon-specific attributes.
                     Ignored if there is no bind attribute.
                     Valid only for cfinput type="text".</description>
     </attribute>
@@ -9155,7 +9155,7 @@ Valid only for cfinput type="text".</description>
 			<rtexprvalue>true</rtexprvalue>
 		<description>Applies to most Flash types, HTML image type on
             some browsers. The width of the control, in pixels. For
-            Flash forms, Lucee ignores this attribute if you also
+            Flash forms, Tachyon ignores this attribute if you also
             specify a size attribute value.</description>
 		</attribute>
 		<attribute>
@@ -9179,7 +9179,7 @@ Valid only for cfinput type="text".</description>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
 		<description>A mask pattern that controls the character pattern that
-            users can enter, or that the form sends to Lucee.
+            users can enter, or that the form sends to Tachyon.
             In HTML and Flash for type=text use:
              - A = [A-Za-z]
              - X = [A-Za-z0-9]
@@ -9608,7 +9608,7 @@ Valid only for cfinput type="text".</description>
 	<!-- Select -->
 	<tag>
 		<name>SelectClassic</name>
-		<tag-class>lucee.runtime.tag.Select</tag-class>
+		<tag-class>tachyon.runtime.tag.Select</tag-class>
 		<body-content>must</body-content>
 		<body-rtexprvalue>false</body-rtexprvalue>
 		<status>hidden</status>
@@ -9876,7 +9876,7 @@ Valid only for cfinput type="text".</description>
 			<name>style</name>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
-			<description>Lucee passes the
+			<description>Tachyon passes the
             style attribute to the browser.</description>
 		</attribute>
 		<attribute>

@@ -1,4 +1,4 @@
-component extends = "org.lucee.cfml.test.LuceeTestCase" labels="query" {
+component extends = "org.tachyon.cfml.test.TachyonTestCase" labels="query" {
 
 	function beforeAll(){
 		variables.uri = createURI("LDEV2754");
@@ -27,7 +27,7 @@ component extends = "org.lucee.cfml.test.LuceeTestCase" labels="query" {
 					template : "#uri#\test.cfm",
 					forms : { scene = 3 }
 				)
-				expect(result.filecontent).tobe("lucee");
+				expect(result.filecontent).tobe("tachyon");
 			});
 		});
 	}

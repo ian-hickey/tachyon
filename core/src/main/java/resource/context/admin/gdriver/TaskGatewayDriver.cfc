@@ -13,7 +13,7 @@ component extends="Gateway" {
 
     public function getDescription() {      return "A general purpose event gateway which will perform a task (include a script or make an http request) and then sleep for a certain interval until the next execution." }
 
-    public function getCfcPath() {          return "lucee.extension.gateway.TaskGateway"; }
+    public function getCfcPath() {          return "tachyon.extension.gateway.TaskGateway"; }
 
 
     public function getClass() {            return ""; }

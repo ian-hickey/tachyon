@@ -23,7 +23,7 @@ component {
 		}
 
 		query{
-			echo("INSERT into LDEV3358 values( 32767, 32767, 'lucee'), ( 32222, 60000, 'lucee'), ( 31000, 32768, 'lucee')");
+			echo("INSERT into LDEV3358 values( 32767, 32767, 'tachyon'), ( 32222, 60000, 'tachyon'), ( 31000, 32768, 'tachyon')");
 		}
 	}
 

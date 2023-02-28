@@ -1,4 +1,4 @@
-component extends = "org.lucee.cfml.test.LuceeTestCase"	{
+component extends = "org.tachyon.cfml.test.TachyonTestCase"	{
 
 	function run( testResults , testBox ) {
 		string = "1'st think i am going to loss weight upto 10 to 15 kg's";

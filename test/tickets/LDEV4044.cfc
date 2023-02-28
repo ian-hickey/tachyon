@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="query,qoq" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="query,qoq" {
 
 	function beforeAll() {
 		variables.uri = createURI("LDEV4044");

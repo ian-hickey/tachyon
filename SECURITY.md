@@ -9,4 +9,4 @@
 
 ## Reporting a Vulnerability
 
-Please send an email to security@lucee.org 
+Please send an email to security@tachyon.org 

@@ -11,11 +11,11 @@ component extends="Gateway" {
 
     public function getDescription() {      return "Handles Asynchronous events through CFCs" }
 
-    public function getCfcPath() {          return "lucee.extension.gateway.AsynchronousEvents"; }
+    public function getCfcPath() {          return "tachyon.extension.gateway.AsynchronousEvents"; }
 
     public function getClass() {            return ""; }
 
-    public function getListenerPath() {     return "lucee.extension.gateway.AsynchronousEventsListener"; }
+    public function getListenerPath() {     return "tachyon.extension.gateway.AsynchronousEventsListener"; }
 
     public function getListenerCfcMode() {  return "required"; }
 

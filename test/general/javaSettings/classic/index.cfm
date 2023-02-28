@@ -1,5 +1,5 @@
 <cfscript>
-	test1=createObject(type:'java',class:'org.lucee.mockup.classic.Test');
+	test1=createObject(type:'java',class:'org.tachyon.mockup.classic.Test');
 	meta1=getMetaData(test1);
 	
 

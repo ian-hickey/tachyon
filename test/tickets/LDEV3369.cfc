@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"  skip="true" {
+component extends="org.tachyon.cfml.test.TachyonTestCase"  skip="true" {
 	function run( testResults, testBox ){
 		describe( "Test case for LDEV-3369", function() {
             it(title="Check expandPath() without mapping", body=function( currentSpec ){

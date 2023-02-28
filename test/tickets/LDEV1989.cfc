@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="zip" skip=true {
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="zip" skip=true {
 	function beforeAll(){
 		variables.uri = createURI("LDEV1989");
 	}

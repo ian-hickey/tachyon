@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="regex" {
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="regex" {
 
 	function run( testResults, testBox ) {
 		describe("Testcase for LDEV-4310 - getApplicationSetting().regex", function() {

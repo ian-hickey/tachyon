@@ -51,7 +51,7 @@ class DebugResponse : Response {
      * print out the response
      */
     fun printResults() {
-        System.out.println("[ --- Lucee Debug Response --- ]")
+        System.out.println("[ --- Tachyon Debug Response --- ]")
         System.out.println()
         System.out.println("----------------------------")
         System.out.println("|          Output          |")

@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase" labels="orm"{
+component extends="org.tachyon.cfml.test.TachyonTestCase" labels="orm"{
 	function run( testResults , testBox ) {
 		describe( "ORM persistent false for inherited property", function() {
 			it('Case 1: This should be run without failures',  function( currentSpec ) {

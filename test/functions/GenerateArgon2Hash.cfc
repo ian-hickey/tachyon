@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 	function run( testResults , testBox ) {
 		describe( "test case for GenerateArgon2Hash", function() {
 			it(title = "Checking with GenerateArgon2Hash()", body = function( currentSpec ) {

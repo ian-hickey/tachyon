@@ -1,4 +1,4 @@
-<cfparam name="src" 		default="C:\Apps\lucee4-jetty\webapps\lucee\crop-image\admin-sprite.png">
+<cfparam name="src" 		default="C:\Apps\tachyon4-jetty\webapps\tachyon\crop-image\admin-sprite.png">
 
 <cfparam name="mimeType"	default="">
 

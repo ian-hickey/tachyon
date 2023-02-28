@@ -16,13 +16,13 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  * 
  ---><cfscript>
-component extends="org.lucee.cfml.test.LuceeTestCase"	{
+component extends="org.tachyon.cfml.test.TachyonTestCase"	{
 	
 	public function setUp(){
 	}
 
 	public void function test(){
-		var ss=GetComponentStaticScope("org.lucee.cfml.Query");
+		var ss=GetComponentStaticScope("org.tachyon.cfml.Query");
 		assertTrue(!isNull(ss.new));
 		
 		var q=ss.new("a,b,c");

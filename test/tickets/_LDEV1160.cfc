@@ -1,4 +1,4 @@
-component extends="org.lucee.cfml.test.LuceeTestCase"{
+component extends="org.tachyon.cfml.test.TachyonTestCase"{
 	function beforeAll(){
 		variables.empDetails = queryNew("name,age,sex","varchar,integer,varchar", [['saravana',35,'male'],['Bob',20, 'female'],['pothy',25, 'male']]);
 	}
